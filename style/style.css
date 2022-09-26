@@ -399,6 +399,9 @@ input.process-line {
 .carousel-indicators .active {
   opacity: 1; }
 
+.carousel-control-next, .carousel-control-prev {
+  width: 50%; }
+
 .module {
   width: 86vw; }
   .module h1 {
@@ -408,7 +411,7 @@ input.process-line {
 
 .module-overflow {
   overflow: scroll;
-  height: auto;
+  height: 87vh;
   width: 86vw;
   overflow-x: hidden; }
 
