@@ -40,12 +40,12 @@ storeScroll();
 
 // SU CARICAMENTO
 // pick up the current url > variable part
-var link = window.location.href
+const link = window.location.href
 
 // change registration link when receiving a personalized url
 if (link.length > 20){
   console.log(link)
-  var sublink = link.slice(7)
+  var sublink = link.slice(30)
   console.log(sublink)
   var affiliate_registration = "https://business.genuiny.com/" + sublink
 
@@ -86,3 +86,9 @@ function button_click(){
   quadrato_prova.classList.add("resize")
   alert("AAAA");
 }
+
+window.addEventListener("scroll", function(event){
+  var scroll = this.scrollY;
+  console.log(document.getElementById("carouselExampleIndicators").getBoundingClientRect.top())
+  console.log("oinwgop", document.getElementsByClassName("carousel-item")[0].scrollTop)
+});
