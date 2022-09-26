@@ -87,8 +87,10 @@ function button_click(){
   alert("AAAA");
 }
 
+
+
+
 window.addEventListener("scroll", function(event){
   var scroll = this.scrollY;
-  console.log(document.getElementById("carouselExampleIndicators").getBoundingClientRect.top())
-  console.log("oinwgop", document.getElementsByClassName("carousel-item")[0].scrollTop)
+  console.log(window.pageYOffset - document.getElementById("carouselExampleIndicators-4").getBoundingClientRect().top + 140);
 });

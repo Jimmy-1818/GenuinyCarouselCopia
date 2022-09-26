@@ -408,7 +408,7 @@ input.process-line {
 
 .module-overflow {
   overflow: scroll;
-  height: 87vh;
+  height: auto;
   width: 86vw;
   overflow-x: hidden; }
 
