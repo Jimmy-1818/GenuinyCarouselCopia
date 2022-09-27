@@ -48,6 +48,8 @@ if (link.length > 67){
   const sublink = link.slice(57)
   console.log(sublink)
 
+
+
 function change_link(){
   console.log("change_link")
   var affiliate_registration = "https://business.genuiny.com/" + sublink
@@ -55,6 +57,7 @@ function change_link(){
   current_link.setAttribute('href', affiliate_registration)};
 };
 
+window.onload = change_link
 
 
 
