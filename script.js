@@ -45,7 +45,7 @@ const link = window.location.href
 // change registration link when receiving a personalized url
 if (link.length > 20){
   console.log(link)
-  var sublink = link.slice(30)
+  var sublink = link.slice(57)
   console.log(sublink)
   var affiliate_registration = "https://business.genuiny.com/" + sublink
 
