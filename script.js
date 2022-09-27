@@ -43,9 +43,9 @@ storeScroll();
 const link = window.location.href
 
 // change registration link when receiving a personalized url
-if (link.length > 67){
+if (link.length > 80){
   console.log(link)
-  const sublink = link.slice(65)
+  const sublink = link.slice(66)
   console.log(sublink)
 
 
