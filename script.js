@@ -45,14 +45,18 @@ const link = window.location.href
 // change registration link when receiving a personalized url
 if (link.length > 67){
   console.log(link)
-  var sublink = link.slice(57)
+  const sublink = link.slice(57)
   console.log(sublink)
-  var affiliate_registration = "https://business.genuiny.com/" + sublink
 
+function change_link(){
+  console.log("change_link")
+  var affiliate_registration = "https://business.genuiny.com/" + sublink
   var current_link = document.getElementById('link')
-  if (current_link){
-    current_link.setAttribute('href', affiliate_registration)}
-  };
+  current_link.setAttribute('href', affiliate_registration)};
+};
+
+
+
 
 
 // produzione link
