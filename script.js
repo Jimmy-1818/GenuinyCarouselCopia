@@ -99,5 +99,8 @@ function button_click(){
 
 window.addEventListener("scroll", function(event){
   var scroll = this.scrollY;
-  console.log(window.pageYOffset - document.getElementById("carouselExampleIndicators-4").getBoundingClientRect().top + 140);
+  var title = document.getElementById("carouselExampleIndicators-4")
+  if(title){
+  console.log(window.pageYOffset - title.getBoundingClientRect().top + 140);
+  }
 });
