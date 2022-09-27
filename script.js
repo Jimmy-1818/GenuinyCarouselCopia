@@ -63,7 +63,7 @@ function process_link(){
   var affiliation_link = document.getElementById("link-to-process").value
   if(affiliation_link.length > 10){
     var variable_affiliation = String(affiliation_link).slice(29)
-    var affiliate_site = "https://jimmy-1818.github.io/HashRouter" + "/#/" + variable_affiliation
+    var affiliate_site = "https://jimmy-1818.github.io/GenuinyCarouselCopia/index.html" + "#/" + variable_affiliation
 
     document.getElementById("processed-link").value = affiliate_site
   }
