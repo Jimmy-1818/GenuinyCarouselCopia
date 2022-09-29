@@ -10,6 +10,8 @@ hamburger.addEventListener("click", function(){
   opacity.classList.toggle("show-opacity")
 });
 
+
+
 // Hide when scrolling up
 let lastSctollY = window.scrollY;
 

@@ -19,22 +19,20 @@ nav.desktop-nav {
   padding: 16px 32px;
   border-bottom: 3px solid var(--primary);
   transition: border-bottom 0s 100ms, top 0.3s 0s; }
-  @media (min-width: 1024px) {
-    nav.desktop-nav {
-      border-bottom: 3px solid var(--primary); } }
-  nav.desktop-nav .container {
+  nav.desktop-nav .container-navbar {
     max-width: 1280px;
     height: 50px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    nav.desktop-nav .container div.logo {
+    nav.desktop-nav .container-navbar div.logo {
       display: flex;
       align-items: center;
       column-gap: 20px; }
-      nav.desktop-nav .container div.logo img {
+      nav.desktop-nav .container-navbar div.logo img {
         width: 55px; }
-      nav.desktop-nav .container div.logo h1 {
+      nav.desktop-nav .container-navbar div.logo h1 {
         color: #fff;
         font-size: 28px;
         font-weight: 900;
@@ -113,8 +111,7 @@ nav.desktop-nav {
   padding-top: 110px;
   background-color: var(--dark);
   border-bottom: 3px solid var(--primary);
-  transition-property: top box-shadow;
-  transition: 0.6s cubic-bezier(0, 0.5, 0.5, 1); }
+  transition: top 0.6s cubic-bezier(0, 0.5, 0.5, 1), box-shadow 0.6s cubic-bezier(0, 0.5, 0.5, 1); }
   @media (min-width: 1024px) {
     .mobile-nav {
       display: none; } }
@@ -160,4 +157,8 @@ nav.border-animation {
 nav.navbar-hide {
   top: -85px; }
 
-/*# sourceMappingURL=provanavbar.css.map */
+@media (min-width: 1024px) {
+  nav.desktop-nav {
+    border-bottom: 3px solid var(--primary); } }
+
+/*# sourceMappingURL=navbar.css.map */

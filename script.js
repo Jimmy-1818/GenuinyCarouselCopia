@@ -22,6 +22,7 @@ const debounce = (fn) => {
   } 
 };
 
+/////////// HIDE NAVBAR ON SCROLL /////////////////
 
 // Reads out the scroll position and stores it in the data attribute
 // so we can use it in our stylesheets
@@ -36,6 +37,7 @@ document.addEventListener('scroll', debounce(storeScroll), { passive: true });
 storeScroll();
 
 
+
 ///////////PER CONDIVISIONE////////////
 
 // SU CARICAMENTO
@@ -48,17 +50,13 @@ if (link.length > 80){
   const sublink = link.slice(66)
   console.log(sublink)
 
-
-
 function change_link(){
   console.log("change_link")
   var affiliate_registration = "https://business.genuiny.com/" + sublink
   var current_link = document.getElementById('link')
   current_link.setAttribute('href', affiliate_registration)};
 };
-
 window.onload = change_link
-
 
 
 
@@ -81,22 +79,9 @@ function process_link(){
 
 
 
+/////////////// PER "PASSARE" SCROLL//////////////
 
-  // prova button classi ecc
-
-button = document.getElementById("button")
-quadrato_prova = document.getElementById("square")
-
-if(button){button.addEventListener("click", button_click)};
-
-function button_click(){
-  quadrato_prova.classList.add("resize")
-  alert("AAAA");
-}
-
-
-
-
+// Track position of single title in relation to top view
 window.addEventListener("scroll", function(event){
   var scroll = this.scrollY;
   var title = document.getElementById("carouselExampleIndicators-4")
