@@ -75,8 +75,7 @@ nav.desktop-nav {
   transform: translate(0px, -2px) rotate(45deg); }
 
 .hamburger.is-active span:nth-child(2) {
-  opacity: 0;
-  transform: translate(15px); }
+  opacity: 0; }
 
 .hamburger.is-active span:nth-child(3) {
   transform: translate(-3px, 3px) rotate(-45deg); }
