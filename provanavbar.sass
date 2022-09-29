@@ -24,8 +24,7 @@ nav.desktop-nav
   background-color: var(--dark)
   padding: 16px 32px
   border-bottom: 3px solid var(--primary)
-  transition-property: border-bottom
-  transition-delay: 100ms
+  transition: border-bottom 0s 100ms, top 1s 0s
   @media (min-width: $breakpoint)
     border-bottom: 3px solid var(--primary)
   .container
@@ -76,19 +75,19 @@ nav.desktop-nav
 
     transition: 0.4s
 
-.hamburger.is-active span
+.hamburger.show span
   background-color: var(--primary)
 
-.hamburger.is-active span:nth-child(1) 
+.hamburger.show span:nth-child(1) 
   transform: translate(0px, -2px) rotate(45deg)
 
-.hamburger.is-active span:nth-child(2)
+.hamburger.show span:nth-child(2)
   opacity: 0
 
-.hamburger.is-active span:nth-child(3)
+.hamburger.show span:nth-child(3)
   transform: translate(-3px, 3px) rotate(-45deg)
 
-.hamburger.is-active:hover span
+.hamburger.show:hover span
   background-color: var(--light)
 
 .menu
@@ -109,7 +108,7 @@ nav.desktop-nav
     padding: 8px 16px
     border-radius: 99px
     font-size: 20px
-  a.is-active, a:hover
+  a.show, a:hover
     background-color: var(--primary)
 
 
@@ -146,7 +145,7 @@ nav.desktop-nav
     background-color: var(--light)
     color: var(--primary)
 
-.is-active-mobile
+.show-mobile
   top: 0
   box-shadow: 0px 5px 65px 25px rgba(0, 0, 0, 0.3) 
 
@@ -154,13 +153,17 @@ nav.border-animation
   border-bottom: transparent
 
 .opacity
+  position: fixed
   width: 100vw
   height: 100vh
   background-color: rgba(0, 0, 0, 0)
   transition: background-color 0.6s
   transition-timing-function: ease-in-out
   z-index: 97
-.is-active-opacity
+.show-opacity
   background-color: rgba(0, 0, 0, 0.4)
   @media (min-width: $breakpoint)
     background-color: rgba(0, 0, 0, 0)
+
+nav.navbar-hide
+  top: -100%
