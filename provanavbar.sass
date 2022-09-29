@@ -1,4 +1,5 @@
 $nav-bar-height: 50px
+$breakpoint: 1024px
 
 \:root
   --primary: #09435E
@@ -25,7 +26,7 @@ nav.desktop-nav
   border-bottom: 3px solid var(--primary)
   transition-property: border-bottom
   transition-delay: 100ms
-  @media (min-width: 1024px)
+  @media (min-width: $breakpoint)
     border-bottom: 3px solid var(--primary)
   .container
     max-width: 1280px
@@ -58,7 +59,7 @@ nav.desktop-nav
   outline: none
   background: none
   cursor: pointer
-  @media (min-width: 1024px)
+  @media (min-width: $breakpoint)
     display: none
   span
     display: block
@@ -94,7 +95,7 @@ nav.desktop-nav
   display: none
   justify-content: flex-end
   margin: 0 -4px
-  @media (min-width: 1024px)
+  @media (min-width: $breakpoint)
     display: flex
     flex-wrap: nowrap
     a
@@ -124,7 +125,7 @@ nav.desktop-nav
   border-bottom: 3px solid var(--primary)
   transition-property: top box-shadow
   transition: 0.6s cubic-bezier(0, 0.5, 0.5, 1)
-  @media (min-width: 1024px)
+  @media (min-width: $breakpoint)
     display: none
   a
     display: block
@@ -161,5 +162,5 @@ nav.border-animation
   z-index: 97
 .is-active-opacity
   background-color: rgba(0, 0, 0, 0.4)
-  @media (min-width: 1024px)
+  @media (min-width: $breakpoint)
     background-color: rgba(0, 0, 0, 0)
