@@ -22,7 +22,7 @@ nav.desktop-nav
   z-index: 99
   background-color: var(--dark)
   padding: 16px 32px
-  @media (min-width: 768px)
+  @media (min-width: 1024px)
     border-bottom: 3px solid var(--primary)
   .container
     max-width: 1280px
@@ -55,7 +55,7 @@ nav.desktop-nav
   outline: none
   background: none
   cursor: pointer
-  @media (min-width: 768px)
+  @media (min-width: 1024px)
     display: none
   span
     display: block
@@ -92,12 +92,15 @@ nav.desktop-nav
 .menu
   display: none
   justify-content: flex-end
-  margin: 0 -16px
-  @media (min-width: 768px)
-    display: block
+  margin: 0 -4px
+  @media (min-width: 1024px)
+    display: flex
+    flex-wrap: nowrap
+    a
+      white-space: nowrap
   a
     color: #fff
-    margin: 0 16px
+    margin: 0 4px
     font-weight: 600
     text-decoration: none
     transition: 0.4s
@@ -119,7 +122,7 @@ nav.desktop-nav
   background-color: var(--dark)
   border-bottom: 3px solid var(--primary)
   transition: top 0.6s cubic-bezier(0, 0.5, 0.5, 1)
-  @media (min-width: 768px)
+  @media (min-width: 1024px)
     display: none
   a
     display: block
