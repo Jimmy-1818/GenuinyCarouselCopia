@@ -67,10 +67,6 @@ nav.desktop-nav {
     transform-origin: 0 0;
     transition: 0.4s; }
 
-.hamburger:hover span:nth-child(2) {
-  transform: translate(10px);
-  background-color: var(--primary); }
-
 .hamburger.is-active span {
   background-color: var(--primary); }
 
