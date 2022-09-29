@@ -18,6 +18,7 @@ window.addEventListener("scroll", () => {
     desktop_nav.classList.add("navbar-hide")
   }else{
     desktop_nav.classList.remove("navbar-hide")
+    console.log(desktop_nav)
   }
   lastSctollY = window.scrollY
 });

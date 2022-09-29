@@ -18,7 +18,7 @@ nav.desktop-nav {
   background-color: var(--dark);
   padding: 16px 32px;
   border-bottom: 3px solid var(--primary);
-  transition: border-bottom 0s 100ms, top 1s 0s; }
+  transition: border-bottom 0s 100ms, top 0.3s 0s; }
   @media (min-width: 1024px) {
     nav.desktop-nav {
       border-bottom: 3px solid var(--primary); } }
@@ -158,6 +158,6 @@ nav.border-animation {
       background-color: rgba(0, 0, 0, 0); } }
 
 nav.navbar-hide {
-  top: -100%; }
+  top: -85px; }
 
 /*# sourceMappingURL=provanavbar.css.map */

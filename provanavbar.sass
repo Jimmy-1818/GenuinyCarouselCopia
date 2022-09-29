@@ -24,7 +24,7 @@ nav.desktop-nav
   background-color: var(--dark)
   padding: 16px 32px
   border-bottom: 3px solid var(--primary)
-  transition: border-bottom 0s 100ms, top 1s 0s
+  transition: border-bottom 0s 100ms, top .3s 0s
   @media (min-width: $breakpoint)
     border-bottom: 3px solid var(--primary)
   .container
@@ -166,4 +166,5 @@ nav.border-animation
     background-color: rgba(0, 0, 0, 0)
 
 nav.navbar-hide
-  top: -100%
+  // Height + padding, margin and border of navbar
+  top: -85px
