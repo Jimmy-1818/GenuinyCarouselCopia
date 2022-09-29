@@ -151,6 +151,7 @@ nav.border-animation
   border-bottom: transparent
 
 .opacity
+  display: none
   position: fixed
   width: 100vw
   height: 100vh
@@ -160,8 +161,10 @@ nav.border-animation
   z-index: 97
 .show-opacity
   background-color: rgba(0, 0, 0, 0.4)
+  display: block
   @media (min-width: $breakpoint)
     background-color: rgba(0, 0, 0, 0)
+    display: none
 
 nav.navbar-hide
   // Height + padding, margin and border of navbar
