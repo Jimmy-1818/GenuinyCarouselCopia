@@ -5,6 +5,7 @@ const opacity = document.getElementsByClassName("opacity")[0]
 
 hamburger.addEventListener("click", function(){
   this.classList.toggle("is-active")
+  desktop_nav.classList.toggle("border-animation")
   menu_mobile.classList.toggle("is-active-mobile")
   opacity.classList.toggle("is-active-opacity")
 });
