@@ -58,6 +58,10 @@ window.addEventListener("scroll", function(event){
       var current_distance = carousel[i].getBoundingClientRect().top - margin_top
       titles.push(Math.abs(Math.round(current_distance)));
     }
-    console.log(Math.min.apply(Math, titles))
+    var nearest_distance = (Math.min.apply(Math, titles))
+    console.log(nearest_distance)
   }
 });
+
+// Show/hide bottom button (& which)
+

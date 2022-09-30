@@ -103,6 +103,7 @@ nav.desktop-nav {
 
 .mobile-nav {
   display: block;
+  overflow-y: auto;
   position: fixed;
   top: -100%;
   left: 0;
@@ -197,6 +198,9 @@ nav.navbar-hide {
   bottom: 50px;
   margin: auto 0 0 auto;
   transition: bottom 0.3s; }
+  @media (min-width: 768px) {
+    .carousel-indicators {
+      display: none; } }
 
 .bottom-btn-hide {
   bottom: -140px; }
