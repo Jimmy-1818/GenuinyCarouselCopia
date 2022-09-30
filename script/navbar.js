@@ -13,6 +13,16 @@ hamburger.addEventListener("click", function(){
   desktop_nav.classList.toggle("border-animation")
   menu_mobile.classList.toggle("show-mobile")
   opacity.classList.toggle("show-opacity")
+  var c = 0
+  if (c == 0){
+    console.log("c == 0")
+    document.getElementsByTagName("body")[0].style.overflow = "scroll" 
+    c = 1
+  }
+  else{
+    document.getElementsByTagName("body")[0].style.overflow = "hidden"
+    c = 0
+  }
 });
 
 
@@ -24,16 +34,19 @@ window.addEventListener("scroll", () => {
 
   if (lastSctollY < window.scrollY && !(menu_mobile.classList.contains("show-mobile"))){
     desktop_nav.classList.add("navbar-hide")
-    bottom_btn.classList.remove("bottom-btn-hide")
-    for (var i = 0; i < bottom_indicators.length; i++) {
-      bottom_indicators[i].classList.remove("bottom-indicators-hide")
+    if (bottom_btn){
+      bottom_btn.classList.remove("bottom-btn-hide")
+      for (var i = 0; i < bottom_indicators.length; i++) {
+        bottom_indicators[i].classList.remove("bottom-indicators-hide")
+      }
     }
-
   }else{
     desktop_nav.classList.remove("navbar-hide")
-    bottom_btn.classList.add("bottom-btn-hide")
-    for (var i = 0; i < bottom_indicators.length; i++) {
-      bottom_indicators[i].classList.add("bottom-indicators-hide")
+    if(bottom_btn){
+      bottom_btn.classList.add("bottom-btn-hide")
+      for (var i = 0; i < bottom_indicators.length; i++) {
+        bottom_indicators[i].classList.add("bottom-indicators-hide")
+      }
     }
   }
   lastSctollY = window.scrollY
