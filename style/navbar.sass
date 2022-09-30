@@ -192,12 +192,12 @@ nav.desktop-nav
   max-height: 100px
   background-color: #c2eeec
   border-radius: 100% 0% 0% 0%
-  transition: bottom 0.5s
+  transition: bottom 0.3s
   @media (min-width: $breakpoint-small)
     display: none
   .next-title
     width: fit-content
-    margin: auto 10px 5px auto
+    margin: auto 15px 5px auto
     justify-content: right 
     position: absolute
     bottom: 0
@@ -212,7 +212,12 @@ nav.desktop-nav
   transform: translate(50%, 50%)
   bottom: 50px
   margin: auto 0 0 auto
+  transition: bottom 0.3s
 
 
 .bottom-btn-hide
   bottom: -140px
+
+.bottom-indicators-hide
+  bottom: -90px
+  // -140 (content shift) -50 (its starting bottom) 

@@ -4,6 +4,7 @@ const desktop_nav = document.getElementsByClassName("desktop-nav")[0]
 const opacity = document.getElementsByClassName("opacity")[0]
 
 const bottom_btn = document.getElementsByClassName("bottom-btn")[0]
+const bottom_indicators = document.getElementsByClassName("carousel-indicators")
 
 
 // Navbar animation
@@ -19,14 +20,21 @@ hamburger.addEventListener("click", function(){
 // Hide/show when scrolling up/down navbar/bottom btn
 let lastSctollY = window.scrollY;
 
-
 window.addEventListener("scroll", () => {
+
   if (lastSctollY < window.scrollY && !(menu_mobile.classList.contains("show-mobile"))){
     desktop_nav.classList.add("navbar-hide")
     bottom_btn.classList.remove("bottom-btn-hide")
+    for (var i = 0; i < bottom_indicators.length; i++) {
+      bottom_indicators[i].classList.remove("bottom-indicators-hide")
+    }
+
   }else{
     desktop_nav.classList.remove("navbar-hide")
     bottom_btn.classList.add("bottom-btn-hide")
+    for (var i = 0; i < bottom_indicators.length; i++) {
+      bottom_indicators[i].classList.add("bottom-indicators-hide")
+    }
   }
   lastSctollY = window.scrollY
 });
