@@ -44,7 +44,9 @@ function process_link(){
 /////////////// PER "PASSARE" SCROLL//////////////
 
 // Track position of nearest title in relation to top view
-window.addEventListener("scroll", function(event){
+window.addEventListener("scroll", on_scroll)
+
+function on_scroll(){
   var carousel = document.getElementsByClassName("carousel")
   var indicators = document.getElementsByClassName("carousel-indicators")
   //margin between title and top page
@@ -81,4 +83,4 @@ window.addEventListener("scroll", function(event){
       }
     }
   }
-});
+};
