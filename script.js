@@ -18,7 +18,7 @@ function change_link(){
   var current_link = document.getElementById('link')
   current_link.setAttribute('href', affiliate_registration)};
 };
-window.onload = change_link
+window.onload = change_link()
 
 
 
@@ -43,7 +43,7 @@ function process_link(){
 
 /////////////// PER "PASSARE" SCROLL//////////////
 
-// Track position of single title in relation to top view
+// Track position of nearest title in relation to top view
 window.addEventListener("scroll", function(event){
   var scroll = this.scrollY;
   var carousel = document.getElementsByClassName("carousel")
