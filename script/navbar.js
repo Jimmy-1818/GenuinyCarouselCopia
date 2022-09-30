@@ -13,16 +13,6 @@ hamburger.addEventListener("click", function(){
   desktop_nav.classList.toggle("border-animation")
   menu_mobile.classList.toggle("show-mobile")
   opacity.classList.toggle("show-opacity")
-  var c = 0
-  if (c == 0){
-    console.log("c == 0")
-    document.getElementsByTagName("body")[0].style.overflow = "scroll" 
-    c = 1
-  }
-  else{
-    document.getElementsByTagName("body")[0].style.overflow = "hidden"
-    c = 0
-  }
 });
 
 
