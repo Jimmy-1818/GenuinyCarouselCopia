@@ -22,21 +22,6 @@ const debounce = (fn) => {
   } 
 };
 
-/////////// HIDE NAVBAR ON SCROLL /////////////////
-
-// Reads out the scroll position and stores it in the data attribute
-// so we can use it in our stylesheets
-const storeScroll = () => {
-  document.documentElement.dataset.scroll = window.scrollY;
-}
-
-// Listen for new scroll events, here we debounce our `storeScroll` function
-document.addEventListener('scroll', debounce(storeScroll), { passive: true });
-
-// Update scroll position for first time
-storeScroll();
-
-
 
 ///////////PER CONDIVISIONE////////////
 
@@ -84,8 +69,17 @@ function process_link(){
 // Track position of single title in relation to top view
 window.addEventListener("scroll", function(event){
   var scroll = this.scrollY;
-  var title = document.getElementById("carouselExampleIndicators-4")
-  if(title){
-  console.log(window.pageYOffset - title.getBoundingClientRect().top + 140);
+  var carousel = document.getElementsByClassName("carousel")
+  var current_carousel = ""
+
+  //margin between title and top page
+  const margin_top = 30
+  
+  if(carousel){
+    var titles = []
+    for (var i = 0; i < carousel.length; i++) {
+      carousel[i].getBoundingClientRect().top - margin_top;
+    }
   }
+  Math.min(titles)
 });
