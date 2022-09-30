@@ -208,6 +208,7 @@ nav.desktop-nav
 
 // Get every indicator group in place to show them in each time
 .carousel-indicators
+  display: none
   width: fit-content
   position: fixed
   z-index: 96
@@ -219,10 +220,18 @@ nav.desktop-nav
   @media (min-width: $breakpoint-small)
     display: none
 
+.display-block
+  display: block
 
 .bottom-btn-hide
   bottom: -140px
 
+.bottom-btn-hide-title
+  bottom: -140px
+
 .bottom-indicators-hide
   bottom: -90px
-  // -140 (content shift) -50 (its starting bottom) 
+  // -140 (content shift) +50 (its starting bottom) 
+
+.bottom-indicators-hide-title
+  bottom: -90px

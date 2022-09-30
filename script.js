@@ -45,23 +45,40 @@ function process_link(){
 
 // Track position of nearest title in relation to top view
 window.addEventListener("scroll", function(event){
-  var scroll = this.scrollY;
   var carousel = document.getElementsByClassName("carousel")
-  var current_carousel = ""
-
+  var indicators = document.getElementsByClassName("carousel-indicators")
   //margin between title and top page
-  const margin_top = 30
+  const margin_top = 50
 
   if(carousel){
     var titles = []
+    var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
     for (var i = 0; i < carousel.length; i++) {
       var current_distance = carousel[i].getBoundingClientRect().top - margin_top
       titles.push(Math.abs(Math.round(current_distance)));
     }
     var nearest_distance = (Math.min.apply(Math, titles))
     console.log(nearest_distance)
+    
+    for (var i = 0; i < indicators.length; i++) {
+      if (nearest_distance < 100){
+        bottom_btn.classList.remove("bottom-btn-hide-title")
+        indicators[i].classList.remove("bottom-indicators-hide-title")
+      }
+      else{
+        bottom_btn.classList.add("bottom-btn-hide-title")
+        indicators[i].classList.add("bottom-indicators-hide-title")  
+      }
+    }
+    // Show just the nearest indicator
+    var current_i = titles.indexOf(nearest_distance)
+    for (var i = 0; i < indicators.length; i++) {
+      if (i == current_i){
+        indicators[i].classList.add("display-block")
+      }
+      else{
+        indicators[i].classList.remove("display-block")
+      }
+    }
   }
 });
-
-// Show/hide bottom button (& which)
-

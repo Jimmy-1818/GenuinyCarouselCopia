@@ -190,6 +190,7 @@ nav.navbar-hide {
     right: 0; }
 
 .carousel-indicators {
+  display: none;
   width: fit-content;
   position: fixed;
   z-index: 96;
@@ -202,10 +203,19 @@ nav.navbar-hide {
     .carousel-indicators {
       display: none; } }
 
+.display-block {
+  display: block; }
+
 .bottom-btn-hide {
   bottom: -140px; }
 
+.bottom-btn-hide-title {
+  bottom: -140px; }
+
 .bottom-indicators-hide {
+  bottom: -90px; }
+
+.bottom-indicators-hide-title {
   bottom: -90px; }
 
 /*# sourceMappingURL=navbar.css.map */
