@@ -164,4 +164,19 @@ nav.navbar-hide {
   nav.desktop-nav {
     border-bottom: 3px solid var(--primary); } }
 
+.bottom-btn {
+  z-index: 96;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 60vw;
+  min-width: 300px;
+  height: 10vh;
+  background-color: #c2eeec;
+  border-radius: 100% 0% 0% 0%; }
+  @media (min-width: 768px) {
+    .bottom-btn {
+      display: none; } }
+
 /*# sourceMappingURL=navbar.css.map */
