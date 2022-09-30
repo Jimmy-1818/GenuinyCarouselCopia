@@ -23,9 +23,9 @@ const debounce = (fn) => {
 };
 
 
-///////////PER CONDIVISIONE////////////
+/////////// FOR SHARING ////////////
 
-// SU CARICAMENTO
+// ON LOADING
 // pick up the current url > variable part
 const link = window.location.href
 
@@ -45,7 +45,7 @@ window.onload = change_link
 
 
 
-// produzione link
+// link production *AGGIUNGI LA CORREZIONI PER CHI INSERISCE IL LINK CON IL MESSAGGIO
 button = document.getElementById("process-link")
 if (button){button.addEventListener("click", process_link)};
 
@@ -74,12 +74,13 @@ window.addEventListener("scroll", function(event){
 
   //margin between title and top page
   const margin_top = 30
-  
+
   if(carousel){
     var titles = []
     for (var i = 0; i < carousel.length; i++) {
-      carousel[i].getBoundingClientRect().top - margin_top;
+      var current_distance = carousel[i].getBoundingClientRect().top - margin_top
+      titles.push(Math.abs(Math.round(current_distance)));
     }
+    console.log(Math.min.apply(Math, titles))
   }
-  Math.min(titles)
 });
