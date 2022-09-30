@@ -189,7 +189,30 @@ nav.desktop-nav
   width: 60vw
   min-width: 300px
   height: 10vh
+  min-height: 60px
   background-color: #c2eeec
   border-radius: 100% 0% 0% 0%
+
+  justify-content: right
+  align-items: bottom
   @media (min-width: $breakpoint-small)
     display: none
+  .next-title
+    width: fit-content
+    margin: auto 10px 5px auto
+    justify-content: right 
+    position: absolute
+    bottom: 0
+    right: 0
+
+// Get every indicator group in place to show them in each time
+.carousel-indicators
+  width: fit-content
+  position: fixed
+  z-index: 98
+  right: 0
+  transform: translate(-50%, -50%)
+  bottom: 21px
+  margin: auto 40px 0 auto
+
+

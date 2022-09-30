@@ -173,10 +173,29 @@ nav.navbar-hide {
   width: 60vw;
   min-width: 300px;
   height: 10vh;
+  min-height: 60px;
   background-color: #c2eeec;
-  border-radius: 100% 0% 0% 0%; }
+  border-radius: 100% 0% 0% 0%;
+  justify-content: right;
+  align-items: bottom; }
   @media (min-width: 768px) {
     .bottom-btn {
       display: none; } }
+  .bottom-btn .next-title {
+    width: fit-content;
+    margin: auto 10px 5px auto;
+    justify-content: right;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+
+.carousel-indicators {
+  width: fit-content;
+  position: fixed;
+  z-index: 98;
+  right: 0;
+  transform: translate(-50%, -50%);
+  bottom: 21px;
+  margin: auto 40px 0 auto; }
 
 /*# sourceMappingURL=navbar.css.map */
