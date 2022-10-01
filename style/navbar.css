@@ -184,16 +184,17 @@ nav.navbar-hide {
       display: none; } }
   .bottom-btn .next-title {
     width: fit-content;
-    justify-content: right;
     position: absolute;
     bottom: 5px;
     right: 50vw;
-    transform: translate(50%); }
+    transform: translate(50%);
+    text-align: center; }
     .bottom-btn .next-title h1 {
       white-space: nowrap; }
   .bottom-btn .arrow img {
     position: absolute;
     width: 14vw;
+    max-width: 72px;
     top: 3px; }
   .bottom-btn .arrow img.right {
     right: 4%; }
@@ -222,10 +223,10 @@ nav.navbar-hide {
     .display-block {
       display: none; } }
 
-.bottom-btn-show {
+.bottom-btn-up {
   bottom: 0px; }
 
-.bottom-indicators-hide {
+.bottom-indicators-down {
   bottom: -90px; }
 
 /*# sourceMappingURL=navbar.css.map */

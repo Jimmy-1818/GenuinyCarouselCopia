@@ -17,15 +17,60 @@ hamburger.addEventListener("click", function(){
 
 
 
-// Hide/show when scrolling up/down navbar/bottom btn
+/////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
+
 let lastSctollY = window.scrollY;
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", on_scroll)
 
+function on_scroll(){
+  var carousel = document.getElementsByClassName("carousel")
+  var indicators = document.getElementsByClassName("carousel-indicators")
+  //margin between title and top page
+  const margin_top = 50
+
+// Track position of nearest title in relation to top view
+  if(carousel){
+    var titles = []
+    var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
+    for (var i = 0; i < carousel.length; i++) {
+      var current_distance = carousel[i].getBoundingClientRect().top - margin_top
+      titles.push(Math.abs(Math.round(current_distance)));
+    }
+    var nearest_distance = (Math.min.apply(Math, titles))
+
+// Hide/show when scrolling up/down navbar/bottom btn
   if (lastSctollY < window.scrollY && !(menu_mobile.classList.contains("show-mobile"))){
     desktop_nav.classList.add("navbar-hide")
-  }else{
+  }else if (nearest_distance > 100){
     desktop_nav.classList.remove("navbar-hide")
   }
   lastSctollY = window.scrollY
-});
+
+
+// When near a title bring up bottom btn and not displayed indicators
+    if (nearest_distance < 100){
+      bottom_btn.classList.add("bottom-btn-up")
+      for (var i = 0; i < indicators.length; i++) {
+        indicators[i].classList.remove("bottom-indicators-down")
+      }
+    }
+    else{
+      bottom_btn.classList.remove("bottom-btn-up")
+      for (var i = 0; i < indicators.length; i++) {
+        indicators[i].classList.add("bottom-indicators-down")  
+      }
+    }
+
+// Show just the nearest indicator
+    var current_i = titles.indexOf(nearest_distance)
+    for (var i = 0; i < indicators.length; i++) {
+      if (i == current_i){
+        indicators[i].classList.add("display-block")
+      }
+      else{
+        indicators[i].classList.remove("display-block")
+      }
+    }
+  }
+};

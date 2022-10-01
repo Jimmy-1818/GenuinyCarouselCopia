@@ -200,16 +200,17 @@ nav.desktop-nav
     display: none
   .next-title
     width: fit-content
-    justify-content: right 
     position: absolute
     bottom: 5px
     right: 50vw
     transform: translate(50%)
+    text-align: center
     h1
       white-space: nowrap
   .arrow img
     position: absolute
     width: 14vw
+    max-width: 72px
     top: 3px
   .arrow img.right
     right: 4%
@@ -239,10 +240,10 @@ nav.desktop-nav
   @media (min-width: $breakpoint-small)
     display: none
 
-.bottom-btn-show
+.bottom-btn-up
   bottom: 0px
 
-.bottom-indicators-hide
+.bottom-indicators-down
   bottom: -90px
   // -140 (content shift) +50 (its starting bottom) 
 
