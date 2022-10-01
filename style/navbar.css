@@ -201,6 +201,9 @@ nav.navbar-hide {
     left: 4%;
     transform: rotate(180deg);
     opacity: 0.5; }
+  .bottom-btn .arrow button {
+    border: none;
+    background: none; }
 
 .carousel-indicators {
   display: none;
