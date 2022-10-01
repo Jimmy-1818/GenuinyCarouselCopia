@@ -33,13 +33,13 @@ function on_scroll(){
 
 // Track position of nearest title in relation to top view
   if(carousel){
-    var titles = []
+    var titles_distances = []
     var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
     for (var i = 0; i < carousel.length; i++) {
       var current_distance = carousel[i].getBoundingClientRect().top - margin_top
-      titles.push(Math.abs(Math.round(current_distance)));
+      titles_distances.push(Math.abs(Math.round(current_distance)));
     }
-    var nearest_distance = (Math.min.apply(Math, titles))
+    var nearest_distance = (Math.min.apply(Math, titles_distances))
 
 // Hide/show when scrolling up/down navbar/bottom btn
   if (lastSctollY < window.scrollY && !(menu_mobile.classList.contains("show-mobile"))){
@@ -71,7 +71,7 @@ function on_scroll(){
     }
 
 // Show just the nearest INDICATOR GROUP & CONTROLS 
-    var current_i = titles.indexOf(nearest_distance)
+    let current_i = titles_distances.indexOf(nearest_distance)
     for (var i = 0; i < indicators.length; i++) {
       if (i == current_i){
         indicators[i].classList.add("display-block")
@@ -86,3 +86,27 @@ function on_scroll(){
     }
   }
 };
+
+
+
+/*
+var titless = $(".carousel-inner > .carousel-item > .module > h1").text()
+var index_titles = [...Array($(".carousel-inner").length).keys()]
+//for (var i = 0;i < index_titles.length; i++) {
+//  index_titles[i].push($(".carousel-inner[i] > .carousel-item > .module > h1").text())
+//}
+console.log(index_titles)
+
+
+var titles_lists = []
+var texts = []
+const carousel_inners = document.getElementsByClassName("carousel-inner")
+for (var i = 0; i < carousel_inners.length; i++) {
+  texts.push(carousel_inners[i].getElementsByClassName("carousel-item").getElementsByTagElement("h1")[0][text])
+  console.log(texts)
+}
+
+//current_i
+*/
+
+
