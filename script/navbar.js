@@ -24,20 +24,8 @@ window.addEventListener("scroll", () => {
 
   if (lastSctollY < window.scrollY && !(menu_mobile.classList.contains("show-mobile"))){
     desktop_nav.classList.add("navbar-hide")
-    if (bottom_btn){
-      bottom_btn.classList.remove("bottom-btn-hide")
-      for (var i = 0; i < bottom_indicators.length; i++) {
-        bottom_indicators[i].classList.remove("bottom-indicators-hide")
-      }
-    }
   }else{
     desktop_nav.classList.remove("navbar-hide")
-    if(bottom_btn){
-      bottom_btn.classList.add("bottom-btn-hide")
-      for (var i = 0; i < bottom_indicators.length; i++) {
-        bottom_indicators[i].classList.add("bottom-indicators-hide")
-      }
-    }
   }
   lastSctollY = window.scrollY
 });

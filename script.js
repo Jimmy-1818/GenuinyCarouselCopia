@@ -41,9 +41,8 @@ function process_link(){
 
 
 
-/////////////// PER "PASSARE" SCROLL//////////////
+/////////////// TO SHOW BOTTOM BTN //////////////
 
-// Track position of nearest title in relation to top view
 window.addEventListener("scroll", on_scroll)
 
 function on_scroll(){
@@ -52,6 +51,7 @@ function on_scroll(){
   //margin between title and top page
   const margin_top = 50
 
+// Track position of nearest title in relation to top view
   if(carousel){
     var titles = []
     var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
@@ -60,19 +60,22 @@ function on_scroll(){
       titles.push(Math.abs(Math.round(current_distance)));
     }
     var nearest_distance = (Math.min.apply(Math, titles))
-    console.log(nearest_distance)
-    
-    for (var i = 0; i < indicators.length; i++) {
-      if (nearest_distance < 100){
-        bottom_btn.classList.remove("bottom-btn-hide-title")
-        indicators[i].classList.remove("bottom-indicators-hide-title")
-      }
-      else{
-        bottom_btn.classList.add("bottom-btn-hide-title")
-        indicators[i].classList.add("bottom-indicators-hide-title")  
+
+// When near a title bring bottom btn and not displayed indicators
+    if (nearest_distance < 100){
+      bottom_btn.classList.add("bottom-btn-show")
+      for (var i = 0; i < indicators.length; i++) {
+        indicators[i].classList.remove("bottom-indicators-hide")
       }
     }
-    // Show just the nearest indicator
+    else{
+      bottom_btn.classList.remove("bottom-btn-show")
+      for (var i = 0; i < indicators.length; i++) {
+        indicators[i].classList.add("bottom-indicators-hide")  
+      }
+    }
+
+// Show just the nearest indicator
     var current_i = titles.indexOf(nearest_distance)
     for (var i = 0; i < indicators.length; i++) {
       if (i == current_i){
