@@ -104,14 +104,14 @@ nav.desktop-nav {
 .mobile-nav {
   display: block;
   position: fixed;
-  top: -100%;
+  top: -400px;
   left: 0;
   z-index: 88;
   width: 100vw;
   padding-top: 110px;
   background-color: var(--dark);
   border-bottom: 3px solid var(--primary);
-  transition: top 0.6s cubic-bezier(0, 0.5, 0.5, 1), box-shadow 0.6s cubic-bezier(0, 0.5, 0.5, 1); }
+  transition: top 0.3s cubic-bezier(0, 0.5, 0.5, 1), box-shadow 0.3s cubic-bezier(0, 0.5, 0.5, 1); }
   @media (orientation: landscape) {
     .mobile-nav {
       overflow-y: auto;
