@@ -104,7 +104,7 @@ nav.desktop-nav {
 .mobile-nav {
   display: block;
   position: fixed;
-  top: -400px;
+  top: -550px;
   left: 0;
   z-index: 88;
   width: 100vw;
