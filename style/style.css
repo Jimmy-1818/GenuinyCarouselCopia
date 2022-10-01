@@ -324,6 +324,9 @@ input.process-line {
   width: 86vw;
   overflow-x: hidden; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 .carousel-blockchain {
   margin-bottom: 20px; }
   .carousel-blockchain .module-1 .module-overflow img {

@@ -6,6 +6,7 @@ const opacity = document.getElementsByClassName("opacity")[0]
 const bottom_btn = document.getElementsByClassName("bottom-btn")[0]
 const control_prev = document.getElementsByClassName("carousel-control-prev")
 const control_next = document.getElementsByClassName("carousel-control-next")
+const module_overflow = document.getElementsByClassName("module-overflow")
 
 
 // Navbar animation
@@ -49,10 +50,11 @@ function on_scroll(){
   lastSctollY = window.scrollY
 
 
-// When near a title bring up BOOTTOM BTN & not displayed INDICATORS & not displayed CONTROLS 
+// When near a title bring up BOOTTOM BTN & not displayed INDICATORS & not displayed CONTROLS & controll SCROLL unlock
     if (nearest_distance < 70){
       bottom_btn.classList.add("bottom-btn-up")
       for (var i = 0; i < indicators.length; i++) {
+        module_overflow[i].classList.remove("overflow-hidden")
         indicators[i].classList.remove("bottom-indicators-down")
         control_prev[i].classList.remove("bottom-control-down")
         control_next[i].classList.remove("bottom-control-down")
@@ -61,6 +63,7 @@ function on_scroll(){
     else{
       bottom_btn.classList.remove("bottom-btn-up")
       for (var i = 0; i < indicators.length; i++) {
+        module_overflow[i].classList.add("overflow-hidden")
         indicators[i].classList.add("bottom-indicators-down")
         control_next[i].classList.add("bottom-control-down")
         control_prev[i].classList.add("bottom-control-down")
