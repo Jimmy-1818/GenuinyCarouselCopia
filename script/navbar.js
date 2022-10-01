@@ -4,7 +4,8 @@ const desktop_nav = document.getElementsByClassName("desktop-nav")[0]
 const opacity = document.getElementsByClassName("opacity")[0]
 
 const bottom_btn = document.getElementsByClassName("bottom-btn")[0]
-const bottom_indicators = document.getElementsByClassName("carousel-indicators")
+const control_prev = document.getElementsByClassName("carousel-control-prev")
+const control_next = document.getElementsByClassName("carousel-control-next")
 
 
 // Navbar animation
@@ -48,28 +49,36 @@ function on_scroll(){
   lastSctollY = window.scrollY
 
 
-// When near a title bring up bottom btn and not displayed indicators
+// When near a title bring up BOOTTOM BTN & not displayed INDICATORS & not displayed CONTROLS 
     if (nearest_distance < 100){
       bottom_btn.classList.add("bottom-btn-up")
       for (var i = 0; i < indicators.length; i++) {
         indicators[i].classList.remove("bottom-indicators-down")
+        control_prev[i].classList.remove("bottom-control-down")
+        control_next[i].classList.remove("bottom-control-down")
       }
     }
     else{
       bottom_btn.classList.remove("bottom-btn-up")
       for (var i = 0; i < indicators.length; i++) {
-        indicators[i].classList.add("bottom-indicators-down")  
+        indicators[i].classList.add("bottom-indicators-down")
+        control_next[i].classList.add("bottom-control-down")
+        control_prev[i].classList.add("bottom-control-down")
       }
     }
 
-// Show just the nearest indicator
+// Show just the nearest INDICATOR GROUP & CONTROLS 
     var current_i = titles.indexOf(nearest_distance)
     for (var i = 0; i < indicators.length; i++) {
       if (i == current_i){
         indicators[i].classList.add("display-block")
+        control_next[i].classList.add("display-block")
+        control_prev[i].classList.add("display-block")
       }
       else{
         indicators[i].classList.remove("display-block")
+        control_next[i].classList.remove("display-block")
+        control_prev[i].classList.remove("display-block")
       }
     }
   }
