@@ -201,10 +201,13 @@ nav.navbar-hide {
   .bottom-btn .arrow img.left {
     left: 4%;
     transform: rotate(180deg);
-    opacity: 0.5; }
+    opacity: 0.3; }
   .bottom-btn .arrow button {
     border: none;
     background: none; }
+
+.bottom-btn-up {
+  bottom: 0px; }
 
 .carousel-indicators {
   display: none;
@@ -223,10 +226,23 @@ nav.navbar-hide {
     .display-block {
       display: none; } }
 
-.bottom-btn-up {
-  bottom: 0px; }
-
 .bottom-indicators-down {
   bottom: -90px; }
+
+.carousel-control-next, .carousel-control-prev {
+  background-color: green;
+  position: fixed;
+  z-index: 90;
+  bottom: 80px;
+  transform: translate(0, 100%);
+  height: 12vw;
+  margin: auto 0 0 auto;
+  width: 14vw; }
+
+.carousel-control-prev {
+  left: 4%; }
+
+.carousel-control-next {
+  right: 4%; }
 
 /*# sourceMappingURL=navbar.css.map */
