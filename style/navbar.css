@@ -190,7 +190,11 @@ nav.navbar-hide {
     transform: translate(50%);
     text-align: center; }
     .bottom-btn .next-title h1 {
-      white-space: nowrap; }
+      white-space: nowrap;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 70vw; }
   .bottom-btn .arrow img {
     position: absolute;
     width: 14vw;

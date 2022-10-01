@@ -43,14 +43,14 @@ function on_scroll(){
 // Hide/show when scrolling up/down navbar/bottom btn
   if (lastSctollY < window.scrollY && !(menu_mobile.classList.contains("show-mobile"))){
     desktop_nav.classList.add("navbar-hide")
-  }else if (nearest_distance > 100){
+  }else if (nearest_distance > 70){
     desktop_nav.classList.remove("navbar-hide")
   }
   lastSctollY = window.scrollY
 
 
 // When near a title bring up BOOTTOM BTN & not displayed INDICATORS & not displayed CONTROLS 
-    if (nearest_distance < 100){
+    if (nearest_distance < 70){
       bottom_btn.classList.add("bottom-btn-up")
       for (var i = 0; i < indicators.length; i++) {
         indicators[i].classList.remove("bottom-indicators-down")
