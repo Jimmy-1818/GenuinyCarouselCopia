@@ -9,6 +9,8 @@ const link = window.location.href
 // change registration link when receiving a personalized url
 if (link.length > 80){
   console.log(link)
+
+  // windows.location.url.length --> x + 4 = e.s. 66
   const sublink = link.slice(66)
   console.log(sublink)
 

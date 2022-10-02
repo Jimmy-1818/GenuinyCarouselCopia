@@ -89,24 +89,18 @@ function on_scroll(){
 
 
 
-/*
-var titless = $(".carousel-inner > .carousel-item > .module > h1").text()
-var index_titles = [...Array($(".carousel-inner").length).keys()]
-//for (var i = 0;i < index_titles.length; i++) {
-//  index_titles[i].push($(".carousel-inner[i] > .carousel-item > .module > h1").text())
-//}
-console.log(index_titles)
+// var titles = $(".carousel-inner > .carousel-item > .module > h1")
+// make titles_text --> list of lists; titles_text [ ["title1", "title2"] ["title1", "title2", "title3"] ]
 
+var titles_text = []
+const titles = $(".carousel-inner > .carousel-item > .module > h1").text()
 
-var titles_lists = []
-var texts = []
-const carousel_inners = document.getElementsByClassName("carousel-inner")
-for (var i = 0; i < carousel_inners.length; i++) {
-  texts.push(carousel_inners[i].getElementsByClassName("carousel-item").getElementsByTagElement("h1")[0][text])
-  console.log(texts)
+for (var i = 0; i < document.getElementsByClassName("carousel-inner").length ;i++) {
+  for (var i2 = 0; i2 < document.getElementsByClassName("carousel-inner")[i].getElementsByClassName("carousel-item").length; i2++) {
+    console.log(i,i2)
+    //console.log(document.querySelector('.carousel-inner:nth-child(1)')):
+    //var content = document.getElementsByClassName("carousel-inner")[i].getElementsByClassName("carousel-item")[i2].getElementsByClassName("module-title")
+    //console.log(content)
+  }
 }
-
-//current_i
-*/
-
 
