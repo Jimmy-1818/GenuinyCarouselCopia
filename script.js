@@ -10,7 +10,7 @@ const link = window.location.href
 if (link.length > 80){
   console.log(link)
 
-  // windows.location.url.length --> x + 4 = e.s. 66
+  // windows.location.url.length --> x + 4 = e.s. 62 + 4 = 66
   const sublink = link.slice(66)
   console.log(sublink)
 
