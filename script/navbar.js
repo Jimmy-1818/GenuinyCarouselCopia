@@ -117,7 +117,6 @@ function on_scroll(){
 };
 
 function control_title(){
-  console.log("control_title")
   var module_title_bottom = document.getElementsByClassName("module-title-bottom")[0]
   var current_i = current_index()[0]
   var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
