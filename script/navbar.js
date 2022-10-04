@@ -29,7 +29,9 @@ for (var i = 0; i < document.getElementsByClassName("carousel-inner").length ;i+
 };
       // console.log(titles_text)
 
-// A function that returns the current carousel index
+
+
+// A function that returns the current carousel index and its distance
 function current_index(){
   //margin between title and top page
   const margin_top = 50
@@ -54,10 +56,14 @@ if(carousel){window.addEventListener("scroll", on_scroll)};
 // Button prev/next
 const carousel_control = document.getElementsByClassName("carousel-control")
 for (var i = 0; i < carousel_control.length; i++) {
-  carousel_control[i].addEventListener("click", control_title)
-}
+  carousel_control[i].addEventListener("click", function(){
+    setTimeout(control_title, 650)
+  });
+};
+
 
 function on_scroll(){
+  control_title()
   var indicators = document.getElementsByClassName("carousel-indicators")
 
   // Track position of nearest title in relation to top view
@@ -80,7 +86,7 @@ function on_scroll(){
     bottom_btn.classList.add("bottom-btn-up")
     for (var i = 0; i < indicators.length; i++) {
       module_overflow[i].classList.remove("overflow-hidden")
-      indicators[i].classList.remove("bottom-indicators-down")
+      indicators[i].classList.add("bottom-indicators-up")
       control_prev[i].classList.remove("bottom-control-down")
       control_next[i].classList.remove("bottom-control-down")
     }
@@ -89,7 +95,7 @@ function on_scroll(){
     bottom_btn.classList.remove("bottom-btn-up")
     for (var i = 0; i < indicators.length; i++) {
       module_overflow[i].classList.add("overflow-hidden")
-      indicators[i].classList.add("bottom-indicators-down")
+      indicators[i].classList.remove("bottom-indicators-up")
       control_next[i].classList.add("bottom-control-down")
       control_prev[i].classList.add("bottom-control-down")
     }
@@ -111,33 +117,26 @@ function on_scroll(){
 };
 
 function control_title(){
+  console.log("control_title")
   var module_title_bottom = document.getElementsByClassName("module-title-bottom")[0]
-  
-//
-//
-//
-
-  if (this.classList.contains("carousel-control-prev")){
-    //module_title_bottom.innerHTML = 
-    next_prev("prev")
-  }
-  else if (this.classList.contains("carousel-control-next")){
-    //module_title_bottom.innerHTML = 
-    next_prev("next")
-  }
-};
-
-
-
-function next_prev(which){
   var current_i = current_index()[0]
-  let second_index = document.getElementsByClassName("carousel-inner")[current_i]
-  console.log(second_index)
+  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].classList.contains("active")){
+      var current_item_index = i
+    }
+  }
 
-  if (which == "prev"){
-    console.log("next")
+  var current_h1 = titles_text[current_i][current_item_index]
+  if (titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]){
+    var next_h1 = titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]
   }
-  else if (which == "next"){
-    console.log("next")
+  else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
+    var next_h1 = titles_text[current_i + 1][0]
   }
+  else{
+    var next_h1 = "Iscriviti" 
+  }
+
+  module_title_bottom.innerHTML = next_h1
 };
