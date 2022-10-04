@@ -63,7 +63,7 @@ if(carousel){window.addEventListener("scroll", on_scroll)};
 const carousel_control = document.getElementsByClassName("carousel-control")
 for (var i = 0; i < carousel_control.length; i++) {
   carousel_control[i].addEventListener("click", function(){
-    setTimeout(control_title, 650)
+    setTimeout(set_next_h1, 650)
   });
 };
 
@@ -71,7 +71,7 @@ for (var i = 0; i < carousel_control.length; i++) {
 const carousel_indicators = document.getElementsByClassName("carousel-indicators")
 for (var i = 0; i < carousel_indicators.length; i++) {
   carousel_indicators[i].addEventListener("click", function(){
-    setTimeout(control_title, 650)
+    setTimeout(set_next_h1, 650)
   });
 };
 
@@ -81,7 +81,7 @@ for (var i = 0; i < carousel_indicators.length; i++) {
 
 function on_scroll(){
   if (carousel.length > 0){
-    control_title()
+    set_next_h1()
   }
   var indicators = document.getElementsByClassName("carousel-indicators")
 
@@ -136,7 +136,7 @@ function on_scroll(){
   }
 };
 
-function control_title(){
+function set_next_h1(){
   var module_title_bottom = document.getElementsByClassName("module-title-bottom")[0]
   var current_i = current_index()[0]
   var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
