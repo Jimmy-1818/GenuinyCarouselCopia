@@ -193,7 +193,9 @@ nav.navbar-hide {
     .bottom-btn .next-title h1 {
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden; }
+      overflow: hidden;
+      font-weight: bold;
+      font-size: 17px; }
   .bottom-btn .arrow {
     position: absolute;
     width: 16vw;
