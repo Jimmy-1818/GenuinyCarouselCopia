@@ -128,6 +128,8 @@ function control_title(){
   var module_title_bottom = document.getElementsByClassName("module-title-bottom")[0]
   var current_i = current_index()[0]
   var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
+  var arrow = document.getElementsByClassName("arrow")[0]
+  
   for (var i = 0; i < items.length; i++) {
     if (items[i].classList.contains("active")){
       var current_item_index = i
@@ -137,12 +139,18 @@ function control_title(){
   var current_h1 = titles_text[current_i][current_item_index]
   if (titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]){
     var next_h1 = titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]
+    arrow.classList.remove("rotate-arrow")
+    arrow.classList.remove("subscribe-image")
   }
   else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
     var next_h1 = titles_text[current_i + 1][0]
+    arrow.classList.add("rotate-arrow")
+    arrow.classList.remove("subscribe-image")
   }
   else{
-    var next_h1 = "Iscriviti" 
+    var next_h1 = "Iscriviti"
+    arrow.classList.remove("rotate-arrow")
+    arrow.classList.add("subscribe-image")
   }
 
   module_title_bottom.innerHTML = next_h1
