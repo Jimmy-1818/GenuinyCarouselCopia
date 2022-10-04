@@ -1,4 +1,4 @@
-const hamburger = document.getElementsByClassName("hamburger")[0]
+const hamburger = document.getElementsByClassName("hamburger")
 const menu_mobile = document.getElementsByClassName("mobile-nav")[0]
 const desktop_nav = document.getElementsByClassName("desktop-nav")[0]
 const opacity = document.getElementsByClassName("opacity")[0]
@@ -10,12 +10,18 @@ const module_overflow = document.getElementsByClassName("module-overflow")
 var carousel = document.getElementsByClassName("carousel")
 
 // Navbar animation
-hamburger.addEventListener("click", function(){
-  this.classList.toggle("show")
+hamburger[0].addEventListener("click", hamburger_click)
+hamburger[1].addEventListener("click", function(){
+  desktop_nav.classList.remove("navbar-hide")
+  hamburger_click()
+});
+
+function hamburger_click(){
+  hamburger[0].classList.toggle("show")
   desktop_nav.classList.toggle("border-animation")
   menu_mobile.classList.toggle("show-mobile")
   opacity.classList.toggle("show-opacity")
-});
+};
 
 // Get a list of lists of titles
 var titles_text = []

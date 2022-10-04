@@ -218,6 +218,13 @@ nav.navbar-hide {
     border: none;
     background: none; }
 
+.bottom-left {
+  top: 32.5px;
+  left: 4%;
+  transform: translate(0, -50%); }
+  .bottom-left span {
+    background-color: var(--dark); }
+
 .bottom-btn-up {
   bottom: 0px; }
 
@@ -244,7 +251,10 @@ nav.navbar-hide {
 .bottom-indicators-up {
   bottom: 45px; }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-prev {
+  display: none; }
+
+.carousel-control-next {
   display: none;
   position: fixed;
   z-index: 90;

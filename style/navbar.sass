@@ -234,6 +234,16 @@ nav.desktop-nav
     border: none
     background: none
 
+
+              //hamburger
+.bottom-left
+  top: 32.5px
+  left: 4%
+  transform: translate(0, -50%)
+  span
+    background-color: var(--dark)
+
+
 .bottom-btn-up
   bottom: 0px
 
@@ -265,9 +275,11 @@ nav.desktop-nav
   // 140 (content shift) -95 (its starting bottom) 
 
 
+.carousel-control-prev
+  display: none
 // Get every control in place to show them one at a time
 
-.carousel-control-next, .carousel-control-prev
+.carousel-control-next, 
   display: none
   position: fixed
   z-index: 90
