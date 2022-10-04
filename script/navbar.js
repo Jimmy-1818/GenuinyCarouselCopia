@@ -119,7 +119,7 @@ function on_scroll(){
 function control_title(){
   var module_title_bottom = document.getElementsByClassName("module-title-bottom")[0]
   var current_i = current_index()[0]
-  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
+  var items = document.getElementsByClassName("carousel-inner")[current_i]..querySelector(".carousel-item")
   for (var i = 0; i < items.length; i++) {
     if (items[i].classList.contains("active")){
       var current_item_index = i
