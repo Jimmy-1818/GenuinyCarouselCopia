@@ -193,10 +193,13 @@ nav.navbar-hide {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden; }
-  .bottom-btn .arrow img {
+  .bottom-btn .arrow {
+    background-color: var(--dark);
     position: absolute;
     width: 14vw;
+    height: 14vw;
     max-width: 72px;
+    max-height: 72px;
     top: 10px; }
   .bottom-btn .arrow img.right {
     right: 4%; }

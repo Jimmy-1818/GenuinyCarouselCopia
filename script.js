@@ -21,6 +21,7 @@ function change_link(){
   var current_link = document.getElementById('link')
   current_link.setAttribute('href', affiliate_registration)};
 };
+
 window.onload = change_link
 
 

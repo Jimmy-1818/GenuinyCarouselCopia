@@ -48,8 +48,6 @@ function current_index(){
 };
 
 
-/////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
-
 let lastSctollY = window.scrollY;
 if(carousel){window.addEventListener("scroll", on_scroll)};
 
@@ -61,6 +59,16 @@ for (var i = 0; i < carousel_control.length; i++) {
   });
 };
 
+const carousel_indicators = document.getElementsByClassName("carousel-indicators")
+for (var i = 0; i < carousel_indicators.length; i++) {
+  carousel_indicators[i].addEventListener("click", function(){
+    setTimeout(control_title, 650)
+  });
+};
+
+
+
+/////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
   control_title()
