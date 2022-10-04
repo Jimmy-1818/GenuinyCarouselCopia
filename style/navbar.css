@@ -14,7 +14,7 @@ nav.desktop-nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 89;
+  z-index: 81;
   background-color: var(--dark);
   padding: 16px 32px;
   border-bottom: 3px solid var(--primary);
@@ -106,7 +106,7 @@ nav.desktop-nav {
   position: fixed;
   top: -550px;
   left: 0;
-  z-index: 88;
+  z-index: 80;
   width: 100vw;
   padding-top: 110px;
   background-color: var(--dark);
@@ -151,7 +151,7 @@ nav.border-animation {
   background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.6s;
   transition-timing-function: ease-in-out;
-  z-index: 87; }
+  z-index: 79; }
 
 .show-opacity {
   background-color: rgba(0, 0, 0, 0.4);
@@ -169,7 +169,7 @@ nav.navbar-hide {
     border-bottom: 3px solid var(--primary); } }
 
 .bottom-btn {
-  z-index: 85;
+  z-index: 71;
   display: block;
   position: fixed;
   bottom: -140px;
@@ -196,7 +196,7 @@ nav.navbar-hide {
       overflow: hidden;
       font-weight: bold;
       font-size: 17px; }
-  .bottom-btn .arrow {
+  .bottom-btn .arrow, .bottom-btn .alternative-next {
     position: absolute;
     width: 16vw;
     height: 16vw;
@@ -210,15 +210,6 @@ nav.navbar-hide {
     background: var(--dark) url("../images/arrow2.png") no-repeat fixed center;
     background-size: 70%;
     background-position: center 15px; }
-  .bottom-btn .arrow img.right {
-    right: 4%; }
-  .bottom-btn .arrow img.left {
-    left: 4%;
-    transform: rotate(180deg);
-    opacity: 0.3; }
-  .bottom-btn .arrow button {
-    border: none;
-    background: none; }
 
 .bottom-left {
   top: 32.5px;
@@ -236,14 +227,11 @@ nav.navbar-hide {
   background-size: 130%;
   background-position: 65% 32%; }
 
-.bottom-btn .rotate-arrow {
-  transform: translate(0, -50%) rotate(180deg); }
-
 .carousel-indicators {
   display: none;
   width: fit-content;
   position: fixed;
-  z-index: 86;
+  z-index: 72;
   right: 50vw;
   transform: translate(50%, 50%);
   bottom: -95px;
@@ -259,7 +247,7 @@ nav.navbar-hide {
 .carousel-control-next {
   display: none;
   position: fixed;
-  z-index: 90;
+  z-index: 73;
   bottom: 65px;
   transform: translate(0, 50%);
   height: 15vw;
@@ -267,6 +255,10 @@ nav.navbar-hide {
   width: 15vw;
   max-width: 72px;
   transition: bottom 0.3s; }
+
+.bottom-btn .alternative-next {
+  z-index: 74;
+  background: none; }
 
 .carousel-control-prev {
   left: 4%; }
@@ -282,5 +274,8 @@ nav.navbar-hide {
   @media (min-width: 768px) {
     .display-block {
       display: none; } }
+
+.bottom-btn .rotate-arrow {
+  transform: translate(0, -50%) rotate(180deg); }
 
 /*# sourceMappingURL=navbar.css.map */

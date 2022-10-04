@@ -4,7 +4,6 @@ const desktop_nav = document.getElementsByClassName("desktop-nav")[0]
 const opacity = document.getElementsByClassName("opacity")[0]
 
 const bottom_btn = document.getElementsByClassName("bottom-btn")[0]
-const control_prev = document.getElementsByClassName("carousel-control-prev")
 const control_next = document.getElementsByClassName("carousel-control-next")
 const module_overflow = document.getElementsByClassName("module-overflow")
 var carousel = document.getElementsByClassName("carousel")
@@ -106,7 +105,6 @@ function on_scroll(){
       for (var i = 0; i < indicators.length; i++) {
         module_overflow[i].classList.remove("overflow-hidden")
         indicators[i].classList.add("bottom-indicators-up")
-        control_prev[i].classList.remove("bottom-control-down")
         control_next[i].classList.remove("bottom-control-down")
       }
     }
@@ -116,7 +114,6 @@ function on_scroll(){
         module_overflow[i].classList.add("overflow-hidden")
         indicators[i].classList.remove("bottom-indicators-up")
         control_next[i].classList.add("bottom-control-down")
-        control_prev[i].classList.add("bottom-control-down")
       }
     }
 
@@ -125,12 +122,10 @@ function on_scroll(){
       if (i == current_i){
         indicators[i].classList.add("display-block")
         control_next[i].classList.add("display-block")
-        control_prev[i].classList.add("display-block")
       }
       else{
         indicators[i].classList.remove("display-block")
         control_next[i].classList.remove("display-block")
-        control_prev[i].classList.remove("display-block")
       }
     }
   }
@@ -141,6 +136,7 @@ function set_next_h1(){
   var current_i = current_index()[0]
   var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
   var arrow = document.getElementsByClassName("arrow")[0]
+  var alternative_next = document.getElementsByClassName("alternative-next")[0]
   
   for (var i = 0; i < items.length; i++) {
     if (items[i].classList.contains("active")){
@@ -151,18 +147,38 @@ function set_next_h1(){
   var current_h1 = titles_text[current_i][current_item_index]
   if (titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]){
     var next_h1 = titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]
+    
     arrow.classList.remove("rotate-arrow")
     arrow.classList.remove("subscribe-image")
+    
+    alternative_next.classList.remove("display-block")
+    alternative_next.classList.remove("rotate-arrow")
+
+    control_next[current_i].classList.add("display-block")
   }
   else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
     var next_h1 = titles_text[current_i + 1][0]
+
     arrow.classList.add("rotate-arrow")
     arrow.classList.remove("subscribe-image")
+
+    
+    alternative_next.classList.add("display-block")
+    alternative_next.classList.add("rotate-arrow")
+
+    control_next[current_i].classList.remove("display-block")
   }
   else{
     var next_h1 = "Iscriviti"
+    
     arrow.classList.remove("rotate-arrow")
     arrow.classList.add("subscribe-image")
+
+
+    alternative_next.classList.remove("display-block")
+    alternative_next.classList.remove("rotate-arrow")
+    
+    control_next[current_i].classList.remove("display-block")
   }
 
   module_title_bottom.innerHTML = next_h1
