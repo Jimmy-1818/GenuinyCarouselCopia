@@ -152,7 +152,6 @@ function set_next_h1(){
     arrow.classList.remove("subscribe-image")
     
     alternative_next.classList.remove("display-block")
-    alternative_next.classList.remove("rotate-arrow")
 
     control_next[current_i].classList.add("display-block")
   }
@@ -164,7 +163,6 @@ function set_next_h1(){
 
     
     alternative_next.classList.add("display-block")
-    alternative_next.classList.add("rotate-arrow")
 
     control_next[current_i].classList.remove("display-block")
   }
@@ -176,10 +174,42 @@ function set_next_h1(){
 
 
     alternative_next.classList.remove("display-block")
-    alternative_next.classList.remove("rotate-arrow")
     
     control_next[current_i].classList.remove("display-block")
   }
 
   module_title_bottom.innerHTML = next_h1
 };
+
+function alternative_next_click(){
+  var inners = document.getElementsByClassName("carousel-inner")
+  var current_i = current_index()[0]
+  console.log(current_i, inners.length)
+  if (current_i < inners.length - 1){
+    var margin_top = 30
+    var scroll_position = inners[current_i + 1].getBoundingClientRect().top + window.scrollY - margin_top
+    window.scrollTo({top: scroll_position, behavior: "smooth"})
+  }
+  else{
+    window.open("subscribe.html", "_self")
+  }
+}
+
+for (var i = 0; i < control_next.length; i++) {
+  control_next[i].addEventListener("click", scroll_fix)
+}
+
+function scroll_fix(){
+  var current_i = current_index()[0]
+  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].classList.contains("active")){
+      var current_item_index = i
+    }
+  }
+  if (current_item_index < items.length - 1)
+    var inners = document.getElementsByClassName("carousel-inner")  
+    var margin_top = 30
+    var scroll_position = inners[current_i].getBoundingClientRect().top + window.scrollY - margin_top
+    window.scrollTo({top: scroll_position})
+}

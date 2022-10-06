@@ -156,7 +156,7 @@ h2.info {
     grid-template-columns: 1fr 2fr minmax(65px,auto) 2fr;
     grid-template-rows: minmax(50px, auto) repeat(9, 30px) minmax(55px, auto);
     width: 100%;
-    border-top: 3px solid #0abbb5;
+    overflow-x: auto;
 }
 
 
@@ -203,6 +203,7 @@ h2.info {
 }
 
 .first-row{
+    border-top: 3px solid #0abab5;
     border-bottom: 1px solid #cbcbcb;
     background-color: #f6f6f6;
     align-content: center;
