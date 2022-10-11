@@ -39,7 +39,7 @@
     right: 20%;
     z-index: 1;
     /**circle***/
-    background: #0abbb5;
+    background: #0abab5;
     border-radius: 50%;
     width: 23px;
     height: 23px;
@@ -100,7 +100,7 @@ h2.info {
 
 .info-number{
     color: #ffffff;
-    background: #0abbb5;
+    background: #0abab5;
     padding: 3px 5px 1px 5px;
     border-radius: 5px;
     display: inline-block;
@@ -201,8 +201,28 @@ h2.info {
     background-color: white;
 }
 
+.table-item:nth-child(1){
+    border-radius: 20px 0 0 0;
+}
+.table-item:nth-child(4){
+    border-radius: 0 20px 0 0;
+}
+.table-item:nth-child(41){
+    border-radius: 0 0 0 20px;
+}
+.table-item:nth-child(44){
+    border-radius: 0 0 20px 0;
+}
+
+.table-item:nth-child(4n+1){
+    border-left: 3px solid #0abab5;
+}
+.table-item:nth-child(4n+4){
+    border-right: 3px solid #0abab5;
+}
+
 .table-multiplier{
-    background-color: #0abbb5 !important;
+    background-color: #0abab5 !important;
     margin: 4px auto;
     width: 20px;
     height: 20px;
@@ -228,7 +248,7 @@ h2.info {
 }
 
 .last-row{
-    border-bottom: 3px solid #0abbb5 !important;
+    border-bottom: 3px solid #0abab5 !important;
     background-color: #f6f6f6;
     align-content: center;
     justify-content: center;
@@ -259,9 +279,9 @@ h2.info {
     height: 42px;
     margin: 0 auto;
     border-radius: 15px 15px 0 0;
-    border-top: 3px solid #0abbb5;
-    border-left: 3px solid #0abbb5;
-    border-right: 3px solid #0abbb5;
+    border-top: 3px solid #0abab5;
+    border-left: 3px solid #0abab5;
+    border-right: 3px solid #0abab5;
     padding: 9px 10px 0 10px;
     font-size: calc(1.325rem + 0.4vw);
     font-weight: bold;
@@ -276,7 +296,7 @@ h2.info {
 .back-on-top{
     position: relative;
     bottom: 200px;
-    border-bottom: 3px solid #5abbb5;
+    border-bottom: 3px solid #5abab5;
     border-top: none;
     border-radius: 0 0 30px 30px;
     min-width: 50px;
@@ -406,7 +426,7 @@ h2.info {
         border-radius: 50%;
         cursor: ew-resize;
         background: black;
-        box-shadow: -405px 0px 0px 400px #0abbb5;
+        box-shadow: -405px 0px 0px 400px #0abab5;
     }
 
 }
