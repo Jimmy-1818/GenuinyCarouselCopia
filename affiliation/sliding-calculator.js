@@ -51,7 +51,7 @@ function reconstruct_branch(){
             higher_not_0 = i 
         }
     }
-    for (let i = 0; i <= higher_not_0; i++){
+    for (let i = 0; i < higher_not_0; i++){
         if (document.getElementsByClassName("input")[i].value == 0){
             document.getElementsByClassName("input")[i].value = 1
         }
