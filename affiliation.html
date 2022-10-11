@@ -124,6 +124,10 @@
 									<span class="two-lines">Premio
 									<span class="second-line">Autentica:</span></span>
 									<span class="autentica_result info-number"></span>
+									<!-- Button trigger modal -->
+									<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-autentica">
+										<img src="images/info-circle.svg" alt="info">
+									</a>
 								</h2>
 								<p>Il premio Autentica viene accreditato <b>una tantum</b> ogni volta che certifichi un utente.<br><a href="#table-autentica">Vedi tabella<a/></p>
 							</div>
@@ -132,140 +136,165 @@
 									<span class="two-lines">Premio
 									<span class="second-line">Rendita:</span></span>
 									<span class="rendita_result info-number"></span>
+									<!-- Button trigger modal -->
+									<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-rendita">
+										<img src="images/info-circle.svg" alt="info">
+									</a>
 								</h2>
 								<p>Il premio Rendita viene accreditato <b>ogni volta</b> che il mercato valorizza le tue filiere di dati (utenti certificati).<br><a href="#table-rendita">Vedi tabella<a/></p>
 							</div>
 
 						</div>
 				</form>
-
-
 			</div>
-				<!----<strong>Preview:</strong><br>
-				<p class="hover-underline-animation">Hover w3resource text to see the effect!</p>--->
 
-			<div class="table-container">
-				<div class="table-title">Premio Autentica</div>
-				<div class="anchor-adjust-tab1" id="table-autentica"></div>
-				<div class="table-grid tables">
-				
-					<div class="table-item first-row">Filiera</div>
-					<div class="table-item first-row">Utenti certificati</div>
-					<div class="table-item first-row">Valore per utente</div>
-					<div class="table-item first-row">Valore per filiera</div>
+			<!-- Modal -->
+			<div class="modal fade" id="modal-autentica" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-body">
+							
+							<div class="table-container">
+								<div class="table-title">Premio Autentica</div>
+								<div class="anchor-adjust-tab1" id="table-autentica"></div>
+								<div class="table-grid tables">
+								
+									<div class="table-item first-row">Filiera</div>
+									<div class="table-item first-row">Utenti certificati</div>
+									<div class="table-item first-row">Valore per utente</div>
+									<div class="table-item first-row">Valore per filiera</div>
 
-					<div class="table-item">1°</div>
-					<div class="table-item"id="tab1_m1"></div>
-					<div class="table-item"><span class="yellow_amount">10 €</span></div>
-					<div class="table-item"id="tab1_p1"></div>
+									<div class="table-item">1°</div>
+									<div class="table-item"id="tab1_m1"></div>
+									<div class="table-item"><span class="yellow_amount">10 €</span></div>
+									<div class="table-item"id="tab1_p1"></div>
 
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab1_m2"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab1_m2"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
 
-					<div class="table-item">2°</div>
-					<div class="table-item"id="tab1_u2"></div>
-					<div class="table-item"><span class="yellow_amount">0,50 €</span></div>
-					<div class="table-item"id="tab1_p2"></div>
+									<div class="table-item">2°</div>
+									<div class="table-item"id="tab1_u2"></div>
+									<div class="table-item"><span class="yellow_amount">0,50 €</span></div>
+									<div class="table-item"id="tab1_p2"></div>
 
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab1_m3"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab1_m3"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
 
-					<div class="table-item">3°</div>
-					<div class="table-item"id="tab1_u3"></div>
-					<div class="table-item"><span class="yellow_amount">1 €</span></div>
-					<div class="table-item"id="tab1_p3"></div>
+									<div class="table-item">3°</div>
+									<div class="table-item"id="tab1_u3"></div>
+									<div class="table-item"><span class="yellow_amount">1 €</span></div>
+									<div class="table-item"id="tab1_p3"></div>
 
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab1_m4"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab1_m4"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
 
-					<div class="table-item">4°</div>
-					<div class="table-item"id="tab1_u4"></div>
-					<div class="table-item"><span class="yellow_amount">1,50 €</span></div>
-					<div class="table-item"id="tab1_p4"></div>
+									<div class="table-item">4°</div>
+									<div class="table-item"id="tab1_u4"></div>
+									<div class="table-item"><span class="yellow_amount">1,50 €</span></div>
+									<div class="table-item"id="tab1_p4"></div>
 
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab1_m5"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab1_m5"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
 
-					<div class="table-item">5°</div>
-					<div class="table-item"id="tab1_u5"></div>
-					<div class="table-item"><span class="yellow_amount">2 €</span></div>
-					<div class="table-item"id="tab1_p5"></div>
+									<div class="table-item">5°</div>
+									<div class="table-item"id="tab1_u5"></div>
+									<div class="table-item"><span class="yellow_amount">2 €</span></div>
+									<div class="table-item"id="tab1_p5"></div>
 
-					<div class="table-item last-row"></div>
-					<div class="table-item last-row">Totale utenti:<br><span id="tab1_u12345"></span></div>
-					<div class="table-item last-row"></div>
-					<div class="table-item last-row">Totale premio:<br><span class="autentica_result"></span><br></div>
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale utenti:<br><span id="tab1_u12345"></span></div>
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale premio:<br><span class="autentica_result"></span><br></div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
 				</div>
-				<div class="table-title back-on-top"><a href="#calculator"><img src="images/up-icon.png" alt="back on top icon"></a></div>
-
-				<div class="table-title" id="table-rendita">Premio Rendita</div>
-				<div class="table-grid tables">
-					<div class="table-item first-row"><span>Filiera</span></div>
-					<div class="table-item first-row"><span>Utenti certificati</span></div>
-					<div class="table-item first-row"><span>Valore per utente</span></div>
-					<div class="table-item first-row"><span>Valore per filiera</span></div>
-
-					<div class="table-item">1°</div>
-					<div class="table-item"id="tab2_m1"></div>
-					<div class="table-item"><span class="yellow_amount">2%</span><span class="monthly"></span></div>
-					<div class="table-item"id="tab2_p1"></div>
-
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab2_m2"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
-
-					<div class="table-item">2°</div>
-					<div class="table-item"id="tab2_u2"></div>
-					<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"></span></div>
-					<div class="table-item"id="tab2_p2"></div>
-
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab2_m3"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
-
-					<div class="table-item">3°</div>
-					<div class="table-item"id="tab2_u3"></div>
-					<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"> </span></div>
-					<div class="table-item"id="tab2_p3"></div>
-
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab2_m4"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
-
-					<div class="table-item">4°</div>
-					<div class="table-item"id="tab2_u4"></div>
-					<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"> </span></div>
-					<div class="table-item"id="tab2_p4"></div>
-
-					<div class="table-item"></div>
-					<div class="table-item"><div class="table-multiplier"id="tab2_m5"></div></div>
-					<div class="table-item"></div>
-					<div class="table-item"></div>
-
-					<div class="table-item">5°</div>
-					<div class="table-item"id="tab2_u5"></div>
-					<div class="table-item"><span class="yellow_amount">2%</span><span class="monthly"></span></div>
-					<div class="table-item"id="tab2_p5"></div>
-
-					<div class="table-item last-row"></div>
-					<div class="table-item last-row">Totale utenti:<br><span id="tab2_u12345"></span></div>
-					<div class="table-item last-row"></div>
-					<div class="table-item last-row">Totale premio:<br><span class="rendita_result"></span><br></div>
-				</div>
-				<div class="table-title back-on-top"><a href="#calculator"><img src="images/up-icon.png" alt="back on top icon"></a></div>
-
 			</div>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="modal-rendita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-body">
+
+							<div class="table-container">
+								<div class="table-title" id="table-rendita">Premio Rendita</div>
+								<div class="table-grid tables">
+									<div class="table-item first-row"><span>Filiera</span></div>
+									<div class="table-item first-row"><span>Utenti certificati</span></div>
+									<div class="table-item first-row"><span>Valore per utente</span></div>
+									<div class="table-item first-row"><span>Valore per filiera</span></div>
+
+									<div class="table-item">1°</div>
+									<div class="table-item"id="tab2_m1"></div>
+									<div class="table-item"><span class="yellow_amount">2%</span><span class="monthly"></span></div>
+									<div class="table-item"id="tab2_p1"></div>
+
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab2_m2"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
+
+									<div class="table-item">2°</div>
+									<div class="table-item"id="tab2_u2"></div>
+									<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"></span></div>
+									<div class="table-item"id="tab2_p2"></div>
+
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab2_m3"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
+
+									<div class="table-item">3°</div>
+									<div class="table-item"id="tab2_u3"></div>
+									<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"> </span></div>
+									<div class="table-item"id="tab2_p3"></div>
+
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab2_m4"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
+
+									<div class="table-item">4°</div>
+									<div class="table-item"id="tab2_u4"></div>
+									<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"> </span></div>
+									<div class="table-item"id="tab2_p4"></div>
+
+									<div class="table-item"></div>
+									<div class="table-item"><div class="table-multiplier"id="tab2_m5"></div></div>
+									<div class="table-item"></div>
+									<div class="table-item"></div>
+
+									<div class="table-item">5°</div>
+									<div class="table-item"id="tab2_u5"></div>
+									<div class="table-item"><span class="yellow_amount">2%</span><span class="monthly"></span></div>
+									<div class="table-item"id="tab2_p5"></div>
+
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale utenti:<br><span id="tab2_u12345"></span></div>
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale premio:<br><span class="rendita_result"></span><br></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
 
 		</main>
 

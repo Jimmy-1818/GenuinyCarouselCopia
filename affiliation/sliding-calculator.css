@@ -164,6 +164,7 @@ h2.info {
     align-content: center;  /**va per il  verticale di tutti**/
     text-align: center; /**va per l'orizzontale di tutti**/
     line-height: 30px;
+    border: none;
 }
 
 .table-item:nth-child(8n+9){
@@ -185,6 +186,20 @@ h2.info {
     background-color: #f6f6f6;
     border-top: 1px solid #cbcbcb;
     border-bottom: 1px solid #cbcbcb;
+}
+
+
+.table-item:nth-child(8n+5){
+    background-color: white;
+}
+.table-item:nth-child(8n+6){
+    background-color: white;
+}
+.table-item:nth-child(8n+7){
+    background-color: white;
+}
+.table-item:nth-child(8n+8){
+    background-color: white;
 }
 
 .table-multiplier{
@@ -254,10 +269,10 @@ h2.info {
 }
 
 
-
+/*
 .table-title:first-of-type{
     margin-top: 200px;
-}
+}*/
 
 .back-on-top{
     position: relative;
