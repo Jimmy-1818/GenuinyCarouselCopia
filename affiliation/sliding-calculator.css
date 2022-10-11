@@ -164,7 +164,6 @@ h2.info {
     align-content: center;  /**va per il  verticale di tutti**/
     text-align: center; /**va per l'orizzontale di tutti**/
     line-height: 30px;
-    border: none;
 }
 
 .table-item:nth-child(8n+9){
