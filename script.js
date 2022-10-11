@@ -1,5 +1,11 @@
 
 
+
+sessionStorage.setItem("URL", window.location)
+var data = sessionStorage.getItem("URL")
+setTimeout(change_link, 3000)
+
+
 /////////// FOR SHARING ////////////
 
 // ON LOADING
@@ -20,6 +26,7 @@ function change_link(){
   var affiliate_registration = "https://business.genuiny.com/" + sublink
   var current_link = document.getElementById('link')
   current_link.setAttribute('href', affiliate_registration)};
+  console.log(data)
 };
 
 window.onload = change_link
@@ -39,6 +46,6 @@ function process_link(){
     document.getElementById("processed-link").value = affiliate_site
   }
   else{
-    alert("inserire il link come da passo 1")
+    alert('Incolla il link che ottieni nell\'app da "condividi app".')
   }
 };

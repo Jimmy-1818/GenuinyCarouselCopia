@@ -42,8 +42,8 @@
 
 					<div class="menu">
 						<a href="index.html">HOME</a>
-						<a href="subscribe.html">ISCRIVITI</a>
-						<a href="affiliation.html">AFFILIAZIONI</a>
+						<a href="subscribe.html">REGISTRATI</a>
+						<a href="affiliation.html">POTENZIALE DIGITALE</a>
 						<a class="show" href="share.html">CONDIVIDI APP</a>
 						<a href="#">ALTRO</a>
 					</div>
@@ -57,8 +57,8 @@
 			</nav>
 			<nav class="mobile-nav">
 				<a href="index.html">HOME</a>
-				<a href="subscribe.html">ISCRIVITI</a>
-				<a href="affiliation.html">AFFILIAZIONI</a>
+				<a href="subscribe.html">REGISTRATI</a>
+				<a href="affiliation.html">POTENZIALE DIGITALE</a>
 				<a href="share.html">CONDIVIDI APP</a>
 				<a href="#">ALTRO</a>
 			</nav>
@@ -66,37 +66,58 @@
 		</div>
 	</header>
 	<main class="container">
-		<h1 class="title title-subscribe">Per condividere l'app puoi utilizzare i seguenti metodi:</h1>
+		<h1 class="title title-subscribe">Incrementa il tuo patrimonio digitale condividendo l'app.</h1>
 
 		<div class="share-box">
-			<h2>Condividi il link affiliato</h2>
+			<h2>Condividi app</h2>
 			<div class="content-box">
-				<p>Una volta iscritto, puoi seguire i passaggi per condividere il tuo link di registrazione. (-Iscriviti-)</p>
-				<ol>
-					<li>All'interno dell'app apri il menù laterale, poi clicca "Condividi App".</li>
-					<li>Invia il link ai tuoi contatti o copialo per i passaggi seguenti.</li> 
-				</ol>
+				<p>All'interno dell'app apri il menù in alto a sinistra e clicca "Condividi App".</p>
+
+				<!-- Button trigger modal -->
+				<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#share-from-app">
+				  video tutorial
+				</a>
+
 			</div>
 		</div>
 
 		<div class="share-box">
-			<h2>Condividi il sito affiliato</h2>
+			<h2>Condividi sito</h2>
 			<div class="content-box">
-				<p>Inserisci il link affiliato nel riquadro sottostante e clicca sul tasto. <br>Otterrai un link che manda l'utente a questo sito e lo fa iscrivere nella tuo filiera.</p>
+				<p>Inserisci il codice del tuo referral link nel riquadro sottostante e clicca sul tasto. <br>Automaticamente otterrai un link che darà la possibilità ad un nuovo utente di registrarsi nella tua filiera direttamente dal sito.</p>
 				<div class="process-lines">
-					<input class="process-line" id="link-to-process" type="text" name="affiliate-link">
+					<input class="process-line" id="link-to-process" type="text" name="affiliate-link" placeholder=" Inserisci il referral link">
 					<button class="process-line" id="process-link" height="20px"><img class="arrow" src="images/arrow.png"></button>
-					<input class="process-line" id="processed-link" type="text" name="affiliate-link">
+					<input class="process-line" readonly="true" id="processed-link" type="text" name="affiliate-link">
 				</div>
 			</div>
 		</div>
 
 		<div class="share-box">
-			<h2>Condividi Genuiny sui social</h2>
+			<h2>Condividi su Instagram</h2>
 			<div class="content-box">
-				<p>Puoi utilizzare i social per espandere la tua filiera, postando questo video ed aggiungendo il link al sito affiliato.<br>-vedi istruzioni- -Scarica video-</p>
+				<p>Puoi condividere il sito (con il tuo referral link) tramite Instagram, postando questo video ed aggiungendo nello spazio apposito il link al sito (generato sopra).<br>-video tutorial-</p>
 				<div class="video-invite">
 					<video controls width="250px" src="videos/genuiny-social.mp4"></video>
+				</div>
+				<p>-Scarica video-</p>
+			</div>
+		</div>
+
+
+
+
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="share-from-app" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video width="100%" height="100%" preload="auto" controls autoplay muted>
+							<source src="videos/share-from-app.mp4" type="">
+						</video>
+					</div>
 				</div>
 			</div>
 		</div>

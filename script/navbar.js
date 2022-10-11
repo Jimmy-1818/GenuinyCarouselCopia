@@ -6,7 +6,9 @@ const opacity = document.getElementsByClassName("opacity")[0]
 const bottom_btn = document.getElementsByClassName("bottom-btn")[0]
 const control_next = document.getElementsByClassName("carousel-control-next")
 const module_overflow = document.getElementsByClassName("module-overflow")
-var carousel = document.getElementsByClassName("carousel")
+const carousel = document.getElementsByClassName("carousel")
+const indicators = document.getElementsByClassName("carousel-indicators")
+
 
 // Navbar animation
 hamburger[0].addEventListener("click", hamburger_click)
@@ -34,8 +36,6 @@ for (var i = 0; i < document.getElementsByClassName("carousel-inner").length ;i+
   };
   titles_text.push(current_titles)
 };
-      // console.log(titles_text)
-
 
 
 // A function that returns the current carousel index and its distance
@@ -75,14 +75,13 @@ for (var i = 0; i < carousel_indicators.length; i++) {
 };
 
 
-
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
   if (carousel.length > 0){
+    end_page_carousel()
     set_next_h1()
   }
-  var indicators = document.getElementsByClassName("carousel-indicators")
 
   // Track position of nearest title in relation to top view
   var current_i = current_index()[0]
@@ -90,7 +89,7 @@ function on_scroll(){
   var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
 
   // Hide/show when scrolling up/down navbar/bottom btn
-  if (lastSctollY < window.scrollY && !(menu_mobile.classList.contains("show-mobile"))){
+  if ((lastSctollY < window.scrollY || nearest_distance < 70) && !(menu_mobile.classList.contains("show-mobile"))) {
     desktop_nav.classList.add("navbar-hide")
   }else if (nearest_distance > 70){
     desktop_nav.classList.remove("navbar-hide")
@@ -121,7 +120,9 @@ function on_scroll(){
     for (var i = 0; i < indicators.length; i++) {
       if (i == current_i){
         indicators[i].classList.add("display-block")
-        control_next[i].classList.add("display-block")
+        if (!(end_page_carousel()["last_in_items"])){
+          control_next[i].classList.add("display-block")
+        }
       }
       else{
         indicators[i].classList.remove("display-block")
@@ -130,6 +131,9 @@ function on_scroll(){
     }
   }
 };
+
+
+
 
 function set_next_h1(){
   var module_title_bottom = document.getElementsByClassName("module-title-bottom")[0]
@@ -145,25 +149,20 @@ function set_next_h1(){
   }
 
   var current_h1 = titles_text[current_i][current_item_index]
-  if (titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]){
+  if (!(end_page_carousel()["last_in_items"])){
     var next_h1 = titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]
     
     arrow.classList.remove("rotate-arrow")
     arrow.classList.remove("subscribe-image")
-    
     alternative_next.classList.remove("display-block")
-
     control_next[current_i].classList.add("display-block")
   }
   else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
-    var next_h1 = titles_text[current_i + 1][0]
+    var next_h1 = titles_text[current_i + 1][0] //*********
 
     arrow.classList.add("rotate-arrow")
     arrow.classList.remove("subscribe-image")
-
-    
     alternative_next.classList.add("display-block")
-
     control_next[current_i].classList.remove("display-block")
   }
   else{
@@ -171,20 +170,21 @@ function set_next_h1(){
     
     arrow.classList.remove("rotate-arrow")
     arrow.classList.add("subscribe-image")
-
-
     alternative_next.classList.remove("display-block")
-    
     control_next[current_i].classList.remove("display-block")
   }
 
   module_title_bottom.innerHTML = next_h1
 };
 
+
+
+
+
+
 function alternative_next_click(){
   var inners = document.getElementsByClassName("carousel-inner")
   var current_i = current_index()[0]
-  console.log(current_i, inners.length)
   if (current_i < inners.length - 1){
     var margin_top = 30
     var scroll_position = inners[current_i + 1].getBoundingClientRect().top + window.scrollY - margin_top
@@ -195,8 +195,15 @@ function alternative_next_click(){
   }
 }
 
+
+
+
+
 for (var i = 0; i < control_next.length; i++) {
   control_next[i].addEventListener("click", scroll_fix)
+}
+for (var i = 0; i < indicators.length; i++) {
+  indicators[i].addEventListener("click", scroll_fix) //**********
 }
 
 function scroll_fix(){
@@ -207,9 +214,39 @@ function scroll_fix(){
       var current_item_index = i
     }
   }
-  if (current_item_index < items.length - 1)
+  if (current_item_index < (items.length - 1) || this.classList.contains("carousel-indicators")){
     var inners = document.getElementsByClassName("carousel-inner")  
     var margin_top = 30
     var scroll_position = inners[current_i].getBoundingClientRect().top + window.scrollY - margin_top
     window.scrollTo({top: scroll_position})
+  }
+}
+
+
+
+
+function end_page_carousel(next = "current"){
+  var result = {last_in_page: false, last_in_items: false}
+
+  if (next == "next"){var reach = 1} else {var reach = 0}
+  var current_i = current_index()[0]
+  
+  if (current_i == carousel.length - 1 - reach){
+    result["last_in_page"] = true
+  }else{
+    result["last_in_page"] = false
+  }
+
+
+  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
+  for (var i = 0; i < items.length; i++) {if (items[i].classList.contains("active")){
+      var current_item_index = i}}
+  
+  if (current_item_index == items.length - 1 - reach){
+    result["last_in_items"] = true
+  }else{
+    result["last_in_items"] = false
+  }
+
+  return result
 }
