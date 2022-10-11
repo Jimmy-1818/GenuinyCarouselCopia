@@ -242,11 +242,13 @@ ul.subscribe-steps
 
 
 .modal-table .modal-body
-	width: 80vw
+	width: 100vw
 	position: absolute
-	transform: translate(-50%, -50%)
+	transform: translate(-50%, -100%)
 	left: 50%
-	top: 0px
+	top: 120px
+	@media (min-width: $layout-breakpoint-small)
+		width: 80vw
 
 .modal-trigger
 	background: white
