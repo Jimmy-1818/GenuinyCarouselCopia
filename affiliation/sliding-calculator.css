@@ -230,7 +230,7 @@ h2.info {
     font-size: 60%;
     color: white;
     align-content: center;
-    line-height: 1.8; 
+    line-height: 1.8;
     box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 50%);
     font-size: 1.18rem;
     font-weight: bold;
@@ -337,7 +337,7 @@ h2.info {
 
 .table-container{
     margin: 0 auto;
-    width: 95vw;
+    width: 80vw;
     max-width: 1200px;
 }
 
