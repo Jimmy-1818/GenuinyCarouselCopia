@@ -1,6 +1,4 @@
 
-
-
 sessionStorage.setItem("URL", window.location)
 var data = sessionStorage.getItem("URL")
 setTimeout(change_link, 3000)
@@ -46,6 +44,6 @@ function process_link(){
     document.getElementById("processed-link").value = affiliate_site
   }
   else{
-    alert('Incolla prima il link che ottieni nell\'app da "condividi app".')
+    alert('Incolla prima il referral link, che ottieni nell\'app da "condividi app".')
   }
 };
