@@ -231,7 +231,8 @@ ul.subscribe-steps {
   position: absolute;
   transform: translate(-50%, 0%);
   left: 50%;
-  top: -250px; }
+  top: -250px;
+  max-height: 420px; }
   @media (min-width: 480px) {
     .modal-table .modal-body {
       width: 80vw; } }
@@ -245,7 +246,7 @@ ul.subscribe-steps {
 
 .modal-body {
   height: 75vh;
-  max-height: 420px;
+  max-height: 800px;
   padding: 0;
   margin: 0; }
 
