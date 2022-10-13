@@ -25,12 +25,11 @@ if (document.getElementsByClassName("subscribe-steps").length > 0){
 // LINK PRODUCTION *AGGIUNGI LA CORREZIONI PER CHI INSERISCE IL LINK CON IL MESSAGGIO
 if (document.getElementById("process-link")){
   document.getElementById("process-link").addEventListener("click", generate_link)
-  document.getElementById("process-link").addEventListener("submit", generate_link)
+  document.getElementById("link-to-process").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    generate_link()
+  }});
 
-  
-var link_input = document.getElementById("link-to-process")
-//link_input.addEventListener("")
-};
 
 function generate_link(){
   var affiliation_link = String(document.getElementById("link-to-process").value)
