@@ -40,7 +40,7 @@ function generate_link(){
     document.getElementById("processed-link").value = affiliate_site
   }
   else if (affiliation_link.length > 10){
-    alert('Link non valido. Incolla il referral link ,che ottieni nell\'app da "condividi app".')
+    alert('Link non valido. Incolla il referral link, che ottieni nell\'app da "condividi app".')
   }
   else {
     alert('Incolla prima il referral link, che ottieni nell\'app da "condividi app".')
