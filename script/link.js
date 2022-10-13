@@ -4,14 +4,11 @@
 // Set session link
 if (sessionStorage.getItem("URL") == null){
   sessionStorage.setItem("URL", window.location.href)
-  console.log("URL copied!")
 }
 
 // If in subscribe.html
 if (document.getElementsByClassName("subscribe-steps").length > 0){
-  console.log("in subscribe")
   if(sessionStorage.getItem("URL").includes("#")){
-    console.log("# found")
     var index = sessionStorage.getItem("URL").indexOf("#")
     var sublink = sessionStorage.getItem("URL").slice(index + 1)
     var affiliate_registration = "https://business.genuiny.com/" + sublink
