@@ -26,9 +26,9 @@ if (document.getElementsByClassName("subscribe-steps").length > 0){
 if (document.getElementById("process-link")){
   document.getElementById("process-link").addEventListener("click", generate_link)
   document.getElementById("link-to-process").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-      generate_link()
-    }
+  if (event.key === "Enter") {
+    generate_link()
+  }
   })
 };
 
