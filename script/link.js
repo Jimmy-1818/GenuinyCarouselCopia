@@ -1,41 +1,38 @@
 
-sessionStorage.setItem("URL", window.location)
-var data = sessionStorage.getItem("URL")
-setTimeout(change_link, 3000)
+// ON LOADING (FIRST from index.html)
+
+// Set session link
+if (sessionStorage.getItem("URL") == null){
+  sessionStorage.setItem("URL", window.location.href)
+  console.log("URL copied!")
+}
+
+// If in subscribe.html
+if (document.getElementsByClassName("subscribe-steps").length > 0){
+  console.log("in subscribe")
+  if(sessionStorage.getItem("URL").includes("#")){
+    console.log("# found")
+    var index = sessionStorage.getItem("URL").indexOf("#")
+    var sublink = sessionStorage.getItem("URL").slice(index + 1)
+    var affiliate_registration = "https://business.genuiny.com/" + sublink
+    if (document.getElementById("link")){
+      var subscribe_button = document.getElementById('link')
+      subscribe_button.setAttribute('href', affiliate_registration)
+    }
+  }
+}
 
 
-/////////// FOR SHARING ////////////
 
-// ON LOADING
-// pick up the current url > variable part
-const link = window.location.href
 
-// change registration link when receiving a personalized url
-                  // windows.location.url.length + 10
-if (link.length > 80){
-  console.log(link)
-
-                          // windows.location.url.length + 4 = e.s. 62 + 4 = 66
-  const sublink = link.slice(66)
-  console.log(sublink)
-
-function change_link(){
-  console.log("change_link")
-  var affiliate_registration = "https://business.genuiny.com/" + sublink
-  var current_link = document.getElementById('link')
-  current_link.setAttribute('href', affiliate_registration)};
-  console.log(data)
+// LINK PRODUCTION *AGGIUNGI LA CORREZIONI PER CHI INSERISCE IL LINK CON IL MESSAGGIO
+button = document.getElementById("process-link")
+if (button){button.addEventListener("click", generate_link)
+  var link_input = document.getElementById("link-to-process")
+  //link_input.addEventListener("")
 };
 
-window.onload = change_link
-
-
-
-// link production *AGGIUNGI LA CORREZIONI PER CHI INSERISCE IL LINK CON IL MESSAGGIO
-button = document.getElementById("process-link")
-if (button){button.addEventListener("click", process_link)};
-
-function process_link(){
+function generate_link(){
   var affiliation_link = document.getElementById("link-to-process").value
   if(affiliation_link.length > 10){
     var variable_affiliation = String(affiliation_link).slice(29)
