@@ -1,4 +1,3 @@
-
 // ON LOADING (FIRST from index.html)
 
 // Set session link
@@ -6,16 +5,28 @@ if (sessionStorage.getItem("URL") == null){
   sessionStorage.setItem("URL", window.location.href)
 }
 
-// If in subscribe.html
-if (document.getElementsByClassName("subscribe-steps").length > 0){
-  if(sessionStorage.getItem("URL").includes("#")){
-    var index = sessionStorage.getItem("URL").indexOf("#")
-    var sublink = sessionStorage.getItem("URL").slice(index + 1)
-    var affiliate_registration = "https://business.genuiny.com/" + sublink
-    if (document.getElementById("link")){
-      var subscribe_button = document.getElementById('link')
-      subscribe_button.setAttribute('href', affiliate_registration)
-    }
+
+
+// If a personalized link is relevated
+if(sessionStorage.getItem("URL").includes("#")){
+  
+  var index = sessionStorage.getItem("URL").indexOf("#")
+  var varibale_affiliation = sessionStorage.getItem("URL").slice(index + 1)
+  var affiliate_registration = "https://business.genuiny.com/" + varibale_affiliation    
+
+  // Keep #variable in pages's url (to pass it even if session is broken and url hash lost)
+  const page_links = document.getElementsByClassName("page-link")
+  console.log(page_links.length)
+  for (var i = 0; i < page_links.length; i++) {
+    var new_link = page_links[i].href + "#" + varibale_affiliation
+    page_links[i].setAttribute("href", new_link)
+    console.log(page_links[i].href)
+  }
+  
+  // In subscribe
+  if (document.getElementById("link")){
+    var subscribe_button = document.getElementById('link')
+    subscribe_button.setAttribute('href', affiliate_registration)
   }
 }
 
