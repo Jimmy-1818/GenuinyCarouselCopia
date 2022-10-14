@@ -10,12 +10,10 @@ $layout-breakpoint-small: 480px
 
 
 body, .navbar-brand
-	box-sizing: border-box
 	font-family: Helvetica, Opens-sans, sans-serif
 	font-size: 1.8rem
 
 body, .navbar-brand, p
-	box-sizing: border-box
 	margin: 0
 	padding: 0
 
@@ -252,15 +250,25 @@ ul.subscribe-steps
 	background-color: transparent
 	border: none
 
-/**** INVITE ****/
+/**** SHARE ****/
+
+#process-link, #copy-link
+	height: 30px
+	width: 30px
+	border-radius: 15px
+	border: none
+
+	background-color: $genuinyCol
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 19px
 
 #process-link
-	height: 20px
-	///border: 3px solid darkgrey
-	border: none
-	border-radius: 3px
+	background-image: url("../images/arrow.png")
 	box-sizing: border-box
-	background-color: #0abab5
+
+#copy-link
+	background-image: url("../images/copy-w.png")
 
 img.arrow
 	width:  15px
@@ -310,6 +318,8 @@ input.process-line
 		width: 80vw
 		border: 4px solid #0abab5
 		max-width: 250px
+
+
 
 /**** CAROUSEL ****/
 

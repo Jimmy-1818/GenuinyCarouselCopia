@@ -6,7 +6,7 @@ if (window.location.href.includes("#")){
 }
 
 
-// If a personalized link is relevated and we're i
+// If a personalized link is relevated and we're in subscribe CHANGE LINK
 if (!(localStorage.getItem("href") == null) && !(document.getElementById("link") == null)){
   var index = localStorage.getItem("href").indexOf("#")
   var varibale_affiliation = localStorage.getItem("href").slice(index + 1)
@@ -22,11 +22,11 @@ if (!(localStorage.getItem("href") == null) && !(document.getElementById("link")
 if (document.getElementById("process-link")){
   document.getElementById("process-link").addEventListener("click", generate_link)
   document.getElementById("link-to-process").addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
-    generate_link()
-  }
-  })
-};
+    if (event.key === "Enter") {
+      generate_link()
+    }
+  });
+}
 
 function generate_link(){
   var affiliation_link = String(document.getElementById("link-to-process").value)
@@ -34,7 +34,6 @@ function generate_link(){
     var link_index = affiliation_link.indexOf("https://business.genuiny.com/")
     var variable_affiliation = affiliation_link.slice(link_index + 57)
     var affiliate_site = "https://jimmy-1818.github.io/GenuinyCarouselCopia/index.html" + "#" + variable_affiliation
-
     document.getElementById("processed-link").value = affiliate_site
   }
   else if (affiliation_link.length > 0){
@@ -43,4 +42,12 @@ function generate_link(){
   else {
     alert('Incolla prima il referral link, che ottieni nell\'app da "condividi app".')
   }
+};
+
+if (document.getElementById("copy-link")){
+  document.getElementById("copy-link").addEventListener("click", copy_link)
+}
+function copy_link(){
+  navigator.clipboard.writeText(document.getElementById("processed-link").value)
+  alert("Copiato negli appunti")
 };

@@ -5,12 +5,10 @@
   font-family: Helvetica; }
 
 body, .navbar-brand {
-  box-sizing: border-box;
   font-family: Helvetica, Opens-sans, sans-serif;
   font-size: 1.8rem; }
 
 body, .navbar-brand, p {
-  box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
@@ -239,13 +237,23 @@ ul.subscribe-steps {
   background-color: transparent;
   border: none; }
 
-/**** INVITE *** */
-#process-link {
-  height: 20px;
+/**** SHARE *** */
+#process-link, #copy-link {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
   border: none;
-  border-radius: 3px;
-  box-sizing: border-box;
-  background-color: #0abab5; }
+  background-color: #0abab5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 19px; }
+
+#process-link {
+  background-image: url("../images/arrow.png");
+  box-sizing: border-box; }
+
+#copy-link {
+  background-image: url("../images/copy-w.png"); }
 
 img.arrow {
   width: 15px; }
