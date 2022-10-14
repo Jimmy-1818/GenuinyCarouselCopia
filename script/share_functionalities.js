@@ -19,8 +19,3 @@ if (document.getElementById("copy-link")){
 new ClipboardJS("#btn1");
 document.querySelector("#copy-link").addEventListener("click", () => 
   document.querySelector("#processed-link").dataset.clipboardText = Math.random());
-
-
-function leave_video(){
-  alert("video leaved")
-}
