@@ -8,7 +8,6 @@ else if (localStorage.getItem("href") == null){
   localStorage.setItem("href", window.location.href)
 }
 
-
 // If a personalized link is relevated
 if(localStorage.getItem("href").includes("#")){
   
@@ -17,7 +16,7 @@ if(localStorage.getItem("href").includes("#")){
   var affiliate_registration = "https://business.genuiny.com/register/index?referralCode=" + varibale_affiliation    
   
   // In subscribe
-  if (document.getElementById("link")){
+  if (!(document.getElementById("link") == null)){
     var subscribe_button = document.getElementById('link')
     subscribe_button.setAttribute('href', affiliate_registration)
   }
