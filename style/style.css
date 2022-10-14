@@ -86,6 +86,9 @@ video.milena-spiega {
   margin-top: 20px;
   border-radius: 10px; }
 
+video.border-none {
+  border: none; }
+
 .side-content {
   width: 40%;
   height: 100%;

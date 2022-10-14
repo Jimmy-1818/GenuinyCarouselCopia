@@ -1,11 +1,7 @@
 
 function onFullScreen() {
-  var isFullscreenNow = document.webkitFullscreenElement !== null
-  if (isFullscreenNow){
-    this.style.border = "none"
-  }
-  else if (!(isFullscreenNow))
-    this.style.border = "5px solid #09435e"
+  console.log(this.classList)
+  this.classList.toggle("border-none")
 }
 
 document.getElementsByClassName("milena-spiega")[0].addEventListener('webkitfullscreenchange', onFullScreen)
