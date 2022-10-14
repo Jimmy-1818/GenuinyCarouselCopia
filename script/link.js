@@ -1,7 +1,7 @@
 // ON LOADING (FIRST from index.html)
 
 // Set session link
-if (window.location.href.contains("#")){
+if (window.location.href.includes("#")){
   localStorage.setItem("href", window.location.href)
 }
 else if (localStorage.getItem("href") == null){
