@@ -21,17 +21,23 @@ nav.desktop-nav {
   transition: border-bottom 0s 100ms, top 0.3s 0s; }
   nav.desktop-nav .container-navbar {
     max-width: 1280px;
-    height: 30px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    height: 30px; }
+    @media (min-width: 768px) {
+      nav.desktop-nav .container-navbar {
+        height: 40px; } }
     nav.desktop-nav .container-navbar div.logo {
       display: flex;
       align-items: center;
       column-gap: 20px; }
       nav.desktop-nav .container-navbar div.logo img {
         width: 200px; }
+        @media (min-width: 768px) {
+          nav.desktop-nav .container-navbar div.logo img {
+            width: 250px; } }
 
 .hamburger {
   display: block;
@@ -93,6 +99,8 @@ nav.desktop-nav {
     padding: 8px 16px;
     border-radius: 99px;
     font-size: 20px; }
+  .menu a:first-of-type {
+    margin-left: 40px; }
   .menu a.show, .menu a:hover {
     background-color: var(--primary); }
 
