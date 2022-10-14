@@ -1,25 +1,18 @@
 // ON LOADING (FIRST from index.html)
 
-// Set session link
+// Set affiliate link
 if (window.location.href.includes("#")){
   localStorage.setItem("href", window.location.href)
 }
-else if (localStorage.getItem("href") == null){
-  localStorage.setItem("href", window.location.href)
-}
 
-// If a personalized link is relevated
-if(localStorage.getItem("href").includes("#")){
-  
+
+// If a personalized link is relevated and we're i
+if (!(localStorage.getItem("href") == null) && !(document.getElementById("link") == null)){
   var index = localStorage.getItem("href").indexOf("#")
   var varibale_affiliation = localStorage.getItem("href").slice(index + 1)
   var affiliate_registration = "https://business.genuiny.com/register/index?referralCode=" + varibale_affiliation    
-  
-  // In subscribe
-  if (!(document.getElementById("link") == null)){
-    var subscribe_button = document.getElementById('link')
-    subscribe_button.setAttribute('href', affiliate_registration)
-  }
+  var subscribe_button = document.getElementById('link')
+  subscribe_button.setAttribute('href', affiliate_registration)
 }
 
 
