@@ -91,7 +91,7 @@ nav.desktop-nav {
       .menu a {
         white-space: nowrap; } }
   .menu a {
-    color: #fff;
+    color: white;
     margin: 0 4px;
     font-weight: 600;
     text-decoration: none;
@@ -102,7 +102,8 @@ nav.desktop-nav {
   .menu a:first-of-type {
     margin-left: 40px; }
   .menu a.show, .menu a:hover {
-    background-color: var(--primary); }
+    background-color: var(--primary);
+    color: white; }
 
 .mobile-nav {
   display: block;
