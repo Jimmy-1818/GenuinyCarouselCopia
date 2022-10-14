@@ -1,24 +1,20 @@
 // ON LOADING (FIRST from index.html)
 
 // Set session link
-if (sessionStorage.getItem("URL") == null){
-  sessionStorage.setItem("URL", window.location.href)
+if (window.location.href.contains("#")){
+  localStorage.setItem("href", window.location.href)
+}
+else if (localStorage.getItem("href") == null){
+  localStorage.setItem("href", window.location.href)
 }
 
 
 // If a personalized link is relevated
-if(sessionStorage.getItem("URL").includes("#")){
+if(localStorage.getItem("href").includes("#")){
   
-  var index = sessionStorage.getItem("URL").indexOf("#")
-  var varibale_affiliation = sessionStorage.getItem("URL").slice(index + 1)
+  var index = localStorage.getItem("href").indexOf("#")
+  var varibale_affiliation = localStorage.getItem("href").slice(index + 1)
   var affiliate_registration = "https://business.genuiny.com/register/index?referralCode=" + varibale_affiliation    
-
-  // Keep #variable in pages's url (to pass it even if session is broken and url hash lost)
-  const page_links = document.getElementsByClassName("page-link")
-  for (var i = 0; i < page_links.length; i++) {
-    var new_link = page_links[i].href + "#" + varibale_affiliation
-    page_links[i].setAttribute("href", new_link)
-  }
   
   // In subscribe
   if (document.getElementById("link")){
