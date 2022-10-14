@@ -5,8 +5,6 @@ if (sessionStorage.getItem("URL") == null){
   sessionStorage.setItem("URL", window.location.href)
 }
 
-var ll = "register/index?referralCode="
-console.log(ll.length)
 
 // If a personalized link is relevated
 if(sessionStorage.getItem("URL").includes("#")){
@@ -14,8 +12,6 @@ if(sessionStorage.getItem("URL").includes("#")){
   var index = sessionStorage.getItem("URL").indexOf("#")
   var varibale_affiliation = sessionStorage.getItem("URL").slice(index + 1)
   var affiliate_registration = "https://business.genuiny.com/register/index?referralCode=" + varibale_affiliation    
-
-                              //   register/index?referralCode=4UH8HL74XF1P&name=Jimmy+Benedetti
 
   // Keep #variable in pages's url (to pass it even if session is broken and url hash lost)
   const page_links = document.getElementsByClassName("page-link")
