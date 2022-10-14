@@ -5,14 +5,17 @@ if (sessionStorage.getItem("URL") == null){
   sessionStorage.setItem("URL", window.location.href)
 }
 
-
+var ll = "register/index?referralCode="
+console.log(ll.length)
 
 // If a personalized link is relevated
 if(sessionStorage.getItem("URL").includes("#")){
   
   var index = sessionStorage.getItem("URL").indexOf("#")
   var varibale_affiliation = sessionStorage.getItem("URL").slice(index + 1)
-  var affiliate_registration = "https://business.genuiny.com/" + varibale_affiliation    
+  var affiliate_registration = "https://business.genuiny.com/register/index?referralCode=" + varibale_affiliation    
+
+                              //   register/index?referralCode=4UH8HL74XF1P&name=Jimmy+Benedetti
 
   // Keep #variable in pages's url (to pass it even if session is broken and url hash lost)
   const page_links = document.getElementsByClassName("page-link")
@@ -46,7 +49,7 @@ function generate_link(){
   var affiliation_link = String(document.getElementById("link-to-process").value)
   if(affiliation_link.includes("https://business.genuiny.com/")){
     var link_index = affiliation_link.indexOf("https://business.genuiny.com/")
-    var variable_affiliation = affiliation_link.slice(link_index + 29)
+    var variable_affiliation = affiliation_link.slice(link_index + 57)
     var affiliate_site = "https://jimmy-1818.github.io/GenuinyCarouselCopia/index.html" + "#" + variable_affiliation
 
     document.getElementById("processed-link").value = affiliate_site
