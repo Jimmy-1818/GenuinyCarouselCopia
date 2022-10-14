@@ -81,21 +81,6 @@ html {
     padding: 3rem 0 1rem 0;
     border-bottom: 3px solid #0abab5; }
 
-.card {
-  font-size: calc(1.48rem + 0.4vw);
-  border: none;
-  line-height: 1.35;
-  background-color: transparent;
-  text-align: justify; }
-@media(min-width: 480px) {
-  .card {
-    text-align: left; } }
-  .card h1 {
-    text-align: left; }
-
-.card:last-of-type {
-  padding-bottom: 9rem; }
-
 .blockchain-videos {
   display: flex; }
   .blockchain-videos .blockchain-video {
@@ -329,6 +314,9 @@ input.process-line {
 .carousel-indicators .active {
   opacity: 1; }
 
+.carousel-inner:last-of-type {
+  margin-bottom: 50px; }
+
 .module {
   width: 86vw;
   margin-bottom: 9vh;
@@ -337,11 +325,12 @@ input.process-line {
     font-size: 20px;
     border-bottom: 2px solid #0abab5;
     padding-bottom: 1rem;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 10px; }
 
 .module-overflow {
   overflow: scroll;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 160px);
   width: 86vw;
   overflow-x: hidden; }
 

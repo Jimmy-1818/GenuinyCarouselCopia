@@ -21,7 +21,7 @@ nav.desktop-nav {
   transition: border-bottom 0s 100ms, top 0.3s 0s; }
   nav.desktop-nav .container-navbar {
     max-width: 1280px;
-    height: 50px;
+    height: 30px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -31,14 +31,7 @@ nav.desktop-nav {
       align-items: center;
       column-gap: 20px; }
       nav.desktop-nav .container-navbar div.logo img {
-        width: 55px; }
-      nav.desktop-nav .container-navbar div.logo h1 {
-        color: #fff;
-        font-size: 28px;
-        font-weight: 900;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        display: inline; }
+        width: 200px; }
 
 .hamburger {
   display: block;
@@ -110,7 +103,7 @@ nav.desktop-nav {
   left: 0;
   z-index: 80;
   width: 100vw;
-  padding-top: 110px;
+  padding-top: 90px;
   background-color: var(--dark);
   border-bottom: 3px solid var(--primary);
   transition: top 0.3s cubic-bezier(0, 0.5, 0.5, 1), box-shadow 0.3s cubic-bezier(0, 0.5, 0.5, 1); }
@@ -186,7 +179,7 @@ nav.navbar-hide {
     .bottom-btn {
       display: none; } }
   .bottom-btn .next-title {
-    width: 70vw;
+    width: 65vw;
     position: absolute;
     bottom: 3px;
     right: 50vw;

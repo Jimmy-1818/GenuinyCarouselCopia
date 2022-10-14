@@ -9,6 +9,8 @@ const module_overflow = document.getElementsByClassName("module-overflow")
 const carousel = document.getElementsByClassName("carousel")
 const indicators = document.getElementsByClassName("carousel-indicators")
 
+const nearest_threshold = 70
+
 
 // Navbar animation
 hamburger[0].addEventListener("click", hamburger_click)
@@ -24,6 +26,9 @@ function hamburger_click(){
   desktop_nav.classList.toggle("border-animation")
   menu_mobile.classList.toggle("show-mobile")
   opacity.classList.toggle("show-opacity")
+  if (!(desktop_nav.classList.contains("border-animation")) && (current_index()[1] < nearest_threshold)) {
+    desktop_nav.classList.add("navbar-hide")
+  }
 };
 
 // Get a list of lists of titles
@@ -89,9 +94,9 @@ function on_scroll(){
   var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
 
   // Hide/show when scrolling up/down navbar/bottom btn
-  if ((lastSctollY < window.scrollY || nearest_distance < 70) && !(menu_mobile.classList.contains("show-mobile"))) {
+  if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile"))) {
     desktop_nav.classList.add("navbar-hide")
-  }else if (nearest_distance > 70){
+  }else if (nearest_distance > nearest_threshold){
     desktop_nav.classList.remove("navbar-hide")
   }
   lastSctollY = window.scrollY
@@ -99,7 +104,7 @@ function on_scroll(){
   if (carousel.length > 0){
     // When near a title bring up BOOTTOM BTN & not displayed INDICATORS 
     //& not displayed CONTROLS & controll SCROLL unlock
-    if (nearest_distance < 70){
+    if (nearest_distance < nearest_threshold){
       bottom_btn.classList.add("bottom-btn-up")
       for (var i = 0; i < indicators.length; i++) {
         module_overflow[i].classList.remove("overflow-hidden")
@@ -166,7 +171,7 @@ function set_next_h1(){
     control_next[current_i].classList.remove("display-block")
   }
   else{
-    var next_h1 = "Iscriviti"
+    var next_h1 = "Registrati"
     
     arrow.classList.remove("rotate-arrow")
     arrow.classList.add("subscribe-image")
