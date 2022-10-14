@@ -1,6 +1,5 @@
 
 function onFullScreen() {
-  console.log(this.classList)
   this.classList.toggle("border-none")
 }
 
