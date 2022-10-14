@@ -28,7 +28,6 @@ if (document.getElementById("process-link")){
   })
 };
 
-
 function generate_link(){
   var affiliation_link = String(document.getElementById("link-to-process").value)
   if(affiliation_link.includes("https://business.genuiny.com/")){
