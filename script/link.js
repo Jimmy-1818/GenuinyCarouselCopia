@@ -16,11 +16,9 @@ if(sessionStorage.getItem("URL").includes("#")){
 
   // Keep #variable in pages's url (to pass it even if session is broken and url hash lost)
   const page_links = document.getElementsByClassName("page-link")
-  console.log(page_links.length)
   for (var i = 0; i < page_links.length; i++) {
     var new_link = page_links[i].href + "#" + varibale_affiliation
     page_links[i].setAttribute("href", new_link)
-    console.log(page_links[i].href)
   }
   
   // In subscribe
