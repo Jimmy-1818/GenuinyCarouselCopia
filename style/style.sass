@@ -1,7 +1,6 @@
 $genuinyCol: #0abab5
 
-$layout-breakpoint-small: 480px
-
+$breakpoint-480: 480px
 *
 	margin: 0
 	padding: 0
@@ -87,13 +86,12 @@ html
 		padding: 3rem 0 1rem 0
 		border-bottom: 3px solid $genuinyCol
 
-.blockchain-videos
-	display: flex
-	.blockchain-video
-		width: 40vw
-		max-width: 735px
-		height: 22.4vw
-		max-height: 413px
+video.milena-spiega
+	width: 100%
+	height: auto
+	border: 5px solid #09435e
+	margin-top: 20px
+	border-radius: 10px
 
 .side-content
 	width: 40%
@@ -230,7 +228,7 @@ ul.subscribe-steps
 	left: 50%
 	top: -250px
 	max-height: 420px
-	@media (min-width: $layout-breakpoint-small)
+	@media (min-width: $breakpoint-480)
 		width: 80vw
 
 .modal-trigger
@@ -254,9 +252,10 @@ ul.subscribe-steps
 
 #process-link, #copy-link
 	height: 30px
-	width: 30px
+	width: 50px
 	border-radius: 15px
 	border: none
+	margin-left: 10px
 
 	background-color: $genuinyCol
 	background-repeat: no-repeat
@@ -297,10 +296,19 @@ img.arrow
 
 .process-lines
 	display: flex
-	flex-wrap: wrap
-	column-gap: 10px
 	align-items: center
+
+	flex-wrap: wrap
+	row-gap: 5px
 	margin: 10px 0 10px 0
+
+.box
+	display: flex
+	align-items: center
+
+	margin: 0 auto
+	@media (min-width: $breakpoint-480)
+		margin: 0 0 0 10px
 
 .process-line
 	height: 25px
@@ -352,6 +360,7 @@ input.process-line
 		padding-bottom: 1rem
 		font-weight: bold
 		margin-bottom: 10px
+
 .module-overflow
 	overflow: scroll
 	height: calc(100vh - 160px)

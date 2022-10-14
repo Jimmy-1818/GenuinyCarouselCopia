@@ -79,13 +79,12 @@ html {
     padding: 3rem 0 1rem 0;
     border-bottom: 3px solid #0abab5; }
 
-.blockchain-videos {
-  display: flex; }
-  .blockchain-videos .blockchain-video {
-    width: 40vw;
-    max-width: 735px;
-    height: 22.4vw;
-    max-height: 413px; }
+video.milena-spiega {
+  width: 100%;
+  height: auto;
+  border: 5px solid #09435e;
+  margin-top: 20px;
+  border-radius: 10px; }
 
 .side-content {
   width: 40%;
@@ -240,9 +239,10 @@ ul.subscribe-steps {
 /**** SHARE *** */
 #process-link, #copy-link {
   height: 30px;
-  width: 30px;
+  width: 50px;
   border-radius: 15px;
   border: none;
+  margin-left: 10px;
   background-color: #0abab5;
   background-repeat: no-repeat;
   background-position: center;
@@ -283,10 +283,18 @@ img.arrow {
 
 .process-lines {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 5px;
   margin: 10px 0 10px 0; }
+
+.box {
+  display: flex;
+  align-items: center;
+  margin: 0 auto; }
+  @media (min-width: 480px) {
+    .box {
+      margin: 0 0 0 10px; } }
 
 .process-line {
   height: 25px;
