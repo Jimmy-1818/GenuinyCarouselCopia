@@ -246,7 +246,7 @@ ul.subscribe-steps {
 .share-boxes {
   display: flex;
   flex-direction: column; }
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     .share-boxes {
       flex-direction: row;
       column-gap: 20px; } }
@@ -280,7 +280,7 @@ ul.subscribe-steps {
 .content-box {
   border-radius: 0 0 20px 20px;
   border: 4px solid #0abab5;
-  padding: 1.4vw 4vw 1vw 2vw; }
+  padding: 1.4vw 4vw 4px 2vw; }
 
 .share-box:nth-of-type(odd) .content-box {
   border-color: #09435E; }
