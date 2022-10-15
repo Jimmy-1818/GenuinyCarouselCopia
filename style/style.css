@@ -258,9 +258,6 @@ ul.subscribe-steps {
 #copy-link {
   background-image: url("../images/copy-w.png"); }
 
-#processed-link {
-  user-select: all; }
-
 .share-box {
   width: 94vw;
   max-width: 840px;
@@ -272,7 +269,10 @@ ul.subscribe-steps {
 .content-box {
   border-radius: 0 0 30px 30px;
   border: 4px dashed #0abab5;
-  padding: 1.4vw 4vw 1vw 2vw; }
+  padding: 1.4vw 4vw 3vw 2vw; }
+  @media (min-width: 768px) {
+    .content-box {
+      padding: 1.4vw 4vw 1vw 2vw; } }
 
 .share-box h2 {
   background: #0abab5;
