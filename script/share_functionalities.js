@@ -14,5 +14,6 @@ copy_btn.onclick = function(){
   }
 };
 
-var clipboard_text = window.clipboardData.getData('Text')
-console.log(clipboard_text)
+//var clipboard_text = window.event.clipboardData.getData('Text')
+//console.log(clipboard_text)
+
