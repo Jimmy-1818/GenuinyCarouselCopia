@@ -1,3 +1,6 @@
+console.log("__")
+
+
 if (document.getElementById("copy-link")){
   document.getElementById("copy-link").addEventListener("click", copy_link)
 }
