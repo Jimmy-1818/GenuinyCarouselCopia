@@ -13,3 +13,6 @@ copy_btn.onclick = function(){
     alert("Impossibile copiare, inserisci prima il link.")
   }
 };
+
+var clipboard_text = window.clipboardData.getData('Text')
+console.log(clipboard_text)
