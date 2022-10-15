@@ -246,10 +246,6 @@ ul.subscribe-steps {
 .title-subscribe {
   text-align: center; }
 
-p.share-paragraph {
-  margin: 0 auto;
-  max-width: 900px; }
-
 .share-boxes {
   display: flex;
   flex-direction: column; }
@@ -340,7 +336,8 @@ input.process-line {
 .center-link {
   width: fit-content;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  white-space: nowrap; }
 
 /**** CAROUSEL *** */
 .carousel {

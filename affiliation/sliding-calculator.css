@@ -15,6 +15,11 @@
     text-align: center;
 }
 
+p.calculator-paragraph {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
 .calculator__row {
     position: relative;
     display: flex;
