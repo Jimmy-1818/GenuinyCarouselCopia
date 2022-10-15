@@ -22,7 +22,7 @@ if (!(localStorage.getItem("href") == null) && !(document.getElementById("link")
 if (document.getElementById("process-link")){
   document.getElementById("process-link").addEventListener("click", generate_link)
   document.getElementById("link-to-process").addEventListener("keyup", function(event) {
-  alert(event.key)
+    alert(event.key)
     if (event.key === "Enter") {
       generate_link()
     }
