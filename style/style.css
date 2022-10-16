@@ -383,13 +383,15 @@ input.process-line {
   #carousel-functioning .block-functioning:first-of-type {
     margin-top: 30px; }
 
-.carousel-blockchain {
-  margin-bottom: 20px; }
-  .carousel-blockchain .module-1 .module-overflow img {
-    display: inline-block;
-    width: 100px; }
-  .carousel-blockchain .module-4 ul {
-    padding-left: 20px; }
+#carouselGenuiny .module-2 .to-calculator {
+  background: #0abab5;
+  padding: 10px 16px;
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+  font-weight: bold;
+  color: white;
+  margin-top: 40px; }
 
 video:fullscreen {
   border-radius: none !important;
