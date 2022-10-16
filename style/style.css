@@ -378,7 +378,8 @@ input.process-line {
   text-align: center;
   padding: 5px 15px;
   color: white;
-  border-radius: 20px; }
+  border-radius: 20px;
+  font-size: 1.4rem; }
   #carousel-functioning .block-functioning:first-of-type {
     margin-top: 30px; }
 
