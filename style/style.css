@@ -348,7 +348,6 @@ input.process-line {
   margin-bottom: 50px; }
 
 .module {
-  width: 86vw;
   margin-bottom: 9vh;
   font-size: 1.5rem; }
   .module h1 {
@@ -356,16 +355,31 @@ input.process-line {
     border-bottom: 2px solid #0abab5;
     padding-bottom: 1rem;
     font-weight: bold;
-    margin-bottom: 10px; }
+    width: 86vw;
+    margin: 0 auto 10px; }
 
 .module-overflow {
   overflow: scroll;
   height: calc(100vh - 175px);
   width: 86vw;
+  margin: 0 auto;
   overflow-x: hidden; }
 
 .overflow-hidden {
   overflow: hidden; }
+
+#carousel-functioning img {
+  width: 30px;
+  margin: 0 auto;
+  display: block; }
+#carousel-functioning .block-functioning {
+  background-color: #0abab5;
+  text-align: center;
+  padding: 5px 15px;
+  color: white;
+  border-radius: 20px; }
+  #carousel-functioning .block-functioning:first-of-type {
+    margin-top: 30px; }
 
 .carousel-blockchain {
   margin-bottom: 20px; }

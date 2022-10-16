@@ -23,7 +23,6 @@ $breakpoint-480: 480px
 html
 	font-size: 62.5%
 
-
 .container
 	width: 100%
 	padding: 9vh 7% 0 7%
@@ -213,6 +212,7 @@ ul.subscribe-steps
 	text-decoration: underline
 	color: #0d6efd
 
+
 .modal-white .modal-content
 	background: white
 	.modal-body
@@ -370,7 +370,6 @@ input.process-line
 	margin-bottom: 50px
 
 .module
-	width: 86vw
 	margin-bottom: 9vh
 	font-size: 1.5rem
 	h1
@@ -378,16 +377,34 @@ input.process-line
 		border-bottom: 2px solid #0abab5
 		padding-bottom: 1rem
 		font-weight: bold
-		margin-bottom: 10px
+		width: 86vw
+		margin: 0 auto 10px
+
 
 .module-overflow
 	overflow: scroll
 	height: calc(100vh - 175px)
 	width: 86vw
+	margin: 0 auto
 	overflow-x: hidden
 
 .overflow-hidden
 	overflow: hidden
+
+
+#carousel-functioning
+	img 
+		width: 30px
+		margin: 0 auto
+		display: block
+	.block-functioning
+		background-color: $genuinyCol
+		text-align: center
+		padding: 5px 15px
+		color: white
+		border-radius: 20px
+		&:first-of-type
+			margin-top: 30px
 
 .carousel-blockchain
 	margin-bottom: 20px
