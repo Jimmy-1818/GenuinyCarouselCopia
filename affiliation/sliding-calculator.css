@@ -2,17 +2,19 @@
     min-width: 240px;
     max-width: 800px;
     margin: 50px auto 40px auto;
-    padding-top: 25px;
-    border: 4px solid #0abab5;
-    border-radius: 30px;
-    background: white;
+    padding-top: 20px;
+    border-top: 4px dashed #0abab5;
+    border-bottom: 4px dashed #0abab5;
     box-sizing: border-box;
+    background-color: #0abab510;
 }
 
 .wrapper__title {
     text-transform: capitalize;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     text-align: center;
+    font-size: calc(1.7rem + 0.7vw);
+    display: none;
 }
 
 p.calculator-paragraph {
@@ -63,7 +65,7 @@ p.calculator-paragraph {
 
 
 .calculator_row_monthly label{
-    font-size: calc(1.2rem + 0.7vw);
+    font-size: calc(1.7rem + 0.7vw);
     margin-left: 10%;
 }
 
@@ -97,16 +99,22 @@ h2.info img{
     width: 50vw;
 }
 
-.box-info p{
-    font-size: calc(1rem + 0.7vw);
+.box-info p, .box-info b{
+    font-size: calc(1.3rem + 0.7vw);
 }
 
 
 .two-lines{
     display: block;
 }
+
 .second-line{
     display: block;
+}
+
+
+.two-lines, .second-line{
+    font-size: calc(1.7rem + 1.1vw);
 }
 
 .info-number{
@@ -387,16 +395,6 @@ h2.info img{
     left: 50%;
 }
 
-
-@media screen and (min-width: 1279px){
-    h2.info{
-        font-size: 2.8rem;
-    }
-    .box-info p{
-        font-size: 2rem;
-    }
-}
-
 @media screen and (min-width: 480px){
     .back-on-calculator{
         visibility: hidden;
@@ -412,6 +410,34 @@ h2.info img{
     }
 
 }
+
+@media screen and (min-width: 768px){
+    .wrapper{
+        border-radius: 30px;
+        border: 4px solid #0abab5;
+    }
+    .wrapper__title{
+        display: block;
+    }
+}
+@media screen and (min-width: 1280px){
+    h2.info{
+        font-size: 2.8rem;
+    }
+    .box-info p, .box-info b{
+        font-size: 2rem;
+    }
+    .calculator_row_monthly label{
+        font-size: 2.3rem
+    }
+    .two-lines, .second-line{
+        font-size: 2.3rem;
+    }
+    .wrapper__title {
+        font-size: 2.3rem;
+    }
+}
+
 
 /*Chrome slider color change*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {

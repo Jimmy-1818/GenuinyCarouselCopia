@@ -2,20 +2,23 @@ $genuinyCol: #0abab5
 $genuinyColDark: #09435E 
 
 $breakpoint-480: 480px
+
+@font-face
+	font-family: "Inter"
+	src: url(../fonts/Inter/static/Inter-Regular.ttf) format('truetype')
+	font-weight: normal
+
+@font-face
+	font-family: "Montserrat"
+	src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format('truetype')
+	font-weight: normal
+
 *
 	margin: 0
 	padding: 0
 	box-sizing: border-box
-	font-family: Helvetica
-
-
-body, .navbar-brand
-	font-family: Helvetica, Opens-sans, sans-serif
+	font-family: "Inter", Helvetica, sans-serif
 	font-size: 1.8rem
-
-body, .navbar-brand, p
-	margin: 0
-	padding: 0
 
 html
 	font-size: 62.5%
@@ -57,35 +60,6 @@ html
 		left: 0
 		z-index: 4
 
-/*** slogan **/
-
-.container-slogan
-	background-color: #f08080
-	position: absolute
-	top: 50%
-	right: 12vw
-	height: 35vw
-	width: 35vw
-	background-color: #ff8e8e
-	transform: translate(0, -50%)
-	border-radius: 50%
-	.slogan
-		background-color: transparent
-
-/***grid system***/
-
-.container-grid
-	display: grid
-	grid-template-columns: 1
-	grid-row-gap: 30px
-	@media (min 768px)
-		grid-template-columns: 7fr 3fr
-	grid-column: 1
-	@media (min-width: 480px)
-		text-align: left
-	h1
-		padding: 3rem 0 1rem 0
-		border-bottom: 3px solid $genuinyCol
 
 video.milena-spiega
 	width: 84vw
@@ -93,15 +67,6 @@ video.milena-spiega
 	border: 5px solid $genuinyColDark
 	margin-top: 20px
 	border-radius: 10px
-
-video.border-none
-	border: none
-
-.side-content
-	width: 40%
-	height: 100%
-	margin: 0 auto
-
 
 .title
 	font-size: calc(1.7rem + 0.6vw)
@@ -125,7 +90,7 @@ ul.subscribe-steps
 	position: relative
 	li
 		padding: 25px 0
-		padding-left: 40px
+		padding-left: 45px
 		position: relative
 
 		list-style: none
@@ -170,7 +135,7 @@ ul.subscribe-steps
 
 .round-bullet
 	position: absolute
-	background-color: #0ABaB5
+	background-color: $genuinyCol
 	width: 40px
 	height: 70px
 	border-radius: 32px 32px 32px 32px
@@ -185,6 +150,7 @@ ul.subscribe-steps
 		position: relative
 		top: 5px
 		font-size: 23px
+		font-weight: bold
 
 .round-bullet-inside
 	@extend .round-bullet
@@ -241,7 +207,6 @@ ul.subscribe-steps
 		width: 80vw
 
 .modal-trigger
-	background: white
 	border: none
 	text-decoration: underline
 	color: #0d6efd
@@ -261,6 +226,7 @@ ul.subscribe-steps
 
 .title-subscribe
 	text-align: center
+	font-weight: bold
 
 .share-boxes
 	display: flex
@@ -299,10 +265,12 @@ ul.subscribe-steps
 	border-radius: 0 0 20px 20px
 	border: 4px solid $genuinyCol
 	padding: 8px 4vw 4px 2vw
+	background-color: #0abab520
 
 .share-box:nth-of-type(odd) 
 	.content-box
 		border-color: $genuinyColDark
+		background-color: #09435e20
 	h2
 		background: $genuinyColDark
 
@@ -345,7 +313,7 @@ input.process-line
 .video-invite
 	text-align: center
 	video.video-invite
-		border-radius: 20px
+		border-radius: 10px
 		margin-top: 20px
 		width: 80vw
 		border: 4px solid #0abab5
@@ -382,9 +350,9 @@ input.process-line
 .module
 	width: 86vw
 	margin-bottom: 9vh
-	font-size: 15px
+	font-size: 1.5rem
 	h1
-		font-size: 20px
+		font-size: 2rem
 		border-bottom: 2px solid #0abab5
 		padding-bottom: 1rem
 		font-weight: bold
@@ -406,6 +374,8 @@ input.process-line
 		width: 100px
 	.module-4 ul
 		padding-left: 20px
+
+
 
 
 
