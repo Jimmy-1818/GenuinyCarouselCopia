@@ -12,6 +12,9 @@
   box-sizing: border-box;
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 1.4rem; }
+  @media (min-width: 768px) {
+    *, p {
+      font-size: 1.6rem; } }
 
 html {
   font-size: 62.5%; }
@@ -75,9 +78,10 @@ video.milena-spiega {
   z-index: -4; }
 
 ul.subscribe-steps {
-  margin: 0;
   padding: 0;
-  position: relative; }
+  position: relative;
+  max-width: 1000px;
+  margin: 25px auto; }
   ul.subscribe-steps li {
     padding: 20px 40px;
     position: relative;
@@ -96,8 +100,9 @@ ul.subscribe-steps {
   text-decoration: none; }
 
 li.subscribe-step-1 .register-btn {
+  box-shadow: 0px 3px 6px 0px #00000070;
   color: white;
-  background: #0abab5;
+  background: #09435E;
   width: fit-content;
   padding: 8px 16px;
   border-radius: 99px;
@@ -121,52 +126,80 @@ li.subscribe-step-1 .register-btn {
     top: -2px; }
 
 .list-line {
-  position: absolute;
-  left: 0px;
-  top: 30px;
-  width: 10px;
-  transform: translate(50%, 0%);
-  height: 89%;
-  background-color: #0ABaB5;
-  z-index: -3;
-  border-radius: 5px; }
+  display: none; }
+  @media (min-width: 768px) {
+    .list-line {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 75px;
+      width: 10px;
+      transform: translate(50%, 0%);
+      height: 81%;
+      background-color: #0ABaB5;
+      z-index: -3;
+      border-radius: 5px; } }
 
 .round-bullet, .round-bullet-inside {
+  border-radius: 0 99px 99px 0;
   position: absolute;
   background-color: #0abab5;
   width: 40px;
   height: 70px;
-  border-radius: 32px 32px 32px 32px;
-  left: -10px;
+  left: 0px;
   top: 50%;
-  transform: translate(0%, -50%);
+  transform: translate(-70%, -50%);
   z-index: -2;
   text-align: center;
   color: white;
   font-size: 20px; }
+  @media (min-width: 768px) {
+    .round-bullet, .round-bullet-inside {
+      transform: translate(0, -50%);
+      left: -10px;
+      border-radius: 32px 32px 32px 32px; } }
   .round-bullet h1, .round-bullet-inside h1 {
     position: relative;
-    top: 5px;
     font-size: 23px;
-    font-weight: bold; }
+    font-weight: bold;
+    top: 50%;
+    transform: translate(0, -50%); }
+    @media (min-width: 768px) {
+      .round-bullet h1, .round-bullet-inside h1 {
+        top: 5px;
+        transform: translate(0, 0); } }
 
 .round-bullet-inside {
-  background-color: white;
-  width: 30px;
-  height: 30px;
-  z-index: -1;
-  left: -5px;
-  transform: translate(0%, -50%);
-  border-radius: 50%;
-  top: calc(50% + 16px); }
-  .round-bullet-inside img {
-    width: 30px;
-    padding: 5px;
-    position: relative;
-    top: -2px; }
+  display: none; }
+  @media (min-width: 768px) {
+    .round-bullet-inside {
+      display: block;
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      z-index: -1;
+      left: -5px;
+      transform: translate(0%, -50%);
+      border-radius: 50%;
+      top: calc(50% + 16px); }
+      .round-bullet-inside h1 {
+        top: 17px;
+        font-size: 30px; }
+      .round-bullet-inside img {
+        display: none; } }
+    @media (min-width: 768px) and (min-width: 768px) {
+      .round-bullet-inside img {
+        display: block;
+        width: 30px;
+        padding: 5px;
+        position: relative;
+        top: -1px; } }
 
 .subscribe-step-3 .round-bullet-inside img {
   padding: 6px; }
+
+.subscribe-step-2 img, .subscribe-step-4 img {
+  top: 0; }
 
 /**app-images* */
 .subscribe-step-3 div.images-container {
@@ -289,17 +322,17 @@ li.subscribe-step-1 .register-btn {
     background-color: #0abab5;
     width: fit-content;
     display: block;
-    margin: 0 auto;
+    margin: 15px auto 0;
     white-space: nowrap;
     border-radius: 15px 15px 0 0;
     padding: 4px 14px 0 14px;
     color: white;
     text-decoration: none; }
     .content-box .center-link img {
-      width: 23px;
+      width: 19px;
       margin-left: 10px;
       position: relative;
-      top: -2px; }
+      top: -1px; }
 
 .share-box:nth-of-type(odd) .content-box {
   border-color: #09435E;
@@ -346,11 +379,10 @@ input.process-line {
 .video-invite {
   text-align: center;
   border-radius: 10px;
-  margin-top: 20px;
   width: 80vw;
   border: 4px solid #0abab5;
   max-width: 250px;
-  margin: 15px auto 10px;
+  margin: 15px auto 0 auto;
   display: block; }
 
 /**** CAROUSEL *** */
