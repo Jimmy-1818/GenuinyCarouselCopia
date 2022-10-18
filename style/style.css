@@ -459,11 +459,25 @@ input.process-line {
   margin: 0 auto;
   display: block; }
 
+#carouselGenuiny .module-1 .citation-mark {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+  width: 30px; }
+  #carouselGenuiny .module-1 .citation-mark:last-of-type {
+    right: 0;
+    bottom: 0;
+    top: auto;
+    left: auto;
+    transform: translate(100%, 100%) rotate(180deg); }
 #carouselGenuiny .module-1 .center-block {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  margin: 0 7vw; }
+  margin: 0 30px;
+  padding: 15px 0; }
 #carouselGenuiny .module-2 a {
   text-decoration: none; }
   #carouselGenuiny .module-2 a .to-calculator {
