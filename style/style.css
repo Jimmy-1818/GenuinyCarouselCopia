@@ -417,7 +417,7 @@ input.process-line {
   #carousel-app .module-1 img .module-overflow {
     overflow: hidden; }
 #carousel-app .module-2 img {
-  width: 100%;
+  width: 60%;
   margin: 20px auto;
   display: block; }
 #carousel-app .module-3 .value {
