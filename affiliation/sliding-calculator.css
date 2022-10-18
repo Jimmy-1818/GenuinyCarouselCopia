@@ -27,7 +27,7 @@ p.calculator-paragraph {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: -15px 0 25px;
+    margin: -10px 0 25px;
 }
 
 .calculator__row:last-of-type{
@@ -48,8 +48,8 @@ p.calculator-paragraph {
     /**circle***/
     background: #0abab5;
     border-radius: 50%;
-    width: 23px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
     line-height: 2;
     font-size: 80%;
     text-align: center;
@@ -252,12 +252,11 @@ h2.info img{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    font-size: 60%;
     color: white;
     align-content: center;
-    line-height: 1.8;
+    line-height: 2;
     box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 50%);
-    font-size: 1.18rem;
+    font-size: 10px;
     font-weight: bold;
 }
 
