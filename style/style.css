@@ -431,10 +431,18 @@ input.process-line {
 .overflow-hidden {
   overflow: hidden; }
 
-#carousel-functioning img {
-  width: 30px;
+#carousel-functioning .block-number {
   margin: 0 auto;
-  display: block; }
+  background: #0abab5;
+  width: fit-content;
+  padding: 2px 10px 0px;
+  border-radius: 99px 99px 0 0;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  bottom: -2px; }
+  #carousel-functioning .block-number:first-of-type {
+    margin-top: 6vh; }
 #carousel-functioning .block-functioning {
   background-color: #0abab5;
   text-align: center;
@@ -442,8 +450,10 @@ input.process-line {
   color: white;
   border-radius: 20px;
   font-size: 1.2rem; }
-  #carousel-functioning .block-functioning:first-of-type {
-    margin-top: 30px; }
+#carousel-functioning img {
+  width: 30px;
+  margin: 0 auto;
+  display: block; }
 
 #carouselGenuiny .module-1 .center-block {
   position: relative;

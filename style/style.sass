@@ -456,10 +456,18 @@ input.process-line
 
 
 #carousel-functioning
-	img 
-		width: 30px
+	.block-number
 		margin: 0 auto
-		display: block
+		background: #0abab5
+		width: fit-content
+		padding: 2px 10px 0px
+		border-radius: 99px 99px 0 0
+		color: white
+		font-weight: bold
+		position: relative
+		bottom: -2px
+		&:first-of-type
+			margin-top: 6vh
 	.block-functioning
 		background-color: $genuinyCol
 		text-align: center
@@ -467,8 +475,10 @@ input.process-line
 		color: white
 		border-radius: 20px
 		font-size: 1.2rem
-		&:first-of-type
-			margin-top: 30px
+	img 
+		width: 30px
+		margin: 0 auto
+		display: block
 
 #carouselGenuiny
 	.module-1
