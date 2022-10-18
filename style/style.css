@@ -6,9 +6,6 @@
   font-family: "Montserrat";
   src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format("truetype");
   font-weight: normal; }
-html {
-  font-size: 62.5%; }
-
 * {
   margin: 0;
   padding: 0;
@@ -16,18 +13,22 @@ html {
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 1.6rem; }
 
+html {
+  font-size: 62.5%; }
+
 .container {
   width: 100%;
   padding: 9vh 7% 0 7%;
   box-sizing: border-box;
   max-width: 2000px; }
-  .container .container-phone {
-    /**for tall and narrow screens: object width% container* */
-    height: 90vh;
-    max-height: 900px; }
-    @media (min-width: 480px) {
-      .container .container-phone {
-        height: 91vh; } }
+
+.container-phone {
+  /**for tall and narrow screens: object width% container* */
+  height: 90vh;
+  max-height: 900px; }
+  @media (min-width: 480px) {
+    .container-phone {
+      height: 91vh; } }
 
 /*******smartphone******* */
 .smartphone {
