@@ -411,6 +411,9 @@ input.process-line {
 
 .module {
   margin-bottom: 9vh; }
+  .module span.subtitle {
+    font-size: 1.2em;
+    font-weight: bold; }
   .module a {
     text-decoration: none; }
   .module h1 {
