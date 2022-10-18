@@ -408,6 +408,10 @@ input.process-line {
   height: 55vh;
   margin: 11vh auto 0;
   display: block; }
+#carousel-app .module-2 img {
+  width: 100%;
+  margin: 20px auto;
+  display: block; }
 #carousel-app .module-3 .value {
   display: block;
   width: fit-content;
@@ -415,6 +419,10 @@ input.process-line {
   font-family: "Montserrat";
   font-weight: 700;
   margin: 2vh auto; }
+#carousel-app .module-4 img {
+  width: 100%;
+  margin: 20px auto;
+  display: block; }
 
 video:fullscreen {
   border-radius: none !important;
