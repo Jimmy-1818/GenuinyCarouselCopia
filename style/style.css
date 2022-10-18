@@ -441,6 +441,11 @@ input.process-line {
   #carousel-functioning .block-functioning:first-of-type {
     margin-top: 30px; }
 
+#carouselGenuiny .module-1 .center-block {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0 7vw; }
 #carouselGenuiny .module-2 a {
   text-decoration: none; }
   #carouselGenuiny .module-2 a .to-calculator {
