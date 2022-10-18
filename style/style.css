@@ -498,6 +498,7 @@ input.process-line {
 #carousel-app .module-1 img {
   height: 50vh;
   margin: 10vh auto 0;
+  filter: drop-shadow(12px 12px 12px #00000090);
   display: block; }
   #carousel-app .module-1 img .module-overflow {
     overflow: hidden; }
