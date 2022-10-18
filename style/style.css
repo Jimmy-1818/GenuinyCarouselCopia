@@ -24,10 +24,13 @@ html {
 
 .container-phone {
   /**for tall and narrow screens: object width% container* */
-  height: 90vh;
+  position: relative;
+  top: 65px;
+  height: calc(100vh - 65px);
   max-height: 900px; }
   @media (min-width: 480px) {
     .container-phone {
+      top: 100px;
       height: 91vh; } }
 
 /*******smartphone******* */
