@@ -6,7 +6,7 @@
   font-family: "Montserrat";
   src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format("truetype");
   font-weight: normal; }
-* {
+*, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -91,6 +91,19 @@ ul.subscribe-steps {
   @media (min-width: 768px) {
     ul.subscribe-steps h7 {
       user-select: none; } }
+
+#link {
+  text-decoration: none; }
+
+li.subscribe-step-1 .register-btn {
+  color: white;
+  background: #0abab5;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 99px;
+  margin: 10px auto;
+  font-size: 1.6rem;
+  white-space: nowrap; }
 
 .subscribe-step-4 .blue-button {
   background-color: #04445f;
