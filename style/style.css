@@ -513,7 +513,7 @@ input.process-line {
   font-weight: 700;
   margin: 2vh auto; }
 #carousel-app .module-4 img {
-  width: 40%;
+  width: 40vw;
   margin: 20px auto;
   display: block;
   border-top: 4px solid #09435e;
