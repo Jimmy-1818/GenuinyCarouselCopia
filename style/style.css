@@ -256,6 +256,9 @@ li.subscribe-step-1 .register-btn {
       font-weight: bold;
       padding-bottom: 15px;
       margin: 0; }
+      @media (min-width: 768px) {
+        .modal-white .modal-content .modal-body h1 {
+          font-size: 25px; } }
     .modal-white .modal-content .modal-body p {
       margin: 0;
       padding: 0; }
@@ -441,8 +444,6 @@ input.process-line {
   #carousel-functioning .block-functioning:first-of-type {
     margin-top: 30px; }
 
-#carouselGenuiny .module-1 h1 {
-  margin-top: 65px; }
 #carouselGenuiny .module-1 .center-block {
   position: relative;
   top: 50%;
