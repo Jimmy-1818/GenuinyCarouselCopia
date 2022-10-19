@@ -1,5 +1,5 @@
-remove_carousel()
-add_container()
+//remove_carousel()
+//add_container()
 
 
 function remove_carousel(){
