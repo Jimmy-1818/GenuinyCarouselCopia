@@ -390,8 +390,11 @@ input.process-line {
   margin: 15px auto 0 auto;
   display: block; }
 
-.share-app img {
-  width: 80vw; }
+.share-app {
+  width: auto; }
+  .share-app img {
+    max-width: 250px;
+    width: 80vw; }
 
 /**** CAROUSEL *** */
 .carousel {
