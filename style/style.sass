@@ -336,8 +336,10 @@ li.subscribe-step-1 .register-btn
 .content-box
 	border-radius: 0 0 20px 20px
 	border: 4px solid $genuinyCol
-	padding: 8px 4vw 0 2vw
 	background-color: #0abab520
+	padding: 8px 4vw 0 2vw
+	@media (min-width: $breakpoint-768)
+		padding: 8px 20px 0 10px
 	.center-link
 		background-color: $genuinyCol
 		width: fit-content
@@ -511,17 +513,20 @@ input.process-line
 			transform: translate(0, -50%)
 			margin: 0 30px
 			padding: 15px 0
-	.module-2 a
-		text-decoration: none
-		.to-calculator
-			background: $genuinyColDark
-			padding: 10px 16px
-			text-align: center
-			position: relative
-			bottom: 10px
-			font-weight: bold
-			color: white
-			margin-top: 50px
+	.module-2 
+		p
+			min-height: 65vh
+		a
+			text-decoration: none
+			.to-calculator
+				background: $genuinyColDark
+				padding: 10px 16px
+				text-align: center
+				position: relative
+				bottom: 10px
+				font-weight: bold
+				color: white
+				margin: 3vh 0 2vh
 
 #carousel-blockchain .module-2 video
 	transform: translate(0, -50%)

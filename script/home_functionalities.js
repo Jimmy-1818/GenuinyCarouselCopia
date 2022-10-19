@@ -1,1 +1,1 @@
-document.getElementsByClassName("remove").remove()
+document.getElementsByClassName("remove")[0].remove()

@@ -321,8 +321,11 @@ li.subscribe-step-1 .register-btn {
 .content-box {
   border-radius: 0 0 20px 20px;
   border: 4px solid #0abab5;
-  padding: 8px 4vw 0 2vw;
-  background-color: #0abab520; }
+  background-color: #0abab520;
+  padding: 8px 4vw 0 2vw; }
+  @media (min-width: 768px) {
+    .content-box {
+      padding: 8px 20px 0 10px; } }
   .content-box .center-link {
     background-color: #0abab5;
     width: fit-content;
@@ -484,6 +487,8 @@ input.process-line {
   transform: translate(0, -50%);
   margin: 0 30px;
   padding: 15px 0; }
+#carouselGenuiny .module-2 p {
+  min-height: 65vh; }
 #carouselGenuiny .module-2 a {
   text-decoration: none; }
   #carouselGenuiny .module-2 a .to-calculator {
@@ -494,7 +499,7 @@ input.process-line {
     bottom: 10px;
     font-weight: bold;
     color: white;
-    margin-top: 50px; }
+    margin: 3vh 0 2vh; }
 
 #carousel-blockchain .module-2 video {
   transform: translate(0, -50%);
