@@ -6,7 +6,7 @@ const opacity = document.getElementsByClassName("opacity")[0]
 const bottom_btn = document.getElementsByClassName("bottom-btn")[0]
 const control_next = document.getElementsByClassName("carousel-control-next")
 const module_overflow = document.getElementsByClassName("module-overflow")
-const carousel = document.getElementsByClassName("carousel")
+var carousel = document.getElementsByClassName("carousel")
 const indicators = document.getElementsByClassName("carousel-indicators")
 
 const nearest_threshold = 70
@@ -241,8 +241,6 @@ function end_page_carousel(next = "current"){
   }else{
     result["last_in_page"] = false
   }
-
-
   var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
   for (var i = 0; i < items.length; i++) {if (items[i].classList.contains("active")){
       var current_item_index = i}}

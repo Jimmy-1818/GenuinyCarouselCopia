@@ -71,6 +71,8 @@ p.calculator-paragraph {
 
 img.info-circle{
     width:  17px;
+    position: relative;
+    top: -3px;
 }
 
 .calculator_row_monthly p.monthly{

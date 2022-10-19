@@ -40,9 +40,13 @@ html
 	height: calc(100vh - 65px)
 	max-height: 900px
 	@media (min-width: 480px)
-		top: 100px
+		top: 75px
 		height: 91vh
 
+.spacer
+	height: 65
+	@media (min-width: 480px)
+		height: 75px
 
 /*******smartphone********/
 
@@ -467,33 +471,7 @@ input.process-line
 .overflow-hidden
 	overflow: hidden
 
-
-#carousel-functioning
-	.block-number
-		margin: 0 auto
-		background: #0abab5
-		width: fit-content
-		padding: 2px 10px 0px 10px
-		border-radius: 99px 99px 0 0
-		color: white
-		font-weight: bold
-		position: relative
-		bottom: -2px
-		&:first-of-type
-			margin-top: 6vh
-	.block-functioning
-		background-color: $genuinyCol
-		text-align: center
-		padding: 5px 15px
-		color: white
-		border-radius: 10px
-		font-size: 1.2rem
-	img 
-		width: 30px
-		margin: 0 auto
-		display: block
-
-#carouselGenuiny
+#carousel-genuiny
 	.module-1
 		.citation-mark
 			background: white
@@ -529,10 +507,53 @@ input.process-line
 				color: white
 				margin: 3vh 0 2vh
 
+#carousel-genuiny-desktop
+	@extend #carousel-genuiny
+	.module-1
+		.center-block
+			transform: translate(0, 0)
+
+
+
+#carousel-functioning
+	.block-number
+		margin: 0 auto
+		background: #0abab5
+		width: fit-content
+		padding: 2px 10px 0px 10px
+		border-radius: 99px 99px 0 0
+		color: white
+		font-weight: bold
+		position: relative
+		bottom: -2px
+		&:first-of-type
+			margin-top: 6vh
+	.block-functioning
+		background-color: $genuinyCol
+		text-align: center
+		padding: 5px 15px
+		color: white
+		border-radius: 10px
+		font-size: 1.2rem
+	img 
+		width: 30px
+		margin: 0 auto
+		display: block
+
+
+#carousel-functioning-desktop
+	@extend #carousel-functioning
+
+
+
 #carousel-blockchain .module-2 video
 	transform: translate(0, -50%)
 	position: relative
 	top: 50%
+
+#carousel-blockchain-desktop
+	@extend #carousel-blockchain
+
 
 #carousel-app 
 	.module-1 img
@@ -559,6 +580,19 @@ input.process-line
 		display: block
 		border-top: 4px solid #09435e
 		border-bottom: 4px solid #09435e
+
+
+#carousel-app-desktop
+	@extend #carousel-app
+
+
+
+
+
+
+
+
+
 
 
 video:fullscreen

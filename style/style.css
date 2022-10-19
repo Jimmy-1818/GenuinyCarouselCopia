@@ -33,8 +33,14 @@ html {
   max-height: 900px; }
   @media (min-width: 480px) {
     .container-phone {
-      top: 100px;
+      top: 75px;
       height: 91vh; } }
+
+.spacer {
+  height: 65; }
+  @media (min-width: 480px) {
+    .spacer {
+      height: 75px; } }
 
 /*******smartphone******* */
 .smartphone {
@@ -445,54 +451,30 @@ input.process-line {
 .overflow-hidden {
   overflow: hidden; }
 
-#carousel-functioning .block-number {
-  margin: 0 auto;
-  background: #0abab5;
-  width: fit-content;
-  padding: 2px 10px 0px 10px;
-  border-radius: 99px 99px 0 0;
-  color: white;
-  font-weight: bold;
-  position: relative;
-  bottom: -2px; }
-  #carousel-functioning .block-number:first-of-type {
-    margin-top: 6vh; }
-#carousel-functioning .block-functioning {
-  background-color: #0abab5;
-  text-align: center;
-  padding: 5px 15px;
-  color: white;
-  border-radius: 10px;
-  font-size: 1.2rem; }
-#carousel-functioning img {
-  width: 30px;
-  margin: 0 auto;
-  display: block; }
-
-#carouselGenuiny .module-1 .citation-mark {
+#carousel-genuiny .module-1 .citation-mark, #carousel-genuiny-desktop .module-1 .citation-mark {
   background: white;
   position: absolute;
   top: 0;
   left: 0;
   transform: translate(-100%, -100%);
   width: 30px; }
-  #carouselGenuiny .module-1 .citation-mark:last-of-type {
+  #carousel-genuiny .module-1 .citation-mark:last-of-type, #carousel-genuiny-desktop .module-1 .citation-mark:last-of-type {
     right: 0;
     bottom: 0;
     top: auto;
     left: auto;
     transform: translate(100%, 100%) rotate(180deg); }
-#carouselGenuiny .module-1 .center-block {
+#carousel-genuiny .module-1 .center-block, #carousel-genuiny-desktop .module-1 .center-block {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
   margin: 0 30px;
   padding: 15px 0; }
-#carouselGenuiny .module-2 p {
+#carousel-genuiny .module-2 p, #carousel-genuiny-desktop .module-2 p {
   min-height: 65vh; }
-#carouselGenuiny .module-2 a {
+#carousel-genuiny .module-2 a, #carousel-genuiny-desktop .module-2 a {
   text-decoration: none; }
-  #carouselGenuiny .module-2 a .to-calculator {
+  #carousel-genuiny .module-2 a .to-calculator, #carousel-genuiny-desktop .module-2 a .to-calculator {
     background: #09435E;
     padding: 10px 16px;
     text-align: center;
@@ -502,30 +484,57 @@ input.process-line {
     color: white;
     margin: 3vh 0 2vh; }
 
-#carousel-blockchain .module-2 video {
+#carousel-genuiny-desktop .module-1 .center-block {
+  transform: translate(0, 0); }
+
+#carousel-functioning .block-number, #carousel-functioning-desktop .block-number {
+  margin: 0 auto;
+  background: #0abab5;
+  width: fit-content;
+  padding: 2px 10px 0px 10px;
+  border-radius: 99px 99px 0 0;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  bottom: -2px; }
+  #carousel-functioning .block-number:first-of-type, #carousel-functioning-desktop .block-number:first-of-type {
+    margin-top: 6vh; }
+#carousel-functioning .block-functioning, #carousel-functioning-desktop .block-functioning {
+  background-color: #0abab5;
+  text-align: center;
+  padding: 5px 15px;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.2rem; }
+#carousel-functioning img, #carousel-functioning-desktop img {
+  width: 30px;
+  margin: 0 auto;
+  display: block; }
+
+#carousel-blockchain .module-2 video, #carousel-blockchain-desktop .module-2 video {
   transform: translate(0, -50%);
   position: relative;
   top: 50%; }
 
-#carousel-app .module-1 img {
+#carousel-app .module-1 img, #carousel-app-desktop .module-1 img {
   height: 50vh;
   margin: 10vh auto 0;
   filter: drop-shadow(12px 12px 12px #00000090);
   display: block; }
-  #carousel-app .module-1 img .module-overflow {
+  #carousel-app .module-1 img .module-overflow, #carousel-app-desktop .module-1 img .module-overflow {
     overflow: hidden; }
-#carousel-app .module-2 img {
+#carousel-app .module-2 img, #carousel-app-desktop .module-2 img {
   width: 50vw;
   margin: 20px auto;
   display: block; }
-#carousel-app .module-3 .value {
+#carousel-app .module-3 .value, #carousel-app-desktop .module-3 .value {
   display: block;
   width: fit-content;
   font-size: 12vw;
   font-family: "Montserrat";
   font-weight: 700;
   margin: 2vh auto; }
-#carousel-app .module-4 img {
+#carousel-app .module-4 img, #carousel-app-desktop .module-4 img {
   width: 40vw;
   margin: 20px auto;
   display: block;
