@@ -83,7 +83,7 @@ for (var i = 0; i < carousel_indicators.length; i++) {
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
-  if (carousel.length > 0){
+  if (carousel.length > 1){
     end_page_carousel()
     set_next_h1()
   }

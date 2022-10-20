@@ -407,9 +407,6 @@ h2.info img{
 }
 
 @media screen and (min-width: 480px){
-    .back-on-calculator{
-        visibility: hidden;
-    }
 
     .box-info{
         margin: 4%;
@@ -430,6 +427,9 @@ h2.info img{
     }
     .wrapper__title{
         display: block;
+    }   
+    h2.info img{
+        top: -6px;
     }
 }
 @media screen and (min-width: 1280px){

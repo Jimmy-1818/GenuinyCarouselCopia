@@ -94,7 +94,8 @@ nav.desktop-nav {
     border-radius: 99px;
     font-size: 18px;
     font-family: "Montserrat";
-    font-weight: 700; }
+    font-weight: 700;
+    text-transform: uppercase; }
   .menu a:first-of-type {
     margin-left: 40px; }
   .menu a.show, .menu a:hover {
@@ -131,7 +132,8 @@ nav.desktop-nav {
     color: white;
     font-size: 18px;
     font-weight: 700;
-    font-family: "Montserrat"; }
+    font-family: "Montserrat";
+    text-transform: uppercase; }
   .mobile-nav a:nth-child(5) {
     margin-bottom: 25px; }
   .mobile-nav a:hover {
