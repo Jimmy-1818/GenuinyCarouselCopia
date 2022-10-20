@@ -447,13 +447,16 @@ input.process-line
 .carousel-inner:last-of-type
 	margin-bottom: 50px
 
-.module
-	margin-bottom: 9vh
-	span.subtitle
+.module-1, .module-2, .module-3, .module-4, .module-5, 
+	.subtitle
 		font-size: 1.2em
 		font-weight: bold
 	a
 		text-decoration: none
+
+
+.module
+	margin-bottom: 9vh
 	h1
 		font-size: 2rem
 		border-bottom: 2px solid #0abab5
@@ -514,6 +517,9 @@ input.process-line
 	.module-1
 		.center-block
 			transform: translate(0, 0)
+	.module-2
+		p
+			min-height: auto
 
 
 
@@ -555,6 +561,9 @@ input.process-line
 
 #carousel-blockchain-desktop
 	@extend #carousel-blockchain
+	.module-2
+		video
+			transform: translate(0, 0)
 
 
 #carousel-app 

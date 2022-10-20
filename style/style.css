@@ -429,13 +429,14 @@ input.process-line {
 .carousel-inner:last-of-type {
   margin-bottom: 50px; }
 
+.module-1 .subtitle, .module-2 .subtitle, .module-3 .subtitle, .module-4 .subtitle, .module-5 .subtitle {
+  font-size: 1.2em;
+  font-weight: bold; }
+.module-1 a, .module-2 a, .module-3 a, .module-4 a, .module-5 a {
+  text-decoration: none; }
+
 .module {
   margin-bottom: 9vh; }
-  .module span.subtitle {
-    font-size: 1.2em;
-    font-weight: bold; }
-  .module a {
-    text-decoration: none; }
   .module h1 {
     font-size: 2rem;
     border-bottom: 2px solid #0abab5;
@@ -489,6 +490,8 @@ input.process-line {
 
 #carousel-genuiny-desktop .module-1 .center-block {
   transform: translate(0, 0); }
+#carousel-genuiny-desktop .module-2 p {
+  min-height: auto; }
 
 #carousel-functioning .block-number, #carousel-functioning-desktop .block-number {
   margin: 0 auto;
@@ -518,6 +521,9 @@ input.process-line {
   transform: translate(0, -50%);
   position: relative;
   top: 50%; }
+
+#carousel-blockchain-desktop .module-2 video {
+  transform: translate(0, 0); }
 
 #carousel-app .module-1 img, #carousel-app-desktop .module-1 img {
   height: 50vh;
