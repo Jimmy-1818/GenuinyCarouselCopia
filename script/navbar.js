@@ -63,21 +63,22 @@ function current_index(){
 let lastSctollY = window.scrollY;
 if(carousel){window.addEventListener("scroll", on_scroll)};
 
+
 // Bottom h1 on button prev/next click (delayed)
 const carousel_control = document.getElementsByClassName("carousel-control")
 for (var i = 0; i < carousel_control.length; i++) {
-  carousel_control[i].addEventListener("click", function(){
-    setTimeout(set_next_h1, 650)
-  });
-};
+  carousel_control[i].addEventListener("click", delayed_next_h1)
+}
 
 // Bottom h1 on indicators click (delayed)
 const carousel_indicators = document.getElementsByClassName("carousel-indicators")
 for (var i = 0; i < carousel_indicators.length; i++) {
-  carousel_indicators[i].addEventListener("click", function(){
-    setTimeout(set_next_h1, 650)
-  });
-};
+  carousel_indicators[i].addEventListener("click", delayed_next_h1)
+}
+
+function delayed_next_h1(){
+  setTimeout(set_next_h1, 650)
+}
 
 
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
@@ -203,13 +204,13 @@ function alternative_next_click(){
 
 
 
-
 for (var i = 0; i < control_next.length; i++) {
   control_next[i].addEventListener("click", scroll_fix)
 }
 for (var i = 0; i < indicators.length; i++) {
   indicators[i].addEventListener("click", scroll_fix) //**********
 }
+
 
 function scroll_fix(){
   var current_i = current_index()[0]

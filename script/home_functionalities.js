@@ -1,5 +1,6 @@
 //desktop_reform()
 //add_container()
+//remove_event_listener()
 
 
 function desktop_reform(){
@@ -49,3 +50,20 @@ function desktop_reform(){
 function add_container(){
 	document.getElementsByTagName("main")[0].classList.add("container")
 }
+
+function remove_event_listener(){
+	for (var i = 0; i < carousel_control.length; i++) {
+		carousel_control[i].removeEventListener("click", delayed_next_h1)
+	}
+
+	for (var i = 0; i < carousel_indicators.length; i++) {
+		carousel_indicators[i].removeEventListener("click", delayed_next_h1)
+	}
+
+	for (var i = 0; i < control_next.length; i++) {
+		control_next[i].removeEventListener("click", scroll_fix)
+	}
+	for (var i = 0; i < indicators.length; i++) {
+		indicators[i].removeEventListener("click", scroll_fix) //**********
+	}
+};
