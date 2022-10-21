@@ -467,7 +467,7 @@ input.process-line
 
 
 .module-overflow
-	overflow: scroll
+	overflow: auto
 	height: calc(100vh - 175px)
 	width: 86vw
 	margin: 0 auto
@@ -484,12 +484,17 @@ input.process-line
 	color: white
 	font-weight: bold
 	border: 4px solid #09435e
-	margin-bottom: 70px
+	margin-bottom: 30px
 	transform: translate(0, -50%)
+	border-radius: 99px
+
+.secondary-module-title-desktop
+	margin: 50px 0 20px
 
 .common-div-desktop
 	background-color: #0abab520
 	margin: 100px 0 0 0
+	padding: 0 50px 30px
 
 #carousel-genuiny
 	.module-1
@@ -522,17 +527,17 @@ input.process-line
 				background: $genuinyColDark
 				padding: 10px 16px
 				text-align: center
-				position: relative
-				bottom: 10px
 				font-weight: bold
 				color: white
-				margin: 3vh 0 2vh
+				margin: 3vh 0 0
 
 #carousel-genuiny-desktop
 	@extend #carousel-genuiny
 	.module-1
 		.center-block
 			transform: translate(0, 0)
+			width: 80%
+			margin: 0 auto 30px
 	.module-2
 		p
 			min-height: auto
@@ -574,6 +579,9 @@ input.process-line
 	transform: translate(0, -50%)
 	position: relative
 	top: 50%
+	width: 50%
+	display: block
+	margin: 0 auto
 
 #carousel-blockchain-desktop
 	@extend #carousel-blockchain
@@ -612,11 +620,19 @@ input.process-line
 #carousel-app-desktop
 	@extend #carousel-app
 	position: relative
+	.first-module-title-desktop
+		margin-bottom: 0
 	.module .module-title
 		width: 500px
 		position: relative
-		left: 50%
-		margin: 0
+		left: 45%
+		margin: 0px 0 10px
+		border: none
+		text-decoration: underline
+		text-decoration-thickness: 3px
+		text-decoration-color: $genuinyCol
+		text-underline-offset: 6px
+		font-size: 2.4rem
 	.carousel-indicators
 		transform: translate(0, 0)
 		display: block
@@ -624,16 +640,30 @@ input.process-line
 		position: absolute
 		left: 50%
 		right: auto
-		bottom: 45px
+		bottom: 0px
 		transform: translate(-50%, 0)
 	.carousel-inner
-		height: 800px
+		height: 650px
 	.module-overflow
-		width: 500px
+		width: 38%
 		position: relative
-		left: 50%
+		left: 45%
 		margin: 0
-		outline: 5px dotted darkred
+		height: 500px
+	/* width */
+	::-webkit-scrollbar 
+		width: 10px
+	/* Track */
+	::-webkit-scrollbar-track 
+		box-shadow: inset 0 0 5px grey 
+		border-radius: 10px
+	/* Handle */
+	::-webkit-scrollbar-thumb 
+		background: #09435e90
+		border-radius: 10px
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover 
+		background: #09435e
 	img.app-image
 		z-index: 1
 		position: absolute
@@ -641,7 +671,7 @@ input.process-line
 		top: 50%
 		margin: 0
 		transform: translate(-50%, -50%)
-		width: 250px
+		width: 19%
 		filter: drop-shadow(12px 12px 12px #00000090)
 	.carousel-item
 		width: 100%
@@ -652,24 +682,36 @@ input.process-line
 		left: auto
 		top: 50%
 		bottom: auto
-		background: yellow
 		transform: translate(0, -50%)
 		width: 100px
 		height: 100px
 		max-width: 100px
+		border-radius: 50%
+		background: $genuinyCol url("../images/arrow2.png") no-repeat fixed center
+		background-size: 58px
+		background-position: center 28px
+		opacity: 0.3
 	.carousel-control-next
-		right: 0
+		right: 50px
+		transform: rotate(90deg)
+		&:focus
+			opacity: 0.3
+		&:hover
+			opacity: 0.8
 	.carousel-control-prev
-		left: 0
-	.module-2
-		img
-			width: 50px
-
-
-
-
-
-
+		left: 50px
+		transform: rotate(-90deg)
+		&:focus
+			opacity: 0.3
+		&:hover
+			opacity: 0.8
+	.module-2 img
+		display: none
+	.module-3 .value
+		font-size: 40px
+	.module-4 img
+		width: 200px
+ 
 
 
 

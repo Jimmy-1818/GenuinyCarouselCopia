@@ -25,8 +25,6 @@ function desktop_reform(){
 		}
 		if (!(carousels[i].classList.contains("keep-carousel"))){
 			carousels[i].innerHTML = content.join("")
-		}else{
-
 		}
 	}
 	
@@ -50,11 +48,13 @@ function desktop_reform(){
 	const carousel_app_desktop = document.getElementById("carousel-app-desktop")
 	const inner_app = carousel_app_desktop.getElementsByClassName("carousel-inner")[0]
 	const image_app = inner_app.children[0].getElementsByTagName("img")[0]
+	var app_title = inner_app.children[0].getElementsByTagName("h1")[0].textContent
 	inner_app.children[0].remove()
 	image_app.classList.add("app-image")
 
+	// add to the NOW first
 	inner_app.children[0].classList.add("active")
-	carousel_app_desktop.innerHTML = image_app.outerHTML + carousel_app_desktop.innerHTML
+	carousel_app_desktop.innerHTML = '<h1 class="first-module-title-desktop">' + app_title + '</h1>' + image_app.outerHTML + carousel_app_desktop.innerHTML
 	
 	const indicators_buttons = carousel_app_desktop.getElementsByClassName("carousel-indicators")[0].getElementsByTagName("button")
 	indicators_buttons[indicators_buttons.length - 1].remove()
