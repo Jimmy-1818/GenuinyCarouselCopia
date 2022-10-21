@@ -33,17 +33,31 @@ function desktop_reform(){
 	// remove "carousel" class so that navbar's on_scroll funcitons won't be called 
 	carousel = document.getElementsByClassName("slide")
 	for (var i3 = 0; i3 < carousel.length; i3++) {
-	 	carousel[i3].classList.remove("carousel")
+	 	if (!(carousel[i3].classList.contains("keep-carousel"))){
+	 		carousel[i3].classList.remove("carousel")
+	 	}
 	 	carousel[i3].classList.add("common-div-desktop")
 	 	carousel[i3].setAttribute("id", carousel[i3].id + "-desktop");
 	}
 	var change_target = document.getElementsByClassName("change-target")
 	var target = "data-bs-target"
-	for (var i = 0; i < change_target.length; i++) {
+	for (var i4 = 0; i4 < change_target.length; i4++) {
 		var current_target = 
-		change_target[i].setAttribute(target, change_target[i].getAttribute(target) + "-desktop")
+		change_target[i4].setAttribute(target, change_target[i4].getAttribute(target) + "-desktop")
 	}
 	carousel = document.getElementsByClassName("carousel")
+
+	const carousel_app_desktop = document.getElementById("carousel-app-desktop")
+	const inner_app = carousel_app_desktop.getElementsByClassName("carousel-inner")[0]
+	const image_app = inner_app.children[0].getElementsByTagName("img")[0]
+	inner_app.children[0].remove()
+	image_app.classList.add("app-image")
+
+	inner_app.children[0].classList.add("active")
+	carousel_app_desktop.innerHTML = image_app.outerHTML + carousel_app_desktop.innerHTML
+	
+	const indicators_buttons = carousel_app_desktop.getElementsByClassName("carousel-indicators")[0].getElementsByTagName("button")
+	indicators_buttons[indicators_buttons.length - 1].remove()
 }
 
 
@@ -64,6 +78,6 @@ function remove_event_listener(){
 		control_next[i].removeEventListener("click", scroll_fix)
 	}
 	for (var i = 0; i < indicators.length; i++) {
-		indicators[i].removeEventListener("click", scroll_fix) //**********
+		indicators[i].removeEventListener("click", scroll_fix)
 	}
 };

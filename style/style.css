@@ -569,17 +569,39 @@ input.process-line {
 
 #carousel-app-desktop {
   position: relative; }
-  #carousel-app-desktop .module-1 img {
+  #carousel-app-desktop .module .module-title {
+    width: 500px;
+    position: relative;
+    left: 50%;
+    margin: 0; }
+  #carousel-app-desktop .carousel-indicators {
+    transform: translate(0, 0);
+    display: block;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    bottom: 45px;
+    transform: translate(-50%, 0); }
+  #carousel-app-desktop .carousel-inner {
+    height: 800px; }
+  #carousel-app-desktop .module-overflow {
+    width: 500px;
+    position: relative;
+    left: 50%;
+    margin: 0;
+    outline: 5px dotted darkred; }
+  #carousel-app-desktop img.app-image {
+    z-index: 1;
+    position: absolute;
+    left: 30%;
+    top: 50%;
     margin: 0;
     transform: translate(-50%, -50%);
-    position: relative;
-    left: 30%;
-    top: 50%; }
-  #carousel-app-desktop .module-1 .module-title {
-    font-size: 2.5rem;
-    width: fit-content;
-    border-bottom: none;
-    font-weight: bold; }
+    width: 250px;
+    filter: drop-shadow(12px 12px 12px #00000090); }
+  #carousel-app-desktop .carousel-item {
+    width: 100%; }
   #carousel-app-desktop .carousel-control {
     display: block;
     position: absolute;
@@ -596,6 +618,8 @@ input.process-line {
     right: 0; }
   #carousel-app-desktop .carousel-control-prev {
     left: 0; }
+  #carousel-app-desktop .module-2 img {
+    width: 50px; }
 
 video:fullscreen {
   border-radius: none !important;

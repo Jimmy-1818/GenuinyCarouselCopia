@@ -612,18 +612,39 @@ input.process-line
 #carousel-app-desktop
 	@extend #carousel-app
 	position: relative
-	.module-1 
-		img
-			margin: 0
-			transform: translate(-50%, -50%)
-			position: relative
-			left: 30%
-			top: 50%
-		.module-title
-			font-size: 2.5rem
-			width: fit-content
-			border-bottom: none
-			font-weight: bold
+	.module .module-title
+		width: 500px
+		position: relative
+		left: 50%
+		margin: 0
+	.carousel-indicators
+		transform: translate(0, 0)
+		display: block
+		width: fit-content
+		position: absolute
+		left: 50%
+		right: auto
+		bottom: 45px
+		transform: translate(-50%, 0)
+	.carousel-inner
+		height: 800px
+	.module-overflow
+		width: 500px
+		position: relative
+		left: 50%
+		margin: 0
+		outline: 5px dotted darkred
+	img.app-image
+		z-index: 1
+		position: absolute
+		left: 30%
+		top: 50%
+		margin: 0
+		transform: translate(-50%, -50%)
+		width: 250px
+		filter: drop-shadow(12px 12px 12px #00000090)
+	.carousel-item
+		width: 100%
 	.carousel-control
 		display: block
 		position: absolute
@@ -640,6 +661,11 @@ input.process-line
 		right: 0
 	.carousel-control-prev
 		left: 0
+	.module-2
+		img
+			width: 50px
+
+
 
 
 
