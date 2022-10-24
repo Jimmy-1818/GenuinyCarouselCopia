@@ -200,7 +200,7 @@ nav.navbar-hide {
       overflow: hidden;
       font-weight: bold;
       font-size: 1.7rem; }
-  .bottom-btn .arrow, .bottom-btn .bottom-btn .alternative-next {
+  .bottom-btn .arrow, .bottom-btn .alternative-next {
     position: absolute;
     width: 16vw;
     height: 16vw;
@@ -214,7 +214,7 @@ nav.navbar-hide {
     background: var(--dark) url("../images/arrow2.png") no-repeat fixed center;
     background-size: 70%;
     background-position: center 15px; }
-  .bottom-btn .bottom-btn .alternative-next {
+  .bottom-btn .alternative-next {
     z-index: 74;
     background: transparent; }
 
