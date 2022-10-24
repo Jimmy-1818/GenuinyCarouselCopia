@@ -2,7 +2,6 @@ $mobile-navbar-height: 30px
 $desktop-navbar-height: 40px
 
 $breakpoint-desktop: 1024px
-$breakpoint-small: 768px
 
 
 \:root
@@ -29,7 +28,7 @@ nav.desktop-nav
     align-items: center
     justify-content: space-between
     height: $mobile-navbar-height
-    @media (min-width: $breakpoint-small)
+    @media (min-width: $breakpoint-desktop)
       height: $desktop-navbar-height
     div.logo
       display: flex
@@ -37,7 +36,7 @@ nav.desktop-nav
       column-gap: 20px
       img
         width: 200px
-        @media (min-width: $breakpoint-small)
+        @media (min-width: $breakpoint-desktop)
           width: 250px
 
 .hamburger
@@ -179,7 +178,7 @@ nav.border-animation
 nav.navbar-hide
   // Height + padding, margin and border of navbar
   top: -85px
-  
+
 body
   background-color: white
 
@@ -203,7 +202,7 @@ nav.desktop-nav
   background-color: #fff
   transition: bottom 0.3s
   box-shadow: 0 0 8px 6px #00000020
-  @media (min-width: $breakpoint-small)
+  @media (min-width: $breakpoint-desktop)
     display: none
   .next-title
     width: 65vw
@@ -311,7 +310,7 @@ nav.desktop-nav
 
 .display-block
   display: block
-  @media (min-width: $breakpoint-small)
+  @media (min-width: $breakpoint-desktop)
     display: none
 
 .bottom-btn .rotate-arrow
