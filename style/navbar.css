@@ -212,12 +212,6 @@ nav.navbar-hide {
     transition: transform 0.3s;
     border-radius: 50%;
     background-color: #0ABAB5; }
-    .bottom-btn .arrow img, .bottom-btn .alternative-next img {
-      width: 70%;
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%); }
 
 .bottom-left {
   top: 50%;
@@ -229,11 +223,21 @@ nav.navbar-hide {
 .bottom-btn-up {
   bottom: 0px; }
 
-.bottom-btn .subscribe-image {
-  transform: translate(0, -50%) rotate(0deg);
-  background: var(--dark) url("../images/page-link.png") no-repeat fixed center;
-  background-size: 130%;
-  background-position: 65% 32%; }
+.arrow-img {
+  display: none;
+  width: 70%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%); }
+
+.subscribe-img {
+  display: none;
+  width: 120%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  left: 50%; }
 
 .carousel-indicators {
   display: none;

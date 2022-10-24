@@ -147,6 +147,8 @@ function set_next_h1(){
   var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
   var arrow = document.getElementsByClassName("arrow")[0]
   var alternative_next = document.getElementsByClassName("alternative-next")[0]
+  var arrow_img = arrow.getElementsByClassName("arrow-img")[0]
+  var subscribe_img = arrow.getElementsByClassName("subscribe-img")[0]
   
   for (var i = 0; i < items.length; i++) {
     if (items[i].classList.contains("active")){
@@ -158,24 +160,27 @@ function set_next_h1(){
   if (!(end_page_carousel()["last_in_items"])){
     var next_h1 = titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]
     
+    arrow_img.classList.add("display-block")
+    subscribe_img.classList.remove("display-block")
     arrow.classList.remove("rotate-arrow")
-    arrow.classList.remove("subscribe-image")
     alternative_next.classList.remove("display-block")
     control_next[current_i].classList.add("display-block")
   }
   else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
-    var next_h1 = titles_text[current_i + 1][0] //*********
+    var next_h1 = titles_text[current_i + 1][0]
 
+    arrow_img.classList.add("display-block")
+    subscribe_img.classList.remove("display-block")
     arrow.classList.add("rotate-arrow")
-    arrow.classList.remove("subscribe-image")
     alternative_next.classList.add("display-block")
     control_next[current_i].classList.remove("display-block")
   }
   else{
     var next_h1 = "Registrati"
-    
-    arrow.classList.remove("rotate-arrow")
-    arrow.classList.add("subscribe-image")
+
+    arrow_img.classList.remove("display-block")
+    subscribe_img.classList.add("display-block")
+    arrow.classList.add("rotate-arrow")
     alternative_next.classList.remove("display-block")
     control_next[current_i].classList.remove("display-block")
   }
@@ -189,7 +194,6 @@ function set_next_h1(){
 
 
 function alternative_next_click(){
-  console.log("___")
   var inners = document.getElementsByClassName("carousel-inner")
   var current_i = current_index()[0]
   if (current_i < inners.length - 1){
