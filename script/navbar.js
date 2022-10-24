@@ -136,6 +136,7 @@ function on_scroll(){
       }
     }
   }
+  //if () inserisci datascroll per rendere visibile la navbar anche su 
 };
 
 
@@ -180,7 +181,7 @@ function set_next_h1(){
 
     arrow_img.classList.remove("display-block")
     subscribe_img.classList.add("display-block")
-    arrow.classList.add("rotate-arrow")
+    arrow.classList.remove("rotate-arrow")
     alternative_next.classList.remove("display-block")
     control_next[current_i].classList.remove("display-block")
   }
@@ -213,7 +214,7 @@ for (var i = 0; i < control_next.length; i++) {
   control_next[i].addEventListener("click", scroll_fix)
 }
 for (var i = 0; i < indicators.length; i++) {
-  indicators[i].addEventListener("click", scroll_fix) //**********
+  indicators[i].addEventListener("click", scroll_fix)
 }
 
 
