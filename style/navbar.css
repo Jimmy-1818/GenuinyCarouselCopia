@@ -216,7 +216,7 @@ nav.navbar-hide {
     background-position: center 15px; }
   .bottom-btn .bottom-btn .alternative-next {
     z-index: 74;
-    background: none; }
+    background: transparent; }
 
 .bottom-left {
   top: 50%;
