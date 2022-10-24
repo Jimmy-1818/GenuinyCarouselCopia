@@ -1,9 +1,23 @@
-//desktop_reform()
-//add_container()
-//remove_event_listener()
+//whole website
+window.onresize = on_resize
 
+function on_resize(){
+	var page_width = $(window).width()
+	var layout_mobile = true
+	if ((page_width >= 1024) && (layout_mobile)){
+		layout_mobile = false
+		console.log("desktop-switch")
+		console.log(layout_mobile)
+	}else if ((page_width < 1024) && !(layout_mobile)){
+		layout_mobile = true
+		console.log("mobile-switch")
+	}
+}
 
+var indexx = 0
 function desktop_reform(){
+	indexx++
+	console.log(indexx)
 	const carousels = document.getElementsByClassName("carousel")
 	for (var i = 0; i < carousels.length; i++) {
 		var module_overflows = carousels[i].getElementsByClassName("module-overflow")
