@@ -168,6 +168,9 @@ nav.border-animation {
 nav.navbar-hide {
   top: -85px; }
 
+body {
+  background-color: white; }
+
 @media (min-width: 1024px) {
   nav.desktop-nav {
     border-bottom: 3px solid var(--primary); } }

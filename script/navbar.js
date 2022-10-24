@@ -95,7 +95,10 @@ function on_scroll(){
   var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
 
   // Hide/show when scrolling up/down navbar/bottom btn
-  if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile"))) {
+  if (window.scrollY == 0){
+    desktop_nav.classList.remove("navbar-hide")
+  }
+  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile"))) {
     desktop_nav.classList.add("navbar-hide")
   }else if (nearest_distance > nearest_threshold){
     desktop_nav.classList.remove("navbar-hide")
