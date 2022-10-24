@@ -1,4 +1,4 @@
-const mobile_body = document.getElementsByTagName("body")[0].innerHTML
+const mobile_html = document.getElementsByTagName("html")[0].innerHTML
 
 var layout_mobile = true
 function on_resize(){
@@ -10,7 +10,8 @@ function on_resize(){
 		remove_event_listener()
 	}else if ((page_width < 1024) && !(layout_mobile)){
 		layout_mobile = true
-		document.getElementsByTagName("body")[0].innerHTML = mobile_body
+		document.getElementsByTagName("html")[0].innerHTML = mobile_html
+		replace_event_listener()
 	}
 }
 
@@ -93,5 +94,22 @@ function remove_event_listener(){
 	}
 	for (var i = 0; i < indicators.length; i++) {
 		indicators[i].removeEventListener("click", scroll_fix)
+	}
+};
+
+function replace_event_listener(){
+	for (var i = 0; i < carousel_control.length; i++) {
+		carousel_control[i].addEventListener("click", delayed_next_h1)
+	}
+
+	for (var i = 0; i < carousel_indicators.length; i++) {
+		carousel_indicators[i].addEventListener("click", delayed_next_h1)
+	}
+
+	for (var i = 0; i < control_next.length; i++) {
+		control_next[i].addEventListener("click", scroll_fix)
+	}
+	for (var i = 0; i < indicators.length; i++) {
+		indicators[i].addEventListener("click", scroll_fix)
 	}
 };
