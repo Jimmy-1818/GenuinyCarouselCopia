@@ -472,8 +472,8 @@ input.process-line {
 
 .common-div-desktop {
   background-color: #0abab520;
-  margin: 100px 0 0 0;
-  padding: 0 50px 30px; }
+  margin: 100px -7vw 0 -7vw;
+  padding: 0 calc(7vw + 50px) 30px; }
 
 #carousel-genuiny .module-1 .citation-mark, #carousel-genuiny-desktop .module-1 .citation-mark {
   position: absolute;
@@ -539,21 +539,25 @@ input.process-line {
   margin: 0 auto;
   display: block; }
 
+#carousel-functioning-desktop .block-functioning {
+  width: 500px;
+  margin: 0 auto; }
+
 #carousel-blockchain .module-2 video, #carousel-blockchain-desktop .module-2 video {
   transform: translate(0, -50%);
   position: relative;
   top: 50%;
-  width: 50%;
   display: block;
   margin: 0 auto; }
 
 #carousel-blockchain-desktop .module-2 video {
-  transform: translate(0, 0); }
+  transform: translate(0, 0);
+  width: 50%; }
 
 #carousel-app .module-1 img, #carousel-app-desktop .module-1 img {
   height: 50vh;
   margin: 10vh auto 0;
-  filter: drop-shadow(12px 12px 12px #00000090);
+  filter: drop-shadow(12px 12px 12px #00000070);
   display: block; }
   #carousel-app .module-1 img .module-overflow, #carousel-app-desktop .module-1 img .module-overflow {
     overflow: hidden; }
@@ -604,7 +608,7 @@ input.process-line {
     bottom: 0px;
     transform: translate(-50%, 0); }
   #carousel-app-desktop .carousel-inner {
-    height: 650px; }
+    height: 540px; }
   #carousel-app-desktop .module-overflow {
     width: 38%;
     position: relative;
@@ -629,7 +633,7 @@ input.process-line {
     margin: 0;
     transform: translate(-50%, -50%);
     width: 19%;
-    filter: drop-shadow(12px 12px 12px #00000090); }
+    filter: drop-shadow(12px 12px 12px #00000070); }
   #carousel-app-desktop .carousel-item {
     width: 100%; }
   #carousel-app-desktop .carousel-control {
