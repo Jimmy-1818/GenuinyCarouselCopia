@@ -1,23 +1,23 @@
-//whole website
-window.onresize = on_resize
+const mobile_body = document.getElementsByTagName("body")[0].innerHTML
 
+var layout_mobile = true
 function on_resize(){
 	var page_width = $(window).width()
-	var layout_mobile = true
 	if ((page_width >= 1024) && (layout_mobile)){
 		layout_mobile = false
-		console.log("desktop-switch")
-		console.log(layout_mobile)
+		desktop_reform()
+		add_container()
+		remove_event_listener()
 	}else if ((page_width < 1024) && !(layout_mobile)){
 		layout_mobile = true
-		console.log("mobile-switch")
+		document.getElementsByTagName("body")[0].innerHTML = mobile_body
 	}
 }
 
-var indexx = 0
+window.onresize = on_resize
+on_resize()
+
 function desktop_reform(){
-	indexx++
-	console.log(indexx)
 	const carousels = document.getElementsByClassName("carousel")
 	for (var i = 0; i < carousels.length; i++) {
 		var module_overflows = carousels[i].getElementsByClassName("module-overflow")

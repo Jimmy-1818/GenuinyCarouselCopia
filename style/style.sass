@@ -695,16 +695,17 @@ input.process-line
 		background-size: 58px
 		background-position: center 28px
 		opacity: 0.3
+		img
+			width: 100%
 	.carousel-control-next
 		right: 50px
-		transform: rotate(90deg)
 		&:focus
 			opacity: 0.3
 		&:hover
 			opacity: 0.8
 	.carousel-control-prev
 		left: 50px
-		transform: rotate(-90deg)
+		transform: translate(0, -50%) rotate(180deg)
 		&:focus
 			opacity: 0.3
 		&:hover

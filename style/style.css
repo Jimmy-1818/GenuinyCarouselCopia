@@ -652,16 +652,17 @@ input.process-line {
     background-size: 58px;
     background-position: center 28px;
     opacity: 0.3; }
+    #carousel-app-desktop .carousel-control img {
+      width: 100%; }
   #carousel-app-desktop .carousel-control-next {
-    right: 50px;
-    transform: rotate(90deg); }
+    right: 50px; }
     #carousel-app-desktop .carousel-control-next:focus {
       opacity: 0.3; }
     #carousel-app-desktop .carousel-control-next:hover {
       opacity: 0.8; }
   #carousel-app-desktop .carousel-control-prev {
     left: 50px;
-    transform: rotate(-90deg); }
+    transform: translate(0, -50%) rotate(180deg); }
     #carousel-app-desktop .carousel-control-prev:focus {
       opacity: 0.3; }
     #carousel-app-desktop .carousel-control-prev:hover {
