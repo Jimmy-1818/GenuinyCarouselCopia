@@ -262,7 +262,7 @@ nav.navbar-hide {
 
 .bottom-btn .alternative-next {
   z-index: 74;
-  background: none; }
+  background: transparent; }
 
 .carousel-control-prev {
   left: 4%; }
