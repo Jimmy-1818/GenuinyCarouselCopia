@@ -139,7 +139,6 @@ function on_scroll(){
       }
     }
   }
-  //if () inserisci datascroll per rendere visibile la navbar anche su 
 };
 
 
