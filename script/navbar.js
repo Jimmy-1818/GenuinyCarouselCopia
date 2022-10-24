@@ -189,6 +189,7 @@ function set_next_h1(){
 
 
 function alternative_next_click(){
+  console.log("___")
   var inners = document.getElementsByClassName("carousel-inner")
   var current_i = current_index()[0]
   if (current_i < inners.length - 1){
