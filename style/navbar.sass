@@ -229,10 +229,6 @@ nav.desktop-nav
     background: var(--dark) url("../images/arrow2.png") no-repeat fixed center
     background-size: 70%
     background-position: center 15px
-  .alternative-next
-    @extend .arrow
-    z-index: 74
-    background: none
 
 
               //hamburger
@@ -288,6 +284,10 @@ nav.desktop-nav
   max-width: 72px
   transition: bottom 0.3s
 
+.bottom-btn .alternative-next
+  @extend .arrow
+  z-index: 74
+  background: none
 
 .carousel-control-prev
   left: 4%
