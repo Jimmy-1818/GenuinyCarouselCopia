@@ -19,6 +19,9 @@
 html {
   font-size: 62.5%; }
 
+body {
+  overflow-x: hidden; }
+
 .container {
   width: 100%;
   box-sizing: border-box;
@@ -37,7 +40,8 @@ html {
   @media (min-width: 480px) {
     .container-phone {
       top: 75px;
-      height: 91vh; } }
+      height: 700px;
+      margin: -7vw; } }
 
 .spacer {
   height: 65; }
@@ -52,12 +56,13 @@ html {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 45%; }
+  width: 65%;
+  filter: drop-shadow(12px 12px 12px #00000070); }
   @media (min-width: 480px) {
     .smartphone {
-      left: 4%;
-      width: 18%;
-      top: 9%;
+      left: 10%;
+      width: 230px;
+      top: 15%;
       transform: translate(0%, 0%);
       max-width: 256px; } }
   .smartphone .smartphone {
