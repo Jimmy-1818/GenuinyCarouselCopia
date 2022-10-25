@@ -18,9 +18,11 @@ function generate_link(){
     document.getElementById("processed-link").value = affiliate_site
   }
   else if (affiliation_link.length > 0){
+    document.activeElement.blur();
     alert('Link non valido. Incolla il referral link, che ottieni nell\'app da "condividi app".')
   }
   else {
+    document.activeElement.blur();
     alert('Incolla prima il referral link, che ottieni nell\'app da "condividi app".')
   }
 };
@@ -38,6 +40,7 @@ copy_btn.onclick = function(){
     alert("Link Copiato!")
   }
   else{
+    document.activeElement.blur();
     alert("Impossibile copiare, inserisci prima il link.")
   }
 };
