@@ -534,16 +534,19 @@ input.process-line {
   color: white;
   border-radius: 10px;
   font-size: 1.2rem; }
-#carousel-functioning img, #carousel-functioning-desktop img {
-  width: 30px;
+#carousel-functioning .module-1 img, #carousel-functioning-desktop .module-1 img {
+  width: 100%;
   margin: 0 auto;
   display: block; }
+#carousel-functioning .module-2 .secondary-module-title-desktop, #carousel-functioning-desktop .module-2 .secondary-module-title-desktop {
+  display: none; }
+#carousel-functioning .module-2 p, #carousel-functioning-desktop .module-2 p {
+  margin-top: 50px; }
 
 #carousel-functioning-desktop {
   background-color: transparent; }
-  #carousel-functioning-desktop .block-functioning {
-    width: 500px;
-    margin: 0 auto; }
+  #carousel-functioning-desktop .module-1 img {
+    width: 80%; }
 
 #carousel-blockchain .module-2 video, #carousel-blockchain-desktop .module-2 video {
   transform: translate(0, -50%);
