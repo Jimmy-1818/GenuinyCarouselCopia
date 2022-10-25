@@ -84,6 +84,7 @@ function delayed_next_h1(){
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
+  console.log("on_scroll called")
   if (carousel.length > 1){
     end_page_carousel()
     set_next_h1()
