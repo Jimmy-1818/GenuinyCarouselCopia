@@ -581,6 +581,7 @@ input.process-line {
 
 #carousel-app-desktop {
   position: relative;
+  background-color: transparent;
   /* width */
   /* Track */
   /* Handle */

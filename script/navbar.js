@@ -209,9 +209,6 @@ function alternative_next_click(){
   }
 }
 
-
-
-
 for (var i = 0; i < control_next.length; i++) {
   control_next[i].addEventListener("click", scroll_fix)
 }
