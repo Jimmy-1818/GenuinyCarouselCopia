@@ -539,9 +539,11 @@ input.process-line {
   margin: 0 auto;
   display: block; }
 
-#carousel-functioning-desktop .block-functioning {
-  width: 500px;
-  margin: 0 auto; }
+#carousel-functioning-desktop {
+  background-color: transparent; }
+  #carousel-functioning-desktop .block-functioning {
+    width: 500px;
+    margin: 0 auto; }
 
 #carousel-blockchain .module-2 video, #carousel-blockchain-desktop .module-2 video {
   transform: translate(0, -50%);
