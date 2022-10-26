@@ -10,6 +10,14 @@ $breakpoint-desktop: 1024px
   --dark: #0abab5
 
 
+nav.desktop-nav:not([data-scroll='0'])
+  box-shadow: 0px 0px 13px 6px #00000080
+
+//
+//nav.desktop-nav
+//  &:not([data-scroll='0']) 
+//    box-shadow: 0px 0px 13px 6px #00000080
+
 nav.desktop-nav
   position: fixed
   top: 0
@@ -18,9 +26,8 @@ nav.desktop-nav
   z-index: 81
   background-color: var(--dark)
   padding: 16px 32px
-  border-bottom: 3px solid var(--primary)
   transition: border-bottom 0s 100ms, top .3s 0s
-  //box-shadow: 0px 0px 15px 6px #00000040
+  //border-bottom: 3px solid var(--primary)
   .container-navbar
     max-width: 1280px
     margin: 0 auto
@@ -181,12 +188,6 @@ nav.navbar-hide
 
 body
   background-color: white
-
-nav.desktop-nav
-  @media (min-width: $breakpoint-desktop)
-    border-bottom: 3px solid var(--primary)
-
-
 
 // BOTTOM BUTTON
 

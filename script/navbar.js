@@ -84,7 +84,6 @@ function delayed_next_h1(){
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
-  console.log("on_scroll called")
   if (carousel.length > 1){
     end_page_carousel()
     set_next_h1()
@@ -101,8 +100,10 @@ function on_scroll(){
   }
   else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile"))) {
     desktop_nav.classList.add("navbar-hide")
+    //console.log(desktop_nav)
   }else if (nearest_distance > nearest_threshold){
     desktop_nav.classList.remove("navbar-hide")
+    //console.log(desktop_nav)
   }
   lastSctollY = window.scrollY
 
