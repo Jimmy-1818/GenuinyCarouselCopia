@@ -29,19 +29,20 @@ body {
   padding: 65px 7% 0 7%; }
   @media (min-width: 480px) {
     .container {
-      padding-top: 75px; } }
+      padding-top: 72px; } }
 
-.container-phone {
+.container-header {
   /**for tall and narrow screens: object width% container* */
   position: relative;
-  top: 65px;
-  height: calc(100vh - 65px);
+  top: -65px;
+  padding-top: 65px;
+  height: 100vh;
   max-height: 900px; }
   @media (min-width: 480px) {
-    .container-phone {
-      top: 75px;
-      height: 700px;
-      margin: -7vw; } }
+    .container-header {
+      top: -73px;
+      margin: 0 -7vw;
+      padding-top: 73px; } }
 
 .spacer {
   height: 65; }
@@ -489,32 +490,39 @@ input.process-line {
   margin: 100px -7vw 0 -7vw;
   padding: 0 calc(7vw + 50px) 30px; }
 
-#carousel-genuiny .module-1 .citation-mark, #carousel-genuiny-desktop .module-1 .citation-mark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-100%, -100%);
-  width: 30px; }
-  #carousel-genuiny .module-1 .citation-mark:last-of-type, #carousel-genuiny-desktop .module-1 .citation-mark:last-of-type {
-    right: 0;
-    bottom: 0;
-    top: auto;
-    left: auto;
-    transform: translate(100%, 100%) rotate(180deg); }
-#carousel-genuiny .module-1 .center-block, #carousel-genuiny-desktop .module-1 .center-block {
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
-  padding: 15px 0;
-  margin: 0 30px; }
-  @media (min-width: 768px) {
-    #carousel-genuiny .module-1 .center-block, #carousel-genuiny-desktop .module-1 .center-block {
-      margin: 30px; } }
-#carousel-genuiny .module-2 p, #carousel-genuiny-desktop .module-2 p {
+.container-header {
+  background-image: url("../images/wave.svg");
+  background-size: 100vw;
+  background-position: top 73px;
+  background-repeat: no-repeat; }
+  .container-header .header_text {
+    position: relative;
+    top: 50%;
+    padding: 15px 0;
+    margin: 0 30px;
+    position: absolute;
+    right: 10%;
+    width: 50%;
+    max-width: 770px;
+    top: 20%; }
+    .container-header .header_text p {
+      font-size: 25px; }
+    .container-header .header_text p.main-text {
+      margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .container-header .header_text {
+        margin: 30px; } }
+    .container-header .header_text .instruction p, .container-header .header_text .instruction b {
+      line-height: 1.5;
+      font-size: 1.6rem; }
+    .container-header .header_text .instruction .box-instructions {
+      margin-left: 15px; }
+
+#carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
   min-height: 60vh; }
-#carousel-genuiny .module-2 a, #carousel-genuiny-desktop .module-2 a {
+#carousel-genuiny .module-1 a, #carousel-genuiny-desktop .module-1 a {
   text-decoration: none; }
-  #carousel-genuiny .module-2 a .to-calculator, #carousel-genuiny-desktop .module-2 a .to-calculator {
+  #carousel-genuiny .module-1 a .to-calculator, #carousel-genuiny-desktop .module-1 a .to-calculator {
     background: #09435E;
     padding: 10px 16px;
     text-align: center;
@@ -522,12 +530,12 @@ input.process-line {
     color: white;
     margin: 3vh 0 0; }
 
-#carousel-genuiny-desktop .module-1 .center-block {
-  transform: translate(0, 0);
-  width: 80%;
-  margin: 0 auto 30px; }
-#carousel-genuiny-desktop .module-2 p {
+#carousel-genuiny-desktop .module-1 p {
   min-height: auto; }
+#carousel-genuiny-desktop .module-1 a .to-calculator {
+  width: 30vw;
+  max-width: 300px;
+  margin: 15px auto; }
 
 #carousel-functioning .block-number, #carousel-functioning-desktop .block-number {
   margin: 0 auto;
