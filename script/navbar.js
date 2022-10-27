@@ -27,6 +27,9 @@ function hamburger_click(){
   hamburger[0].classList.toggle("show")
   desktop_nav.classList.toggle("border-animation")
   menu_mobile.classList.toggle("show-mobile")
+  if (menu_mobile.classList.contains("show-mobile")){
+    desktop_nav.style.boxShadow = "none"
+  }
   opacity.classList.toggle("show-opacity")
   if (!(desktop_nav.classList.contains("border-animation")) && (current_index()[1] < nearest_threshold)) {
     desktop_nav.classList.add("navbar-hide")
