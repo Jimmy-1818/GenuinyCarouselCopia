@@ -33,14 +33,15 @@ body {
 
 .container-header {
   background-image: url("../images/wave.png");
-  background-size: 1600px;
   background-repeat: no-repeat;
   position: relative;
   top: -62px;
   padding-top: 62px;
-  height: calc(100vh + 62px); }
+  height: calc(100vh + 62px);
+  background-size: 1100px; }
   @media (min-width: 480px) {
     .container-header {
+      background-size: 1600px;
       height: calc(100vh + 73px);
       max-height: 900px;
       top: -73px;
@@ -61,7 +62,6 @@ body {
         width: 50%;
         max-width: 770px; } }
     .container-header .header_text p.main-text {
-      margin-bottom: 30px;
       padding: 0 25px 25px;
       font-family: "Montserrat";
       position: relative;
@@ -80,15 +80,21 @@ body {
       .container-header .header_text p.main-text span.second-main {
         display: block;
         font-size: 25px;
-        margin-top: 100%; }
+        margin-top: 100%;
+        background: #ffffff80;
+        padding: 10px 0px;
+        border-radius: 20px; }
         @media (min-width: 768px) {
           .container-header .header_text p.main-text span.second-main {
-            margin-top: 20px; } }
+            margin-top: 20px;
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0; } }
     @media (min-width: 768px) {
       .container-header .header_text {
         margin: 30px; } }
     .container-header .header_text .instructions {
-      text-align: left;
+      text-align: center;
       position: relative; }
       @media (min-width: 768px) {
         .container-header .header_text .instructions {
@@ -96,9 +102,23 @@ body {
           left: -45px; } }
       .container-header .header_text .instructions p, .container-header .header_text .instructions b {
         line-height: 1.5;
-        font-size: 1.6rem; }
+        font-size: 1.6rem;
+        text-align: center; }
+      .container-header .header_text .instructions p.use_instrutions {
+        background: #09435e;
+        width: fit-content;
+        margin: 0 auto;
+        color: white;
+        display: block;
+        padding: 2px 13px;
+        border-radius: 99px; }
       .container-header .header_text .instructions .box-instructions {
         padding: 0 15px; }
+        .container-header .header_text .instructions .box-instructions p, .container-header .header_text .instructions .box-instructions b {
+          text-align: left; }
+          @media (min-width: 768px) {
+            .container-header .header_text .instructions .box-instructions p, .container-header .header_text .instructions .box-instructions b {
+              text-align: center; } }
         @media (min-width: 768px) {
           .container-header .header_text .instructions .box-instructions {
             padding: 0;
@@ -550,24 +570,28 @@ input.process-line {
   margin: 100px -7vw 0 -7vw;
   padding: 0 calc(7vw + 50px) 30px; }
 
-#carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
-  min-height: 60vh; }
-#carousel-genuiny .module-1 a, #carousel-genuiny-desktop .module-1 a {
-  text-decoration: none; }
-  #carousel-genuiny .module-1 a .to-calculator, #carousel-genuiny-desktop .module-1 a .to-calculator {
-    background: #09435E;
-    padding: 10px 16px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    margin: 3vh 0 0; }
+#carousel-genuiny, #carousel-genuiny-desktop {
+  margin-top: 215px; }
+  #carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
+    min-height: 60vh; }
+  #carousel-genuiny .module-1 a, #carousel-genuiny-desktop .module-1 a {
+    text-decoration: none; }
+    #carousel-genuiny .module-1 a .to-calculator, #carousel-genuiny-desktop .module-1 a .to-calculator {
+      background: #09435E;
+      padding: 10px 16px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      margin: 3vh 0 0; }
 
-#carousel-genuiny-desktop .module-1 p {
-  min-height: auto; }
-#carousel-genuiny-desktop .module-1 a .to-calculator {
-  width: 30vw;
-  max-width: 300px;
-  margin: 15px auto; }
+#carousel-genuiny-desktop {
+  margin-top: 50px; }
+  #carousel-genuiny-desktop .module-1 p {
+    min-height: auto; }
+  #carousel-genuiny-desktop .module-1 a .to-calculator {
+    width: 30vw;
+    max-width: 300px;
+    margin: 15px auto; }
 
 #carousel-functioning .block-number, #carousel-functioning-desktop .block-number {
   margin: 0 auto;

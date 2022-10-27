@@ -89,9 +89,9 @@ function delayed_next_h1(){
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
-  if (window.scrollY == 0)
+  if (window.scrollY == 0){
     desktop_nav.style.boxShadow = "none"
-  else{
+  }else{
     desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
   }
   if (carousel.length > 1){

@@ -39,13 +39,14 @@ body
 
 .container-header
 	background-image: url("../images/wave.png")
-	background-size: 1600px
 	background-repeat: no-repeat
 	position: relative
 	top: -62px
 	padding-top: 62px
 	height: calc(100vh + 62px)
+	background-size: 1100px
 	@media (min-width: 480px)
+		background-size: 1600px
 		height: calc(100vh + 73px)
 		max-height: 900px
 		top: -73px
@@ -65,7 +66,6 @@ body
 			width: 50%
 			max-width: 770px
 		p.main-text
-			margin-bottom: 30px
 			padding: 0 25px 25px
 			font-family: 'Montserrat'
 			position: relative
@@ -92,12 +92,18 @@ body
 				display: block
 				font-size: 25px	
 				margin-top: 100%
+				background: #ffffff80
+				padding: 10px 0px
+				border-radius: 20px
 				@media (min-width: $breakpoint-768)
 					margin-top: 20px
+					padding: 0
+					background-color: transparent
+					border-radius: 0
 		@media (min-width: $breakpoint-768)
 			margin: 30px
 		.instructions
-			text-align: left
+			text-align: center
 			position: relative
 			@media (min-width: $breakpoint-768)
 				text-align: center
@@ -105,8 +111,22 @@ body
 			p, b
 				line-height: 1.5
 				font-size: 1.6rem
+				text-align: center
+			p.use_instrutions
+				background: #09435e
+				width: fit-content
+				margin: 0 auto
+				color: white
+				display: block
+				padding: 2px 13px
+				border-radius: 99px
 			.box-instructions
 				padding: 0 15px
+				p, b
+					text-align: left
+					@media (min-width: $breakpoint-768)
+						text-align: center
+
 				@media (min-width: $breakpoint-768)
 					padding: 0
 					margin-left: 15px
@@ -585,6 +605,7 @@ input.process-line
 //		transform: translate(100%, 100%) rotate(180deg)					
 
 #carousel-genuiny
+	margin-top: 215px
 	.module-1 
 		p
 			min-height: 60vh
@@ -599,6 +620,7 @@ input.process-line
 				margin: 3vh 0 0
 
 #carousel-genuiny-desktop
+	margin-top: 50px
 	@extend #carousel-genuiny
 	//.module-1
 	//	.center-block
