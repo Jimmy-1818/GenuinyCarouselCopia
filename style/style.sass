@@ -521,13 +521,11 @@ input.process-line
 //		transform: translate(100%, 100%) rotate(180deg)
 	
 .container-header
-	background-image: url("../images/wave.svg")
+	background-image: url("../images/wave.png")
 	background-size: 100vw
-	background-position: top 73px
 	background-repeat: no-repeat
 	.header_text
 		position: relative
-		top: 50%
 		padding: 15px 0
 		margin: 0 30px
 
@@ -535,14 +533,34 @@ input.process-line
 		right: 10%
 		width: 50%
 		max-width: 770px
-		top: 20%
+		top: 10%
 		p
 			font-size: 25px
 		p.main-text
 			margin-bottom: 30px
+			padding: 25px
+			font-family: 'Montserrat'
+			font-weight: bold
+			position: relative
+			filter: drop-shadow(0px 0px 15px #09435e)
+			color: white			
+			//color: $genuinyColDark
+			//box-shadow: 5px 5px 15px 4px #00000035
+			//border-radius: 37px 0 0 37px
+			//background: white
+			//left: -25px
+			//padding-right: 35vw
+			//margin-right: -35vw
+			//border: 4px solid $genuinyColDark
+			span.first-line
+				font-size: 3rem
+				text-transform: uppercase
 		@media (min-width: $breakpoint-768)
 			margin: 30px
 		.instruction
+			text-align: center
+			position: relative
+			left: -45px
 			p, b
 				line-height: 1.5
 				font-size: 1.6rem

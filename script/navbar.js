@@ -8,6 +8,8 @@ const control_next = document.getElementsByClassName("carousel-control-next")
 const module_overflow = document.getElementsByClassName("module-overflow")
 var carousel = document.getElementsByClassName("carousel")
 const indicators = document.getElementsByClassName("carousel-indicators")
+var page_width = $(window).width()
+
 
 const nearest_threshold = 70
 
@@ -84,6 +86,11 @@ function delayed_next_h1(){
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
+  if (window.scrollY == 0)
+    desktop_nav.style.boxShadow = "none"
+  else{
+    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
+  }
   if (carousel.length > 1){
     end_page_carousel()
     set_next_h1()
@@ -98,9 +105,9 @@ function on_scroll(){
   if (window.scrollY == 0){
     desktop_nav.classList.remove("navbar-hide")
   }
-  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile"))) {
+  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile")) && (page_width < 768)) {
     desktop_nav.classList.add("navbar-hide")
-    //console.log(desktop_nav)
+    console.log("desktop_nav.aDd")
   }else if (nearest_distance > nearest_threshold){
     desktop_nav.classList.remove("navbar-hide")
     //console.log(desktop_nav)

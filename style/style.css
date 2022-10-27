@@ -491,32 +491,43 @@ input.process-line {
   padding: 0 calc(7vw + 50px) 30px; }
 
 .container-header {
-  background-image: url("../images/wave.svg");
+  background-image: url("../images/wave.png");
   background-size: 100vw;
-  background-position: top 73px;
   background-repeat: no-repeat; }
   .container-header .header_text {
     position: relative;
-    top: 50%;
     padding: 15px 0;
     margin: 0 30px;
     position: absolute;
     right: 10%;
     width: 50%;
     max-width: 770px;
-    top: 20%; }
+    top: 10%; }
     .container-header .header_text p {
       font-size: 25px; }
     .container-header .header_text p.main-text {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      padding: 25px;
+      font-family: "Montserrat";
+      font-weight: bold;
+      position: relative;
+      filter: drop-shadow(0px 0px 15px #09435e);
+      color: white; }
+      .container-header .header_text p.main-text span.first-line {
+        font-size: 3rem;
+        text-transform: uppercase; }
     @media (min-width: 768px) {
       .container-header .header_text {
         margin: 30px; } }
-    .container-header .header_text .instruction p, .container-header .header_text .instruction b {
-      line-height: 1.5;
-      font-size: 1.6rem; }
-    .container-header .header_text .instruction .box-instructions {
-      margin-left: 15px; }
+    .container-header .header_text .instruction {
+      text-align: center;
+      position: relative;
+      left: -45px; }
+      .container-header .header_text .instruction p, .container-header .header_text .instruction b {
+        line-height: 1.5;
+        font-size: 1.6rem; }
+      .container-header .header_text .instruction .box-instructions {
+        margin-left: 15px; }
 
 #carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
   min-height: 60vh; }
