@@ -39,7 +39,7 @@ body {
   padding-top: 62px;
   height: calc(100vh + 62px);
   background-size: 1100px; }
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     .container-header {
       background-size: 1600px;
       height: calc(100vh + 73px);
@@ -80,7 +80,7 @@ body {
       .container-header .header_text p.main-text span.second-main {
         display: block;
         font-size: 25px;
-        margin-top: 100%;
+        margin-top: 76vw;
         background: #ffffff80;
         padding: 10px 0px;
         border-radius: 20px; }
@@ -139,7 +139,7 @@ body {
   transform: translate(-50%, -50%);
   width: 40%;
   filter: drop-shadow(12px 12px 12px #00000070); }
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     .smartphone {
       left: 10%;
       width: 230px;
