@@ -142,9 +142,6 @@ nav.desktop-nav {
   top: 0;
   box-shadow: 0px 5px 65px 25px rgba(0, 0, 0, 0.3); }
 
-nav.border-animation {
-  border-bottom: transparent; }
-
 .opacity {
   display: none;
   position: fixed;

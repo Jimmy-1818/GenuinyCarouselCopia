@@ -38,7 +38,7 @@ body {
   top: -62px;
   padding-top: 62px;
   height: calc(100vh + 62px);
-  background-size: 1100px; }
+  background-size: 1300px; }
   @media (min-width: 768px) {
     .container-header {
       background-size: 1600px;

@@ -7,6 +7,8 @@ generate_btn.addEventListener("click",()=>{
     let link_desktop = document.getElementById("link_desktop")
     if(!qr_destination){return};
     var qr_link = `https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${qr_destination}&size=[780]x[780]`;
+    //if (qr_destination == business.geniny.com/default registration){
+    //    qr_image.src = "imaegs/default_qr.png" <-- da scaricare tramite l'api per omologazione}
     if (qr_image.src != qr_link){
         qr_image.src = qr_link
         qr_image.src = qr_link

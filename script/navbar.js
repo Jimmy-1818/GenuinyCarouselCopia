@@ -1,6 +1,6 @@
 const hamburger = document.getElementsByClassName("hamburger")
 const menu_mobile = document.getElementsByClassName("mobile-nav")[0]
-const desktop_nav = document.getElementsByClassName("desktop-nav")[0]
+var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
 const opacity = document.getElementsByClassName("opacity")[0]
 
 const bottom_btn = document.getElementsByClassName("bottom-btn")[0]
@@ -8,7 +8,6 @@ const control_next = document.getElementsByClassName("carousel-control-next")
 const module_overflow = document.getElementsByClassName("module-overflow")
 var carousel = document.getElementsByClassName("carousel")
 const indicators = document.getElementsByClassName("carousel-indicators")
-var page_width = $(window).width()
 
 
 const nearest_threshold = 70
@@ -25,7 +24,6 @@ if (hamburger[1]){
 
 function hamburger_click(){
   hamburger[0].classList.toggle("show")
-  desktop_nav.classList.toggle("border-animation")
   menu_mobile.classList.toggle("show-mobile")
   if (menu_mobile.classList.contains("show-mobile")){
     desktop_nav.style.boxShadow = "none"
@@ -108,12 +106,11 @@ function on_scroll(){
   if (window.scrollY == 0){
     desktop_nav.classList.remove("navbar-hide")
   }
-  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile")) && (page_width < 768)) {
+  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile")) && ($(window).width() < 768)) {
+    desktop_nav = document.getElementsByClassName("desktop-nav")[0]
     desktop_nav.classList.add("navbar-hide")
-    console.log("desktop_nav.aDd")
   }else if (nearest_distance > nearest_threshold){
     desktop_nav.classList.remove("navbar-hide")
-    //console.log(desktop_nav)
   }
   lastSctollY = window.scrollY
 
