@@ -759,6 +759,7 @@ input.process-line {
     width: 200px; }
 
 footer {
+  margin-top: 50px;
   display: grid;
   justify-items: center;
   align-items: center;
