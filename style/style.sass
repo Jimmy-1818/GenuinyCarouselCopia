@@ -664,14 +664,15 @@ input.process-line
 	.module-2 
 		.secondary-module-title-desktop
 			display: none
-		p
-			margin-top: 50px
+
 
 #carousel-functioning-desktop
 	@extend #carousel-functioning
 	background-color: transparent
 	.module-1 img 
 		width: 80%
+	.module-2 p
+		margin-top: 50px
 
 
 
@@ -817,6 +818,23 @@ input.process-line
 		width: 200px
  
 footer
+	display: grid
+	justify-items: center
+	align-items: center
+	//background-color: $genuinyColDark
+	background-color: black
+	padding: 15px
+	color: #f1f1f1
+	grid-template-columns: 1fr 1fr
+	@media (min-width: $breakpoint-768)
+		grid-template-columns: 1fr 1fr
+		color: white
+	.grid_item
+		margin-bottom: 10px
+		paddign: 0 10px
+		&:last-of-type
+			margin-bottom: 0
+
 	
 
 
