@@ -836,6 +836,8 @@ footer
 		color: white
 	.grid_item
 		font-size: 1.2rem
+		@media (min-width: $breakpoint-768)
+			font-size: 1.3rem
 		&:last-of-type
 			margin-bottom: 0
 	.two_span
@@ -844,6 +846,14 @@ footer
 		@media (min-width: $breakpoint-768)
 			grid-column-start: auto
 			grid-column-end: auto
+	span.br
+		display: block
+		font-size: 1em
+		@media (min-width: $breakpoint-768)
+			display: inline-block
+			&::before
+				content: "| "
+
 
 
 	

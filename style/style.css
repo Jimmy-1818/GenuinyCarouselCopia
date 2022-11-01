@@ -777,6 +777,9 @@ footer {
       color: white; } }
   footer .grid_item {
     font-size: 1.2rem; }
+    @media (min-width: 768px) {
+      footer .grid_item {
+        font-size: 1.3rem; } }
     footer .grid_item:last-of-type {
       margin-bottom: 0; }
   footer .two_span {
@@ -786,6 +789,14 @@ footer {
       footer .two_span {
         grid-column-start: auto;
         grid-column-end: auto; } }
+  footer span.br {
+    display: block;
+    font-size: 1em; }
+    @media (min-width: 768px) {
+      footer span.br {
+        display: inline-block; }
+        footer span.br::before {
+          content: " | "; } }
 
 video:fullscreen {
   border-radius: none !important;
