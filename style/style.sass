@@ -824,16 +824,26 @@ footer
 	//background-color: $genuinyColDark
 	background-color: black
 	padding: 15px
+	text-align: center
+	column-gap: 15px
+	grid-row-gap: 14px
 	color: #f1f1f1
 	grid-template-columns: 1fr 1fr
 	@media (min-width: $breakpoint-768)
+		grid-row-gap: 10px
 		grid-template-columns: 1fr 1fr
 		color: white
 	.grid_item
-		margin-bottom: 10px
-		paddign: 0 10px
+		font-size: 1.2rem
 		&:last-of-type
 			margin-bottom: 0
+	.two_span
+		grid-column-start: 1
+		grid-column-end: 3
+		@media (min-width: $breakpoint-768)
+			grid-column-start: auto
+			grid-column-end: auto
+
 
 	
 
