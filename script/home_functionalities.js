@@ -8,6 +8,7 @@ function on_resize(){
 		desktop_reform()
 		add_container()
 		remove_event_listener()
+		on_scroll()
 	}else if ((page_width < 1024) && !(layout_mobile)){
 		layout_mobile = true
 		document.getElementsByTagName("html")[0].innerHTML = mobile_html

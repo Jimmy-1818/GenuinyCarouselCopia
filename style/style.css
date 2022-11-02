@@ -11,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", Helvetica, sans-serif;
-  font-size: 1.2rem; }
+  font-size: 1.6rem; }
   @media (min-width: 768px) {
     *, p {
       font-size: 1.6rem; } }
@@ -61,23 +61,25 @@ body {
         margin: 0 30px;
         width: 50%;
         max-width: 770px; } }
-    .container-header .header_text p.main-text {
+    .container-header .header_text div.main-text {
       padding: 0 25px 25px;
       font-family: "Montserrat";
       position: relative;
       color: #09435E;
       text-align: center; }
       @media (min-width: 768px) {
-        .container-header .header_text p.main-text {
+        .container-header .header_text div.main-text {
           text-align: left;
-          color: white;
-          filter: drop-shadow(0px 0px 15px #09435e); } }
-      .container-header .header_text p.main-text span.first-main {
+          color: white; } }
+      .container-header .header_text div.main-text span.first-main {
         font-size: 3rem;
         text-transform: uppercase;
         margin-top: 20px;
         display: block; }
-      .container-header .header_text p.main-text span.second-main {
+        @media (min-width: 768px) {
+          .container-header .header_text div.main-text span.first-main {
+            filter: drop-shadow(0px 0px 15px #09435e); } }
+      .container-header .header_text div.main-text span.second-main {
         display: block;
         font-size: 25px;
         margin-top: 76vw;
@@ -85,11 +87,27 @@ body {
         padding: 10px 0px;
         border-radius: 20px; }
         @media (min-width: 768px) {
-          .container-header .header_text p.main-text span.second-main {
+          .container-header .header_text div.main-text span.second-main {
+            filter: drop-shadow(0px 0px 15px #09435e); } }
+        @media (min-width: 768px) {
+          .container-header .header_text div.main-text span.second-main {
             margin-top: 20px;
             padding: 0;
             background-color: transparent;
             border-radius: 0; } }
+      .container-header .header_text div.main-text .images_download {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly; }
+        @media (min-width: 768px) {
+          .container-header .header_text div.main-text .images_download {
+            margin-top: 20px; } }
+        .container-header .header_text div.main-text .images_download a {
+          width: 35%; }
+          .container-header .header_text div.main-text .images_download a img {
+            margin: 0 auto;
+            width: 100%;
+            display: inline-block; }
     @media (min-width: 768px) {
       .container-header .header_text {
         margin: 30px; } }
@@ -773,14 +791,14 @@ footer {
     footer {
       grid-row-gap: 10px;
       grid-template-columns: 1fr 1fr; } }
-  footer .grid_item, footer a {
+  footer .grid_item, footer a, footer .leng_btn {
     font-size: 1.2rem;
     color: #f1f1f1; }
     @media (min-width: 768px) {
-      footer .grid_item, footer a {
+      footer .grid_item, footer a, footer .leng_btn {
         font-size: 1.3rem;
         color: white; } }
-    footer .grid_item:last-of-type, footer a:last-of-type {
+    footer .grid_item:last-of-type, footer a:last-of-type, footer .leng_btn:last-of-type {
       margin-bottom: 0; }
   footer .two_span {
     grid-column-start: 1;
@@ -804,21 +822,45 @@ footer {
   footer a {
     text-decoration: none; }
 
-@media (min-width: 768px) {
+.leng_btn {
+  background: transparent;
+  border: none; }
+
+.dropdown-menu li a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 2.5px 10px;
+  color: black;
+  font-size: 0.9em; }
+
+img.leng_flag {
+  width: 16px;
+  margin-right: 8px; }
+
+.current-lenguage-flex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5px; }
+  .current-lenguage-flex img.leng_flag {
+    margin-right: 0; }
+
+@media (min-width: 1024px) {
   main.subscribe {
     background: url(../images/wave-flat-subscribe.png);
     background-repeat: no-repeat;
     background-position: 0 72px;
     background-size: 100% 7%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   main.share {
     background: url(../images/wave-flat-share.png);
     background-repeat: no-repeat;
     background-position: 0 72px;
     background-size: 100% 7%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   main.affiliation {
     background: url(../images/wave-flat-affiliation.png);
     background-repeat: no-repeat;

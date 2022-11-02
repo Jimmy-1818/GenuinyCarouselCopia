@@ -89,13 +89,14 @@ nav.desktop-nav
 .menu
   display: none
   justify-content: flex-end
+  align-items: center
   margin: 0 -4px
   @media (min-width: $breakpoint-desktop)
     display: flex
     flex-wrap: nowrap
     a
       white-space: nowrap
-  a
+  a.page-link
     color: white
     margin: 0 4px
     font-weight: 600
@@ -107,9 +108,9 @@ nav.desktop-nav
     font-family: "Montserrat"
     font-weight: 700
     text-transform: uppercase
-  a:first-of-type
+  a.page-link:first-of-type
     margin-left: 40px
-  a.show, a:hover
+  a.show, a.page-link:hover
     background-color: var(--primary)
     color: white
 
@@ -132,7 +133,7 @@ nav.desktop-nav
   transition: top 0.3s cubic-bezier(0, 0.5, 0.5, 1), box-shadow 0.3s cubic-bezier(0, 0.5, 0.5, 1)
   @media (min-width: $breakpoint-desktop)
     display: none
-  a
+  a.page-link
     display: block
     width: fit-content
     margin: 0 auto 12px
@@ -149,11 +150,15 @@ nav.desktop-nav
     text-transform: uppercase
 
 
-  a:nth-child(5)
+  a.page-link:nth-child(5)
     margin-bottom: 25px
-  a:hover
+  a.page-link:hover
     background-color: var(--light)
     color: var(--primary)
+  .dropdown
+    display: block
+    margin: 0 auto 12px auto
+    width: fit-content
 
 nav.mobile_nav_immediate_shadow
   transition: box-shadow 0s
