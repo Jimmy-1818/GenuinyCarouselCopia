@@ -13,6 +13,7 @@ const indicators = document.getElementsByClassName("carousel-indicators")
 const nearest_threshold = 70
 
 
+
 // Navbar animation
 hamburger[0].addEventListener("click", hamburger_click)
 if (hamburger[1]){
@@ -25,10 +26,13 @@ if (hamburger[1]){
 function hamburger_click(){
   hamburger[0].classList.toggle("show")
   menu_mobile.classList.toggle("show-mobile")
+  console.log(desktop_nav.classList)
+  desktop_nav.classList.toggle("mobile_nav_immediate_shadow")
+  console.log(desktop_nav.classList)
   if (menu_mobile.classList.contains("show-mobile")){
     desktop_nav.style.boxShadow = "none"
   }
-  else{
+  else if (!window.scrollY == 0){
     desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
   }
   opacity.classList.toggle("show-opacity")
@@ -36,6 +40,9 @@ function hamburger_click(){
     desktop_nav.classList.add("navbar-hide")
   }
 };
+
+
+
 
 // Get a list of lists of titles
 var titles_text = []
@@ -64,7 +71,6 @@ function current_index(){
   var values_return = [current_index, nearest_distance]  
   return values_return
 };
-
 
 let lastSctollY = window.scrollY;
 if(carousel){window.addEventListener("scroll", on_scroll)};
@@ -109,7 +115,7 @@ function on_scroll(){
   if (window.scrollY == 0){
     desktop_nav.classList.remove("navbar-hide")
   }
-  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile")) && ($(window).width() < 768)) {
+  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile")) && ($(window).width() < 1024)) {
     desktop_nav = document.getElementsByClassName("desktop-nav")[0]
     desktop_nav.classList.add("navbar-hide")
   }else if (nearest_distance > nearest_threshold){
@@ -271,3 +277,6 @@ function end_page_carousel(next = "current"){
 
   return result
 }
+
+//for reloads with page scroll != 0
+on_scroll()
