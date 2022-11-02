@@ -55,8 +55,8 @@ body {
     z-index: 1; }
     @media (min-width: 768px) {
       .container-header .header_text {
-        top: 12%;
-        right: 10%;
+        top: 11%;
+        right: 12%;
         padding: 15px 0;
         margin: 0 30px;
         width: 50%;
@@ -95,19 +95,19 @@ body {
             padding: 0;
             background-color: transparent;
             border-radius: 0; } }
-      .container-header .header_text div.main-text .images_download {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly; }
-        @media (min-width: 768px) {
-          .container-header .header_text div.main-text .images_download {
-            margin-top: 20px; } }
-        .container-header .header_text div.main-text .images_download a {
-          width: 35%; }
-          .container-header .header_text div.main-text .images_download a img {
-            margin: 0 auto;
-            width: 100%;
-            display: inline-block; }
+    .container-header .header_text .images_download {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly; }
+      @media (min-width: 768px) {
+        .container-header .header_text .images_download {
+          margin-top: 20px; } }
+      .container-header .header_text .images_download a {
+        width: 35%; }
+        .container-header .header_text .images_download a img {
+          margin: 0 auto;
+          width: 100%;
+          display: inline-block; }
     @media (min-width: 768px) {
       .container-header .header_text {
         margin: 30px; } }
@@ -116,8 +116,7 @@ body {
       position: relative; }
       @media (min-width: 768px) {
         .container-header .header_text .instructions {
-          text-align: center;
-          left: -45px; } }
+          text-align: center; } }
       .container-header .header_text .instructions p, .container-header .header_text .instructions b {
         line-height: 1.5;
         font-size: 1.6rem;
