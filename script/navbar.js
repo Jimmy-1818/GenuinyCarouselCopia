@@ -28,6 +28,9 @@ function hamburger_click(){
   if (menu_mobile.classList.contains("show-mobile")){
     desktop_nav.style.boxShadow = "none"
   }
+  else{
+    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
+  }
   opacity.classList.toggle("show-opacity")
   if (!(desktop_nav.classList.contains("border-animation")) && (current_index()[1] < nearest_threshold)) {
     desktop_nav.classList.add("navbar-hide")
@@ -89,7 +92,7 @@ function delayed_next_h1(){
 function on_scroll(){
   if (window.scrollY == 0){
     desktop_nav.style.boxShadow = "none"
-  }else{
+  }else if (!menu_mobile.classList.contains("show-mobile")){
     desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
   }
   if (carousel.length > 1){

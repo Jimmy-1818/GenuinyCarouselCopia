@@ -768,27 +768,31 @@ footer {
   text-align: center;
   column-gap: 15px;
   grid-row-gap: 14px;
-  color: #f1f1f1;
   grid-template-columns: 1fr 1fr; }
   @media (min-width: 768px) {
     footer {
       grid-row-gap: 10px;
-      grid-template-columns: 1fr 1fr;
-      color: white; } }
-  footer .grid_item {
-    font-size: 1.2rem; }
+      grid-template-columns: 1fr 1fr; } }
+  footer .grid_item, footer a {
+    font-size: 1.2rem;
+    color: #f1f1f1; }
     @media (min-width: 768px) {
-      footer .grid_item {
-        font-size: 1.3rem; } }
-    footer .grid_item:last-of-type {
+      footer .grid_item, footer a {
+        font-size: 1.3rem;
+        color: white; } }
+    footer .grid_item:last-of-type, footer a:last-of-type {
       margin-bottom: 0; }
   footer .two_span {
     grid-column-start: 1;
     grid-column-end: 3; }
+    footer .two_span span {
+      font-size: 1em;
+      display: block; }
     @media (min-width: 768px) {
-      footer .two_span {
-        grid-column-start: auto;
-        grid-column-end: auto; } }
+      footer .two_span span.line {
+        display: inline-block; }
+        footer .two_span span.line:nth-of-type(1n + 3)::before {
+          content: "| "; } }
   footer span.br {
     display: block;
     font-size: 1em; }
@@ -796,7 +800,30 @@ footer {
       footer span.br {
         display: inline-block; }
         footer span.br::before {
-          content: " | "; } }
+          content: "| "; } }
+  footer a {
+    text-decoration: none; }
+
+@media (min-width: 768px) {
+  main.subscribe {
+    background: url(../images/wave-flat-subscribe.png);
+    background-repeat: no-repeat;
+    background-position: 0 72px;
+    background-size: 100% 7%; } }
+
+@media (min-width: 768px) {
+  main.share {
+    background: url(../images/wave-flat-share.png);
+    background-repeat: no-repeat;
+    background-position: 0 72px;
+    background-size: 100% 7%; } }
+
+@media (min-width: 768px) {
+  main.affiliation {
+    background: url(../images/wave-flat-affiliation.png);
+    background-repeat: no-repeat;
+    background-position: 0 72px;
+    background-size: 100% 7%; } }
 
 video:fullscreen {
   border-radius: none !important;
