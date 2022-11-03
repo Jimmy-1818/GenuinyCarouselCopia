@@ -1,4 +1,5 @@
 // ON LOADING (FIRST from index.html)
+var userLang = navigator.language || navigator.userLanguage; 
 
 // Set affiliate link
 if (window.location.href.includes("#")){
@@ -13,5 +14,3 @@ if (!(localStorage.getItem("hash") == null) && !(document.getElementById("link")
   subscribe_button.setAttribute('href', affiliate_registration)
 }
 
-var userLang = navigator.language || navigator.userLanguage; 
-alert ("The language is: " + userLang);
