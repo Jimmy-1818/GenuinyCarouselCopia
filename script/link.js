@@ -12,3 +12,6 @@ if (!(localStorage.getItem("hash") == null) && !(document.getElementById("link")
   var subscribe_button = document.getElementById('link')
   subscribe_button.setAttribute('href', affiliate_registration)
 }
+
+var userLang = navigator.language || navigator.userLanguage; 
+alert ("The language is: " + userLang);
