@@ -98,10 +98,8 @@ body {
     .container-header .header_text .images_download {
       width: 100%;
       display: flex;
-      justify-content: space-evenly; }
-      @media (min-width: 768px) {
-        .container-header .header_text .images_download {
-          margin-top: 20px; } }
+      justify-content: space-evenly;
+      margin-top: 20px; }
       .container-header .header_text .images_download a {
         width: 35%; }
         .container-header .header_text .images_download a img {
