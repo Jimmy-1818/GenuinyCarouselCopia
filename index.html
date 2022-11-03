@@ -52,10 +52,10 @@
 			  			  	<div class="current-lenguage-flex"><span>IT</span><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"></div>
 						  </button>
 						  <ul class="dropdown-menu">
-						    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
-						    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/esp_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
-						    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
-						    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
+						    <li><a onclick="set_lang_manually('eng')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+						    <li><a onclick="set_lang_manually('spa')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/esp_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
+						    <li><a onclick="set_lang_manually('ita')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
+						    <li><a onclick="set_lang_manually('slv')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
 						  </ul>
 						</div>
 					</div>
@@ -510,6 +510,15 @@
 		</div>
 	</div>
 
+
+	<div style="background: yellow;">
+		<div lang="eng">inglese</div>
+		<div class="display_none" lang="ita">italiano</div>
+		<div class="display_none" lang="spa">spagnolo</div>
+		<div class="display_none" lang="slv">sloveno</div>
+	</div>
+	
+
 	</main>
 	
 
@@ -519,10 +528,10 @@
 		  	<div class="current-lenguage-flex"><span style="font-size: 1.2rem;">IT</span><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"></div>
 		  </button>
 		  <ul class="dropdown-menu">
-		    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"><span style="font-size: 1em;">English</span></a></li>
-		    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/esp_flag.svg"><span style="font-size: 1em;">Español</span></a></li>
-		    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano</span></a></li>
-		    <li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian</span></a></li>
+		    <li><a onclick="set_lang_manually('eng')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"><span style="font-size: 1em;">English</span></a></li>
+		    <li><a onclick="set_lang_manually('spa')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/esp_flag.svg"><span style="font-size: 1em;">Español</span></a></li>
+		    <li><a onclick="set_lang_manually('ita')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano</span></a></li>
+		    <li><a onclick="set_lang_manually('slv')" class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian</span></a></li>
 		  </ul>
 		</div>
 		<div class="grid_item">
@@ -543,7 +552,6 @@
 			<span class="line">Fingerprint icons created by Freepik - Flaticon</span>
 			<span class="line">Contract icons created by Kalashnyk - Flaticon</span>
 		</div>
-		
 	</footer>
 
 	<!----- BOOTSTRAP ------->
@@ -553,7 +561,7 @@
 	<!--navbar-->
 	<script class="navbar-link" type="text/javascript" src="script/navbar.js"></script>
 	
-	<script type="text/javascript" src="script/link.js"></script>
+	<script type="text/javascript" src="script/on_loading.js"></script>
 	<script type="text/javascript" src="script/home_functionalities.js"></script>
 </body>
 </html>

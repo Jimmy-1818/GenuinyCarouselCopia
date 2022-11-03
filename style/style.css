@@ -864,6 +864,9 @@ img.leng_flag {
     background-position: 0 72px;
     background-size: 100% 7%; } }
 
+.display_none {
+  display: none; }
+
 video:fullscreen {
   border-radius: none !important;
   border: 0 !important; }
