@@ -24,11 +24,10 @@ if (hamburger[1]){
 };
 
 function hamburger_click(){
+  var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
   hamburger[0].classList.toggle("show")
   menu_mobile.classList.toggle("show-mobile")
-  console.log(desktop_nav.classList)
   desktop_nav.classList.toggle("mobile_nav_immediate_shadow")
-  console.log(desktop_nav.classList)
   if (menu_mobile.classList.contains("show-mobile")){
     desktop_nav.style.boxShadow = "none"
   }
@@ -36,7 +35,7 @@ function hamburger_click(){
     desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
   }
   opacity.classList.toggle("show-opacity")
-  if (!(desktop_nav.classList.contains("border-animation")) && (current_index()[1] < nearest_threshold)) {
+  if ((!menu_mobile.classList.contains("show-mobile")) && (current_index()[1] < nearest_threshold)) {
     desktop_nav.classList.add("navbar-hide")
   }
 };
