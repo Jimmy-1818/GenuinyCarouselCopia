@@ -864,6 +864,9 @@ img.leng_flag {
     background-position: 0 72px;
     background-size: 100% 7%; } }
 
+span[lang] {
+  font-size: 1em; }
+
 .display_none {
   display: none; }
 
