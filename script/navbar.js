@@ -96,9 +96,9 @@ function delayed_next_h1(){
 
 function on_scroll(){
   if (window.scrollY == 0){
-    desktop_nav.style.boxShadow = "none"
+    desktop_nav.classList.remove("navbar_desktop_scrolled")
   }else if (!menu_mobile.classList.contains("show-mobile")){
-    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
+    desktop_nav.classList.add("navbar_desktop_scrolled")        
   }
   if (carousel.length > 1){
     end_page_carousel()

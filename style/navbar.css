@@ -3,7 +3,7 @@
   --light: #EEEEEE;
   --dark: #0abab5; }
 
-nav.desktop-nav {
+.desktop-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,8 +11,10 @@ nav.desktop-nav {
   z-index: 81;
   background-color: var(--dark);
   padding: 16px 32px;
-  transition: border-bottom 0s 100ms, top 0.3s 0s, box-shadow 0.4s 0s; }
-  nav.desktop-nav .container-navbar {
+  transition: top 0.3s 0s, box-shadow 0.4s 0s, height 3s 0s;
+  background-color: gray;
+  height: 73px; }
+  .desktop-nav .container-navbar {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -20,17 +22,28 @@ nav.desktop-nav {
     justify-content: space-between;
     height: 30px; }
     @media (min-width: 1024px) {
-      nav.desktop-nav .container-navbar {
-        height: 40px; } }
-    nav.desktop-nav .container-navbar div.logo {
+      .desktop-nav .container-navbar {
+        height: 100%;
+        transition: height 3s 0s; } }
+    .desktop-nav .container-navbar div.logo {
       display: flex;
       align-items: center;
-      column-gap: 20px; }
-      nav.desktop-nav .container-navbar div.logo img {
-        width: 200px; }
-        @media (min-width: 1024px) {
-          nav.desktop-nav .container-navbar div.logo img {
-            width: 250px; } }
+      column-gap: 20px;
+      height: 100%;
+      transition: height 3s 0s; }
+      .desktop-nav .container-navbar div.logo a {
+        height: 100%;
+        transition: height 3s 0s; }
+        .desktop-nav .container-navbar div.logo a img {
+          height: 100%;
+          min-height: 100%;
+          max-height: 100%;
+          transition: height 3s 0s; }
+
+.navbar_desktop_scrolled {
+  box-shadow: 0px 0px 16px 3px #00000045;
+  height: 60px;
+  padding: 13px; }
 
 .hamburger {
   display: block;
