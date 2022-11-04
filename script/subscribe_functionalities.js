@@ -1,6 +1,12 @@
 const generate_btn = document.getElementById("generate_qr_btn")
 const qr_image = document.getElementById("qr_image")
 
+// If a personalized link is relevated CHANGE LINK
+if (!localStorage.getItem("hash") == null){
+  var affiliate_registration = "https://business.genuiny.com/register/index?referralCode=" + localStorage.getItem("hash") 
+  var subscribe_button = document.getElementById('link')
+  subscribe_button.setAttribute('href', affiliate_registration)
+}
 
 generate_btn.addEventListener("click",()=>{
     let qr_destination = document.getElementById("link").href
