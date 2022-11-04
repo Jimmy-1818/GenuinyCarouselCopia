@@ -10,22 +10,22 @@ function set_lang_manually(language){
 
 language_set()
 function language_set(){  
-  lang_set = false
-  if (!lang_set && localStorage.getItem("lang_set") == null){
-    var userLang = navigator.language || navigator.userLanguage;
-    console.log(userLang)
-    if(userLang.includes("en")){
+  lang_setted = false
+  if (!lang_setted && localStorage.getItem("lang_set") == null){
+    let browser_language = navigator.language || navigator.userLanguage;
+    console.log(browser_language)
+    if(browser_language.includes("en")){
       null
     }
-    else if(userLang.includes("it")){
+    else if(browser_language.includes("it")){
       hide_other_languages("ita")
-      lang_set = true
-    }else if(userLang.includes("sl")){
+      lang_setted = true
+    }else if(browser_language.includes("sl")){
       hide_other_languages("slv")
-      lang_set = true
-    }else if(userLang.includes("es")){
+      lang_setted = true
+    }else if(browser_language.includes("es")){
       hide_other_languages("spa")
-      lang_set = true
+      lang_setted = true
     }
   }else{
     hide_other_languages(localStorage.getItem("lang_set"))
