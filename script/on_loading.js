@@ -12,8 +12,7 @@ language_set()
 function language_set(){  
   lang_setted = false
   if (!lang_setted && localStorage.getItem("lang_set") == null){
-    let browser_language = navigator.language || navigator.userLanguage;
-    console.log(browser_language)
+    var browser_language = navigator.language || navigator.userLanguage;
     if(browser_language.includes("en")){
       null
     }
