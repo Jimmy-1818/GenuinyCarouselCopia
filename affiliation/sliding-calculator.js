@@ -10,30 +10,10 @@ document.getElementById("tip5").addEventListener("change", on_slider_change);
 
 
 var monthly = 0
+var s1 = s2 = s3 = s4 = s5 = 0
+var l1_a = l2_a = l3_a = l4_a = l5_a = result_a = 0
+var l1_r = l2_r = l3_r = l4_r = l5_r = result_r = 0
 
-var s1 = 0
-var s2 = 0
-var s3 = 0
-var s4 = 0
-var s5 = 0
-
-
-var l1_a = 0
-var l2_a = 0
-var l3_a = 0
-var l4_a = 0
-var l5_a = 0
-var result_a = 0
-
-
-var l1_r = 0
-var l2_r = 0
-var l3_r = 0
-var l4_r = 0
-var l5_r = 0
-var result_r = 0
-
-console.log(format_prize(74839421.23))
 
 function format_user(number){
     //fallback on english (once not "not english")
@@ -47,7 +27,7 @@ function format_user(number){
     }else{
         return Number(number).toLocaleString("en", {minimumFractionDigits: 0});
     }
-}
+};
 
 
 function format_prize(number){
@@ -62,7 +42,7 @@ function format_prize(number){
     }else{
         return Intl.NumberFormat("en", { style: "currency", "currency":"EUR" }).format(number);
     }
-}
+};
 
 function reconstruct_branch(){
     var input_s = document.getElementsByClassName("input")
@@ -77,7 +57,7 @@ function reconstruct_branch(){
             document.getElementsByClassName("input")[i].value = 1
         }
     }
-}
+};
 
 function vars_def(){
     monthly = document.getElementById("tip_monthly").value
@@ -101,7 +81,7 @@ function vars_def(){
     l4_r = (s1*s2*s3*s4*(monthly/100))
     l5_r = (s1*s2*s3*s4*s5*(monthly/50))
     result_r = l1_r + l2_r + l3_r + l4_r + l5_r
-}
+};
 
 
 function slider_value_update(){
@@ -116,7 +96,7 @@ function slider_value_update(){
     document.getElementById("slider-value-3").innerHTML = "x"+ s3
     document.getElementById("slider-value-4").innerHTML = "x"+ s4
     document.getElementById("slider-value-5").innerHTML = "x"+ s5
-}
+};
 
 function tab_value_update(){
 /**odd lines first column (no 1st)**/
@@ -169,7 +149,16 @@ function tab_value_update(){
     document.getElementById("tab1_p5").innerHTML = format_prize(l5_a)
     document.getElementById("tab2_p5").innerHTML = format_prize(l5_r)
 
-}
+};
+
+function results_update(){
+    document.getElementsByClassName("autentica_result")[0].innerHTML = format_prize(result_a)
+    document.getElementsByClassName("autentica_result")[1].innerHTML = format_prize(result_a)
+
+    document.getElementsByClassName("rendita_result")[0].innerHTML = format_prize(result_r)
+    document.getElementsByClassName("rendita_result")[1].innerHTML = format_prize(result_r)
+};
+
 
 
 function on_slider_change(){
@@ -177,13 +166,7 @@ function on_slider_change(){
     vars_def()
     slider_value_update()
     tab_value_update()
-
-
-    document.getElementsByClassName("autentica_result")[0].innerHTML = format_prize(result_a)
-    document.getElementsByClassName("autentica_result")[1].innerHTML = format_prize(result_a)
-
-    document.getElementsByClassName("rendita_result")[0].innerHTML = format_prize(result_r)
-    document.getElementsByClassName("rendita_result")[1].innerHTML = format_prize(result_r)
+    results_update()
 }
 
 

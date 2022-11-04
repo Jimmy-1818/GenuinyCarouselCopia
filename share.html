@@ -32,18 +32,32 @@
 <body>
 	<header>
 		<div class="full-nav">
-			<nav class="desktop-nav">
+						<nav class="desktop-nav">
 				<div class="container-navbar">
 					<div class="logo">
 						<a class="page-link" href="index.html"><img src="images/svg-logo-ethical-w.png" alt="logo"></a>
 					</div>
 
 					<div class="menu">
+						<!--LATER REMOVE ALL.html (it doesn't work in local)-->
 						<a class="page-link" href="index.html">home</a>
 						<a class="page-link" href="subscribe.html">registrati</a>
 						<a class="page-link" href="affiliation.html">potenziale digitale</a>
 						<a class="show page-link" href="share.html">condividi app</a>
-						<a class="page-link" href="">altro</a>
+						<div class="grid-item dropdown-center dropdown" style="width: 62px;"> <!--width so to avoid moving other titles-->
+							<button class="leng_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<div lang="eng" class="current-lenguage-flex"><span>EN</span><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"></div>
+								<div lang="ita" class="current-lenguage-flex display_none"><span>IT</span><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"></div>
+								<div lang="slv" class="current-lenguage-flex display_none"><span>SL</span><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"></div>
+								<div lang="spa" class="current-lenguage-flex display_none"><span>ES</span><img class="leng_flag" src="images/lenguage-flags/spa_flag.svg"></div>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+								<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
+								<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
+								<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
+							</ul>
+						</div>
 					</div>
 
 					<button class="hamburger">
@@ -54,11 +68,24 @@
 				</div>
 			</nav>
 			<nav class="mobile-nav">
-					<a class="page-link" href="index.html">home</a>
-					<a class="page-link" href="subscribe.html">registrati</a>
-					<a class="page-link" href="affiliation.html">potenziale digitale</a>
-					<a class="page-link" href="share.html">condividi app</a>
-					<a class="page-link" href="">altro</a>
+				<a class="page-link" href="index.html">home</a>
+				<a class="page-link" href="subscribe.html">registrati</a>
+				<a class="page-link" href="affiliation.html">potenziale digitale</a>
+				<a class="page-link" href="share.html">condividi app</a>
+				<div class="grid-item dropdown-center dropdown">
+					<button class="leng_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<div lang="eng" class="current-lenguage-flex"><span>EN</span><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"></div>
+								<div lang="ita" class="current-lenguage-flex display_none"><span>IT</span><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"></div>
+								<div lang="slv" class="current-lenguage-flex display_none"><span>SL</span><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"></div>
+								<div lang="spa" class="current-lenguage-flex display_none"><span>ES</span><img class="leng_flag" src="images/lenguage-flags/spa_flag.svg"></div>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+						<li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
+						<li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
+						<li><a class="dropdown-item" href=""><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
+					</ul>
+				</div>
 			</nav>
 			<div class="opacity"></div>
 		</div>
@@ -166,7 +193,38 @@
 		</div>
 	</main>
 	<footer>
-		
+		<div class="grid-item dropup-center dropup">
+		  	<button class="leng_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<div lang="eng" class="current-lenguage-flex"><span>EN</span><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"></div>
+				<div lang="ita" class="current-lenguage-flex display_none"><span>IT</span><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"></div>
+				<div lang="slv" class="current-lenguage-flex display_none"><span>SL</span><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"></div>
+  				<div lang="spa" class="current-lenguage-flex display_none"><span>ES</span><img class="leng_flag" src="images/lenguage-flags/spa_flag.svg"></div>
+			</button>
+		  <ul class="dropdown-menu">
+		    <li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/eng_flag.svg"><span style="font-size: 1em;">English</span></a></li>
+		    <li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/spa_flag.svg"><span style="font-size: 1em;">Español</span></a></li>
+		    <li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano</span></a></li>
+		    <li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="leng_flag" src="images/lenguage-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian</span></a></li>
+		  </ul>
+		</div>
+		<div class="grid_item">
+			<a href="mailto:staff@genuiny.com">staff@genuiny.com</a>
+		</div>
+		<div class="grid_item">
+			<a href="">Privacy & Policy</a>
+		</div>
+		<div class="grid_item">
+			<a href="https://goo.gl/maps/5ype6eZXjok3Bxiv6" target="self">20-22 Wenlock Road <span class="br">London, England, N1 7GU</span></a>
+		</div>
+		<div class="grid_item two_span">
+			© Copyright 2022 Genuiny - All Rights Reserved
+		</div>
+		<div class="grid_item two_span">
+			<span>Credits</span>
+			<span class="line">Layer icons created by Freepik - Flaticon</span>
+			<span class="line">Fingerprint icons created by Freepik - Flaticon</span>
+			<span class="line">Contract icons created by Kalashnyk - Flaticon</span>
+		</div>
 	</footer>
 
 	<!----- BOOTSTRAP ------->
