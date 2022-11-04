@@ -210,9 +210,6 @@ function set_next_h1(){
 
 
 
-
-
-
 function alternative_next_click(){
   var inners = document.getElementsByClassName("carousel-inner")
   var current_i = current_index()[0]
