@@ -6,15 +6,12 @@
   font-family: "Montserrat";
   src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format("truetype");
   font-weight: normal; }
-*, p {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 1.6rem; }
-  @media (min-width: 768px) {
-    *, p {
-      font-size: 1.6rem; } }
 
 html {
   font-size: 62.5%; }
@@ -865,7 +862,8 @@ img.leng_flag {
     background-size: 100% 7%; } }
 
 span[lang] {
-  font-size: 1em; }
+  font-size: 1em;
+  font-family: inherit; }
 
 .display_none {
   display: none; }

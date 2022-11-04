@@ -15,14 +15,12 @@ $breakpoint-1024: 1024px
 	src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format('truetype')
 	font-weight: normal
 
-*, p
+*
 	margin: 0
 	padding: 0
 	box-sizing: border-box
 	font-family: "Inter", Helvetica, sans-serif
 	font-size: 1.6rem
-	@media (min-width: $breakpoint-768)
-		font-size: 1.6rem
 
 html
 	font-size: 62.5%
@@ -928,6 +926,7 @@ main.affiliation
 
 span[lang]
 	font-size: 1em
+	font-family: inherit
 
 .display_none
 	display: none
