@@ -94,11 +94,17 @@ function delayed_next_h1(){
 
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
+const strating_height = desktop_nav.style.height
 function on_scroll(){
+  console.log(strating_height)
   if (window.scrollY == 0){
-    desktop_nav.classList.remove("navbar_desktop_scrolled")
+    desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
+    desktop_nav.style.height = "73px"
+    desktop_nav.style.padding = "13px"
   }else if (!menu_mobile.classList.contains("show-mobile")){
-    desktop_nav.classList.add("navbar_desktop_scrolled")        
+    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
+    desktop_nav.style.height = "60px"
+    desktop_nav.style.padding = "13px"
   }
   if (carousel.length > 1){
     end_page_carousel()
