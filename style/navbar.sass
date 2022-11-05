@@ -23,7 +23,9 @@ $breakpoint-desktop: 1024px
   background-color: var(--dark)
   padding: 16px 32px
   transition: top .3s 0s, box-shadow .4s 0s, height .3s 0s
-  height: 73px
+  height: 62px
+  @media (min-width: $breakpoint-desktop)
+    height: 73px
   .container-navbar
     max-width: 1280px
     margin: 0 auto
