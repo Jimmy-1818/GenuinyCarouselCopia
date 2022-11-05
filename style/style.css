@@ -844,22 +844,22 @@ img.leng_flag {
   main.subscribe {
     background: url(../images/wave-flat-subscribe.png);
     background-repeat: no-repeat;
-    background-position: 0 72px;
-    background-size: 100% 7%; } }
+    background-position: 0px 20px;
+    background-size: 100% 15%; } }
 
 @media (min-width: 1024px) {
   main.share {
     background: url(../images/wave-flat-share.png);
     background-repeat: no-repeat;
-    background-position: 0 72px;
-    background-size: 100% 7%; } }
+    background-position: 0px 20px;
+    background-size: 100% 14%; } }
 
 @media (min-width: 1024px) {
   main.affiliation {
     background: url(../images/wave-flat-affiliation.png);
     background-repeat: no-repeat;
-    background-position: 0 72px;
-    background-size: 100% 7%; } }
+    background-position: 0px 20px;
+    background-size: 100% 12%; } }
 
 span[lang] {
   font-size: 1em;

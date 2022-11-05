@@ -25,20 +25,16 @@
     height: 30px; }
     @media (min-width: 1024px) {
       .desktop-nav .container-navbar {
-        height: 100%;
-        transition: height 3s 0s; } }
+        height: 100%; } }
     .desktop-nav .container-navbar div.logo {
       display: flex;
       align-items: center;
       column-gap: 20px;
-      height: 100%;
-      transition: height 3s 0s; }
+      height: 100%; }
       .desktop-nav .container-navbar div.logo a {
-        height: 100%;
-        transition: height 3s 0s; }
+        height: 100%; }
         .desktop-nav .container-navbar div.logo a img {
-          height: 100%;
-          transition: height 3s 0s; }
+          height: 100%; }
 
 .hamburger {
   display: block;

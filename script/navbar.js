@@ -284,3 +284,21 @@ function end_page_carousel(next = "current"){
 
 //for reloads with page scroll != 0
 on_scroll()
+
+
+
+//fix the height remaining 73 on mobile (-->62)
+var layout_mobile = true
+function on_resize(){
+  var page_width = $(window).width()
+  if ((page_width >= 1024) && (layout_mobile)){
+    layout_mobile = false
+    desktop_nav.classList.remove("navbar-hide")
+  }else if ((page_width < 1024) && !(layout_mobile)){
+    layout_mobile = true
+    desktop_nav.style.height = "62px"
+  }
+}
+
+window.onresize = on_resize
+on_resize()

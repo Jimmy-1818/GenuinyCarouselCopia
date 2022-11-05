@@ -1,7 +1,7 @@
 const mobile_html = document.getElementsByTagName("html")[0].innerHTML
 
 var layout_mobile = true
-function on_resize(){
+function home_on_resize(){
 	var page_width = $(window).width()
 	if ((page_width >= 1024) && (layout_mobile)){
 		layout_mobile = false
@@ -16,8 +16,8 @@ function on_resize(){
 	}
 }
 
-window.onresize = on_resize
-on_resize()
+window.onresize = home_on_resize
+home_on_resize()
 
 function desktop_reform(){
 	const carousels = document.getElementsByClassName("carousel")
