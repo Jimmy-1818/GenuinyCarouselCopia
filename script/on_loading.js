@@ -16,19 +16,26 @@ language_set()
 function language_set(){  
   lang_setted = false
   if (!lang_setted && localStorage.getItem("lang_set") == null){
-    var browser_language = navigator.language || navigator.userLanguage;
-    if(browser_language.includes("en")){
-      null
-    }
-    else if(browser_language.includes("it")){
-      hide_other_languages("ita")
-      lang_setted = true
-    }else if(browser_language.includes("sl")){
-      hide_other_languages("slv")
-      lang_setted = true
-    }else if(browser_language.includes("es")){
-      hide_other_languages("spa")
-      lang_setted = true
+    var browser_languages = navigator.languages || navigator.userLanguages;
+    console.log(navigator.languages)
+    for (var i = 0; i < browser_languages.length; i++) {
+      var browser_language = browser_languages[i]
+      if (!lang_setted){
+        if(browser_language.includes("en")){
+          null //every elem with (lang!="eng" is "display_none" to start with)
+          lang_setted = true
+        }
+        else if(browser_language.includes("it")){
+          hide_other_languages("ita")
+          lang_setted = true
+        }else if(browser_language.includes("sl")){
+          hide_other_languages("slv")
+          lang_setted = true
+        }else if(browser_language.includes("es")){
+          hide_other_languages("spa")
+          lang_setted = true
+        }
+      }
     }
   }else{
     hide_other_languages(localStorage.getItem("lang_set"))
