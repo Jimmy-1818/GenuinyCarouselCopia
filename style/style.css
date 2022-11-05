@@ -845,21 +845,21 @@ img.leng_flag {
     background: url(../images/wave-flat-subscribe.png);
     background-repeat: no-repeat;
     background-position: 0px 20px;
-    background-size: 100% 15%; } }
+    background-size: 100% 120px; } }
 
 @media (min-width: 1024px) {
   main.share {
     background: url(../images/wave-flat-share.png);
     background-repeat: no-repeat;
     background-position: 0px 20px;
-    background-size: 100% 14%; } }
+    background-size: 100% 120px; } }
 
 @media (min-width: 1024px) {
   main.affiliation {
     background: url(../images/wave-flat-affiliation.png);
     background-repeat: no-repeat;
     background-position: 0px 20px;
-    background-size: 100% 12%; } }
+    background-size: 100% 110px; } }
 
 span[lang] {
   font-size: 1em;
