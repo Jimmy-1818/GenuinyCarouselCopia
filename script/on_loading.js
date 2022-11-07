@@ -17,7 +17,6 @@ function language_set(){
   lang_setted = false
   if (!lang_setted && localStorage.getItem("lang_set") == null){
     var browser_languages = navigator.languages || navigator.userLanguages;
-    console.log(navigator.languages)
     for (var i = 0; i < browser_languages.length; i++) {
       var browser_language = browser_languages[i]
       if (!lang_setted){
@@ -57,9 +56,9 @@ function hide_other_languages(language){
 
 
 
-// Set affiliate link
+// Set affiliate link and cancel it from url
 if (window.location.href.includes("#")){
   localStorage.setItem("hash", window.location.hash.slice(1))
   var url =  window.location.href.substr(0, window.location.href.indexOf("#"))
-  history.replaceState({id:1}, "", url)
+  history.replaceState(null, "", url)
 }
