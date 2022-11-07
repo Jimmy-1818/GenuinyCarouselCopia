@@ -60,5 +60,6 @@ function hide_other_languages(language){
 // Set affiliate link
 if (window.location.href.includes("#")){
   localStorage.setItem("hash", window.location.hash.slice(1))
-  //window.history.pushState("object or string", "Title", "/new-url")
+  var url =  window.location.href.substr(0, window.location.href.indexOf("#"))
+  history.replaceState({id:1}, "", url)
 }
