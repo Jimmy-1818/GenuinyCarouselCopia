@@ -81,7 +81,7 @@ body {
         font-size: 25px;
         margin-top: 76vw;
         background: #ffffff80;
-        padding: 10px 0px;
+        padding: 10px;
         border-radius: 20px; }
         @media (min-width: 768px) {
           .container-header .header_text div.main-text span.second-main {

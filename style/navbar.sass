@@ -21,11 +21,13 @@ $breakpoint-desktop: 1024px
   right: 0
   z-index: 81
   background-color: var(--dark)
-  padding: 16px 32px
   transition: top .3s 0s, box-shadow .4s 0s, height .3s 0s
   height: 62px
+  padding: 16px 4vw
   @media (min-width: $breakpoint-desktop)
+    padding: 16px 32px
     height: 73px
+
   .container-navbar
     max-width: 1280px
     margin: 0 auto
@@ -33,8 +35,7 @@ $breakpoint-desktop: 1024px
     align-items: center
     justify-content: space-between
     height: $mobile-navbar-height
-    @media (min-width: $breakpoint-desktop)
-      height: 100%
+    height: 100%
     div.logo
       display: flex
       align-items: center
@@ -126,7 +127,7 @@ $breakpoint-desktop: 1024px
   // horizontal navigation
   @media (orientation: landscape)
     overflow-y: auto
-    max-height: 100vw
+    max-height: 100%
 
   position: fixed
   top: -550px

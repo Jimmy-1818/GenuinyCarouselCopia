@@ -1,5 +1,5 @@
-const mobile_html = document.getElementsByTagName("html")[0].innerHTML
 
+const mobile_body = document.getElementsByTagName("body")[0].innerHTML
 var layout_mobile = true
 function home_on_resize(){
 	var page_width = $(window).width()
@@ -11,12 +11,14 @@ function home_on_resize(){
 		on_scroll()
 	}else if ((page_width < 1024) && !(layout_mobile)){
 		layout_mobile = true
-		document.getElementsByTagName("html")[0].innerHTML = mobile_html
+		document.getElementsByTagName("body")[0].innerHTML = mobile_body
 		replace_event_listener()
+		on_scroll()
+		hamburger_listener()
 	}
 }
 
-window.onresize = home_on_resize
+//window.onresize = home_on_resize
 home_on_resize()
 
 function desktop_reform(){
@@ -79,6 +81,10 @@ function desktop_reform(){
 
 function add_container(){
 	document.getElementsByTagName("main")[0].classList.add("container")
+}
+
+function remove_container(){
+	document.getElementsByTagName("main")[0].classList.remove("container")
 }
 
 function remove_event_listener(){

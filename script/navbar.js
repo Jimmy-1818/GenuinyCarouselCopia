@@ -1,5 +1,5 @@
 const hamburger = document.getElementsByClassName("hamburger")
-const menu_mobile = document.getElementsByClassName("mobile-nav")[0]
+var menu_mobile = document.getElementsByClassName("mobile-nav")[0]
 var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
 const opacity = document.getElementsByClassName("opacity")[0]
 
@@ -12,18 +12,21 @@ const indicators = document.getElementsByClassName("carousel-indicators")
 
 const nearest_threshold = 70
 
-
+hamburger_listener()
 
 // Navbar animation
-hamburger[0].addEventListener("click", hamburger_click)
-if (hamburger[1]){
-  hamburger[1].addEventListener("click", function(){
-  desktop_nav.classList.remove("navbar-hide")
-  hamburger_click()
-  });
-};
+function hamburger_listener(){
+  hamburger[0].addEventListener("click", hamburger_click)
+  if (hamburger[1]){
+    hamburger[1].addEventListener("click", function(){
+    desktop_nav.classList.remove("navbar-hide")
+    hamburger_click()
+    })
+  }
+}
 
 function hamburger_click(){
+  menu_mobile = document.getElementsByClassName("mobile-nav")[0]
   var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
   hamburger[0].classList.toggle("show")
   menu_mobile.classList.toggle("show-mobile")
@@ -92,22 +95,33 @@ function delayed_next_h1(){
 }
 
 
+
+function navbar_height_shadow_control(){
+  if (window.scrollY == 0){
+    desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
+    if($(window).width() >= 1024){
+      desktop_nav.style.height = "73px"
+    }else{
+      desktop_nav.style.height = "62px"
+    }
+  }else{
+    desktop_nav.style.height = "62px"
+    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
+  }
+}
+
+window.onresize = function(){
+  navbar_height_shadow_control()
+  if(window.location.pathname.includes("index")){
+    home_on_resize()
+  }
+}
+
+
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 
 function on_scroll(){
-  if (window.scrollY == 0){
-    desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
-    if ($(window).width() > 1024){
-      desktop_nav.style.height = "73px"
-      desktop_nav.style.padding = "13px"
-    }  
-  }else if (!menu_mobile.classList.contains("show-mobile")){
-    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
-    if ($(window).width() > 1024){
-      desktop_nav.style.height = "60px"
-      desktop_nav.style.padding = "13px"
-    }
-  }
+  navbar_height_shadow_control()
   if (carousel.length > 1){
     end_page_carousel()
     set_next_h1()
@@ -287,18 +301,4 @@ on_scroll()
 
 
 
-//fix the height remaining 73 on mobile (-->62)
-var layout_mobile = true
-function on_resize(){
-  var page_width = $(window).width()
-  if ((page_width >= 1024) && (layout_mobile)){
-    layout_mobile = false
-    desktop_nav.classList.remove("navbar-hide")
-  }else if ((page_width < 1024) && !(layout_mobile)){
-    layout_mobile = true
-    desktop_nav.style.height = "62px"
-  }
-}
 
-window.onresize = on_resize
-on_resize()
