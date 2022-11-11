@@ -33,7 +33,7 @@ body
 	box-sizing: border-box
 	max-width: 2000px
 	padding: 62px 7% 0 7%
-	@media (min-width: 480px)
+	@media (min-width: 1024px)
 		padding-top: 72px
 
 .container-header
@@ -188,6 +188,8 @@ video.milena-spiega
 
 /**************SUBSCRIBE***************/
 
+main.subscribe
+	min-height: calc(100vh - 50px)
 
 .separation-line
 	position: relative
@@ -209,8 +211,6 @@ ul.subscribe-steps
 		background-position: left 46px
 		background-size: 20px
 		font-size: calc(1.4rem + 0.4vw)
-	li:last-of-type
-		margin-bottom: 5vw
 	h7
 		@media (min-width: $breakpoint-768)
 			user-select: none
@@ -318,14 +318,22 @@ li.subscribe-step-1 .subscribe-parent
 				width: 30px
 				padding: 5px
 				position: relative
-				top: -1px
+
+
+.subscribe-step-1 .round-bullet-inside img
+	padding: 7px
 
 .subscribe-step-3 .round-bullet-inside img
 	padding: 6px
 
 .subscribe-step-2, .subscribe-step-4
-	img
-		top: 0
+	.round-bullet-inside img
+		top: 1px
+
+.subscribe-step-5 .round-bullet-inside img
+	padding: 6px
+	top: 2px
+
 
 /**app-images**/
 
@@ -415,9 +423,12 @@ li.subscribe-step-1 .subscribe-parent
 .share-boxes
 	display: flex
 	flex-direction: column
+	align-items: center
 	@media (min-width: 1280px)
+		align-items: start
 		flex-direction: row
 		column-gap: 20px
+		margin-top: 30px
 
 #process-link, #copy-link
 	height: 30px
@@ -442,8 +453,8 @@ li.subscribe-step-1 .subscribe-parent
 	width: 94vw
 	max-width: 840px
 	margin: 20px -4vw
-	@media (min-width: 480px)
-		margin: 30px auto 0
+	@media (min-width: 1280px)
+		margin: 0px auto 0
 
 .content-box
 	border-radius: 0 0 20px 20px
@@ -488,6 +499,9 @@ li.subscribe-step-1 .subscribe-parent
 	position: relative
 	top: 5px
 	text-align: center
+	font-size: calc(1.325rem + 0.6vw)
+	@media (min-width: $breakpoint-1024)
+		font-size: 1.939rem
 
 
 .process-lines
@@ -514,6 +528,7 @@ li.subscribe-step-1 .subscribe-parent
 input.process-line
 	border-radius: 7px
 	border: 2px solid #6a6a6a
+	width: 80%
 
 .video-invite
 	text-align: center
@@ -524,12 +539,11 @@ input.process-line
 	margin: 15px auto 0 auto
 	display: block
 
-.share-app
+img.share-app
 	@extend .video-invite
-	width: auto
-	img
-		max-width: 250px
-		width: 80vw
+	width: 100%
+	max-width: 250px
+	width: 80vw
 
 
 /**** CAROUSEL ****/
@@ -829,50 +843,51 @@ input.process-line
 	.module-4 img
 		width: 200px
  
-footer
-	margin-top: 50px
-	display: grid
-	justify-items: center
-	align-items: center
-	//background-color: $genuinyColDark
+footer 
 	background-color: black
-	padding: 15px
-	text-align: center
-	column-gap: 15px
-	grid-row-gap: 14px
-	grid-template-columns: 1fr 1fr
-	@media (min-width: $breakpoint-768)
-		grid-row-gap: 10px
+	margin-top: 50px
+	div.container
+		padding: 15px
+		display: grid
+		justify-items: center
+		align-items: center
+		//background-color: $genuinyColDark
+		text-align: center
+		column-gap: 15px
+		grid-row-gap: 14px
 		grid-template-columns: 1fr 1fr
-	.grid_item
-		font-size: 1.2rem
-		color: #f1f1f1
 		@media (min-width: $breakpoint-768)
-			font-size: 1.3rem
-			color: white
-		&:last-of-type
-			margin-bottom: 0
-	.two_span
-		grid-column-start: 1
-		grid-column-end: 3
-		span
-			font-size: 1em
+			grid-row-gap: 10px
+			grid-template-columns: 1fr 1fr
+		.grid_item
+			font-size: 1.2rem
+			color: #f1f1f1
+			@media (min-width: $breakpoint-768)
+				font-size: 1.3rem
+				color: white
+			&:last-of-type
+				margin-bottom: 0
+		.two_span
+			grid-column-start: 1
+			grid-column-end: 3
+			span
+				font-size: 1em
+				display: block
+			span.line
+				@media (min-width: $breakpoint-768)
+					display: inline-block
+					&:nth-of-type(1n + 3)::before
+						content: "| "
+		span.br
 			display: block
-		span.line
+			font-size: 1em
 			@media (min-width: $breakpoint-768)
 				display: inline-block
-				&:nth-of-type(1n + 3)::before
+				&::before
 					content: "| "
-	span.br
-		display: block
-		font-size: 1em
-		@media (min-width: $breakpoint-768)
-			display: inline-block
-			&::before
-				content: "| "
-	a
-		@extend .grid_item
-		text-decoration: none
+		a
+			@extend .grid_item
+			text-decoration: none
 
 // lenguage selection menu
 .leng_btn

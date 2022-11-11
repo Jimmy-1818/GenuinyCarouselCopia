@@ -75,7 +75,7 @@ function current_index(){
 };
 
 let lastSctollY = window.scrollY;
-if(carousel){window.addEventListener("scroll", on_scroll)};
+window.addEventListener("scroll", on_scroll)
 
 
 // Bottom h1 on button prev/next click (delayed)
@@ -96,89 +96,6 @@ function delayed_next_h1(){
 
 
 
-function navbar_height_shadow_control(){
-  if (window.scrollY == 0){
-    desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
-    if($(window).width() >= 1024){
-      desktop_nav.style.height = "73px"
-    }else{
-      desktop_nav.style.height = "62px"
-    }
-  }else{
-    desktop_nav.style.height = "62px"
-    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
-  }
-}
-
-window.onresize = function(){
-  navbar_height_shadow_control()
-  if(window.location.pathname.includes("index")){
-    home_on_resize()
-  }
-}
-
-
-/////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
-
-function on_scroll(){
-  navbar_height_shadow_control()
-  if (carousel.length > 1){
-    end_page_carousel()
-    set_next_h1()
-  }
-
-  // Track position of nearest title in relation to top view
-  var current_i = current_index()[0]
-  var nearest_distance = current_index()[1]
-  var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
-
-  // Hide/show when scrolling up/down navbar/bottom btn
-  if (window.scrollY == 0){
-    desktop_nav.classList.remove("navbar-hide")
-  }
-  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile")) && ($(window).width() < 1024)) {
-    desktop_nav = document.getElementsByClassName("desktop-nav")[0]
-    desktop_nav.classList.add("navbar-hide")
-  }else if (nearest_distance > nearest_threshold){
-    desktop_nav.classList.remove("navbar-hide")
-  }
-  lastSctollY = window.scrollY
-
-  if (carousel.length > 0){
-    // When near a title bring up BOOTTOM BTN & not displayed INDICATORS 
-    //& not displayed CONTROLS & controll SCROLL unlock
-    if (nearest_distance < nearest_threshold){
-      bottom_btn.classList.add("bottom-btn-up")
-      for (var i = 0; i < indicators.length; i++) {
-        module_overflow[i].classList.remove("overflow-hidden")
-        indicators[i].classList.add("bottom-indicators-up")
-        control_next[i].classList.remove("bottom-control-down")
-      }
-    }
-    else{
-      bottom_btn.classList.remove("bottom-btn-up")
-      for (var i = 0; i < indicators.length; i++) {
-        module_overflow[i].classList.add("overflow-hidden")
-        indicators[i].classList.remove("bottom-indicators-up")
-        control_next[i].classList.add("bottom-control-down")
-      }
-    }
-
-    // Show just the nearest INDICATOR GROUP & CONTROLS 
-    for (var i = 0; i < indicators.length; i++) {
-      if (i == current_i){
-        indicators[i].classList.add("display-block")
-        if (!(end_page_carousel()["last_in_items"])){
-          control_next[i].classList.add("display-block")
-        }
-      }
-      else{
-        indicators[i].classList.remove("display-block")
-        control_next[i].classList.remove("display-block")
-      }
-    }
-  }
-};
 
 
 
@@ -302,3 +219,90 @@ on_scroll()
 
 
 
+
+function navbar_width_scroll_control(){
+  desktop_nav = document.getElementsByClassName("desktop-nav")[0]
+  if (window.scrollY == 0){
+    desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
+    if($(window).width() >= 1024){
+      desktop_nav.style.height = "73px"
+    }else{
+      desktop_nav.style.height = "62px"
+    }
+  }else{
+    if (!menu_mobile.classList.contains("show-mobile")){
+      desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
+    }
+    desktop_nav.style.height = "62px"
+  }
+}
+
+window.onresize = function(){
+  navbar_width_scroll_control()
+  if(window.location.pathname.includes("index")){
+    home_on_resize()
+  }
+}
+
+
+/////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
+
+function on_scroll(){
+  navbar_width_scroll_control()
+  if (carousel.length > 1){
+    end_page_carousel()
+    set_next_h1()
+  }
+
+  // Track position of nearest title in relation to top view
+  var current_i = current_index()[0]
+  var nearest_distance = current_index()[1]
+  var bottom_btn = document.getElementsByClassName("bottom-btn")[0]
+
+  // Hide/show when scrolling up/down navbar/bottom btn
+  if (window.scrollY == 0){
+    desktop_nav.classList.remove("navbar-hide")
+  }
+  else if ((lastSctollY < window.scrollY || nearest_distance < nearest_threshold) && !(menu_mobile.classList.contains("show-mobile")) && ($(window).width() < 1024)) {
+    desktop_nav = document.getElementsByClassName("desktop-nav")[0]
+    desktop_nav.classList.add("navbar-hide")
+  }else if (nearest_distance > nearest_threshold){
+    desktop_nav.classList.remove("navbar-hide")
+  }
+  lastSctollY = window.scrollY
+
+  if (carousel.length > 0){
+    // When near a title bring up BOOTTOM BTN & not displayed INDICATORS 
+    //& not displayed CONTROLS & controll SCROLL unlock
+    if (nearest_distance < nearest_threshold){
+      bottom_btn.classList.add("bottom-btn-up")
+      for (var i = 0; i < indicators.length; i++) {
+        module_overflow[i].classList.remove("overflow-hidden")
+        indicators[i].classList.add("bottom-indicators-up")
+        control_next[i].classList.remove("bottom-control-down")
+      }
+    }
+    else{
+      bottom_btn.classList.remove("bottom-btn-up")
+      for (var i = 0; i < indicators.length; i++) {
+        module_overflow[i].classList.add("overflow-hidden")
+        indicators[i].classList.remove("bottom-indicators-up")
+        control_next[i].classList.add("bottom-control-down")
+      }
+    }
+
+    // Show just the nearest INDICATOR GROUP & CONTROLS 
+    for (var i = 0; i < indicators.length; i++) {
+      if (i == current_i){
+        indicators[i].classList.add("display-block")
+        if (!(end_page_carousel()["last_in_items"])){
+          control_next[i].classList.add("display-block")
+        }
+      }
+      else{
+        indicators[i].classList.remove("display-block")
+        control_next[i].classList.remove("display-block")
+      }
+    }
+  }
+};

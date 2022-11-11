@@ -3,8 +3,8 @@
     max-width: 800px;
     margin: 50px auto 40px auto;
     padding-top: 30px;
-    border-top: 4px dashed #0abab5;
-    border-bottom: 4px dashed #0abab5;
+    border-top: 4px solid #0abab5;
+    border-bottom: 4px solid #0abab5;
     box-sizing: border-box;
     background-color: #0abab510;
 }

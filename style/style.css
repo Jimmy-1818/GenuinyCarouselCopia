@@ -24,7 +24,7 @@ body {
   box-sizing: border-box;
   max-width: 2000px;
   padding: 62px 7% 0 7%; }
-  @media (min-width: 480px) {
+  @media (min-width: 1024px) {
     .container {
       padding-top: 72px; } }
 
@@ -178,6 +178,9 @@ video.milena-spiega {
       padding: 5rem 0 2rem 0; } }
 
 /**************SUBSCRIBE************** */
+main.subscribe {
+  min-height: calc(100vh - 50px); }
+
 .separation-line {
   position: relative;
   width: 90%;
@@ -197,8 +200,6 @@ ul.subscribe-steps {
     background-position: left 46px;
     background-size: 20px;
     font-size: calc(1.4rem + 0.4vw); }
-  ul.subscribe-steps li:last-of-type {
-    margin-bottom: 5vw; }
   @media (min-width: 768px) {
     ul.subscribe-steps h7 {
       user-select: none; } }
@@ -308,14 +309,20 @@ li.subscribe-step-1 .subscribe-parent {
         display: block;
         width: 30px;
         padding: 5px;
-        position: relative;
-        top: -1px; } }
+        position: relative; } }
+
+.subscribe-step-1 .round-bullet-inside img {
+  padding: 7px; }
 
 .subscribe-step-3 .round-bullet-inside img {
   padding: 6px; }
 
-.subscribe-step-2 img, .subscribe-step-4 img {
-  top: 0; }
+.subscribe-step-2 .round-bullet-inside img, .subscribe-step-4 .round-bullet-inside img {
+  top: 1px; }
+
+.subscribe-step-5 .round-bullet-inside img {
+  padding: 6px;
+  top: 2px; }
 
 /**app-images* */
 .subscribe-step-3 div.images-container {
@@ -402,11 +409,14 @@ li.subscribe-step-1 .subscribe-parent {
 
 .share-boxes {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   @media (min-width: 1280px) {
     .share-boxes {
+      align-items: start;
       flex-direction: row;
-      column-gap: 20px; } }
+      column-gap: 20px;
+      margin-top: 30px; } }
 
 #process-link, #copy-link {
   height: 30px;
@@ -430,9 +440,9 @@ li.subscribe-step-1 .subscribe-parent {
   width: 94vw;
   max-width: 840px;
   margin: 20px -4vw; }
-  @media (min-width: 480px) {
+  @media (min-width: 1280px) {
     .share-box {
-      margin: 30px auto 0; } }
+      margin: 0px auto 0; } }
 
 .content-box {
   border-radius: 0 0 20px 20px;
@@ -475,7 +485,11 @@ li.subscribe-step-1 .subscribe-parent {
   border-radius: 20px 20px 0 0;
   position: relative;
   top: 5px;
-  text-align: center; }
+  text-align: center;
+  font-size: calc(1.325rem + 0.6vw); }
+  @media (min-width: 1024px) {
+    .share-box h2 {
+      font-size: 1.939rem; } }
 
 .process-lines {
   display: flex;
@@ -499,9 +513,10 @@ li.subscribe-step-1 .subscribe-parent {
 
 input.process-line {
   border-radius: 7px;
-  border: 2px solid #6a6a6a; }
+  border: 2px solid #6a6a6a;
+  width: 80%; }
 
-.video-invite, .share-app {
+.video-invite, img.share-app {
   text-align: center;
   border-radius: 10px;
   width: 80vw;
@@ -510,11 +525,10 @@ input.process-line {
   margin: 15px auto 0 auto;
   display: block; }
 
-.share-app {
-  width: auto; }
-  .share-app img {
-    max-width: 250px;
-    width: 80vw; }
+img.share-app {
+  width: 100%;
+  max-width: 250px;
+  width: 80vw; }
 
 /**** CAROUSEL *** */
 .carousel {
@@ -771,50 +785,51 @@ input.process-line {
     width: 200px; }
 
 footer {
-  margin-top: 50px;
-  display: grid;
-  justify-items: center;
-  align-items: center;
   background-color: black;
-  padding: 15px;
-  text-align: center;
-  column-gap: 15px;
-  grid-row-gap: 14px;
-  grid-template-columns: 1fr 1fr; }
-  @media (min-width: 768px) {
-    footer {
-      grid-row-gap: 10px;
-      grid-template-columns: 1fr 1fr; } }
-  footer .grid_item, footer a, footer .leng_btn {
-    font-size: 1.2rem;
-    color: #f1f1f1; }
+  margin-top: 50px; }
+  footer div.container {
+    padding: 15px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 15px;
+    grid-row-gap: 14px;
+    grid-template-columns: 1fr 1fr; }
     @media (min-width: 768px) {
-      footer .grid_item, footer a, footer .leng_btn {
-        font-size: 1.3rem;
-        color: white; } }
-    footer .grid_item:last-of-type, footer a:last-of-type, footer .leng_btn:last-of-type {
-      margin-bottom: 0; }
-  footer .two_span {
-    grid-column-start: 1;
-    grid-column-end: 3; }
-    footer .two_span span {
-      font-size: 1em;
-      display: block; }
-    @media (min-width: 768px) {
-      footer .two_span span.line {
-        display: inline-block; }
-        footer .two_span span.line:nth-of-type(1n + 3)::before {
-          content: "| "; } }
-  footer span.br {
-    display: block;
-    font-size: 1em; }
-    @media (min-width: 768px) {
-      footer span.br {
-        display: inline-block; }
-        footer span.br::before {
-          content: "| "; } }
-  footer a {
-    text-decoration: none; }
+      footer div.container {
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr 1fr; } }
+    footer div.container .grid_item, footer div.container a, footer div.container .leng_btn {
+      font-size: 1.2rem;
+      color: #f1f1f1; }
+      @media (min-width: 768px) {
+        footer div.container .grid_item, footer div.container a, footer div.container .leng_btn {
+          font-size: 1.3rem;
+          color: white; } }
+      footer div.container .grid_item:last-of-type, footer div.container a:last-of-type, footer div.container .leng_btn:last-of-type {
+        margin-bottom: 0; }
+    footer div.container .two_span {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+      footer div.container .two_span span {
+        font-size: 1em;
+        display: block; }
+      @media (min-width: 768px) {
+        footer div.container .two_span span.line {
+          display: inline-block; }
+          footer div.container .two_span span.line:nth-of-type(1n + 3)::before {
+            content: "| "; } }
+    footer div.container span.br {
+      display: block;
+      font-size: 1em; }
+      @media (min-width: 768px) {
+        footer div.container span.br {
+          display: inline-block; }
+          footer div.container span.br::before {
+            content: "| "; } }
+    footer div.container a {
+      text-decoration: none; }
 
 .leng_btn {
   background: transparent;
