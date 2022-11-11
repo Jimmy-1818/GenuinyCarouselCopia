@@ -867,17 +867,8 @@ footer
 				color: white
 			&:last-of-type
 				margin-bottom: 0
-		.two_span
-			grid-column-start: 1
-			grid-column-end: 3
-			span
-				font-size: 1em
-				display: block
-			span.line
-				@media (min-width: $breakpoint-768)
-					display: inline-block
-					&:nth-of-type(1n + 3)::before
-						content: "| "
+
+		// adress in two lines under tablet size
 		span.br
 			display: block
 			font-size: 1em
@@ -889,28 +880,46 @@ footer
 			@extend .grid_item
 			text-decoration: none
 
-// lenguage selection menu
-.leng_btn
-	background: transparent
-	border: none
-	@extend .grid_item
-.dropdown-menu li a
-	display: flex
-	justify-content: start
-	align-items: center
-	padding: 2.5px 10px
-	color: black
-	font-size: 0.9em
-img.leng_flag
-	width: 16px
-	margin-right: 8px
-.current-lenguage-flex
-	display: inline-flex
-	align-items: center
-	justify-content: end
-	gap: 5px
-	img.leng_flag
-		margin-right: 0
+
+
+
+// language selection menu
+.language_group
+	img.lang_flag
+		width: 16px
+		margin-right: 8px
+	button.lang_btn
+		background: transparent
+		border: none
+		@extend .grid_item
+		.current-language-flex
+			display: inline-flex
+			align-items: center
+			justify-content: end
+			gap: 5px
+			img.lang_flag
+				margin-right: 0
+	ul.dropdown-menu li a
+		display: flex
+		justify-content: start
+		align-items: center
+		padding: 2.5px 10px
+		color: black
+		font-size: 0.9em
+
+
+		//.two_span
+		//	grid-column-start: 1
+		//	grid-column-end: 3
+		//	span
+		//		font-size: inherit
+		//		display: block
+		//	span.line
+		//		@media (min-width: $breakpoint-768)
+		//			display: inline-block
+		//			&:nth-of-type(1n + 3)::before
+		//				content: "| "
+
 
 
 main.subscribe
@@ -942,9 +951,10 @@ main.affiliation
 span[lang]
 	font-size: 1em
 	font-family: inherit
+	color: inherit
 
 .display_none
-	display: none
+	display: none !important
 
 video:fullscreen
 	border-radius: none !important

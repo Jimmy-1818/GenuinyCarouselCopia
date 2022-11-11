@@ -306,3 +306,6 @@ function on_scroll(){
     }
   }
 };
+
+
+console.log(screen.ms0rientation)

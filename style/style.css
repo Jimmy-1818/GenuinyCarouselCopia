@@ -800,26 +800,15 @@ footer {
       footer div.container {
         grid-row-gap: 10px;
         grid-template-columns: 1fr 1fr; } }
-    footer div.container .grid_item, footer div.container a, footer div.container .leng_btn {
+    footer div.container .grid_item, footer div.container a, footer div.container .language_group button.lang_btn, .language_group footer div.container button.lang_btn {
       font-size: 1.2rem;
       color: #f1f1f1; }
       @media (min-width: 768px) {
-        footer div.container .grid_item, footer div.container a, footer div.container .leng_btn {
+        footer div.container .grid_item, footer div.container a, footer div.container .language_group button.lang_btn, .language_group footer div.container button.lang_btn {
           font-size: 1.3rem;
           color: white; } }
-      footer div.container .grid_item:last-of-type, footer div.container a:last-of-type, footer div.container .leng_btn:last-of-type {
+      footer div.container .grid_item:last-of-type, footer div.container a:last-of-type, footer div.container .language_group button.lang_btn:last-of-type, .language_group footer div.container button.lang_btn:last-of-type {
         margin-bottom: 0; }
-    footer div.container .two_span {
-      grid-column-start: 1;
-      grid-column-end: 3; }
-      footer div.container .two_span span {
-        font-size: 1em;
-        display: block; }
-      @media (min-width: 768px) {
-        footer div.container .two_span span.line {
-          display: inline-block; }
-          footer div.container .two_span span.line:nth-of-type(1n + 3)::before {
-            content: "| "; } }
     footer div.container span.br {
       display: block;
       font-size: 1em; }
@@ -831,29 +820,26 @@ footer {
     footer div.container a {
       text-decoration: none; }
 
-.leng_btn {
+.language_group img.lang_flag {
+  width: 16px;
+  margin-right: 8px; }
+.language_group button.lang_btn {
   background: transparent;
   border: none; }
-
-.dropdown-menu li a {
+  .language_group button.lang_btn .current-language-flex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px; }
+    .language_group button.lang_btn .current-language-flex img.lang_flag {
+      margin-right: 0; }
+.language_group ul.dropdown-menu li a {
   display: flex;
   justify-content: start;
   align-items: center;
   padding: 2.5px 10px;
   color: black;
   font-size: 0.9em; }
-
-img.leng_flag {
-  width: 16px;
-  margin-right: 8px; }
-
-.current-lenguage-flex {
-  display: inline-flex;
-  align-items: center;
-  justify-content: end;
-  gap: 5px; }
-  .current-lenguage-flex img.leng_flag {
-    margin-right: 0; }
 
 @media (min-width: 1024px) {
   main.subscribe {
@@ -878,10 +864,11 @@ img.leng_flag {
 
 span[lang] {
   font-size: 1em;
-  font-family: inherit; }
+  font-family: inherit;
+  color: inherit; }
 
 .display_none {
-  display: none; }
+  display: none !important; }
 
 video:fullscreen {
   border-radius: none !important;
