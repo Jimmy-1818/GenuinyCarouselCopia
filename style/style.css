@@ -819,6 +819,19 @@ footer {
             content: "| "; } }
     footer div.container a {
       text-decoration: none; }
+      footer div.container a:hover {
+        color: #8f8f8f; }
+    footer div.container .two_span {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+      footer div.container .two_span span {
+        font-size: inherit;
+        display: block; }
+      @media (min-width: 768px) {
+        footer div.container .two_span span.line {
+          display: inline-block; }
+          footer div.container .two_span span.line:nth-of-type(1n + 3)::before {
+            content: "| "; } }
 
 .language_group img.lang_flag {
   width: 16px;
