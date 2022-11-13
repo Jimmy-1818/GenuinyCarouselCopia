@@ -17,8 +17,6 @@ function home_on_resize(){
 		hamburger_listener()
 	}
 }
-
-//window.onresize = home_on_resize
 home_on_resize()
 
 function desktop_reform(){
@@ -68,6 +66,9 @@ function desktop_reform(){
 	const image_app = inner_app.children[0].getElementsByTagName("img")[0]
 	var app_title = inner_app.children[0].getElementsByTagName("h1")[0].textContent
 	inner_app.children[0].remove()
+	for (var i = 0; i < inner_app.children.length; i++) {
+		inner_app.children[i].classList.remove("active")
+	}
 	image_app.classList.add("app-image")
 
 	// add to the NOW first
