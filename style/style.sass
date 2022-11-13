@@ -177,7 +177,6 @@ video.milena-spiega
 	width: 84vw
 	height: auto
 	border: 3px solid $genuinyColDark
-	margin: 20px 0
 
 .title
 	font-size: calc(1.7rem + 0.6vw)
@@ -706,6 +705,9 @@ img.share-app
 	top: 50%
 	display: block
 	margin: 0 auto
+	@media (max-width: $breakpoint-768) and (orientation: landscape)
+		width: fit-content
+		height: 53vh
 
 #carousel-blockchain-desktop
 	@extend #carousel-blockchain
