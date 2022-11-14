@@ -410,8 +410,12 @@ li.subscribe-step-1 .subscribe-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  margin: 20px -7vw 0; }
+  margin: 20px -7vw 0;
+  width: 100vw; }
+  @media (min-width: 480px) {
+    .share-boxes {
+      margin: 20px auto 0;
+      width: 86vw; } }
   @media (min-width: 1280px) {
     .share-boxes {
       align-items: start;
@@ -425,7 +429,6 @@ li.subscribe-step-1 .subscribe-parent {
     box-shadow: 0px 0px 13px 3px #00000090; }
     @media (min-width: 480px) {
       .share-boxes .share-box {
-        width: 86vw;
         box-shadow: none; } }
     @media (min-width: 1280px) {
       .share-boxes .share-box {
