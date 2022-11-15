@@ -57,13 +57,33 @@ function number_strip(number){
 }
 
 function format_user(number){
-    return Number(number).toLocaleString("es-ES", {minimumFractionDigits: 0});
-}
+    //fallback on english (once not "not english")
+    var browser_language = navigator.language || navigator.userLanguage;
+    if (localStorage.getItem("lang_set") == null){
+        if (!browser_language.includes("en")){
+            return Number(number).toLocaleString("it", {minimumFractionDigits: 0});
+        }
+    }else if (localStorage.getItem("lang_set") != "eng"){
+        return Number(number).toLocaleString("it", {minimumFractionDigits: 0});
+    }else{
+        return Number(number).toLocaleString("en", {minimumFractionDigits: 0});
+    }
+};
 
 
 function format_prize(number){
-    return new Intl.NumberFormat("de-DE", { style: "currency", "currency":"EUR" }).format(number);
-}
+    //fallback on english (once not "not english")
+    var browser_language = navigator.language || navigator.userLanguage;
+    if (localStorage.getItem("lang_set") == null){
+        if (!browser_language.includes("en")){
+            return Intl.NumberFormat("it", { style: "currency", "currency":"EUR" }).format(number);
+        }
+    }else if (localStorage.getItem("lang_set") != "eng"){
+        return Intl.NumberFormat("it", { style: "currency", "currency":"EUR" }).format(number);
+    }else{
+        return Intl.NumberFormat("en", { style: "currency", "currency":"EUR" }).format(number);
+    }
+};
 
 /***
 function reconstruct_branch(){

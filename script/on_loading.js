@@ -7,8 +7,7 @@ function set_lang_manually(language){
   localStorage.setItem("lang_set", language)
   language_set()
   if(window.location.pathname.includes("affiliation")){
-    tab_value_update()
-    results_update()
+    on_focus()
   }
 }
 
