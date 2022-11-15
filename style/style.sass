@@ -372,11 +372,12 @@ li.subscribe-step-1 .subscribe-parent
 	transform: translate(-50%, 0%)
 	left: 50%
 	top: -250px
-	max-height: 420px
 	height: fit-content
+	max-height: 80vh
 	padding: 0
 	margin: 0
-	@media (min-width: $breakpoint-480)
+	@media (min-width: $breakpoint-768)
+		max-height: 420px
 		width: 80vw
 
 .max-height video
@@ -498,7 +499,7 @@ li.subscribe-step-1 .subscribe-parent
 	h2
 		background: $genuinyColDark
 
-#process-link, #copy-link
+#process-link, #copy-link, .arrow_btn
 	height: 30px
 	width: 50px
 	border-radius: 15px

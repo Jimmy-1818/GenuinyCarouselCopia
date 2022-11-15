@@ -362,12 +362,13 @@ li.subscribe-step-1 .subscribe-parent {
   transform: translate(-50%, 0%);
   left: 50%;
   top: -250px;
-  max-height: 420px;
   height: fit-content;
+  max-height: 80vh;
   padding: 0;
   margin: 0; }
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     .modal-table .modal-body {
+      max-height: 420px;
       width: 80vw; } }
 
 .max-height video {
@@ -492,7 +493,7 @@ li.subscribe-step-1 .subscribe-parent {
 .share-box:nth-of-type(odd) h2 {
   background: #09435E; }
 
-#process-link, #copy-link {
+#process-link, #copy-link, .arrow_btn {
   height: 30px;
   width: 50px;
   border-radius: 15px;
