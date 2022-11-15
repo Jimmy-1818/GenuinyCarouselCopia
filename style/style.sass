@@ -408,6 +408,9 @@ li.subscribe-step-1 .subscribe-parent
 			margin: 0
 			padding: 0
 
+#generate_qr .modal-body
+	overflow: hidden
+
 .modal-content
 	background-color: transparent
 	border: none
@@ -594,12 +597,9 @@ img.share-app
 .carousel-inner:last-of-type
 	margin-bottom: 50px
 
-.module-1, .module-2, .module-3, .module-4, .module-5, 
-	.subtitle
-		font-size: 1.2em
-		font-weight: bold
-	a
-		text-decoration: none
+.subtitle
+	font-size: 1.2em
+	font-weight: bold
 
 
 .module
@@ -657,13 +657,38 @@ img.share-app
 //		left: auto
 //		transform: translate(100%, 100%) rotate(180deg)					
 
-#carousel-genuiny .module-1 
+.system_ban
+		margin: 330px 7vw 0
+		@media (min-width: $breakpoint-768)
+			margin-top: -100px
 		p
 			min-height: 60vh
 			@media screen and (orientation: landscape)
 				min-height: 35vh
 		a
 			text-decoration: none
+		@media (min-width: $breakpoint-768)
+		//.module-1
+		//	.center-block
+		//		transform: translate(0, 0)
+		//		width: 80%
+		//		margin: 0 auto 30px
+		img
+			width: 100%
+			display: block
+			margin: 0 auto
+			@media (min-width: $breakpoint-768)
+				width: 80%
+		p.after_image
+			min-height: auto
+			margin-top: 40px
+		a .to-calculator
+			width: fit-content
+			max-width: 300px
+			margin: 15px auto
+
+		background-color: transparent
+
 .to-calculator
 	background: $genuinyColDark
 	padding: 10px 16px
@@ -671,22 +696,6 @@ img.share-app
 	font-weight: bold
 	color: white
 	margin: 3vh 0 0
-
-#carousel-genuiny-desktop
-	margin-top: 50px
-	@extend #carousel-genuiny
-	//.module-1
-	//	.center-block
-	//		transform: translate(0, 0)
-	//		width: 80%
-	//		margin: 0 auto 30px
-	.module-1
-		p
-			min-height: auto
-		a .to-calculator
-			width: 30vw
-			max-width: 300px
-			margin: 15px auto
 
 
 
@@ -723,16 +732,6 @@ img.share-app
 	.module-2 
 		.secondary-module-title-desktop
 			display: none
-
-
-#carousel-functioning-desktop
-	@extend #carousel-functioning
-	background-color: transparent
-	.module-1 img 
-		width: 80%
-	.module-2 p
-		margin-top: 50px
-
 
 
 

@@ -400,6 +400,9 @@ li.subscribe-step-1 .subscribe-parent {
       margin: 0;
       padding: 0; }
 
+#generate_qr .modal-body {
+  overflow: hidden; }
+
 .modal-content {
   background-color: transparent;
   border: none; }
@@ -580,11 +583,9 @@ img.share-app {
 .carousel-inner:last-of-type {
   margin-bottom: 50px; }
 
-.module-1 .subtitle, .module-2 .subtitle, .module-3 .subtitle, .module-4 .subtitle, .module-5 .subtitle {
+.subtitle {
   font-size: 1.2em;
   font-weight: bold; }
-.module-1 a, .module-2 a, .module-3 a, .module-4 a, .module-5 a {
-  text-decoration: none; }
 
 .module {
   margin-bottom: 9vh; }
@@ -626,13 +627,33 @@ img.share-app {
   margin: 100px -7vw 0 -7vw;
   padding: 0 calc(7vw + 50px) 30px; }
 
-#carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
-  min-height: 60vh; }
-  @media screen and (orientation: landscape) {
-    #carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
-      min-height: 35vh; } }
-#carousel-genuiny .module-1 a, #carousel-genuiny-desktop .module-1 a {
-  text-decoration: none; }
+.system_ban {
+  margin: 330px 7vw 0;
+  background-color: transparent; }
+  @media (min-width: 768px) {
+    .system_ban {
+      margin-top: -100px; } }
+  .system_ban p {
+    min-height: 60vh; }
+    @media screen and (orientation: landscape) {
+      .system_ban p {
+        min-height: 35vh; } }
+  .system_ban a {
+    text-decoration: none; }
+  .system_ban img {
+    width: 100%;
+    display: block;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .system_ban img {
+        width: 80%; } }
+  .system_ban p.after_image {
+    min-height: auto;
+    margin-top: 40px; }
+  .system_ban a .to-calculator {
+    width: fit-content;
+    max-width: 300px;
+    margin: 15px auto; }
 
 .to-calculator {
   background: #09435E;
@@ -642,21 +663,12 @@ img.share-app {
   color: white;
   margin: 3vh 0 0; }
 
-#carousel-genuiny-desktop {
-  margin-top: 50px; }
-  #carousel-genuiny-desktop .module-1 p {
-    min-height: auto; }
-  #carousel-genuiny-desktop .module-1 a .to-calculator {
-    width: 30vw;
-    max-width: 300px;
-    margin: 15px auto; }
-
-#carousel-functioning, #carousel-functioning-desktop {
+#carousel-functioning {
   margin-top: 330px; }
   @media (min-width: 1024px) {
-    #carousel-functioning, #carousel-functioning-desktop {
+    #carousel-functioning {
       margin-top: 215px; } }
-  #carousel-functioning .block-number, #carousel-functioning-desktop .block-number {
+  #carousel-functioning .block-number {
     margin: 0 auto;
     background: #0abab5;
     width: fit-content;
@@ -666,32 +678,25 @@ img.share-app {
     font-weight: bold;
     position: relative;
     bottom: -2px; }
-    #carousel-functioning .block-number:first-of-type, #carousel-functioning-desktop .block-number:first-of-type {
+    #carousel-functioning .block-number:first-of-type {
       margin-top: 6vh; }
-  #carousel-functioning .block-functioning, #carousel-functioning-desktop .block-functioning {
+  #carousel-functioning .block-functioning {
     background-color: #0abab5;
     text-align: center;
     padding: 5px 15px;
     color: white;
     border-radius: 10px;
     font-size: 1.2rem; }
-  #carousel-functioning .module-1 img, #carousel-functioning-desktop .module-1 img {
+  #carousel-functioning .module-1 img {
     width: 100%;
     margin: 0 auto;
     display: block; }
     @media screen and (orientation: landscape) {
-      #carousel-functioning .module-1 img, #carousel-functioning-desktop .module-1 img {
+      #carousel-functioning .module-1 img {
         max-height: 100%;
         width: auto; } }
-  #carousel-functioning .module-2 .secondary-module-title-desktop, #carousel-functioning-desktop .module-2 .secondary-module-title-desktop {
+  #carousel-functioning .module-2 .secondary-module-title-desktop {
     display: none; }
-
-#carousel-functioning-desktop {
-  background-color: transparent; }
-  #carousel-functioning-desktop .module-1 img {
-    width: 80%; }
-  #carousel-functioning-desktop .module-2 p {
-    margin-top: 50px; }
 
 #carousel-blockchain .module-2 video, #carousel-blockchain-desktop .module-2 video {
   transform: translate(0, -50%);
