@@ -355,7 +355,7 @@ h2.info img{
 }
 
 .tables{
-    margin: 0 auto 160px auto;
+    margin: 0 auto 0px auto;
     font-size: calc(1.1rem + 0.7vw);
 }
 
