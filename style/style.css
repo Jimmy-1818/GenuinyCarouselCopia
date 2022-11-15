@@ -504,7 +504,7 @@ li.subscribe-step-1 .subscribe-parent {
   background-position: center;
   background-size: 19px; }
 
-#process-link {
+#process-link, .arrow_btn {
   background-image: url("../images/icons/arrow-right-solid.svg");
   box-sizing: border-box; }
 
@@ -614,7 +614,10 @@ img.share-app {
   padding: 0 calc(7vw + 50px) 30px; }
 
 #carousel-genuiny, #carousel-genuiny-desktop {
-  margin-top: 215px; }
+  margin-top: 415px; }
+  @media (min-width: 1024px) {
+    #carousel-genuiny, #carousel-genuiny-desktop {
+      margin-top: 215px; } }
   #carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
     min-height: 60vh; }
     @media screen and (orientation: landscape) {

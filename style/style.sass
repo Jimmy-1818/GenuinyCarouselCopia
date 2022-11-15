@@ -511,7 +511,7 @@ li.subscribe-step-1 .subscribe-parent
 	background-position: center
 	background-size: 19px
 
-#process-link
+#process-link, .arrow_btn
 	background-image: url("../images/icons/arrow-right-solid.svg")
 	box-sizing: border-box
 
@@ -647,7 +647,9 @@ img.share-app
 //		transform: translate(100%, 100%) rotate(180deg)					
 
 #carousel-genuiny
-	margin-top: 215px
+	margin-top: 415px
+	@media (min-width: $breakpoint-1024)
+		margin-top: 215px
 	.module-1 
 		p
 			min-height: 60vh
