@@ -168,7 +168,7 @@ body {
     z-index: 4; }
 
 video.milena-spiega {
-  width: 84vw;
+  width: 100%;
   height: auto;
   border: 3px solid #09435E; }
 
@@ -314,12 +314,16 @@ li.subscribe-step-1 .subscribe-parent {
         position: relative; } }
 
 .subscribe-step-1 .round-bullet-inside img {
+  padding: 8px; }
+
+.subscribe-step-2 .round-bullet-inside img {
+  top: 1px;
   padding: 7px; }
 
 .subscribe-step-3 .round-bullet-inside img {
   padding: 6px; }
 
-.subscribe-step-2 .round-bullet-inside img, .subscribe-step-4 .round-bullet-inside img {
+.subscribe-step-4 .round-bullet-inside img {
   top: 1px; }
 
 .subscribe-step-5 .round-bullet-inside img {
@@ -475,7 +479,7 @@ li.subscribe-step-1 .subscribe-parent {
         color: white;
         text-decoration: none; }
         .share-boxes .share-box .content-box .center-link img {
-          width: 15px;
+          width: 12px;
           margin-left: 10px;
           position: relative;
           top: -1px; }
@@ -500,11 +504,11 @@ li.subscribe-step-1 .subscribe-parent {
   background-size: 19px; }
 
 #process-link {
-  background-image: url("../images/arrow.png");
+  background-image: url("../images/icons/arrow-right-solid.svg");
   box-sizing: border-box; }
 
 #copy-link {
-  background-image: url("../images/copy-w.png"); }
+  background-image: url("../images/icons/copy-regular.svg"); }
 
 .process-lines {
   display: flex;
@@ -612,15 +616,19 @@ img.share-app {
   margin-top: 215px; }
   #carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
     min-height: 60vh; }
+    @media screen and (orientation: landscape) {
+      #carousel-genuiny .module-1 p, #carousel-genuiny-desktop .module-1 p {
+        min-height: 35vh; } }
   #carousel-genuiny .module-1 a, #carousel-genuiny-desktop .module-1 a {
     text-decoration: none; }
-    #carousel-genuiny .module-1 a .to-calculator, #carousel-genuiny-desktop .module-1 a .to-calculator {
-      background: #09435E;
-      padding: 10px 16px;
-      text-align: center;
-      font-weight: bold;
-      color: white;
-      margin: 3vh 0 0; }
+
+.to-calculator {
+  background: #09435E;
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin: 3vh 0 0; }
 
 #carousel-genuiny-desktop {
   margin-top: 50px; }
@@ -654,6 +662,10 @@ img.share-app {
   width: 100%;
   margin: 0 auto;
   display: block; }
+  @media screen and (orientation: landscape) {
+    #carousel-functioning .module-1 img, #carousel-functioning-desktop .module-1 img {
+      max-height: 100%;
+      width: auto; } }
 #carousel-functioning .module-2 .secondary-module-title-desktop, #carousel-functioning-desktop .module-2 .secondary-module-title-desktop {
   display: none; }
 
