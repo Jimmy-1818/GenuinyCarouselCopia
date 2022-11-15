@@ -51,12 +51,12 @@ p.calculator-paragraph {
 
 
 .calculator_row_monthly{
-    margin: 0px 10% 40px;
+    margin: 0px 6% 40px; 
 }
 
 
 .calculator_row_monthly label{
-    font-size: calc(1.7rem + 0.7vw);
+    font-size: calc(1.3rem + 0.7vw);
 }
 
 img.info-circle{
@@ -176,7 +176,7 @@ h2.info img{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr minmax(65px,auto) 2fr;
-    grid-template-rows: minmax(50px, auto) repeat(9, 30px) minmax(55px, auto);
+    grid-template-rows: minmax(50px, auto) repeat(5, 30px) minmax(55px, auto);
     width: 100%;
     overflow-x: auto;
 }
@@ -449,6 +449,10 @@ div.reduce-4{
     div.reduce-1, div.reduce-2, div.reduce-3, div.reduce-4{
         font-size: calc(1.325rem + 0.6vw);
     }
+    .calculator_row_monthly{
+        margin: 0px 10% 40px; 
+}
+
 
 }
 
