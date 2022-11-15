@@ -366,6 +366,15 @@ li.subscribe-step-1 .subscribe-parent
 			padding: 4px
 			box-shadow: 0px 3px 6px 0px #00000070
 
+
+.max-height video
+	max-height: 70vh
+
+.modal-trigger
+	border: none
+	text-decoration: underline
+	color: #0d6efd
+
 .modal-table .modal-body
 	width: 100vw
 	position: absolute
@@ -380,19 +389,12 @@ li.subscribe-step-1 .subscribe-parent
 		max-height: 420px
 		width: 80vw
 
-.max-height video
-	max-height: 70vh
-
-.modal-trigger
-	border: none
-	text-decoration: underline
-	color: #0d6efd
-
-
 .modal-white .modal-content
 	background: white
 	.modal-body
 		padding: 35px
+		max-height: 80vh
+		overflow: auto
 		h1
 			font-weight: bold
 			padding-bottom: 15px
@@ -499,7 +501,7 @@ li.subscribe-step-1 .subscribe-parent
 	h2
 		background: $genuinyColDark
 
-#process-link, #copy-link, .arrow_btn
+#process-link, #copy-link
 	height: 30px
 	width: 50px
 	border-radius: 15px
@@ -511,14 +513,21 @@ li.subscribe-step-1 .subscribe-parent
 	background-position: center
 	background-size: 19px
 
-#process-link, .arrow_btn
+#process-link, 
 	background-image: url("../images/icons/arrow-right-solid.svg")
 	box-sizing: border-box
 
 #copy-link
 	background-image: url("../images/icons/copy-regular.svg")
 
-
+.arrow_btn
+	@extend #process-link
+	display: inline-block
+	transform: translate(0, 18%)
+	margin-left: 3px
+	width: 24px
+	height: 18px
+	background-size: 12px
 
 
 
