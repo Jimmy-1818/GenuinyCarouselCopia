@@ -114,9 +114,9 @@
 				<form class="calculator">
 
 						<div class="calculator_row_monthly">
-								<label for="tip">Rendita media
+								<label style="display: inline" for="tip">Rendita media ipotizzata
 									<!-- Button trigger modal -->
-									<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#average-profit">
+									<a class="modal-trigger" data-bs-toggle="modal" data-bs-target="#average-profit">
 										<img class="info-circle" src="images/icons/circle-info-solid.svg" alt="info">
 									</a>
 									<span class="tip-amount"></span></label>
@@ -155,25 +155,29 @@
 						<div class="result__row">
 							<div class="box-info autentica">
 								<h2 class="info">
-									<span class="two-lines">Premio
-									<span class="second-line">Autentica:</span></span>
+									<span class="two-lines">
+										<span class="first-line">Premio</span>
+										<span class="second-line">Autentica:</span>
+										<!-- Button trigger modal -->
+										<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-autentica">
+											<img class="info-circle" src="images/icons/circle-info-solid.svg" alt="info">
+										</a>
+									</span>
 									<span class="autentica_result info-number resize-text"></span>
-									<!-- Button trigger modal -->
-									<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-autentica">
-										<img class="info-circle" src="images/icons/circle-info-solid.svg" alt="info">
-									</a>
 								</h2>
-								<p>Ogni volta che certifichi un dato/utente ricevi in tempo reale GData (Condividi App).<br></p>
+								<p>Ogni volta che certifichi un dato/utente ricevi in tempo reale GData (<a style="font-size: inherit;" href="share.html">Condividi App</a>).<br></p>
 							</div>
 							<div class="box-info rendita">
 								<h2 class="info">
-									<span class="two-lines">Premio
-									<span class="second-line">Rendita:</span></span>
+									<span class="two-lines">
+										<span class="first-line">Premio</span>
+										<span class="second-line">Rendita:</span>
+										<!-- Button trigger modal -->
+										<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-rendita">
+											<img class="info-circle" src="images/icons/circle-info-solid.svg" alt="info">
+										</a>
+									</span>
 									<span class="rendita_result info-number resize-text"></span>
-									<!-- Button trigger modal -->
-									<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-rendita">
-										<img class="info-circle" src="images/icons/circle-info-solid.svg" alt="info">
-									</a>
 								</h2>
 								<p>Ogni volta che le tue filiere dati generano traffico, ricevi accrediti GData (Data Profit).<br></p>
 							</div>
@@ -254,7 +258,7 @@
 									<div class="table-item">1<sup>a</sup></div>
 									<div class="table-item resize-text"id="tab2_u1"></div>
 									<div class="table-item"><span class="yellow_amount">2%</span><span class="monthly"></span></div>
-									<div class="table-item resize-text"id="tab2_p1"></div>>
+									<div class="table-item resize-text"id="tab2_p1"></div>
 
 									<div class="table-item">2<sup>a</sup></div>
 									<div class="table-item resize-text"id="tab2_u2"></div>

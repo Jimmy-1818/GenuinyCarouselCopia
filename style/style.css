@@ -632,7 +632,7 @@ img.share-app {
   background-color: transparent; }
   @media (min-width: 768px) {
     .system_ban {
-      margin-top: -100px; } }
+      margin: -100px 0 0; } }
   .system_ban p {
     min-height: 60vh; }
     @media screen and (orientation: landscape) {

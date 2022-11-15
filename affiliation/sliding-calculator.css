@@ -25,9 +25,11 @@ p.calculator-paragraph {
 .calculator__row {
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10%;
     align-items: center;
-    margin: -10px 0 25px;
+    margin: 0 0 11px;
+
 }
 
 .calculator__row:last-of-type{
@@ -45,28 +47,16 @@ p.calculator-paragraph {
     top: -17px;
     right: 20%;
     z-index: 1;
-    /**circle***/
-    background: #0abab5;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    line-height: 2;
-    font-size: 10px;
-    text-align: center;
-    color: white;
-    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
-    font-weight: bold;
 }
 
 
 .calculator_row_monthly{
-    margin-bottom: 40px;
+    margin: 0px 10% 40px;
 }
 
 
 .calculator_row_monthly label{
     font-size: calc(1.7rem + 0.7vw);
-    margin-left: 10%;
 }
 
 img.info-circle{
@@ -84,7 +74,10 @@ img.info-circle{
 }
 
 .calculator__tip {
-    width: 60%;
+    width: calc(30% + 1vw);
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #909090;
 }
 
 h2.info {
@@ -114,7 +107,11 @@ h2.info img{
     display: block;
 }
 
-.second-line{
+.first-line, .second-line{
+    font-size: inherit;
+}
+
+.first-line{
     display: block;
 }
 
@@ -402,15 +399,55 @@ h2.info img{
     left: 50%;
 }
 
+
+
+
+.reduce-1{
+    font-size: 6vw;
+}
+.reduce-2{
+    font-size: 5vw;
+}
+.reduce-3{
+    font-size: 4.5vw;
+}
+.reduce-4{
+    font-size: 3.8vw;
+}
+div.resize-text{
+    font-size: calc(1.3rem + 0.6vw);
+}
+div.reduce-1{
+    font-size: calc(1.15rem + 0.6vw);
+}
+div.reduce-2{
+    font-size: calc(1.05rem + 0.6vw);
+}
+div.reduce-3{
+    font-size: calc(0.9rem + 0.6vw);
+}
+div.reduce-4{
+    font-size: calc(0.75rem + 0.6vw);
+}
+
+
+
+
+
 @media screen and (min-width: 480px){
 
     .box-info{
         margin: 4%;
         text-align: left;
     }
-
-    .second-line{
-        display: inline-block;
+    .first-line{
+        display: inline;
+    }
+    .reduce-1, .reduce-2, .reduce-3, .reduce-4, .resize-text{
+        font-size: 2.4rem;
+    }
+    div.reduce-1, div.reduce-2, div.reduce-3, div.reduce-4{
+        font-size: calc(1.325rem + 0.6vw);
     }
 
 }
