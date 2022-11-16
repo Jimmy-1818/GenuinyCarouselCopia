@@ -180,11 +180,11 @@ function tab_value_update(){
 
 var input = document.getElementsByClassName("input");
 for (var i = 0; i < input.length; i++) {
-    input[i].addEventListener('input', alternative_format_input)
+    input[i].addEventListener('input', on_focus)
 } 
 function alternative_format_input(){
     for (let i = 0; i < input.length; i++){
-        if (input[i].value == '' || input[i].value == 0 || !is_number(input[i].value)){
+        if (input[i].value == '' || input[i].value == 0 || (!is_number(input[i].value) & !input[i].value.includes(','))){
             input[i].value = ''
         }
         else if (input[i].value.length > 13){
@@ -269,6 +269,7 @@ function resize_result(){
 
 function on_focus(){
     //reconstruct_branch()
+    alternative_format_input()
     vars_def()
     slider_value_update()
     tab_value_update()
