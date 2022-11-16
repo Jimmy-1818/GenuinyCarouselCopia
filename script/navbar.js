@@ -122,8 +122,8 @@ function set_next_h1(){
       alternative_next.classList.remove("display-block")
       control_next[cci].classList.add("display-block")
     }
-    else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
-      var next_h1 = titles_text[cci + 1][cci]
+    else if (!(cci == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
+      var next_h1 = titles_text[current_i + 1][0]
 
       arrow_img.classList.add("display-block")
       subscribe_img.classList.remove("display-block")
