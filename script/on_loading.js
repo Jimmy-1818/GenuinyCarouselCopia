@@ -7,7 +7,7 @@ function set_lang_manually(language){
   localStorage.setItem("lang_set", language)
   language_set()
   if(window.location.pathname.includes("affiliation")){
-    on_focus()
+    on_input()
   }
 }
 

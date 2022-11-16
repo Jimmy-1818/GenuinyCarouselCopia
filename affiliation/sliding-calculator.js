@@ -1,46 +1,11 @@
-
-
-
-/****Run everything on every change in one of the input through autentica_cacl()**/
-
-document.getElementById("tip_monthly").addEventListener("change", on_focus);
-document.getElementById("tip1").addEventListener("change", on_focus);
-document.getElementById("tip2").addEventListener("change", on_focus);
-document.getElementById("tip3").addEventListener("change", on_focus);
-document.getElementById("tip4").addEventListener("change", on_focus);
-document.getElementById("tip5").addEventListener("change", on_focus);
-
-document.getElementById("tip_monthly").addEventListener("focus", on_focus);
-document.getElementById("tip1").addEventListener("focus", on_focus);
-document.getElementById("tip2").addEventListener("focus", on_focus);
-document.getElementById("tip3").addEventListener("focus", on_focus);
-document.getElementById("tip4").addEventListener("focus", on_focus);
-document.getElementById("tip5").addEventListener("focus", on_focus);
-
-
 var monthly = 0
+var s1 = s2 = s3 = s4 = s5 = 0
+var l1_a = l2_a = l3_a = l4_a = l5_a = result_a = 0
+var l1_r = l2_r = l3_r = l4_r = l5_r = result_r = 0
 
-var s1 = 0
-var s2 = 0
-var s3 = 0
-var s4 = 0
-var s5 = 0
-
-
-var l1_a = 0
-var l2_a = 0
-var l3_a = 0
-var l4_a = 0
-var l5_a = 0
-var result_a = 0
+var input = document.getElementsByClassName("input");
 
 
-var l1_r = 0
-var l2_r = 0
-var l3_r = 0
-var l4_r = 0
-var l5_r = 0
-var result_r = 0
 
 function is_number(number){
     if (number.replaceAll('.', '') != number_strip(number)){
@@ -63,6 +28,9 @@ function format_user(number){
         if (!browser_language.includes("en")){
             return Number(number).toLocaleString("it", {minimumFractionDigits: 0});
         }
+        else{
+            return Number(number).toLocaleString("en", {minimumFractionDigits: 0});
+        }
     }else if (localStorage.getItem("lang_set") != "eng"){
         return Number(number).toLocaleString("it", {minimumFractionDigits: 0});
     }else{
@@ -77,6 +45,9 @@ function format_prize(number){
     if (localStorage.getItem("lang_set") == null){
         if (!browser_language.includes("en")){
             return Intl.NumberFormat("it", { style: "currency", "currency":"EUR" }).format(number);
+        }
+        else{
+            return Intl.NumberFormat("en", { style: "currency", "currency":"EUR" }).format(number);
         }
     }else if (localStorage.getItem("lang_set") != "eng"){
         return Intl.NumberFormat("it", { style: "currency", "currency":"EUR" }).format(number);
@@ -177,11 +148,6 @@ function tab_value_update(){
 
 }
 
-
-var input = document.getElementsByClassName("input");
-for (var i = 0; i < input.length; i++) {
-    input[i].addEventListener('input', on_focus)
-} 
 function alternative_format_input(){
     for (let i = 0; i < input.length; i++){
         if (input[i].value == '' || input[i].value == 0 || (!is_number(input[i].value) & !input[i].value.includes(','))){
@@ -267,7 +233,7 @@ function resize_result(){
 }
 
 
-function on_focus(){
+function on_input(){
     //reconstruct_branch()
     alternative_format_input()
     vars_def()
@@ -283,8 +249,11 @@ function on_focus(){
     resize_result()
 }
 
-on_focus()
-
+on_input()
+for (var i = 0; i < input.length; i++) {
+    input[i].addEventListener('input', on_input)
+} 
+document.getElementById("tip_monthly").addEventListener("input", on_input)
 
 
 
