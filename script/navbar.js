@@ -169,8 +169,11 @@ for (var i = 0; i < indicators.length; i++) {
 
 
 function scroll_fix(){
+  var bottom_btns_copy = [].slice.call(document.getElementsByClassName("bottom-btn"));
+  var cci = bottom_btns_copy.indexOf(this.parentNode)
+  //da usare al posto di current_i --> this.parent e recuperare l'index
   var current_i = current_index()[0]
-  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
+  var items = document.getElementsByClassName("carousel-inner")[cci].getElementsByClassName("carousel-item")
   for (var i = 0; i < items.length; i++) {
     if (items[i].classList.contains("active")){
       var current_item_index = i
@@ -179,7 +182,7 @@ function scroll_fix(){
   if (current_item_index < (items.length - 1) || this.classList.contains("carousel-indicators")){
     var inners = document.getElementsByClassName("carousel-inner")  
     var margin_top = 30
-    var scroll_position = inners[current_i].getBoundingClientRect().top + window.scrollY - margin_top
+    var scroll_position = inners[cci].getBoundingClientRect().top + window.scrollY - margin_top
     window.scrollTo({top: scroll_position})
   }
 }
