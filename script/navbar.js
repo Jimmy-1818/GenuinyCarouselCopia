@@ -169,8 +169,14 @@ for (var i = 0; i < indicators.length; i++) {
 
 
 function scroll_fix(){
-  var bottom_btns_copy = [].slice.call(document.getElementsByClassName("bottom-btn"));
-  var cci = bottom_btns_copy.indexOf(this.parentNode)
+  var bottom_btns_copy = [].slice.call(document.getElementsByClassName("bottom-btn"))
+  var carousels_copy = [].slice.call(carousel)
+  if (this.parentNode.classList.contains("bottom-btn")){
+    var cci = bottom_btns_copy.indexOf(this.parentNode)
+  }
+  else{
+    var cci = carousels_copy.indexOf(this.parentNode)
+  }
   //da usare al posto di current_i --> this.parent e recuperare l'index
   var current_i = current_index()[0]
   var items = document.getElementsByClassName("carousel-inner")[cci].getElementsByClassName("carousel-item")
