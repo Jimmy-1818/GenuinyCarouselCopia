@@ -569,7 +569,8 @@ img.share-app {
 
 /**** CAROUSEL *** */
 .carousel {
-  margin-top: 50px; }
+  margin-top: 50px;
+  margin-bottom: 9vh; }
 
 .carousel-indicators [data-bs-target] {
   background-color: #0abab5;
@@ -588,15 +589,13 @@ img.share-app {
   font-size: 1.2em;
   font-weight: bold; }
 
-.module {
-  margin-bottom: 9vh; }
-  .module h1 {
-    font-size: 2rem;
-    border-bottom: 2px solid #0abab5;
-    padding-bottom: 1rem;
-    font-weight: bold;
-    width: 86vw;
-    margin: 0 auto 10px; }
+.module h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid #0abab5;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  width: 86vw;
+  margin: 0 auto 10px; }
 
 .module-overflow {
   overflow: auto;

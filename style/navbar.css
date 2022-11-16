@@ -37,8 +37,8 @@
 
 .hamburger {
   display: block;
-  position: relative;
   z-index: 1;
+  position: relative;
   user-select: none;
   border: none;
   outline: none;
@@ -181,20 +181,24 @@ body {
 .bottom-btn {
   z-index: 71;
   display: block;
-  position: fixed;
-  bottom: -140px;
   left: 0;
-  width: 100%;
   min-width: 300px;
   height: 65px;
   background-color: #fff;
   transition: bottom 0.3s;
-  box-shadow: 0 0 8px 6px #00000020; }
+  box-shadow: 0 0 8px 6px #00000020;
+  width: 80%;
+  position: relative;
+  bottom: -2vh;
+  margin: 0 auto;
+  border-radius: 99px;
+  border: 4px solid #0abab5;
+  box-sizing: content-box; }
   @media (min-width: 1024px) {
     .bottom-btn {
       display: none; } }
   .bottom-btn .next-title {
-    width: 65vw;
+    width: 55%;
     position: absolute;
     bottom: 3px;
     right: 50%;
@@ -208,21 +212,21 @@ body {
       font-size: 1.7rem; }
   .bottom-btn .arrow, .bottom-btn .alternative-next {
     position: absolute;
-    width: 16vw;
-    height: 16vw;
     max-width: 72px;
     max-height: 72px;
     top: 0px;
-    right: 14px;
-    transform: translate(0, -50%);
+    right: 0px;
+    width: 65px;
+    height: 65px;
     transition: transform 0.3s;
     border-radius: 50%;
     background-color: #0ABAB5; }
 
 .bottom-left {
-  top: 50%;
   left: 4%;
-  transform: translate(0, -50%); }
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%; }
   .bottom-left span {
     background-color: var(--dark); }
 
@@ -246,16 +250,17 @@ body {
   left: 50%; }
 
 .carousel-indicators {
-  display: none;
-  width: fit-content;
-  position: fixed;
   z-index: 72;
-  transform: translate(-50%, 50%);
   right: auto;
+  transition: bottom 0.3s;
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, 0);
   left: 50%;
-  bottom: -95px;
-  margin: auto 0 0 auto;
-  transition: bottom 0.3s; }
+  top: 0;
+  height: 50%;
+  display: block; }
 
 .bottom-indicators-up {
   bottom: 45px; }
@@ -265,15 +270,17 @@ body {
 
 .carousel-control-next {
   display: none;
-  position: fixed;
   z-index: 73;
-  bottom: 65px;
-  transform: translate(0, 50%);
   height: 15vw;
   margin: auto 0 0 auto;
   width: 15vw;
   max-width: 72px;
-  transition: bottom 0.3s; }
+  transition: bottom 0.3s;
+  bottom: 65px;
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  bottom: calc(-2vh + 4px); }
 
 .bottom-btn .alternative-next {
   z-index: 74;
@@ -283,7 +290,7 @@ body {
   left: 14px; }
 
 .carousel-control-next {
-  right: 14px; }
+  right: 10%; }
 
 .bottom-control-down {
   bottom: -60px; }
@@ -295,6 +302,6 @@ body {
       display: none; } }
 
 .bottom-btn .rotate-arrow {
-  transform: translate(0, -50%) rotate(90deg); }
+  transform: translate(0, 0%) rotate(90deg); }
 
 /*# sourceMappingURL=navbar.css.map */
