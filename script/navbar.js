@@ -96,53 +96,52 @@ function delayed_next_h1(){
   setTimeout(set_next_h1, 650)
 }
 
-
+set_next_h1()
 function set_next_h1(){
-  var module_title_bottom = document.getElementsByClassName("module-title-bottom")
-  var current_i = current_index()[0]
-  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
-  var arrow = document.getElementsByClassName("arrow")[0]
-  var alternative_next = document.getElementsByClassName("alternative-next")[0]
-  var arrow_img = arrow.getElementsByClassName("arrow-img")[0]
-  var subscribe_img = arrow.getElementsByClassName("subscribe-img")[0]
-  
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].classList.contains("active")){
-      var current_item_index = i
-    }
-  }
-
-  var current_h1 = titles_text[current_i][current_item_index]
-  if (!(end_page_carousel()["last_in_items"])){
-    var next_h1 = titles_text[current_i][titles_text[current_i].indexOf(current_h1) + 1]
+  //cci: current carousle index
+  for (var cci = 0; cci < carousel.length; cci++){
+    var module_title_bottom = document.getElementsByClassName("module-title-bottom")[cci]
+    var current_i = current_index()[0]
+    var items = document.getElementsByClassName("carousel-inner")[cci].getElementsByClassName("carousel-item")
+    var arrow = document.getElementsByClassName("arrow")[cci]
+    var alternative_next = document.getElementsByClassName("alternative-next")[cci]
+    var arrow_img = arrow.getElementsByClassName("arrow-img")[0]
+    var subscribe_img = arrow.getElementsByClassName("subscribe-img")[0]
     
-    arrow_img.classList.add("display-block")
-    subscribe_img.classList.remove("display-block")
-    arrow.classList.remove("rotate-arrow")
-    alternative_next.classList.remove("display-block")
-    control_next[current_i].classList.add("display-block")
-  }
-  else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
-    var next_h1 = titles_text[current_i + 1][0]
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].classList.contains("active")){
+        var current_item_index = i
+      }
+    }
+    var current_h1 = titles_text[cci][current_item_index]
+    if (!(end_page_carousel()["last_in_items"])){
+      var next_h1 = titles_text[cci][titles_text[cci].indexOf(current_h1) + 1]
+      arrow_img.classList.add("display-block")
+      subscribe_img.classList.remove("display-block")
+      arrow.classList.remove("rotate-arrow")
+      alternative_next.classList.remove("display-block")
+      control_next[cci].classList.add("display-block")
+    }
+    else if (!(current_i == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
+      var next_h1 = titles_text[cci + 1][cci]
 
-    arrow_img.classList.add("display-block")
-    subscribe_img.classList.remove("display-block")
-    arrow.classList.add("rotate-arrow")
-    alternative_next.classList.add("display-block")
-    control_next[current_i].classList.remove("display-block")
-  }
-  else{
-    var next_h1 = "Registrati"
+      arrow_img.classList.add("display-block")
+      subscribe_img.classList.remove("display-block")
+      arrow.classList.add("rotate-arrow")
+      alternative_next.classList.add("display-block")
+      control_next[cci].classList.remove("display-block")
+    }
+    else{
+      var next_h1 = "Registrati"
 
-    arrow_img.classList.remove("display-block")
-    subscribe_img.classList.add("display-block")
-    arrow.classList.remove("rotate-arrow")
-    alternative_next.classList.remove("display-block")
-    control_next[current_i].classList.remove("display-block")
-  }
+      arrow_img.classList.remove("display-block")
+      subscribe_img.classList.add("display-block")
+      arrow.classList.remove("rotate-arrow")
+      alternative_next.classList.remove("display-block")
+      control_next[cci].classList.remove("display-block")
+    }
 
-  for (var i = 0; i < module_title_bottom.length; i++){
-    module_title_bottom[i].innerHTML = next_h1
+    module_title_bottom.innerHTML = next_h1
   }
 };
 
@@ -186,7 +185,29 @@ function scroll_fix(){
 }
 
 
+function alternative_end_page_carousel(next = "current"){
+  var result = {last_in_page: false, last_in_items: false}
 
+  if (next == "next"){var reach = 1} else {var reach = 0}
+  var current_i = current_index()[0]
+  
+  if (current_i == carousel.length - 1 - reach){
+    result["last_in_page"] = true
+  }else{
+    result["last_in_page"] = false
+  }
+  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
+  for (var i = 0; i < items.length; i++) {if (items[i].classList.contains("active")){
+      var current_item_index = i}}
+  
+  if (current_item_index == items.length - 1 - reach){
+    result["last_in_items"] = true
+  }else{
+    result["last_in_items"] = false
+  }
+
+  return result
+}
 
 function end_page_carousel(next = "current"){
   var result = {last_in_page: false, last_in_items: false}
