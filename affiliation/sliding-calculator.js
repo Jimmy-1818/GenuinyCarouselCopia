@@ -178,12 +178,30 @@ function tab_value_update(){
 }
 
 
+input[i].addEventListener('input', alternative_format_input)
+function alternative_format_input(){
+    var input = document.getElementsByClassName("input");
+    for (let i = 0; i < input.length; i++){
+        console.log(input[i].value)
+        if (input[i].value == '' || input[i].value == 0 || !is_number(input[i].value)){
+            n = ''
+        }
+        else if (input[i].value.length > 13){
+            input[i].value = "9.999.999.999"
+        }
+        var input[i].value = input[i].value.replace(/\D/g, "");
+    }
+}
 
 
+
+//format_input()
+var i = 0
 function format_input(){
     var input = document.getElementsByClassName("input");
     for (let i = 0; i < input.length; i++){
         input[i].addEventListener('input', function(evt){
+        console.log(input[i].value)
         var n = parseInt(this.value.replace(/\D/g,''),10);
         if (input[i].value == '' || input[i].value == 0 || !is_number(input[i].value)){
             n = ''
@@ -246,8 +264,7 @@ function resize_result(){
 
 
 function on_focus(){
-    //**reconstruct_branch()**/
-    format_input()
+    //reconstruct_branch()
     vars_def()
     slider_value_update()
     tab_value_update()
