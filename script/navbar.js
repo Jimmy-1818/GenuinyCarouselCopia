@@ -114,7 +114,7 @@ function set_next_h1(){
       }
     }
     var current_h1 = titles_text[cci][current_item_index]
-    if (!(end_page_carousel()["last_in_items"])){
+    if (current_item_index < items.length - 1){
       var next_h1 = titles_text[cci][titles_text[cci].indexOf(current_h1) + 1]
       arrow_img.classList.add("display-block")
       subscribe_img.classList.remove("display-block")
@@ -123,7 +123,7 @@ function set_next_h1(){
       control_next[cci].classList.add("display-block")
     }
     else if (!(cci == document.getElementsByClassName("carousel-inner").length - 1 && current_item_index == items.length - 1)){
-      var next_h1 = titles_text[current_i + 1][0]
+      var next_h1 = titles_text[cci + 1][0]
 
       arrow_img.classList.add("display-block")
       subscribe_img.classList.remove("display-block")
@@ -184,30 +184,6 @@ function scroll_fix(){
   }
 }
 
-
-function alternative_end_page_carousel(next = "current"){
-  var result = {last_in_page: false, last_in_items: false}
-
-  if (next == "next"){var reach = 1} else {var reach = 0}
-  var current_i = current_index()[0]
-  
-  if (current_i == carousel.length - 1 - reach){
-    result["last_in_page"] = true
-  }else{
-    result["last_in_page"] = false
-  }
-  var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
-  for (var i = 0; i < items.length; i++) {if (items[i].classList.contains("active")){
-      var current_item_index = i}}
-  
-  if (current_item_index == items.length - 1 - reach){
-    result["last_in_items"] = true
-  }else{
-    result["last_in_items"] = false
-  }
-
-  return result
-}
 
 function end_page_carousel(next = "current"){
   var result = {last_in_page: false, last_in_items: false}
