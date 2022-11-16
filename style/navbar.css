@@ -49,7 +49,7 @@
       display: none; } }
   .hamburger span {
     display: block;
-    width: 33px;
+    width: 30px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
@@ -223,7 +223,7 @@ body {
     background-color: #0ABAB5; }
 
 .bottom-left {
-  left: 4%;
+  left: 5%;
   transform: translate(0, -50%);
   position: absolute;
   top: 50%; }

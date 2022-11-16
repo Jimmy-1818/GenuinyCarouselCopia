@@ -635,6 +635,9 @@ img.share-app {
   background-color: transparent; }
   @media (min-width: 768px) {
     .system_ban {
+      margin: -100px 7vw 0; } }
+  @media (min-width: 1024px) {
+    .system_ban {
       margin: -100px 0 0; } }
   .system_ban p {
     min-height: 60vh; }
@@ -654,9 +657,10 @@ img.share-app {
     min-height: auto;
     margin-top: 40px; }
   .system_ban a .to-calculator {
-    width: fit-content;
-    max-width: 300px;
     margin: 15px auto; }
+    @media (min-width: 768px) {
+      .system_ban a .to-calculator {
+        width: fit-content; } }
 
 .to-calculator {
   background: #09435E;

@@ -97,13 +97,8 @@ function delayed_next_h1(){
 }
 
 
-
-
-
-
-
 function set_next_h1(){
-  var module_title_bottom = document.getElementsByClassName("module-title-bottom")[0]
+  var module_title_bottom = document.getElementsByClassName("module-title-bottom")
   var current_i = current_index()[0]
   var items = document.getElementsByClassName("carousel-inner")[current_i].getElementsByClassName("carousel-item")
   var arrow = document.getElementsByClassName("arrow")[0]
@@ -146,7 +141,9 @@ function set_next_h1(){
     control_next[current_i].classList.remove("display-block")
   }
 
-  module_title_bottom.innerHTML = next_h1
+  for (var i = 0; i < module_title_bottom.length; i++){
+    module_title_bottom[i].innerHTML = next_h1
+  }
 };
 
 
@@ -296,7 +293,6 @@ function on_scroll(){
   navbar_width_scroll_control()
   if (carousel.length > 1){
     end_page_carousel()
-    set_next_h1()
   }
 
   // Track position of nearest title in relation to top view
