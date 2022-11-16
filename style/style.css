@@ -602,7 +602,7 @@ img.share-app {
 
 .module-overflow {
   overflow: auto;
-  height: calc(100vh - 175px);
+  height: calc(94vh - 175px);
   width: 86vw;
   margin: 0 auto;
   overflow-x: hidden; }
