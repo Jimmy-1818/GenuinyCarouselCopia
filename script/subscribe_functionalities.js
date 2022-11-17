@@ -24,6 +24,3 @@ function generateQRCode(){
     link_desktop.innerHTML = value
     link_desktop.href = value
 }
-
-const generate_btn = document.getElementById("generate_qr_btn")
-generate_btn.addEventListener("click", generateQRCode)
