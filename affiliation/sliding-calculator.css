@@ -63,7 +63,7 @@ p.calculator-paragraph {
 img.info-circle{
     width:  17px;
     position: relative;
-    top: -3px;
+    top: -2px;
 }
 
 .calculator_row_monthly p.monthly{
@@ -85,12 +85,6 @@ h2.info {
     text-transform: capitalize;
     margin: 0 auto 3% 4%;
     font-size: calc(1.6rem + 1vw);
-}
-
-h2.info img{
-    position: relative;
-    top: -4px;
-    width: 20px;
 }
 
 .box-info{
