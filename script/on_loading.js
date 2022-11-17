@@ -1,7 +1,7 @@
 // ON LOADING (FIRST from index.html)
 
 // languages on html: [ita, spa, eng], languages in navigator.language: [it, es, en]
-// default lang is english, if checked 
+// default lang is english
 
 function set_lang_manually(language){
   localStorage.setItem("lang_set", language)
@@ -40,7 +40,6 @@ function language_set(){
   }
 }
 
-
 function hide_other_languages(language){
   const lang_elements = document.querySelectorAll('[lang]');
   for (var i = 0; i < lang_elements.length; i++) {
@@ -51,6 +50,7 @@ function hide_other_languages(language){
     }
   }
 }
+
 
 
 
