@@ -19,13 +19,17 @@ hamburger_listener()
 // Navbar animation
 function hamburger_listener(){
   hamburger[0].addEventListener("click", hamburger_click)
-  if (hamburger[1]){
-    hamburger[1].addEventListener("click", function(){
-    desktop_nav.classList.remove("navbar-hide")
-    hamburger_click()
-    })
+  if ((window.location.pathname.includes("index"))){
+    for (var i = 0; i < hamburger.length; i++){
+      if (i != 0){
+        hamburger[i].addEventListener("click", function(){
+          desktop_nav.classList.remove("navbar-hide")
+          hamburger_click()
+        })
+      }
+    }
   }
-}
+};
 
 function hamburger_click(){
   menu_mobile = document.getElementsByClassName("mobile-nav")[0]
@@ -50,7 +54,7 @@ function hamburger_click(){
 
 // Get a list of lists of titles
 var titles_text = []
-for (var i = 0; i < document.getElementsByClassName("carousel-inner").length ;i++) {
+for (var i = 0; i < document.getElementsByClassName("carousel-inner").length; i++) {
   var current_titles = []
   for (var i2 = 0; i2 < document.getElementsByClassName("carousel-inner")[i].getElementsByClassName("carousel-item").length; i2++) {
     var current_title = document.getElementsByClassName("carousel-inner")[i].getElementsByClassName("carousel-item")[i2].querySelector("h1").innerHTML
