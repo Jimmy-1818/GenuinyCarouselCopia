@@ -387,6 +387,9 @@ li.subscribe-step-1 .subscribe-parent {
 #generate_qr img {
   width: 80vw;
   max-width: 100%; }
+#generate_qr p {
+  margin-top: 15px;
+  overflow-x: auto; }
 
 .modal-white .modal-content {
   background: white; }
