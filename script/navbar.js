@@ -272,7 +272,7 @@ function navbar_width_scroll_control(){
   desktop_nav = document.getElementsByClassName("desktop-nav")[0]
   if (window.scrollY == 0){
     desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
-    if($(window).width() >= 1024){
+    if(window.innerWidth >= 1024){
       desktop_nav.style.height = "73px"
     }else{
       desktop_nav.style.height = "62px"

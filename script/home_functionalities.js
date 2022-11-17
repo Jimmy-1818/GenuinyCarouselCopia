@@ -2,7 +2,7 @@
 const mobile_body = document.getElementsByTagName("body")[0].innerHTML
 var layout_mobile = true
 function home_on_resize(){
-	var page_width = $(window).width()
+	var page_width = window.innerWidth
 	if ((page_width >= 1024) && (layout_mobile)){
 		layout_mobile = false
 		desktop_reform()
