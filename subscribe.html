@@ -33,7 +33,6 @@
 
 	<!------QR LIBRARY---->
 	<script type="text/javascript" src="script/qrcode.min.js"></script>
-
 </head>
 <body>
 
@@ -165,9 +164,7 @@
 				<div class="round-bullet"><h1>+</h1></div>
 				<div class="round-bullet-inside"><img src="images/icons/users-solid.svg" alt="list-icon"></div></li>
 		</ul>
-
-
-
+		
 		<!-- Modal -->
 		<div class="modal fade" id="video-tutorial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
@@ -186,7 +183,7 @@
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-body max-height">
-						<img id="qr_image" style="width: 80vw; max-width: 100%;" src="gifs/loading_icon.gif">
+						<div id="qr_div"></div>
 						<p style="margin-top: 15px;">Scannerizza il codice QR per registrarti tramite smartphone, o clicca sul link per registrarti tramite desktop.<br>
 							<a style="overflow-x: auto" id="link_desktop" target="self">Se l'immagine non viene caricata, ripremi sul  tasto "Genera QR"</a>
 						</p>
@@ -242,9 +239,6 @@
 
 	<script type="text/javascript" src="script/on_loading.js"></script>
 	
-	<!-- load qrcode library -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.1/qrcode.js" integrity="sha512-hAz8pxm1kva4chZWPXQhGehvvlIj1Loka653sQXoYHNj4sgSukoR3ZKyHEOT7kFGVW17wUqD9CbKeviIJ2XFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 	<script src="script/subscribe_functionalities.js" type="text/javascript"></script>
 </body>
 </html>

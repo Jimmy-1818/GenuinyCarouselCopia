@@ -384,6 +384,9 @@ li.subscribe-step-1 .subscribe-parent {
 
 #generate_qr .modal-body {
   max-height: 90vh; }
+#generate_qr img {
+  width: 80vw;
+  max-width: 100%; }
 
 .modal-white .modal-content {
   background: white; }
