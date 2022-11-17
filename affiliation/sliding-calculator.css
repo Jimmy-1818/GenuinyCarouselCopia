@@ -60,10 +60,27 @@ p.calculator-paragraph {
     font-size: calc(1.3rem + 0.7vw);
 }
 
-img.info-circle{
-    width:  17px;
+div.info_div{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    padding: 1px 7px 16px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 99px;
+    line-height: 1.5;
     position: relative;
+    top: 3px;
+}
+
+img.info-circle{
+    width:  100%;
     top: -2px;
+    transform: translate(-50%,-50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
 }
 
 .calculator_row_monthly p.monthly{
@@ -461,9 +478,6 @@ div.reduce-4{
     .wrapper__title{
         display: block;
     }   
-    h2.info img{
-        top: -6px;
-    }
 }
 @media screen and (min-width: 1280px){
     h2.info{
