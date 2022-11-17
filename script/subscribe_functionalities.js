@@ -5,10 +5,11 @@ if (localStorage.getItem("hash") != null){
   subscribe_button.setAttribute('href', affiliate_registration)
 }
 
-const generate_btn = document.getElementById("generate_qr_btn")
-generate_btn.addEventListener("click", generateQRCode)
 
-var qrcode = undefined;
+var default_link = "https://www.google.com"
+qrcode = new QRCode(document.getElementById("qr_div"), default_link);
+link_desktop.innerHTML = default_link
+link_desktop.href = default_link
 function generateQRCode(){
     var value = undefined
     let link_desktop = document.getElementById("link_desktop")
@@ -18,12 +19,11 @@ function generateQRCode(){
     else{
         value = "https://www.google.com"
     }
-    if (qrcode === undefined){
-        qrcode = new QRCode(document.getElementById("qr_div"), value);
-    }else{
-        qrcode.clear()
-        qrcode.makeCode(value);
-    }
+    qrcode.clear()
+    qrcode.makeCode(value);
     link_desktop.innerHTML = value
     link_desktop.href = value
 }
+
+const generate_btn = document.getElementById("generate_qr_btn")
+generate_btn.addEventListener("click", generateQRCode)
