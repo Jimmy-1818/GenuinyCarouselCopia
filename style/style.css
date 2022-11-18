@@ -72,7 +72,7 @@ body {
         font-family: "Montserrat";
         font-weight: bold;
         font-size: 3rem;
-        text-transform: uppercase;
+        text-transform: capitalize;
         margin-top: 20px;
         display: block; }
         @media (min-width: 768px) {

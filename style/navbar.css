@@ -100,7 +100,7 @@
     font-size: 18px;
     font-family: "Montserrat";
     font-weight: 700;
-    text-transform: uppercase; }
+    text-transform: capitalize; }
   .menu a.page-link:first-of-type {
     margin-left: 40px; }
   .menu a.show, .menu a.page-link:hover {
@@ -138,7 +138,7 @@
     font-size: 18px;
     font-weight: 700;
     font-family: "Montserrat";
-    text-transform: uppercase; }
+    text-transform: capitalize; }
   .mobile-nav a.page-link:nth-child(5) {
     margin-bottom: 25px; }
   .mobile-nav a.page-link:hover {
