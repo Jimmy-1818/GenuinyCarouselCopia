@@ -253,6 +253,9 @@ on_input()
 for (var i = 0; i < input.length; i++) {
     input[i].addEventListener('input', on_input)
 } 
+for (var i = 0; i < input.length; i++) {
+    input[i].addEventListener('focus', on_input)
+} 
 document.getElementById("tip_monthly").addEventListener("input", on_input)
 
 
