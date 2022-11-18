@@ -5,8 +5,6 @@ var l1_r = l2_r = l3_r = l4_r = l5_r = result_r = 0
 
 var input = document.getElementsByClassName("input");
 
-window.onload = alert("mlml")
-
 
 function is_number(number){
     if (number.replaceAll('.', '') != number_strip(number)){
