@@ -72,7 +72,7 @@ body {
         font-family: "Montserrat";
         font-weight: bold;
         font-size: 3rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
         margin-top: 20px;
         display: block; }
         @media (min-width: 768px) {
@@ -389,7 +389,7 @@ li.subscribe-step-1 .subscribe-parent {
       width: 80vw; } }
 
 #generate_qr .modal-body {
-  max-height: 90vh; }
+  max-height: none; }
 #generate_qr img {
   width: 80vw;
   max-width: 100%; }
