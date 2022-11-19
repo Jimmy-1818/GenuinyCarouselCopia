@@ -36,146 +36,134 @@ body
 	@media (min-width: 1024px)
 		padding-top: 72px
 
-.container-header
+.home-background
 	background-image: url("../images/wave.png")
 	background-repeat: no-repeat
-	position: relative
+	background-size: 2000px 700px
+
+.background-header
+	background-image: url("../images/wave.png")
+	background-repeat: no-repeat
 	top: -62px
 	padding-top: 62px
-	height: calc(100vh + 62px)
-	background-size: 1300px
+	background-size: 2000px
+	position: absolute
+	width: 100%
+	height: 100%
 	@media (min-width: $breakpoint-768)
-		background-size: 1600px
-		height: calc(100vh + 73px)
-		max-height: 900px
+		background-size: 2000px
 		top: -73px
 		margin: 0 -7vw
-		padding-top: 73px
-	.header_text
-		top: 62px
-		position: absolute
-		width: 100%
-		margin: 62px auto 0
-		z-index: 1
-		@media (min-width: $breakpoint-768)
-			top: 11%
-			right: 12%
-			padding: 15px 0
-			margin: 0 30px
-			width: 50%
-			max-width: 770px
-		div.main-text
-			padding: 0 25px 25px
-			font-family: 'Montserrat'
-			position: relative
-			color: $genuinyColDark
-			text-align: center
-			@media (min-width: $breakpoint-768)
-				text-align: left
-				color: white			
-			//color: $genuinyColDark
-			//box-shadow: 5px 5px 15px 4px #00000035
-			//border-radius: 37px 0 0 37px
-			//background: white
-			//left: -25px
-			//padding-right: 35vw
-			//margin-right: -35vw
-			//border: 4px solid $genuinyColDark
-			span.first-main
-				font-family: "Montserrat"
-				font-weight: bold
-				font-size: 3rem
-				text-transform: uppercase
-				margin-top: 20px
-				display: block
-				@media (min-width: $breakpoint-768)
-					filter: drop-shadow(0px 0px 15px #09435e)
-			span.second-main
-				font-family: "Montserrat"
-				display: block
-				font-size: 25px	
-				margin-top: 76vw
-				background: #ffffff80
-				padding: 10px
-				border-radius: 20px
-				@media (min-width: $breakpoint-768)
-					filter: drop-shadow(0px 0px 15px #09435e)
-				@media (min-width: $breakpoint-768)
-					margin-top: 20px
-					padding: 0
-					background-color: transparent
-					border-radius: 0
-		.images_download
-			width: 100%
-			display: flex
-			justify-content: space-evenly
-			margin-top: 20px
-			a
-				width: 45%
-				@media (min-width: $breakpoint-480)
-					width: 35% 
-				img
-					margin: 0 auto
-					width: 100%
-					display: inline-block
-		@media (min-width: $breakpoint-768)
-			margin: 30px
-		.instructions
-			text-align: center
-			position: relative
-			@media (min-width: $breakpoint-768)
-				text-align: center
-			p, b
-				line-height: 1.5
-				font-size: 1.6rem
-				text-align: center
-			p.use_instrutions
-				background: #09435e
-				width: fit-content
-				margin: 0 auto
-				color: white
-				display: block
-				padding: 2px 13px
-				border-radius: 99px
-			.box-instructions
-				padding: 0 15px
-				p, b
-					text-align: left
-					@media (min-width: $breakpoint-768)
-						text-align: center
+		padding: 73px 7% 0
 
-				@media (min-width: $breakpoint-768)
-					padding: 0
-					margin-left: 15px
-
-
-
-.spacer
-	height: 65
-	@media (min-width: 480px)
-		height: 75px
-
-/*******smartphone********/
-
-.smartphone
-	/**mobile first**/
+.header_grid
+	width: 100%
+	padding-top: 77px
+	z-index: 1
 	position: relative
-	left: 50%
-	top: 50%
-	transform: translate(-50%, -50%)
-	width: 40%
-	filter: drop-shadow(12px 12px 12px #00000070)
-	@media (min-width: $breakpoint-768)
-		left: 10%
-		width: 230px
-		top: 15%
-		transform: translate(0%, 0%)
-		max-width: 256px
+	display: grid
+	grid-template-rows: auto
+	grid-template-columns: repeat(1, 1fr)
+	box-shadow: 0px 20px 37px 3px #00000050
+	border-radius: 0 0 25px 25px
+	@media (min-width: $breakpoint-1024)
+		//grid-template-columns: repeat(5, 1fr)
+		grid-template-columns: 35% 65%
+		grid-template-rows: min-content
+		margin: 40px auto
+		padding-top: 0
+		width: 80%
+		box-shadow: none
 	.smartphone
+		width: 50%
+		position: relative
+		filter: drop-shadow(12px 12px 12px #00000070)
+		transform: translate(-50%)
+		left: 50%
+		max-width: 220px
+		@media (min-width: $breakpoint-1024)
+			height: auto
+			width: auto
+			max-width: 80%
+			transform: translate(0)
+			left: auto
+			grid-row: 1 / 5
+	.first-main, .second-main
+		font-family: 'Montserrat'
+		position: relative
+		color: $genuinyColDark
+		text-align: center
+		@media (min-width: $breakpoint-1024)
+			text-align: left	
+			grid-column: 2 / -1
+	span.first-main
+		font-family: "Montserrat"
+		font-weight: bold
+		font-size: 3rem
+		text-transform: uppercase
+		margin: 20px 4% 20px
+		display: block
+		order: -1
+	span.second-main
+		font-family: "Montserrat"
+		display: block
+		font-size: 25px	
+		background: #ffffff80
+		padding: 10px
+		border-radius: 20px
+		margin: 15px
+		@media (min-width: $breakpoint-768)
+			margin: 15px 11%
+		@media (min-width: $breakpoint-1024)
+			margin: auto
+			padding: 12px
+	.images_download
 		width: 100%
-		position: absolute
-		left: 0
-		z-index: 4
+		display: flex
+		justify-content: space-evenly
+		//margin-top: 20px
+		margin-bottom: 17px
+		@media (min-width: $breakpoint-1024)
+			margin-bottom: 0
+			grid-column: 2 / -1
+		a
+			width: 45%
+			@media (min-width: $breakpoint-480)
+				width: 35% 
+			img
+				margin: 0 auto
+				width: 100%
+				display: inline-block
+	.instructions
+		padding: 4% 4% 0
+		text-align: center
+		position: relative
+		@media (min-width: $breakpoint-768)
+			text-align: center
+		@media (min-width: $breakpoint-1024)
+			padding: 0 
+			grid-column: 2 / -1
+		p, b
+			line-height: 1.5
+			font-size: 1.6rem
+			text-align: center
+		p.use_instrutions
+			background: #09435e
+			width: fit-content
+			margin: 0 auto
+			color: white
+			display: block
+			padding: 2px 13px
+			border-radius: 99px
+		.box-instructions
+			p, b
+				text-align: left
+				@media (min-width: $breakpoint-768)
+					text-align: center
+
+			@media (min-width: $breakpoint-768)
+				padding: 0
+				margin-left: 15px
 
 
 video.milena-spiega
@@ -192,8 +180,9 @@ video.milena-spiega
 
 /**************SUBSCRIBE***************/
 
-main.subscribe
-	min-height: calc(100vh - 50px)
+main
+	min-height: calc(100vh - 73px)
+
 
 .separation-line
 	position: relative
@@ -673,11 +662,9 @@ img.share-app
 //		transform: translate(100%, 100%) rotate(180deg)					
 
 .system_ban
-		margin: 330px 7vw 0
-		@media (min-width: $breakpoint-768)
-			margin: -100px 7vw 0
+		margin: 60px 7vw 0
 		@media (min-width: $breakpoint-1024)
-			margin: -100px 0 0
+			margin: 0
 		p
 			min-height: 60vh
 			@media screen and (orientation: landscape)
@@ -987,7 +974,8 @@ footer
 
 
 
-
+main
+	box-shadow: 0px 0px 60px 11px #00000045
 
 main.subscribe
 	@media (min-width: $breakpoint-1024)

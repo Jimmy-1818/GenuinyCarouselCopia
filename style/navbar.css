@@ -180,6 +180,10 @@ nav.navbar-hide {
 body {
   background-color: white; }
 
+@media (min-width: 1024px) {
+  .desktop_hide {
+    display: none; } }
+
 .bottom-btn {
   z-index: 71;
   display: block;
@@ -198,7 +202,11 @@ body {
   box-sizing: content-box; }
   @media (min-width: 1024px) {
     .bottom-btn {
-      display: none; } }
+      background: transparent;
+      border: navajowhite;
+      box-shadow: none;
+      margin-top: 60px;
+      bottom: 0; } }
   .bottom-btn .next-title {
     width: 55%;
     position: absolute;
