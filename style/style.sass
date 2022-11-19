@@ -32,7 +32,9 @@ body
 	width: 100%
 	box-sizing: border-box
 	max-width: 2000px
-	padding: 62px 7% 0 7%
+	padding-top: 62px 
+	padding-left: 7%
+	padding-right: 7%
 	@media (min-width: 1024px)
 		padding-top: 72px
 
@@ -108,7 +110,7 @@ body
 		font-family: "Montserrat"
 		display: block
 		font-size: 25px	
-		background: #ffffff80
+		background: #ffffffc2
 		padding: 10px
 		border-radius: 20px
 		margin: 15px
@@ -117,6 +119,7 @@ body
 		@media (min-width: $breakpoint-1024)
 			margin: auto
 			padding: 12px
+			padding-left: 20px
 	.images_download
 		width: 100%
 		display: flex
@@ -202,7 +205,7 @@ ul.subscribe-steps
 	padding: 0
 	position: relative
 	max-width: 1000px
-	margin: 25px auto
+	margin: 25px auto 0
 	
 	li
 		padding: 20px 40px 20px 45px
@@ -830,8 +833,10 @@ img.share-app
 		transform: translate(-50%, 0)
 	.carousel-inner
 		height: 540px
+		width: 70%
+		margin: 0 auto
 	.module-overflow
-		width: 45%
+		width: 55%
 		position: relative
 		left: 45%
 		margin: 0
@@ -880,13 +885,13 @@ img.share-app
 		img
 			width: 100%
 	.carousel-control-next
-		right: 50px
+		right: 100px
 		&:focus
 			opacity: 0.3
 		&:hover
 			opacity: 0.8
 	.carousel-control-prev
-		left: 50px
+		left: 100px
 		transform: translate(0, -50%) rotate(180deg)
 		&:focus
 			opacity: 0.3
@@ -901,7 +906,6 @@ img.share-app
  
 footer 
 	background-color: black
-	margin-top: 50px
 	div.container
 		padding: 15px
 		display: grid
@@ -984,6 +988,7 @@ footer
 
 main
 	box-shadow: 0px 0px 60px 11px #00000045
+	padding-bottom: 50px
 
 main.subscribe
 	@media (min-width: $breakpoint-1024)
