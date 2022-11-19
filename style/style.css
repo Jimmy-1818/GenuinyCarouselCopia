@@ -739,7 +739,7 @@ img.share-app {
 
 #carousel-app .module-1 img, #carousel-app-desktop .module-1 img {
   height: 50vh;
-  margin: 0 auto;
+  margin: 2vh auto 0;
   filter: drop-shadow(12px 12px 12px #00000070);
   display: block; }
   #carousel-app .module-1 img .module-overflow, #carousel-app-desktop .module-1 img .module-overflow {
