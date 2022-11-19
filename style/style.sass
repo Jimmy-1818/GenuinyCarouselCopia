@@ -773,8 +773,10 @@ img.share-app
 	.module-1 img
 		height: 50vh
 		margin: 2vh auto 0
-		filter: drop-shadow(12px 12px 12px #00000070)
 		display: block
+		filter: drop-shadow(8px 8px 8px #00000070)
+		@media (min-width: $breakpoint-1024)
+			filter: drop-shadow(12px 12px 12px #00000070)
 		.module-overflow
 			overflow: hidden
 	.module-2 img

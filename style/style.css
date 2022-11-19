@@ -740,8 +740,11 @@ img.share-app {
 #carousel-app .module-1 img, #carousel-app-desktop .module-1 img {
   height: 50vh;
   margin: 2vh auto 0;
-  filter: drop-shadow(12px 12px 12px #00000070);
-  display: block; }
+  display: block;
+  filter: drop-shadow(8px 8px 8px #00000070); }
+  @media (min-width: 1024px) {
+    #carousel-app .module-1 img, #carousel-app-desktop .module-1 img {
+      filter: drop-shadow(12px 12px 12px #00000070); } }
   #carousel-app .module-1 img .module-overflow, #carousel-app-desktop .module-1 img .module-overflow {
     overflow: hidden; }
 #carousel-app .module-2 img, #carousel-app-desktop .module-2 img {
