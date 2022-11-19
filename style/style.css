@@ -119,8 +119,12 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 17px; }
+    @media (min-width: 768px) {
+      .header_grid .images_download {
+        margin-top: 10px; } }
     @media (min-width: 1024px) {
       .header_grid .images_download {
+        margin-top: 0;
         margin-bottom: 0;
         grid-column: 2/-1; } }
     .header_grid .images_download a {
@@ -130,8 +134,14 @@ body {
           width: 35%; } }
       .header_grid .images_download a img {
         margin: 0 auto;
-        width: 100%;
-        display: inline-block; }
+        display: block;
+        width: 100%; }
+        @media (min-width: 768px) {
+          .header_grid .images_download a img {
+            width: 75%; } }
+        @media (min-width: 1024px) {
+          .header_grid .images_download a img {
+            width: 100%; } }
   .header_grid .instructions {
     padding: 4% 4% 0;
     text-align: center;
@@ -581,6 +591,8 @@ img.share-app {
 .carousel {
   margin-top: 50px;
   margin-bottom: 9vh; }
+  .carousel:last-of-type {
+    margin-bottom: 0; }
 
 .carousel-indicators [data-bs-target] {
   background-color: #0abab5;
