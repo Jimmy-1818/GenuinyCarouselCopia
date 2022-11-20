@@ -48,3 +48,20 @@ copy_btn.onclick = function(){
 //var clipboard_text = window.event.clipboardData.getData('Text')
 //console.log(clipboard_text)
 
+
+
+
+// mute video on modal close
+$('#share-on-instagram').on("hide.bs.modal", function() {
+  $('#video-share-on-instagram')[0].pause();
+})
+
+// mute video on modal close
+$('#share-via-site').on("hide.bs.modal", function() {
+  $('#video-share-via-site')[0].pause();
+})
+
+// mute video on modal close
+$('#share-on-instagram').on("hide.bs.modal", function() {
+  $('#video-share-on-instagram')[0].pause();
+})

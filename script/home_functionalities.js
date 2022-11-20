@@ -121,3 +121,11 @@ function replace_event_listener(){
 		indicators[i].addEventListener("click", scroll_fix)
 	}
 };
+
+
+
+
+// mute video on modal close
+$('#blockchain').on("hide.bs.modal", function() {
+	$('.milena-spiega')[0].pause();
+})

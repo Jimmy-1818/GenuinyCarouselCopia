@@ -75,7 +75,8 @@ body {
     transform: translate(-50%);
     left: 50%;
     max-width: 220px;
-    filter: drop-shadow(8px 8px 8px #00000070); }
+    filter: drop-shadow(8px 8px 8px #00000070);
+    margin-bottom: 12px; }
     @media (min-width: 1024px) {
       .header_grid .smartphone {
         filter: drop-shadow(12px 12px 12px #00000070);
@@ -84,7 +85,8 @@ body {
         max-width: 80%;
         transform: translate(0);
         left: auto;
-        grid-row: 1/5; } }
+        grid-row: 1/5;
+        margin-bottom: 0; } }
   .header_grid .first-main, .header_grid .second-main {
     font-family: "Montserrat";
     position: relative;
@@ -109,7 +111,7 @@ body {
     background: #ffffffc2;
     padding: 10px;
     border-radius: 20px;
-    margin: 15px; }
+    margin: 10px 15px 15px; }
     @media (min-width: 768px) {
       .header_grid span.second-main {
         margin: 15px 11%; } }

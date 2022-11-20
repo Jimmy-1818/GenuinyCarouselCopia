@@ -24,3 +24,10 @@ function generateQRCode(){
     link_desktop.innerHTML = value
     link_desktop.href = value
 }
+
+
+
+// mute video on modal close
+$('#video-tutorial').on("hide.bs.modal", function() {
+    $('#video-tutorial-subscribe')[0].pause();
+})
