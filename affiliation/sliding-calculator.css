@@ -62,16 +62,16 @@ p.calculator-paragraph {
 
 div.info_div{
     display: inline-block;
-    width: 23px;
-    height: 23px;
+    width: 18px;
+    height: 18px;
     background-color: white;
-    padding: 1px 7px 16px;
+    padding: 1px 5px 12px;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 99px;
-    line-height: 1.5;
+    line-height: 1.18;
     position: relative;
-    top: 3px;
+    top: 2px;
 }
 
 img.info-circle{
@@ -499,6 +499,12 @@ div.reduce-4{
     }
     .first-row, .last-row{
         font-size: 1.6rem;
+    }
+    div.info_div{
+        width: 23px;
+        height: 23px;
+        padding: 1px 7px 16px;
+        line-height: 1.5;
     }
 }
 
