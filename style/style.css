@@ -104,6 +104,10 @@ body {
     margin: 20px 4% 20px;
     display: block;
     order: -1; }
+    @media (min-width: 1024px) {
+      .header_grid span.first-main {
+        margin: auto;
+        margin-left: 10px; } }
   .header_grid span.second-main {
     font-family: "Montserrat";
     display: block;
