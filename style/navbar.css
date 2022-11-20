@@ -157,6 +157,7 @@ nav.mobile_nav_immediate_shadow {
   box-shadow: 0px 5px 65px 25px rgba(0, 0, 0, 0.3); }
 
 .opacity {
+  top: 0;
   display: none;
   position: fixed;
   width: 100%;
