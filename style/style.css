@@ -161,6 +161,7 @@ body {
         text-align: center; } }
     @media (min-width: 1024px) {
       .header_grid .instructions {
+        margin-top: 40px;
         padding: 0;
         grid-column: 2/-1; } }
     .header_grid .instructions p, .header_grid .instructions b {
