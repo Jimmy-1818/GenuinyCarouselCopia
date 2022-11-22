@@ -532,6 +532,10 @@ li.subscribe-step-1 .subscribe-parent {
 .share-box:nth-of-type(odd) h2 {
   background: #09435E; }
 
+.share-box:last-of-type a.download {
+  text-align: center;
+  display: block; }
+
 #process-link, .arrow_btn, #copy-link {
   height: 30px;
   width: 50px;
