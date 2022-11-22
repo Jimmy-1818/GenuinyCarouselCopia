@@ -801,6 +801,8 @@ img.share-app {
   /* Track */
   /* Handle */
   /* Handle on hover */ }
+  #carousel-app-desktop .module-overflow {
+    padding-right: 20px; }
   #carousel-app-desktop .first-module-title-desktop {
     margin-bottom: 0; }
   #carousel-app-desktop .module .module-title {
