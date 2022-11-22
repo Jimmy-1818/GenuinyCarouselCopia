@@ -630,10 +630,13 @@ img.share-app {
 
 .module-overflow {
   overflow: auto;
-  height: calc(100vh - 250px);
   width: 86vw;
   margin: 0 auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  height: calc(100vh - 250px); }
+  @media screen and (orientation: landscape) {
+    .module-overflow {
+      height: 55vh; } }
 
 .overflow-hidden {
   overflow: hidden; }
