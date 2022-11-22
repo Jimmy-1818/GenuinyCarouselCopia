@@ -658,13 +658,11 @@ img.share-app {
   margin: 50px 0 20px; }
 
 .common-div-desktop {
-  background-color: #0abab520;
   margin: 100px -7vw 0 -7vw;
   padding: 0 calc(7vw + 50px) 30px; }
 
 .system_ban {
-  margin: 60px 7vw 0;
-  background-color: transparent; }
+  margin: 60px 7vw 0; }
   @media (min-width: 1024px) {
     .system_ban {
       margin: 120px 0 0; } }
@@ -799,7 +797,6 @@ img.share-app {
 
 #carousel-app-desktop {
   position: relative;
-  background-color: transparent;
   /* width */
   /* Track */
   /* Handle */
