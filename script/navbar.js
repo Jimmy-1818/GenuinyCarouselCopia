@@ -12,6 +12,7 @@ const indicators = document.getElementsByClassName("carousel-indicators")
 //var theText = $('body').text();
 //console.log(theText)
 
+
 const nearest_threshold = 70
 
 hamburger_listener()
