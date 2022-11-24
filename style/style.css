@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter/Inter-VariableFont_slnt,wght.ttf) format("truetype");
+  font-weight: normal; }
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+  font-weight: normal; }
 * {
   margin: 0;
   padding: 0;
@@ -89,7 +97,6 @@ body {
         text-align: left;
         grid-column: 2/-1; } }
   .header_grid span.first-main {
-    font-family: "Montserrat";
     font-weight: bold;
     font-size: 3rem;
     text-transform: uppercase;
