@@ -7,6 +7,7 @@ function home_on_resize(){
 		layout_mobile = false
 		desktop_reform()
 		add_container()
+		change_functioning_image()
 		remove_event_listener()
 		on_scroll()
 	}else if ((page_width < 1024) && !(layout_mobile)){
@@ -123,6 +124,11 @@ function replace_event_listener(){
 };
 
 
+function change_functioning_image(){
+	const image = document.getElementById("functioning_image")
+	image.setAttribute("src", "images/functioning.png")
+	image.style.maxWidth = "none"
+}
 
 
 // mute video on modal close
