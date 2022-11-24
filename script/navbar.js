@@ -293,7 +293,6 @@ function navbar_width_scroll_control(){
 window.onresize = function(){
   navbar_width_scroll_control()
   if(window.location.pathname.includes("index")){
-    console.log("trigger home_on_resize")
     home_on_resize()
   }
 }
