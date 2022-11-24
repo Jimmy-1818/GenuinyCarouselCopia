@@ -274,7 +274,6 @@ on_scroll()
 
 
 function navbar_width_scroll_control(){
-  console.log("navbar_width_scroll_control")
   desktop_nav = document.getElementsByClassName("desktop-nav")[0]
   if (window.scrollY == 0){
     desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
@@ -292,7 +291,6 @@ function navbar_width_scroll_control(){
 }
 
 window.onresize = function(){
-  console.log("on resirze")
   navbar_width_scroll_control()
   if(window.location.pathname.includes("index")){
     console.log("trigger home_on_resize")
