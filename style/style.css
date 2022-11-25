@@ -104,7 +104,8 @@ body {
     text-transform: uppercase;
     margin: 20px 4% 20px;
     display: block;
-    order: -1; }
+    order: -1;
+    color: white; }
     @media (min-width: 1024px) {
       .header_grid span.first-main {
         margin: auto;
