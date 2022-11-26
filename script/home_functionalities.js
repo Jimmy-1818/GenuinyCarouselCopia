@@ -76,7 +76,7 @@ function desktop_reform(){
 
 	// add to the NOW first
 	inner_app.children[0].classList.add("active")
-	carousel_app_desktop.innerHTML = '<h1 class="first-module-title-desktop">' + app_title + '</h1>' + image_app.outerHTML + carousel_app_desktop.innerHTML
+	carousel_app_desktop.innerHTML = '<div class="desktop_title_line"></div>' + '<h1 class="first-module-title-desktop">' + app_title + '</h1>' + image_app.outerHTML + carousel_app_desktop.innerHTML
 	
 	const indicators_buttons = carousel_app_desktop.getElementsByClassName("carousel-indicators")[0].getElementsByTagName("button")
 	indicators_buttons[indicators_buttons.length - 1].remove()
