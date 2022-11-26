@@ -711,12 +711,12 @@ img.share-app
 		margin: 120px 0 0
 	.module-1
 		img
-			width: 90%
+			height: calc(100% - 59px)
 			display: block
 			margin: 0 auto
 			max-width: 400px
-			border: 5px solid #09435e
-			border-radius: 20px
+			border: 4px solid #09435e
+			border-radius: 10px
 			@media (min-width: $breakpoint-768)
 				width: 80%
 	a
@@ -727,15 +727,17 @@ img.share-app
 			width: fit-content
 		@media (min-width: $breakpoint-1024)
 			margin: 15px auto
+	.to-calculator
+		background: $genuinyColDark
+		padding: 10px 16px
+		text-align: center
+		font-weight: bold
+		color: white
+		margin: 3vh 0 0
+		border-radius: 99px
 
-.to-calculator
-	background: $genuinyColDark
-	padding: 10px 16px
-	text-align: center
-	font-weight: bold
-	color: white
-	margin: 3vh 0 0
-	border-radius: 99px
+#carousel-system-ban-desktop
+	@extend #carousel-system-ban
 
 
 #carousel-blockchain .module-2 video
