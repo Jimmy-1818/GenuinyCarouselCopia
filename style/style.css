@@ -785,18 +785,17 @@ img.share-app {
     border: none;
     font-size: 2.4rem; }
   #carousel-app-desktop .carousel-indicators {
-    transform: translate(0, 0);
     display: block;
     width: fit-content;
     position: absolute;
     left: 50%;
     right: auto;
     bottom: 0px;
-    transform: translate(-50%, 0); }
+    transform: translate(-50%, -50%); }
   #carousel-app-desktop .carousel-inner {
     height: 540px;
     width: 70%;
-    margin: 0 auto; }
+    margin: 50px auto 0; }
   #carousel-app-desktop .module-overflow {
     width: 55%;
     position: relative;
@@ -817,10 +816,10 @@ img.share-app {
     z-index: 1;
     position: absolute;
     left: 30%;
-    top: 50%;
+    top: 88px;
     margin: 0;
-    transform: translate(-50%, -50%);
-    width: 19%;
+    transform: translate(-50%);
+    height: 78%;
     filter: drop-shadow(12px 12px 12px #00000070); }
   #carousel-app-desktop .carousel-item {
     width: 100%; }
