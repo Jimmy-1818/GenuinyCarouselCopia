@@ -84,7 +84,7 @@ body {
         filter: drop-shadow(12px 12px 12px #00000070);
         height: auto;
         width: auto;
-        max-width: 80%;
+        max-width: 70%;
         transform: translate(0);
         left: auto;
         grid-row: 1/5;
@@ -116,7 +116,7 @@ body {
     font-size: 25px;
     padding: 10px;
     border-radius: 20px;
-    margin: 10px 15px 15px; }
+    margin: 10px 15px 0; }
     @media (min-width: 768px) {
       .header_grid span.second-main {
         margin: 15px 11%; } }
@@ -137,13 +137,13 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 17px; }
+    margin-bottom: 17px;
+    margin-top: 10px; }
     @media (min-width: 768px) {
       .header_grid .images_download {
-        margin-top: 10px; } }
+        margin-top: 20px; } }
     @media (min-width: 1024px) {
       .header_grid .images_download {
-        margin-top: 0;
         margin-bottom: 0;
         grid-column: 2/-1; } }
     .header_grid .images_download a {
@@ -176,15 +176,37 @@ body {
     .header_grid .instructions p, .header_grid .instructions b {
       line-height: 1.5;
       font-size: 1.6rem;
-      text-align: center; }
-    .header_grid .instructions p.use_instrutions {
-      background: #09435e;
-      width: fit-content;
-      margin: 0 auto;
-      color: white;
-      display: block;
-      padding: 2px 13px;
-      border-radius: 99px; }
+      text-align: center;
+      margin-bottom: 0; }
+    .header_grid .instructions .accordion-item {
+      border: none;
+      background: transparent; }
+      .header_grid .instructions .accordion-item .use_instructions_title {
+        background: #09435e;
+        width: fit-content;
+        margin: 0 auto;
+        color: white;
+        display: block;
+        border-radius: 99px;
+        padding: 5px 13px; }
+        @media (min-width: 1024px) {
+          .header_grid .instructions .accordion-item .use_instructions_title {
+            padding: 8px 16px; } }
+        .header_grid .instructions .accordion-item .use_instructions_title .accordion-button {
+          background: transparent;
+          color: white;
+          font-size: 1.6rem;
+          padding: 0; }
+          .header_grid .instructions .accordion-item .use_instructions_title .accordion-button:focus {
+            box-shadow: none !important; }
+          .header_grid .instructions .accordion-item .use_instructions_title .accordion-button::after {
+            margin-left: 10px;
+            background-image: url("../images/down-icon.png"); }
+      .header_grid .instructions .accordion-item .accordion-body p {
+        text-align: left; }
+        @media (min-width: 768px) {
+          .header_grid .instructions .accordion-item .accordion-body p {
+            text-align: center; } }
     .header_grid .instructions .box-instructions p, .header_grid .instructions .box-instructions b {
       text-align: left; }
       @media (min-width: 768px) {
