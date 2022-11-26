@@ -28,9 +28,11 @@ function desktop_reform(){
 		for (var i2 = 0; i2 < module_overflows.length; i2++) {
 			var momentary_content = []
 			var module_title = carousels[i].getElementsByClassName("module-title")[i2]
-			
+			if (i2 == 0){
+				momentary_content.push('<div class="desktop_title_line"></div>')
+			}
 			momentary_content.push('<div class="module-' + String(i2 + 1) + '">')
-			if (i2 == 0) {
+			if (i2 == 0){
 				momentary_content.push('<h1 class="first-module-title-desktop">' + module_title.textContent + '</h1>')
 			}else{
 				momentary_content.push('<h1 class="secondary-module-title-desktop">' + module_title.textContent + '</h1>')

@@ -662,13 +662,13 @@ img.share-app {
   overflow: hidden; }
 
 .first-module-title-desktop {
-  width: 100%;
+  width: fit-content;
   text-align: center;
   margin: 0 auto;
   font-weight: bold;
   margin-bottom: 40px;
-  border-bottom: 4px solid #0abab5;
-  padding-bottom: 5px; }
+  padding: 0 16px 5px;
+  background: white; }
 
 .secondary-module-title-desktop {
   margin: 50px 0 20px; }
@@ -860,6 +860,14 @@ img.share-app {
     font-size: 40px; }
   #carousel-app-desktop .module-4 img {
     width: 200px; }
+
+.desktop_title_line {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #0abab5;
+  top: 18px;
+  z-index: -1; }
 
 footer {
   background-color: black; }
