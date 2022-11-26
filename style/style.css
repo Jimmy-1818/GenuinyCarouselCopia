@@ -126,6 +126,13 @@ body {
         margin: auto;
         padding: 12px;
         padding-left: 20px; } }
+    .header_grid span.second-main .normative-note {
+      font-size: 0.5em;
+      display: block;
+      margin-top: 10px; }
+      @media (min-width: 1024px) {
+        .header_grid span.second-main .normative-note {
+          margin-top: 3px; } }
   .header_grid .images_download {
     width: 100%;
     display: flex;
