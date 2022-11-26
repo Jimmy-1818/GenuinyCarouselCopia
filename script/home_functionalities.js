@@ -131,9 +131,3 @@ function change_functioning_image(){
 	image.style.border = "none"
 	image.style.borderRadius = "0"
 }
-
-
-// mute video on modal close
-$('#blockchain').on("hide.bs.modal", function() {
-	$('.milena-spiega')[0].pause();
-})

@@ -450,6 +450,16 @@ li.subscribe-step-1 .subscribe-parent {
   float: right;
   margin: 10px 0 15px 15px; }
 
+#functioning_image_modal .modal-content {
+  width: fit-content;
+  margin: 0 auto; }
+  #functioning_image_modal .modal-content .modal-body {
+    padding: 10px; }
+    #functioning_image_modal .modal-content .modal-body #functioning_image {
+      height: 70vh;
+      margin: 0 auto;
+      display: block; }
+
 /**** SHARE *** */
 .title-subscribe {
   text-align: center;
