@@ -704,24 +704,14 @@ img.share-app
 //		left: auto
 //		transform: translate(100%, 100%) rotate(180deg)					
 
-.system_ban
-		margin: 60px 7vw 0
-		@media (min-width: $breakpoint-1024)
-			margin: 120px 0 0
-		p
-			min-height: 60vh
-			@media screen and (orientation: landscape)
-				min-height: 35vh
-		a
-			text-decoration: none
-		@media (min-width: $breakpoint-768)
-		//.module-1
-		//	.center-block
-		//		transform: translate(0, 0)
-		//		width: 80%
-		//		margin: 0 auto 30px
+
+#carousel-system-ban
+	margin: 60px 7vw 0
+	@media (min-width: $breakpoint-1024)
+		margin: 120px 0 0
+	.module-1
 		img
-			width: 100%
+			width: 90%
 			display: block
 			margin: 0 auto
 			max-width: 400px
@@ -729,13 +719,17 @@ img.share-app
 			border-radius: 20px
 			@media (min-width: $breakpoint-768)
 				width: 80%
-		p.after_image
-			min-height: auto
-			margin-top: 40px
-		a .to-calculator
+	a
+		text-decoration: none
+	p.after_image
+		min-height: auto
+		margin-top: 40px
+	a .to-calculator
+		margin: 15px auto 0
+		@media (min-width: $breakpoint-768)
+			width: fit-content
+		@media (min-width: $breakpoint-1024)
 			margin: 15px auto
-			@media (min-width: $breakpoint-768)
-				width: fit-content
 
 .to-calculator
 	background: $genuinyColDark
@@ -744,43 +738,7 @@ img.share-app
 	font-weight: bold
 	color: white
 	margin: 3vh 0 0
-
-
-
-#carousel-functioning
-	margin-top: 330px
-	@media (min-width: $breakpoint-1024)
-		margin-top: 215px
-	.block-number
-		margin: 0 auto
-		background: #0abab5
-		width: fit-content
-		padding: 2px 10px 0px 10px
-		border-radius: 99px 99px 0 0
-		color: white
-		font-weight: bold
-		position: relative
-		bottom: -2px
-		&:first-of-type
-			margin-top: 6vh
-	.block-functioning
-		background-color: $genuinyCol
-		text-align: center
-		padding: 5px 15px
-		color: white
-		border-radius: 10px
-		font-size: 1.2rem
-	.module-1 img 
-		width: 100%
-		margin: 0 auto
-		display: block
-		@media screen and (orientation: landscape)
-			max-height: 100%
-			width: auto
-	.module-2 
-		.secondary-module-title-desktop
-			display: none
-
+	border-radius: 99px
 
 
 #carousel-blockchain .module-2 video
