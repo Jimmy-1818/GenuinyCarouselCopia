@@ -211,7 +211,7 @@ body {
   .bottom-btn .next-title {
     width: 59%;
     position: absolute;
-    bottom: 3px;
+    bottom: 1px;
     right: 50%;
     transform: translate(50%);
     text-align: center; }
