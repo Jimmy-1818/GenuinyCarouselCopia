@@ -298,7 +298,9 @@ li.subscribe-step-1 .subscribe-parent {
   color: white;
   padding: 4px 10px;
   border-radius: 99px;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-top: 3px;
+  display: inline-block; }
 
 .list-line {
   display: none; }
