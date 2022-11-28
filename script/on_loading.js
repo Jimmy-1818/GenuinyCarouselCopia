@@ -56,7 +56,14 @@ function hide_other_languages(language){
 }
 
 
-
+//change content based on language (ita / eng)
+function set_translated_media(language){
+  if (language = "eng"){
+    console.log("eng media")
+  }else{
+    console.log("eng ita")
+  }
+}
 
 
 // Set affiliate link and cancel it from url
