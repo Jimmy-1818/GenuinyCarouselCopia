@@ -133,3 +133,14 @@ function change_functioning_image(){
 	image.style.border = "none"
 	image.style.borderRadius = "0"
 }
+
+
+
+//change content based on language (ita / eng)
+function set_translated_media(language){
+	if (language = "eng"){
+		console.log("eng media")
+	}else{
+		console.log("eng ita")
+	}
+}

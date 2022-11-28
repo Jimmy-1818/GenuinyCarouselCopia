@@ -12,7 +12,7 @@ function set_lang_manually(language){
 }
 
 language_set()
-function language_set(){  
+function language_set(){
   lang_setted = false
   if (!lang_setted && localStorage.getItem("lang_set") == null){
     var browser_languages = navigator.languages || navigator.userLanguages;
@@ -22,15 +22,19 @@ function language_set(){
         if(browser_language.includes("en")){
           null //every elem with (lang!="eng" is "display_none" to start with)
           lang_setted = true
+          set_translated_media("eng")  
         }
         else if(browser_language.includes("it")){
           hide_other_languages("ita")
+          set_translated_media("non-eng")
           lang_setted = true
         }else if(browser_language.includes("sl")){
           hide_other_languages("slv")
+          set_translated_media("non-eng")
           lang_setted = true
         }else if(browser_language.includes("es")){
           hide_other_languages("spa")
+          set_translated_media("non-eng")
           lang_setted = true
         }
       }
