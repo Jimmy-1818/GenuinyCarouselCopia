@@ -22,20 +22,15 @@ function language_set(){
         if(browser_language.includes("en")){
           null //every elem with (lang!="eng" is "display_none" to start with)
           lang_setted = true
-          set_translated_media("eng")  
         }
         else if(browser_language.includes("it")){
           hide_other_languages("ita")
-          set_translated_media("non-eng")
-          console.log("ittS")
           lang_setted = true
         }else if(browser_language.includes("sl")){
           hide_other_languages("slv")
-          set_translated_media("non-eng")
           lang_setted = true
         }else if(browser_language.includes("es")){
           hide_other_languages("spa")
-          set_translated_media("non-eng")
           lang_setted = true
         }
       }
@@ -45,8 +40,17 @@ function language_set(){
   }
 }
 
+
+
+
 function hide_other_languages(language){
   const lang_elements = document.querySelectorAll('[lang]');
+  if (language != "eng"){
+    console.log("non_eng")
+  }
+  else{
+    console.log("eng")
+  }
   for (var i = 0; i < lang_elements.length; i++) {
     if (lang_elements[i].getAttribute("lang") != language){
       lang_elements[i].classList.add("display_none")
