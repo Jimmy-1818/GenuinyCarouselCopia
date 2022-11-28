@@ -897,6 +897,8 @@ div.privacy_all h1 {
   font-weight: 700;
   font-size: 40px;
   line-height: 60px; }
+div.privacy_all h1, div.privacy_all h2, div.privacy_all h3, div.privacy_all h4 {
+  font-weight: bold; }
 div.privacy_all h1, div.privacy_all h2, div.privacy_all h3, div.privacy_all h4, div.privacy_all h5, div.privacy_all h6, div.privacy_all li, div.privacy_all p {
   margin: 0 0 16px; }
 
