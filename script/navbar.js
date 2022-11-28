@@ -9,8 +9,8 @@ const module_overflow = document.getElementsByClassName("module-overflow")
 var carousel = document.getElementsByClassName("carousel")
 const indicators = document.getElementsByClassName("carousel-indicators")
 
-//var theText = $('body').text();
-//console.log(theText)
+var theText = $('body').text();
+console.log(theText)
 
 
 const nearest_threshold = 70

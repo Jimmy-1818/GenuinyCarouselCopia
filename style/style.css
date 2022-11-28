@@ -922,9 +922,10 @@ footer {
       font-size: 1em; }
       @media (min-width: 768px) {
         footer div.container span.br {
-          display: inline-block; }
-          footer div.container span.br::before {
-            content: "| "; } }
+          display: inline-block; } }
+    @media (min-width: 768px) {
+      footer div.container span.slash::before {
+        content: ", "; } }
     footer div.container a {
       text-decoration: none; }
       footer div.container a:hover {

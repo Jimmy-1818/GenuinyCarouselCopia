@@ -973,8 +973,9 @@ footer
 			font-size: 1em
 			@media (min-width: $breakpoint-768)
 				display: inline-block
-				&::before
-					content: "| "
+		span.slash::before
+			@media (min-width: $breakpoint-768)
+				content: ", "
 		a
 			@extend .grid_item
 			text-decoration: none
