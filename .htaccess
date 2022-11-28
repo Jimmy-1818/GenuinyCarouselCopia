@@ -1,15 +1,24 @@
-# mod_rewrite starts here
 
-RewriteEngine on
+RewriteEngine On 
+RewriteBase /
 
-# does not apply to existing directories, meaning that if the folder exists on the server then don't change anything and don't run the Rule
+#www to non
+RewriteCond %{HTTP_HOST} ^www\.(([a-z0-9_]+\.)?domain\.com)$ [NC]
+RewriteRule ^(.+?)/?$ http://%1/$1/ [R=301,L]
 
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html/?[\s?] [NC]
+RewriteRule ^ /%1/ [R=301,NE,L]
 
-# Check for file in directory with .html extension
+#index redirect 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ 
+RewriteRule ^index\.html$ http://%{HTTP_HOST}/ [R=301,L]
 
-RewriteCond %{REQUEST_FILENAME}\.html -f
+# add a trailing slash to non files
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*?[^/])$ %{REQUEST_URI}/ [L,R=301,NE]
 
-# Here we actually show the page that has the .html extension
-
-RewriteRule ^(.*)$ $1.html [NC,L]
+# add html internally
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([^.]+)/$ $1.html [L]
