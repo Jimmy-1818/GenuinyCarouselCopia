@@ -27,6 +27,7 @@ function language_set(){
         else if(browser_language.includes("it")){
           hide_other_languages("ita")
           set_translated_media("non-eng")
+          console.log("ittS")
           lang_setted = true
         }else if(browser_language.includes("sl")){
           hide_other_languages("slv")
@@ -58,7 +59,8 @@ function hide_other_languages(language){
 
 //change content based on language (ita / eng)
 function set_translated_media(language){
-  if (language = "eng"){
+  console.log("oin")
+  if (language == "eng"){
     console.log("eng media")
   }else{
     console.log("eng ita")
