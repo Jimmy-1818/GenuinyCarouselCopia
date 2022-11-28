@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html translate="no" class="notranslate">
+<head>	
+	<!---COOKIE-BOT----->
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d6c31a3e-a4a1-44c3-8459-094604ba2906" data-blockingmode="auto" type="text/javascript"></script>
+
+	<meta name="google" content="notranslate">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Genuiny - Home</title>
+
+	<!----Jquery CDN--->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+	<!----Favicon----->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<!---<link rel="manifest" href="images/favicon/site.webmanifest">--->
+	<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="images/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--------BOOTSTRAP----------->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+	
+	<!--STYLE-->
+	<link rel="stylesheet" type="text/css" href="style/navbar.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+	<!---Fonts links--->
+	<link rel="preload" href="fonts/Montserrat/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="preload" href="fonts/Inter/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
+
+	<!-------JQUERY-------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<header>
+		<div class="full-nav">
+			<nav class="desktop-nav">
+				<div class="container-navbar">
+					<div class="logo">
+						<a class="page-link" href="index.html"><img src="images/svg-logo-ethical-w.png" alt="logo"></a>
+					</div>
+
+					<div class="menu">
+						<!--LATER REMOVE ALL.html (it doesn't work in local)-->
+						<a class="show page-link" href="index.html">home</a>
+						<a class="page-link" href="subscribe.html">registrati</a>
+						<a class="page-link" href="affiliation.html">potenziale digitale</a>
+						<a class="page-link" href="share.html">condividi app</a>
+						<div class="grid-item dropdown-center dropdown language_group" style="width: 62px;"> <!--width so to avoid moving other titles-->
+							<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
+								<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="images/language-flags/ita_flag.svg"></div>
+								<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="images/language-flags/slv_flag.svg"></div>
+								<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="images/language-flags/spa_flag.svg"></div>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+								<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Spanish </span></a></li>
+								<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italian </span></a></li>
+								<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<button class="hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</nav>
+			<nav class="mobile-nav">
+				<a class="page-link" href="index.html">home</a>
+				<a class="page-link" href="subscribe.html">registrati</a>
+				<a class="page-link" href="affiliation.html">potenziale digitale</a>
+				<a class="page-link" href="share.html">condividi app</a>
+				<div class="grid-item dropdown-center dropdown language_group">
+					<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
+						<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="images/language-flags/ita_flag.svg"></div>
+						<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="images/language-flags/slv_flag.svg"></div>
+						<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="images/language-flags/spa_flag.svg"></div>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a onclick="set_lang_manually('eng'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+						<li><a onclick="set_lang_manually('spa'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Spanish </span></a></li>
+						<li><a onclick="set_lang_manually('ita'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italian </span></a></li>
+						<li><a onclick="set_lang_manually('slv'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="opacity"></div>
+		</div>
+	</header>
+	<main class="container">
+		<div style="margin-top: 50px;">
+			<h1>Cookie Policy for genuiny.com</h1>
+			<p>This is the Cookie Policy for genuiny.com, accessible from https://jimmy-1818.github.io/GenuinyCarouselCopia/</p>
+			<p><strong>What Are Cookies</strong></p>
+			<p>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
+			<p><strong>How We Use Cookies</strong></p>
+			<p>We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.</p>
+			<p><strong>Disabling Cookies</strong></p>
+			<p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies. This Cookies Policy was created with the help of the <a href="https://www.cookiepolicygenerator.com/cookie-policy-generator/">Cookies Policy Generator</a>.</p>
+			<p><strong>The Cookies We Set</strong></p>
+			<ul>
+			<li>
+			<p>Site preferences cookies</p>
+			<p>In order to provide you with a great experience on this site we provide the functionality to set your preferences for how this site runs when you use it. In order to remember your preferences we need to set cookies so that this information can be called whenever you interact with a page is affected by your preferences.</p>
+			</li>
+			</ul>
+			<p><strong>Third Party Cookies</strong></p>
+			<p>In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.</p>
+			<ul>
+			<li>
+			<p>Third party analytics are used to track and measure usage of this site so that we can continue to produce engaging content. These cookies may track things such as how long you spend on the site or pages you visit which helps us to understand how we can improve the site for you.</p>
+			</li>
+			</ul>
+			<p><strong>More Information</strong></p>
+			<p>Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site.</p>
+			<p>For more general information on cookies, please read <a href="https://www.cookiepolicygenerator.com/sample-cookies-policy/">the Cookies Policy article</a>.</p>
+			<p>However if you are still looking for more information then you can contact us through one of our preferred contact methods:</p>
+			<ul>
+			<li>Email: staff@genuiny.com</li>
+			</ul>
+			</div>
+		
+	</main>
+	
+
+	<footer>
+		<div class="container">
+			<div class="grid_item dropup-center dropup language_group">
+				<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
+					<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="images/language-flags/ita_flag.svg"></div>
+					<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="images/language-flags/slv_flag.svg"></div>
+					<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="images/language-flags/spa_flag.svg"></div>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English</span></a></li>
+					<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Spanish</span></a></li>
+					<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italian</span></a></li>
+					<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian</span></a></li>
+				</ul>
+			</div>
+			<div class="grid_item">
+				<a href="mailto:staff@genuiny.com">staff@genuiny.com</a>
+			</div>
+			<div class="grid_item">
+				<a href="privacy.html">Privacy policy</a>
+			</div>
+			<div class="grid_item">
+				<a href="https://goo.gl/maps/5ype6eZXjok3Bxiv6" target="self">Sede legale: <span class="br">20-22 Wenlock Road </span><span class="br slash">London, England, N1 7GU</span></a>
+			</div>
+			<div class="grid_item two_span">
+				© Copyright 2022 Genuiny - All Rights Reserved
+			</div>
+			<div class="grid_item two_span">
+				©Credits<br>
+				Contract icons created by Freepik - Flaticon<br>
+				Fingerprint icons created by Google - Flaticon
+			</div>
+		</div>
+	</footer>
+
+	<!----- BOOTSTRAP ------->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+	
+	<!--navbar-->
+	<script class="navbar-link" type="text/javascript" src="script/navbar.js"></script>
+	
+	<script type="text/javascript" src="script/on_loading.js"></script>
+	<script type="text/javascript" src="script/home_functionalities.js"></script>
+</body>
+</html>

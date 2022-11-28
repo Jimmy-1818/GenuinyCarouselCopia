@@ -943,6 +943,16 @@ img.share-app
 	top: 18px
 	z-index: -1
 
+
+//PRIVACY POLICY
+
+div.privacy_all
+	h1
+		font-weight: 700
+		font-size: 40px
+		line-height: 60px
+	h1, h2, h3, h4, h5, h6, li, p 
+		margin: 0 0 16px
  
 footer 
 	background-color: black
@@ -968,12 +978,12 @@ footer
 				margin-bottom: 0
 
 		// adress in two lines under tablet size
-		span.br
+		.br
 			display: block
 			font-size: 1em
 			@media (min-width: $breakpoint-768)
 				display: inline-block
-		span.slash::before
+		.slash::before
 			@media (min-width: $breakpoint-768)
 				content: ", "
 		a
