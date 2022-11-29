@@ -71,17 +71,30 @@ function hide_other_languages(language){
 
 //change content based on language (ita / eng)
 function set_translated_media(language){
-  console.log(language)
-  if (language == "eng"){
-    var smartphone = document.getElementsByClassName("smartphone")
-    for (var i = 0; i < smartphone.length; i++) {
-      smartphone[i].setAttribute("src", "images/front-mock-up-eng.png")
-    }
-  }else{
-    var smartphone = document.getElementsByClassName("smartphone")
-    if (smartphone[0].getAttribute("src") != "images/front-mock-up.png"){
+  if(window.location.pathname.includes("affiliation")){
+    if (language == "eng"){
+      var smartphone = document.getElementsByClassName("smartphone")
       for (var i = 0; i < smartphone.length; i++) {
-        smartphone[i].setAttribute("src", "images/front-mock-up.png")
+        smartphone[i].setAttribute("src", "images/front-mock-up-eng.png")
+      }
+    }else{
+      var smartphone = document.getElementsByClassName("smartphone")
+      if (smartphone[0].getAttribute("src") != "images/front-mock-up.png"){
+        for (var i = 0; i < smartphone.length; i++) {
+          smartphone[i].setAttribute("src", "images/front-mock-up.png")
+        }
+      }
+    }
+  }
+  else if (window.location.pathname.includes("subscribe")){
+    if (language == "eng"){
+      var smartphone = document.getElementsByClassName("smartphone")
+        smartphone[i].setAttribute("src", "images/front-mock-up-eng.png")
+    }else{
+      if (smartphone[0].getAttribute("src") != "images/front-mock-up.png"){
+        for (var i = 0; i < smartphone.length; i++) {
+          smartphone[i].setAttribute("src", "images/front-mock-up.png")
+        }
       }
     }
   }
