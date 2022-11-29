@@ -288,9 +288,9 @@ body {
   max-width: 72px;
   transition: bottom 0.3s;
   position: absolute;
-  height: 60px;
-  width: 60px;
-  bottom: calc(-2vh + 4px); }
+  height: 64px;
+  width: 64px;
+  bottom: calc(-2vh + 2px); }
 
 .bottom-btn .alternative-next {
   z-index: 74;
@@ -300,7 +300,7 @@ body {
   left: 14px; }
 
 .carousel-control-next {
-  right: 10%; }
+  right: calc(10% - 2px); }
 
 .bottom-control-down {
   bottom: -60px; }

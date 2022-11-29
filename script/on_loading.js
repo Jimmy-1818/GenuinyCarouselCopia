@@ -75,13 +75,19 @@ function set_translated_media(language){
 
   if(window.location.pathname.includes("index")){
     var smartphone = document.getElementsByClassName("smartphone")
+    var alerts_btn = document.getElementsByClassName("alerts_btn")[0]
+    var balance_image = document.getElementsByClassName("balance_image")[0]
     if (language == "eng"){
       if (smartphone[0].getAttribute("src") != "images/front-mock-up-eng.png"){
+        alerts_btn.setAttribute("src", "images/alerts_eng.png")
+        balance_image.setAttribute("src", "images/account_eng.png")
         for (var i = 0; i < smartphone.length; i++) {
           smartphone[i].setAttribute("src", "images/front-mock-up-eng.png")
         }
       }
     }else if (language == "ita"){
+      alerts_btn.setAttribute("src", "images/alerts_ita.png")
+      balance_image.setAttribute("src", "images/account_ita.png")
       for (var i = 0; i < smartphone.length; i++) {
         smartphone[i].setAttribute("src", "images/front-mock-up-ita.png")
       }
