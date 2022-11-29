@@ -943,6 +943,19 @@ img.share-app
 	top: 18px
 	z-index: -1
 
+#carousel-sharing
+	.module-1 
+		a.source_link
+			text-decoration: underline
+			color: black
+			font-style: italic
+			font-size: calc(0.5rem + 1.15vw)
+			@media (min-width: $breakpoint-768)
+				font-size: 1.4rem
+
+#carousel-sharing-desktop
+	@extend #carousel-sharing
+
 
 //PRIVACY POLICY
 
@@ -950,7 +963,7 @@ div.privacy_all
 	h1
 		font-weight: 700
 		font-size: 30px
-		line-height: 60px
+		line-height: 40px
 	h1, h2, h3, h4
 		font-weight: bold
 	h1, h2, h3, h4, h5, h6, li, p 
