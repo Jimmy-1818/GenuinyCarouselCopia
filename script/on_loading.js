@@ -1,5 +1,12 @@
 // ON LOADING (FIRST from index.html)
 
+// Set affiliate link and cancel it from url
+if (window.location.href.includes("#")){
+  localStorage.setItem("hash", window.location.hash.slice(1))
+  var url =  window.location.href.substr(0, window.location.href.indexOf("#"))
+  history.replaceState(null, "", url)
+}
+
 // languages on html: [ita, spa, eng], languages in navigator.language: [it, es, en]
 // default lang is english
 
@@ -20,8 +27,9 @@ function language_set(){
       var browser_language = browser_languages[i]
       if (!lang_setted){
         if(browser_language.includes("en")){
-          null //every elem with (lang!="eng" is "display_none" to start with)
+          null //every elem with (lang!="eng" is "display_none" by default)
           lang_setted = true
+          set_translated_media("eng")
         }
         else if(browser_language.includes("it")){
           hide_other_languages("ita")
@@ -41,16 +49,16 @@ function language_set(){
 }
 
 
-
-
 function hide_other_languages(language){
-  const lang_elements = document.querySelectorAll('[lang]');
-  if (language != "eng"){
-    console.log("non_eng")
+
+  if (language != "ita"){
+    set_translated_media("eng")
   }
   else{
-    console.log("eng")
+    set_translated_media("ita")
   }
+
+  const lang_elements = document.querySelectorAll('[lang]');
   for (var i = 0; i < lang_elements.length; i++) {
     if (lang_elements[i].getAttribute("lang") != language){
       lang_elements[i].classList.add("display_none")
@@ -63,18 +71,19 @@ function hide_other_languages(language){
 
 //change content based on language (ita / eng)
 function set_translated_media(language){
-  console.log("oin")
+  console.log(language)
   if (language == "eng"){
-    console.log("eng media")
+    var smartphone = document.getElementsByClassName("smartphone")
+    for (var i = 0; i < smartphone.length; i++) {
+      smartphone[i].setAttribute("src", "images/front-mock-up-eng.png")
+    }
   }else{
-    console.log("eng ita")
+    var smartphone = document.getElementsByClassName("smartphone")
+    if (smartphone[0].getAttribute("src") != "images/front-mock-up.png"){
+      for (var i = 0; i < smartphone.length; i++) {
+        smartphone[i].setAttribute("src", "images/front-mock-up.png")
+      }
+    }
   }
 }
 
-
-// Set affiliate link and cancel it from url
-if (window.location.href.includes("#")){
-  localStorage.setItem("hash", window.location.hash.slice(1))
-  var url =  window.location.href.substr(0, window.location.href.indexOf("#"))
-  history.replaceState(null, "", url)
-}
