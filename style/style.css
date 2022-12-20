@@ -725,6 +725,10 @@ img.share-app {
 
 #carousel-system-ban-desktop .module-1 img {
   width: 80%; }
+#carousel-system-ban-desktop .module-2 .secondary-module-title-desktop {
+  display: none; }
+#carousel-system-ban-desktop .module-2 .after_image {
+  margin-top: 4rem; }
 
 #carousel-blockchain .module-2 video, #carousel-blockchain-desktop .module-2 video {
   transform: translate(0, -50%);
