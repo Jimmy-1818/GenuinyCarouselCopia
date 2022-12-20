@@ -146,21 +146,17 @@ body {
       .header_grid .images_download {
         margin-bottom: 0;
         grid-column: 2/-1; } }
-    .header_grid .images_download a {
-      width: 45%; }
+    .header_grid .images_download img {
+      height: fit-content;
+      width: 45%;
+      margin: 0 auto;
+      display: block; }
       @media (min-width: 480px) {
-        .header_grid .images_download a {
+        .header_grid .images_download img {
           width: 35%; } }
-      .header_grid .images_download a img {
-        margin: 0 auto;
-        display: block;
-        width: 100%; }
-        @media (min-width: 768px) {
-          .header_grid .images_download a img {
-            width: 75%; } }
-        @media (min-width: 1024px) {
-          .header_grid .images_download a img {
-            width: 100%; } }
+      @media (min-width: 1024px) {
+        .header_grid .images_download img {
+          width: 35%; } }
   .header_grid .instructions {
     padding: 4% 4% 0;
     text-align: center;

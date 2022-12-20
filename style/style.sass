@@ -164,18 +164,15 @@ body
 		@media (min-width: $breakpoint-1024)
 			margin-bottom: 0
 			grid-column: 2 / -1
-		a
+		img
+			height: fit-content
 			width: 45%
+			margin: 0 auto
+			display: block
 			@media (min-width: $breakpoint-480)
 				width: 35% 
-			img
-				margin: 0 auto
-				display: block
-				width: 100%
-				@media (min-width: $breakpoint-768)
-					width: 75%
-				@media (min-width: $breakpoint-1024)
-					width: 100%
+			@media (min-width: $breakpoint-1024)
+				width: 35%
 
 	.instructions
 		padding: 4% 4% 0
