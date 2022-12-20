@@ -1092,5 +1092,128 @@ video:fullscreen
 	border: 0 !important
 
 
+div.main_landing_page
+	padding-bottom: 0
+	min-height: 100vh
+	@media (min-width: $breakpoint-768)
+		height: 100vh
+		min-height: 500px
 
 
+.boxes_landing_page
+	display: flex
+	min-height: 400px
+	height: 70%
+	max-height: 800px
+	margin: auto
+	min-width: 500px
+	width: 100%
+	max-width: 1000px
+	border-radius: 20px
+	box-shadow: 0 0 20px 3px #00000065
+	@media (min-width: $breakpoint-768)
+		width: 75%
+		position: relative
+		transform: translate(0, -50%)
+		top: 50%
+	.left-box
+		width: 80%
+		position: relative
+		top: 50vh
+		transform: translate(0, -50%)
+		@media (min-width: $breakpoint-768)
+			position: static
+			transform: translate(0,0)
+			margin: 0
+			padding: 30px
+			height: 100%
+			width: 60%
+			background: #0abab5
+			border-radius: 20px 0 0 20px
+		.main_content
+			@media (min-width: $breakpoint-768)
+				position: relative
+				top: 50%
+				transform: translate(0, -50%)
+			h1
+				color: white
+				font-weight: bold
+				margin-bottom: 5%
+			h2
+				color: white
+				text-align: right
+				margin-bottom: 30%
+			.btns-container
+				display: flex
+				justify-content: center
+				flex-direction: column
+				row-gap: 20px
+				margin: 0 10%
+				@media (min-width: $breakpoint-768)
+					column-gap: 10%
+					flex-direction: row
+					position: static
+					max-width: 430px
+					margin: auto
+				.button
+					width: 100%
+					height: 55px
+					border-radius: 99px
+					background: #09435E
+					color: white
+					border: none
+					font-weight: bold
+					font-size: calc(1.4rem + 0.78vw)
+					box-shadow: 0px 5px 12px 0px #00000080
+					@media (min-width: $breakpoint-1024)
+						font-size: 2.2rem
+					&::hover
+						cursor: pointer
+	.right-box
+		position: absolute
+		width: 100%
+		z-index: -1
+		@media (min-width: $breakpoint-768)
+			width: 40%
+			z-index: 0
+			position: static
+			border-radius: 0 20px 20px 0
+			background: white
+		img
+			display: none
+			@media (min-width: $breakpoint-768)
+				display: block
+				width: 50%
+				position: relative
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				filter: drop-shadow(12px 12px 12px #00000070)
+		div.background-linear
+			position: absolute
+			width: 100%
+			height: 100%
+			background: linear-gradient(rgba(7, 119, 75, .6), rgba(7, 16, 119, .6)), url(../images/glogov.png) no-repeat center / cover
+			background-size: 100%
+			@media (min-width: $breakpoint-768)
+				display: none
+
+
+.button-register
+	display: none
+	@media (min-width: $breakpoint-1024)
+		display: block
+		margin: 6rem auto 0 auto
+		width: 60%
+		height: 55px
+		border-radius: 99px
+		background: #09435E
+		color: white
+		border: none
+		font-weight: bold
+		font-size: calc(1.4rem + 0.78vw)
+		box-shadow: 0px 5px 12px 0px #00000080
+		@media (min-width: $breakpoint-1024)
+			font-size: 2.2rem
+		&::hover
+			cursor: pointer
