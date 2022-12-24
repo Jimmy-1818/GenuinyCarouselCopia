@@ -148,12 +148,11 @@ function set_next_h1(){
 
 
 
-function alternative_next_click(){
+function alternative_next_click(current_btn){
   var inners = document.getElementsByClassName("carousel-inner")
-  var current_i = current_index()[0]
-  if (current_i < inners.length - 1){
+  if (current_btn < inners.length - 1){
     var margin_top = 30
-    var scroll_position = inners[current_i + 1].getBoundingClientRect().top + window.scrollY - margin_top
+    var scroll_position = inners[current_btn + 1].getBoundingClientRect().top + window.scrollY - margin_top
     window.scrollTo({top: scroll_position, behavior: "smooth"})
   }
   else{
@@ -178,7 +177,7 @@ function scroll_fix(){
   else{
     var cci = carousels_copy.indexOf(this.parentNode)
   }
-  //da usare al posto di current_i --> this.parent e recuperare l'index
+  //to use instead of current_i --> this.parent and finding the index
   var current_i = current_index()[0]
   var items = document.getElementsByClassName("carousel-inner")[cci].getElementsByClassName("carousel-item")
   for (var i = 0; i < items.length; i++) {
