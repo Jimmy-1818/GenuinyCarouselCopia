@@ -725,6 +725,8 @@ img.share-app {
 
 #carousel-system-ban-desktop .module-1 img {
   width: 80%; }
+#carousel-system-ban-desktop .module-1 .to-calculator {
+  box-shadow: 0px 3px 6px 2px #00000060; }
 #carousel-system-ban-desktop .module-2 .secondary-module-title-desktop {
   display: none; }
 #carousel-system-ban-desktop .module-2 .after_image {
