@@ -157,7 +157,7 @@ function alternative_next_click(){
     window.scrollTo({top: scroll_position, behavior: "smooth"})
   }
   else{
-    window.open("subscribe.html", "_self")
+    window.open("subscribe", "_self")
   }
 }
 
