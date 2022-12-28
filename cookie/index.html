@@ -13,12 +13,13 @@
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 	<!----Favicon----->
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-	<!---<link rel="manifest" href="images/favicon/site.webmanifest">--->
-	<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="images/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+
+	<!---<link rel="manifest" href="../images/favicon/site.webmanifest">--->
+	<link rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="../images/favicon/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
@@ -27,12 +28,12 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 	
 	<!--STYLE-->
-	<link rel="stylesheet" type="text/css" href="style/navbar.css">
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="../style/navbar.css">
+	<link rel="stylesheet" type="text/css" href="../style/style.css">
 
 	<!---Fonts links--->
-	<link rel="preload" href="fonts/Montserrat/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
-	<link rel="preload" href="fonts/Inter/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="preload" href="../fonts/Montserrat/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="preload" href="../fonts/Inter/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
 
 	<!-------JQUERY-------->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -44,27 +45,27 @@
 			<nav class="desktop-nav">
 				<div class="container-navbar">
 					<div class="logo">
-						<a class="page-link" href="index"><img src="images/svg-logo-ethical-w.png" alt="logo"></a>
+						<a class="page-link" href="https://genuiny.it"><img src="../images/svg-logo-ethical-w.png" alt="logo"></a>
 					</div>
 
 					<div class="menu">
 						<!--LATER REMOVE ALL (it doesn't work in local)-->
-						<a class="show page-link" href="index">home</a>
-						<a class="page-link" href="subscribe">registrati</a>
-						<a class="page-link" href="affiliation">potenziale digitale</a>
-						<a class="page-link" href="share">condividi app</a>
-						<div class="grid-item dropdown-center dropdown language_group" style="width: 62px;"> <!--width so to avoid moving other titles-->
+						<a class="show page-link" href="https://genuiny.it">home</a>
+						<a class="page-link" href="../subscribe">registrati</a>
+						<a class="page-link" href="../affiliation">potenziale digitale</a>
+						<a class="page-link" href="../share">condividi app</a>
+						<div class="grid-item dropdown-../center dropdown language_group" style="width: 62px;"> <!--width so to avoid moving other titles-->
 							<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
-								<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="images/language-flags/ita_flag.svg"></div>
-								<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="images/language-flags/slv_flag.svg"></div>
-								<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="images/language-flags/spa_flag.svg"></div>
+								<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="../images/language-flags/eng_flag.svg"></div>
+								<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="../images/language-flags/ita_flag.svg"></div>
+								<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="../images/language-flags/slv_flag.svg"></div>
+								<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="../images/language-flags/spa_flag.svg"></div>
 							</button>
 							<ul class="dropdown-menu">
-								<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
-								<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
-								<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
-								<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenščina </span></a></li>
+								<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+								<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
+								<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
+								<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenščina </span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -77,22 +78,22 @@
 				</div>
 			</nav>
 			<nav class="mobile-nav">
-				<a class="page-link" href="index">home</a>
-				<a class="page-link" href="subscribe">registrati</a>
-				<a class="page-link" href="affiliation">potenziale digitale</a>
-				<a class="page-link" href="share">condividi app</a>
+				<a class="page-link" href="https://genuiny.it">home</a>
+				<a class="page-link" href="../subscribe">registrati</a>
+				<a class="page-link" href="../affiliation">potenziale digitale</a>
+				<a class="page-link" href="../share">condividi app</a>
 				<div class="grid-item dropdown-center dropdown language_group">
 					<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
-						<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="images/language-flags/ita_flag.svg"></div>
-						<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="images/language-flags/slv_flag.svg"></div>
-						<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="images/language-flags/spa_flag.svg"></div>
+						<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="../images/language-flags/eng_flag.svg"></div>
+						<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="../images/language-flags/ita_flag.svg"></div>
+						<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="../images/language-flags/slv_flag.svg"></div>
+						<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="../images/language-flags/spa_flag.svg"></div>
 					</button>
 					<ul class="dropdown-menu">
-						<li><a onclick="set_lang_manually('eng'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
-						<li><a onclick="set_lang_manually('spa'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
-						<li><a onclick="set_lang_manually('ita'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
-						<li><a onclick="set_lang_manually('slv'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenščina </span></a></li>
+						<li><a onclick="set_lang_manually('eng'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+						<li><a onclick="set_lang_manually('spa'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
+						<li><a onclick="set_lang_manually('ita'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano </span></a></li>
+						<li><a onclick="set_lang_manually('slv'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenščina </span></a></li>
 					</ul>
 				</div>
 			</nav>
@@ -102,7 +103,7 @@
 	<main class="container">
 		<div style="margin-top: 50px;" class="privacy_all">
 			<h1>Cookie Policy for genuiny.com</h1>
-			<p>This is the Cookie Policy for genuiny.com, accessible from https://jimmy-1818.github.io/GenuinyCarouselCopia/</p>
+			<p>This is the Cookie Policy for genuiny.com, accessible from https://genuiny.it</p>
 			<p><b>What Are Cookies</b></p>
 			<p>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
 			<p><b>How We Use Cookies</b></p>
@@ -139,23 +140,23 @@
 		<div class="container">
 			<div class="grid_item dropup-center dropup language_group">
 				<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-					<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
-					<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="images/language-flags/ita_flag.svg"></div>
-					<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="images/language-flags/slv_flag.svg"></div>
-					<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="images/language-flags/spa_flag.svg"></div>
+					<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="../images/language-flags/eng_flag.svg"></div>
+					<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="../images/language-flags/ita_flag.svg"></div>
+					<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="../images/language-flags/slv_flag.svg"></div>
+					<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="../images/language-flags/spa_flag.svg"></div>
 				</button>
 				<ul class="dropdown-menu">
-					<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English</span></a></li>
-					<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español</span></a></li>
-					<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano</span></a></li>
-					<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenščina</span></a></li>
+					<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English</span></a></li>
+					<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español</span></a></li>
+					<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italiano</span></a></li>
+					<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="../images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenščina</span></a></li>
 				</ul>
 			</div>
 			<div class="grid_item">
 				<a href="mailto:staff@genuiny.com">staff@genuiny.com</a>
 			</div>
 			<div class="grid_item">
-				<a href="privacy">Privacy policy</a><a class="br slash" href="cookie">Cookie policy</a>
+				<a href="../privacy">Privacy policy</a><a class="br slash" href="cookie">Cookie policy</a>
 			</div>
 			<div class="grid_item">
 				<a href="https://goo.gl/maps/5ype6eZXjok3Bxiv6" target="self">Sede legale: <span class="br">20-22 Wenlock Road </span><span class="br slash">London, England, N1 7GU</span></a>
@@ -171,9 +172,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 	
 	<!--navbar-->
-	<script class="navbar-link" type="text/javascript" src="script/navbar.js"></script>
+	<script class="navbar-link" type="text/javascript" src="../script/navbar.js"></script>
 	
-	<script type="text/javascript" src="script/on_loading.js"></script>
-	<script type="text/javascript" src="script/home_functionalities.js"></script>
+	<script type="text/javascript" src="../script/on_loading.js"></script>
+	<script type="text/javascript" src="../script/home_functionalities.js"></script>
 </body>
 </html>
