@@ -33,31 +33,31 @@ function language_set(){
         }
         else if(browser_language.includes("it")){
           hide_other_languages("ita")
+          set_translated_media("ita")
           lang_setted = true
         }else if(browser_language.includes("sl")){
           hide_other_languages("slv")
+          set_translated_media("eng")
           lang_setted = true
         }else if(browser_language.includes("es")){
           hide_other_languages("spa")
+          set_translated_media("eng")
           lang_setted = true
         }
       }
     }
   }else{
     hide_other_languages(localStorage.getItem("lang_set"))
+    if (localStorage.getItem("lang_set") == "ita"){
+      set_translated_media("ita")
+    }else{
+      set_translated_media("eng")
+    }
   }
 }
 
 
 function hide_other_languages(language){
-
-  if (language != "ita"){
-    set_translated_media("eng")
-  }
-  else{
-    set_translated_media("ita")
-  }
-
   const lang_elements = document.querySelectorAll('[lang]');
   for (var i = 0; i < lang_elements.length; i++) {
     if (lang_elements[i].getAttribute("lang") != language){
