@@ -98,12 +98,12 @@ function set_translated_media(language){
   else if (window.location.pathname.includes("subscribe")){
     var video_autenticate = document.getElementsByClassName("video_autenticate_src")[0]
     if (language == "eng"){
-      if (video_autenticate.getAttribute("src") != "/videos/autenticate_base_eng.mp4"){
-        video_autenticate.setAttribute("src", "/videos/autenticate_base_eng.mp4")
+      if (video_autenticate.getAttribute("src") != "../videos/autenticate_base_eng.mp4"){
+        video_autenticate.setAttribute("src", "../videos/autenticate_base_eng.mp4")
         document.getElementById('video-tutorial-subscribe').load()
       }
     }else if (language == "ita"){
-      video_autenticate.setAttribute("src", "/videos/autenticate_base_ita.mp4")  
+      video_autenticate.setAttribute("src", "../videos/autenticate_base_ita.mp4")  
       document.getElementById('video-tutorial-subscribe').load()
     }
 
@@ -113,10 +113,10 @@ function set_translated_media(language){
     var source_share_site = document.getElementById("source_share_via_site")
     var source_share_ig = document.getElementById("source_share_on_instagram")
     if (language == "eng"){
-      if (source_share_app.getAttribute("src") != "/videos/share_from_app_eng.mp4"){
-        source_share_app.setAttribute("src", "/videos/share_from_app_eng.mp4")
-        source_share_site.setAttribute("src", "/videos/share_from_app_eng.mp4")
-        source_share_ig.setAttribute("src", "/videos/share_from_app_eng.mp4")
+      if (source_share_app.getAttribute("src") != "../videos/share_from_app_eng.mp4"){
+        source_share_app.setAttribute("src", "../videos/share_from_app_eng.mp4")
+        source_share_site.setAttribute("src", "../videos/share_from_app_eng.mp4")
+        source_share_ig.setAttribute("src", "../videos/share_from_app_eng.mp4")
         document.getElementById('video-share-from-app').load()
         document.getElementById('video-share-via-site').load()
         document.getElementById('video-share-on-instagram').load()
