@@ -122,7 +122,6 @@ function set_translated_media(language){
         document.getElementById('video-share-on-instagram').load()
       }
     }else if (language == "ita"){
-      console.log("___")
       source_share_app.setAttribute("src", "../videos/share_from_app_ita.mp4")
       source_share_site.setAttribute("src", "../videos/share_from_app_ita.mp4")
       source_share_ig.setAttribute("src", "../videos/share_from_app_ita.mp4")
