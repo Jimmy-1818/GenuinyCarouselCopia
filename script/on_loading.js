@@ -1,5 +1,7 @@
 // ON LOADING (FIRST from index.html)
 
+alert("oon")
+
 // Set affiliate link and cancel it from url
 if (window.location.href.includes("#")){
   localStorage.setItem("hash", window.location.hash.slice(1))
@@ -15,44 +17,6 @@ function set_lang_manually(language){
   language_set()
   if(window.location.pathname.includes("affiliation")){
     on_input()
-  }
-}
-
-language_set()
-function language_set(){
-  lang_setted = false
-  if (!lang_setted && localStorage.getItem("lang_set") == null){
-    var browser_languages = navigator.languages || navigator.userLanguages;
-    for (var i = 0; i < browser_languages.length; i++) {
-      var browser_language = browser_languages[i]
-      if (!lang_setted){
-        if(browser_language.includes("en")){
-          null //every elem with (lang!="eng" is "display_none" by default)
-          lang_setted = true
-          set_translated_media("eng")
-        }
-        else if(browser_language.includes("it")){
-          hide_other_languages("ita")
-          set_translated_media("ita")
-          lang_setted = true
-        }else if(browser_language.includes("sl")){
-          hide_other_languages("slv")
-          set_translated_media("eng")
-          lang_setted = true
-        }else if(browser_language.includes("es")){
-          hide_other_languages("spa")
-          set_translated_media("eng")
-          lang_setted = true
-        }
-      }
-    }
-  }else{
-    hide_other_languages(localStorage.getItem("lang_set"))
-    if (localStorage.getItem("lang_set") == "ita"){
-      set_translated_media("ita")
-    }else{
-      set_translated_media("eng")
-    }
   }
 }
 
@@ -73,7 +37,8 @@ function hide_other_languages(language){
 function set_translated_media(language){
 
 
-  if(window.location.pathname.includes("index")){
+  console.log(location.pathname)
+  if(window.location.pathname == "https://genuiny.it"){
     var smartphone = document.getElementsByClassName("smartphone")
     var alerts_btn = document.getElementsByClassName("alerts_btn")[0]
     var balance_image = document.getElementsByClassName("balance_image")[0]
@@ -132,3 +97,42 @@ function set_translated_media(language){
   }
 }
 
+
+
+language_set()
+function language_set(){
+  lang_setted = false
+  if (!lang_setted && localStorage.getItem("lang_set") == null){
+    var browser_languages = navigator.languages || navigator.userLanguages;
+    for (var i = 0; i < browser_languages.length; i++) {
+      var browser_language = browser_languages[i]
+      if (!lang_setted){
+        if(browser_language.includes("en")){
+          null //every elem with (lang!="eng" is "display_none" by default)
+          lang_setted = true
+          set_translated_media("eng")
+        }
+        else if(browser_language.includes("it")){
+          hide_other_languages("ita")
+          set_translated_media("ita")
+          lang_setted = true
+        }else if(browser_language.includes("sl")){
+          hide_other_languages("slv")
+          set_translated_media("eng")
+          lang_setted = true
+        }else if(browser_language.includes("es")){
+          hide_other_languages("spa")
+          set_translated_media("eng")
+          lang_setted = true
+        }
+      }
+    }
+  }else{
+    hide_other_languages(localStorage.getItem("lang_set"))
+    if (localStorage.getItem("lang_set") == "ita"){
+      set_translated_media("ita")
+    }else{
+      set_translated_media("eng")
+    }
+  }
+}
