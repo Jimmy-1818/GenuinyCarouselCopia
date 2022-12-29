@@ -21,10 +21,16 @@ function set_lang_manually(language){
 
 function hide_other_languages(language){
   const lang_elements = document.querySelectorAll('[lang]');
-  const cookie_parent = document.getElementById("CybotCookiebotDialog")
+  var loaded = false
   for (var i = 0; i < lang_elements.length; i++) {
+    const cookie_parent = document.getElementById("CybotCookiebotDialog")
     if (lang_elements[i].getAttribute("lang") != language){
-      if (!cookie_parent.contains(lang_elements[i])){
+      if (cookie_parent){
+        if (!cookie_parent.contains(lang_elements[i])){
+          lang_elements[i].classList.add("display_none")
+        }
+      }
+      else{
         lang_elements[i].classList.add("display_none")
       }
     }else{
