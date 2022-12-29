@@ -1,7 +1,5 @@
 // ON LOADING (FIRST from index.html)
 
-alert("oon")
-
 // Set affiliate link and cancel it from url
 if (window.location.href.includes("#")){
   localStorage.setItem("hash", window.location.hash.slice(1))
@@ -23,9 +21,12 @@ function set_lang_manually(language){
 
 function hide_other_languages(language){
   const lang_elements = document.querySelectorAll('[lang]');
+  const cookie_parent = document.getElementById("CybotCookiebotDialog")
   for (var i = 0; i < lang_elements.length; i++) {
     if (lang_elements[i].getAttribute("lang") != language){
-      lang_elements[i].classList.add("display_none")
+      if (!cookie_parent.contains(lang_elements[i])){
+        lang_elements[i].classList.add("display_none")
+      }
     }else{
       lang_elements[i].classList.remove("display_none")
     }
@@ -36,9 +37,7 @@ function hide_other_languages(language){
 //change content based on language (ita / eng)
 function set_translated_media(language){
 
-
-  console.log(location.pathname)
-  if(window.location.pathname == "https://genuiny.it"){
+  if(window.location.href == "https://www.genuiny.it"){
     var smartphone = document.getElementsByClassName("smartphone")
     var alerts_btn = document.getElementsByClassName("alerts_btn")[0]
     var balance_image = document.getElementsByClassName("balance_image")[0]
