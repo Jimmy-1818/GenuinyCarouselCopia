@@ -464,8 +464,9 @@ li.subscribe-step-1 .subscribe-parent {
       .modal-x .spans span:nth-of-type(0n + 2) {
         transform: rotate(-45deg); }
 
-.modal-content {
-  top: -5vh; }
+@media (max-width: 1024px) {
+  .modal-content {
+    top: -5vh; } }
 
 #generate_qr .modal-body {
   max-height: none; }
