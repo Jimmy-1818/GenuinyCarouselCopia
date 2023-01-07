@@ -464,6 +464,9 @@ li.subscribe-step-1 .subscribe-parent {
       .modal-x .spans span:nth-of-type(0n + 2) {
         transform: rotate(-45deg); }
 
+.modal-content {
+  top: -5vh; }
+
 #generate_qr .modal-body {
   max-height: none; }
 #generate_qr img {
@@ -474,8 +477,7 @@ li.subscribe-step-1 .subscribe-parent {
   overflow-x: auto; }
 
 .modal-white .modal-content {
-  background: white;
-  top: -5vh; }
+  background: white; }
   .modal-white .modal-content .modal-body {
     padding: 35px;
     max-height: 65vh;
