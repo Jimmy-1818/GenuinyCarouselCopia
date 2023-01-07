@@ -477,7 +477,7 @@ li.subscribe-step-1 .subscribe-parent {
   background: white; }
   .modal-white .modal-content .modal-body {
     padding: 35px;
-    max-height: 80vh;
+    max-height: 65vh;
     overflow: auto; }
     .modal-white .modal-content .modal-body h1 {
       font-weight: bold;
