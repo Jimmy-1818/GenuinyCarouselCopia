@@ -433,6 +433,34 @@ li.subscribe-step-1 .subscribe-parent {
       max-height: 420px;
       width: 80vw; } }
 
+.modal-x {
+  width: 70px;
+  height: 70px;
+  background: #3c3c3c;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 70px;
+  box-shadow: 0px 0px 12px 5px #ffffff70; }
+  .modal-x .spans {
+    width: 50px;
+    position: relative;
+    top: calc(50% - 5px);
+    transform: translate(0, -50%);
+    margin: auto; }
+    .modal-x .spans span {
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #e6e6e6;
+      display: block; }
+      .modal-x .spans span:nth-of-type(0n + 1) {
+        transform: rotate(45deg); }
+      .modal-x .spans span:nth-of-type(0n + 2) {
+        transform: rotate(-45deg); }
+
 #generate_qr .modal-body {
   max-height: none; }
 #generate_qr img {
