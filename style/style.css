@@ -434,8 +434,8 @@ li.subscribe-step-1 .subscribe-parent {
       width: 80vw; } }
 
 .modal-x {
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
   background: #3c3c3c;
   position: fixed;
   bottom: 8vh;
@@ -481,7 +481,7 @@ li.subscribe-step-1 .subscribe-parent {
   background: white; }
   .modal-white .modal-content .modal-body {
     padding: 35px;
-    max-height: 65vh;
+    max-height: 60vh;
     overflow: auto; }
     .modal-white .modal-content .modal-body h1 {
       font-weight: bold;
