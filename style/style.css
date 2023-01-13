@@ -1174,7 +1174,7 @@ div.main_landing_page {
   @media (min-width: 1024px) {
     .button-register {
       display: block;
-      margin: 6rem auto 0 auto;
+      margin: 0rem auto 10rem auto;
       width: 60%;
       height: 55px;
       border-radius: 99px;

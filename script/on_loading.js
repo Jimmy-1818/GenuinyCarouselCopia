@@ -13,7 +13,7 @@ if (window.location.href.includes("#")){
 function set_lang_manually(language){
   localStorage.setItem("lang_set", language)
   language_set()
-  if(window.location.pathname.includes("affiliation")){
+  if(window.location.pathname.includes("digital-potential")){
     on_input()
   }
 }
