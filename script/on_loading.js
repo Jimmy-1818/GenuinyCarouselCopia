@@ -7,6 +7,7 @@ if (window.location.href.includes("#")){
   history.replaceState(null, "", url)
 }
 
+
 // languages on html: [ita, spa, eng], languages in navigator.language: [it, es, en]
 // default lang is english
 
@@ -42,7 +43,7 @@ function hide_other_languages(language){
 
 //change content based on language (ita / eng)
 function set_translated_media(language){
-  if(window.location.href == "https://www.genuiny.it/index1.html"){
+  if(window.location.href == "https://www.genuiny.it"){
     var smartphone = document.getElementsByClassName("smartphone")
     var alerts_btn = document.getElementsByClassName("alerts_btn")[0]
     var balance_image = document.getElementsByClassName("balance_image")[0]

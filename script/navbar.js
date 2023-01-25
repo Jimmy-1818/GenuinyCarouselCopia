@@ -287,7 +287,6 @@ function navbar_width_scroll_control(){
 
 window.onresize = function(){
   navbar_width_scroll_control()
-  console.log(window.location.href)
   if(window.location.href == "https://www.genuiny.it/index1.html"){
     home_on_resize()
   }
