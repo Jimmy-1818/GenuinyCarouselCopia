@@ -43,7 +43,7 @@ function hide_other_languages(language){
 
 //change content based on language (ita / eng)
 function set_translated_media(language){
-  if(window.location.href == "https://jimmy-1818.github.io/GenuinyCarouselCopia"){
+  if(window.location.href == "https://www.genuiny.it"){
     var smartphone = document.getElementsByClassName("smartphone")
     var alerts_btn = document.getElementsByClassName("alerts_btn")[0]
     var balance_image = document.getElementsByClassName("balance_image")[0]

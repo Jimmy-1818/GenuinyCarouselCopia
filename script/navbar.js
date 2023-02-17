@@ -11,24 +11,13 @@ const indicators = document.getElementsByClassName("carousel-indicators")
 
 const nearest_threshold = 70
 
-hamburger_listener()
 
-// Navbar animation
-function hamburger_listener(){
-  hamburger[0].addEventListener("click", hamburger_click)
-  if ((window.location.pathname.includes("index"))){
-    for (var i = 0; i < hamburger.length; i++){
-      if (i != 0){
-        hamburger[i].addEventListener("click", function(){
-          desktop_nav.classList.remove("navbar-hide")
-          hamburger_click()
-        })
-      }
-    }
-  }
-};
 
 function hamburger_click(){
+  var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
+  if (desktop_nav.classList.contains("navbar-hide")){
+    desktop_nav.classList.remove("navbar-hide")
+  }
   menu_mobile = document.getElementsByClassName("mobile-nav")[0]
   var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
   hamburger[0].classList.toggle("show")

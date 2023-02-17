@@ -14,7 +14,7 @@ function generate_link(){
   if(affiliation_link.includes("https://business.genuiny.com/")){
     var link_index = affiliation_link.indexOf("https://business.genuiny.com/")
     var variable_affiliation = affiliation_link.slice(link_index + 57)
-    var affiliate_site = "https://jimmy-1818.github.io/GenuinyCarouselCopia" + "#" + variable_affiliation
+    var affiliate_site = "https://genuiny.it" + "#" + variable_affiliation
     document.getElementById("processed-link").value = affiliate_site
   }
   else if (affiliation_link.length > 0){
