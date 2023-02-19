@@ -116,7 +116,8 @@ $breakpoint-desktop: 1024px
     font-size: 18px
     font-family: "Montserrat"
     font-weight: 700
-    text-transform: capitalize
+    &:first-letter
+      text-transform: uppercase
   a.page-link:first-of-type
     margin-left: 40px
   a.show, a.page-link:hover

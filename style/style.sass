@@ -1260,22 +1260,33 @@ div.main_landing_page
 //BUTTONS  index3
 
 main.index3
-	height: 100vh
-	background: linear-gradient(rgba(7, 119, 75, .25), rgba(7, 16, 119, .25)), url(../images/sfondo_sito_genuiny.jpg) no-repeat center / cover
+	background: linear-gradient(rgba(7, 119, 75, .25), rgba(7, 16, 119, .25)), url(../images/background_genuiny_website.jpg) no-repeat center / cover
+	filter: saturate(0.8)
+	@media (min-width: $breakpoint-768)
+		height: 100vh
 
 
 div.text
 	opacity: 0
 
 .buttons
+	flex-direction: column
+	row-gap: 3rem
+	transform: translate(0,0)
+	position: static
+	align-items: center
+	width: 80%
+	margin: auto
+	padding-top: 100px
 	display: flex
-	flex-direction: row
-	position: relative
-	top: calc(50% + 36px)
-	transform: translate(0, -50%)
-	margin: 0 7%
-	column-gap: 5%
 	justify-content: center
+	@media (min-width: $breakpoint-768)
+		flex-direction: row
+		position: relative
+		top: calc(50% + 36px)
+		transform: translate(0, -50%)
+		margin: 0 7%
+		column-gap: 5%
 	.option-card
 		width: 100%
 		max-width: 350px
@@ -1317,7 +1328,7 @@ div.text
 				width: 100%
 				transition: opacity .5s
 		.card-box
-			padding: 15px
+			padding: 15px 7%
 			h4
 				text-align: center
 				margin: 20px auto
