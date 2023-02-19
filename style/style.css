@@ -1235,7 +1235,8 @@ div.text {
       .buttons .option-card .card-image:hover div.text {
         opacity: 1; }
       .buttons .option-card .card-image:hover > img {
-        opacity: 0.1; }
+        opacity: 0.1;
+        background-size: 130%; }
       .buttons .option-card .card-image .overlay {
         position: absolute;
         width: 100%;
