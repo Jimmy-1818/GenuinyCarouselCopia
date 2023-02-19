@@ -1255,3 +1255,72 @@ div.main_landing_page
 			font-size: 2.2rem
 		&::hover
 			cursor: pointer
+
+
+//BUTTONS  index3
+
+main.index3
+	height: 100vh
+	background: linear-gradient(rgba(7, 119, 75, .25), rgba(7, 16, 119, .25)), url(../images/sfondo_sito_genuiny.jpg) no-repeat center / cover
+
+
+div.text
+	opacity: 0
+
+.buttons
+	display: flex
+	flex-direction: row
+	position: relative
+	top: calc(50% + 36px)
+	transform: translate(0, -50%)
+	margin: 0 7%
+	column-gap: 5%
+	justify-content: center
+	.option-card
+		width: 100%
+		max-width: 350px
+		cursor: pointer
+		border-radius: 10px
+		box-shadow: 0 0 15px 5px #00000050
+		transition: all ease 0.3s
+		background: white
+		&:hover
+			box-shadow: 0 0 0 4px #09435E, 0 0 0 (4px+3) #09435E
+		.card-image
+			position: relative
+			&:hover div.text
+				opacity: 1
+			&:hover > img
+				opacity: 0.1
+			.overlay
+				position: absolute
+				width: 100%
+				height: 100%
+				div.text
+					display: inline-block
+					position: relative
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					background: $genuinyColDark
+					color: white
+					padding: 5px 16px
+					border-radius: 20px
+					font-size: 2rem
+					white-space: nowrap
+					text-overflow: ellipsis
+					max-width: 90%
+					transition: opacity .5s
+
+			img
+				border-radius: 10px 10px 0 0 
+				width: 100%
+				transition: opacity .5s
+		.card-box
+			padding: 15px
+			h4
+				text-align: center
+				margin: 20px auto
+				text-transform: uppercase
+				font-weight: bold
+
