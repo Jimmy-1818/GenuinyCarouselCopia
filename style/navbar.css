@@ -138,8 +138,9 @@
     color: white;
     font-size: 18px;
     font-weight: 700;
-    font-family: "Montserrat";
-    text-transform: capitalize; }
+    font-family: "Montserrat"; }
+    .mobile-nav a.page-link:first-letter {
+      text-transform: uppercase; }
   .mobile-nav a.page-link:nth-child(5) {
     margin-bottom: 25px; }
   .mobile-nav a.page-link:hover {
