@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html translate="no" class="notranslate">
+<head>
+	<!---COOKIE-BOT----->
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d6c31a3e-a4a1-44c3-8459-094604ba2906" data-blockingmode="auto" type="text/javascript"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="google" content="notranslate">
+
+	<title>Genuiny - Share</title>
+
+	<!----Favicon----->
+	<link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+	<!---<link rel="manifest" href="../../images/favicon/site.webmanifest">--->
+	<link rel="mask-icon" href="../../images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="../../images/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	
+	<!--------BOOTSTRAP----------->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+	
+	<!----Jquery CDN--->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+	<!--STYLE-->
+	<link rel="stylesheet" type="text/css" href="../../style/style.css">
+	<link rel="stylesheet" type="text/css" href="../../style/navbar.css">
+
+	<!---Fonts links--->
+	<link rel="preload" href="../fonts/Montserrat/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="preload" href="../fonts/Inter/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
+</head>
+<body>
+	<header>
+		<div class="full-nav">
+						<nav class="desktop-nav">
+				<div class="container-navbar">
+					<div class="logo">
+						<a class="page-link" href="https://genuiny.it"><img src="../../images/svg-logo-ethical-w.png" alt="logo"></a>
+					</div>
+
+					<div class="menu">
+						<!--LATER REMOVE ALL (it doesn't work in local)-->
+						<a class="page-link" href="https://genuiny.it">home</a>
+						<a class="page-link" href="../subscribe">registrati</a>
+						<a class="page-link" href="../digital-potential">potenziale digitale</a>
+						<a class="show page-link" href="../share">condividi app</a>
+						<div class="grid-item dropdown-center dropdown language_group" style="width: 62px;"> <!--width so to avoid moving other titles-->
+							<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="../../images/language-flags/eng_flag.svg"></div>
+								<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="../../images/language-flags/ita_flag.svg"></div>
+								<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="../../images/language-flags/slv_flag.svg"></div>
+								<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="../../images/language-flags/spa_flag.svg"></div>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+								<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
+								<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italian </span></a></li>
+								<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<button class="hamburger" onclick="hamburger_click()">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</nav>
+			<nav class="mobile-nav">
+				<a class="page-link" href="https://genuiny.it">home</a>
+				<a class="page-link" href="../subscribe">registrati</a>
+				<a class="page-link" href="../digital-potential">potenziale digitale</a>
+				<a class="page-link" href="../share">condividi app</a>
+				<div class="grid-item dropdown-center dropdown language_group">
+					<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="../../images/language-flags/eng_flag.svg"></div>
+								<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="../../images/language-flags/ita_flag.svg"></div>
+								<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="../../images/language-flags/slv_flag.svg"></div>
+								<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="../../images/language-flags/spa_flag.svg"></div>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a onclick="set_lang_manually('eng'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English </span></a></li>
+						<li><a onclick="set_lang_manually('spa'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español </span></a></li>
+						<li><a onclick="set_lang_manually('ita'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italian </span></a></li>
+						<li><a onclick="set_lang_manually('slv'); hamburger_click()" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian </span></a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="opacity"></div>
+		</div>
+	</header>
+	<main class="container share">
+		<h1 class="title title-subscribe">Incrementa il tuo patrimonio digitale condividendo l'app.</h1>
+		<div class="share-boxes">
+			<div class="share-box">
+				<h2>Condividi il referral link</h2>
+				<div class="content-box">
+					<p>All'interno dell'app apri il menù in alto a sinistra e clicca "Condividi App", otterrai un link che manda a una pagina di registrazione a te collegata.</p>
+					<div>
+						<img class="share-app" src="../../images/share-app.jpg">
+					</div>
+
+					<!-- Button trigger modal -->
+					<a class="center-link modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#share-from-app">
+					  video tutorial <img src="../../images/icons/play-solid.svg">
+					</a>
+
+				</div>
+			</div>
+
+			<div class="share-box">
+				<h2>Condividi sito</h2>
+				<div class="content-box">
+					<p style="display: inline;">Inserisci il codice del tuo referral link nel riquadro sottostante e clicca sul tasto <div style="display: inline-block;" class="arrow_btn" height="20px"></div>.<br>Automaticamente otterrai un link che darà la possibilità ad un nuovo utente di registrarsi nella tua filiera direttamente dal sito.</p>
+
+
+					<div class="process-lines">
+						<div class="box">
+							<input class="process-line" id="link-to-process" type="text" name="affiliate-link" placeholder=" Inserisci il referral link">
+							<a class="process-line" id="process-link" height="20px"></a>
+						</div>
+						<div class="box">
+							<input id="processed-link" class="process-line" readonly="true" type="text" name="affiliate-link">
+							<a class="process-line" id="copy-link"></a>
+						</div>
+					</div>
+
+					<!-- Button trigger modal -->
+					<a class="center-link modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#share-via-site">
+					  video tutorial<img src="../../images/icons/play-solid.svg">
+					</a>
+				</div>
+			</div>
+
+			<div class="share-box">
+				<h2>Condividi su Instagram</h2>
+				<div class="content-box">
+					<p>Puoi condividere il sito (con il tuo referral link) tramite Instagram, postando 	questo video ed aggiungendo nello spazio apposito il link al sito (generato prima).
+					</p>
+					<a class="download" href="../videos/genuiny-social.mp4" download="genuiny-instagram">Scarica video</a>
+					
+					<div>
+						<video class="video-invite" controls width="250px" src="../videos/genuiny-social.mp4"></video>
+					</div>
+
+					<!-- Button trigger modal -->
+					<a class="center-link modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#share-on-instagram">
+					  video tutorial<img src="../../images/icons/play-solid.svg">
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="share-from-app" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-x"><div class="spans"><span></span><span></span></div></div>
+				<div class="modal-content">
+					<div class="modal-body max-height">
+						<video id="video-share-from-app" width="100%" height="100%" preload="auto" controls autoplay muted>
+							<source id="source_share_from_app" src="../videos/share_from_app_eng.mp4" type="">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="share-via-site" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-x"><div class="spans"><span></span><span></span></div></div>
+				<div class="modal-content">
+					<div class="modal-body max-height">
+						<video id="video-share-via-site" width="100%" height="100%" preload="auto" controls autoplay muted>
+							<source id="source_share_via_site" src="../videos/share_from_app_eng.mp4" type="">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="share-on-instagram" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-x"><div class="spans"><span></span><span></span></div></div>
+				<div class="modal-content">
+					<div class="modal-body max-height">
+						<video id="video-share-on-instagram" width="100%" height="100%" preload="auto" controls autoplay muted>
+							<source id="source_share_on_instagram" src="../videos/share_from_app_eng.mp4" type="">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="grid_item dropup-center dropup language_group">
+				<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="../../images/language-flags/eng_flag.svg"></div>
+					<div lang="ita" class="current-language-flex display_none"><span>IT</span><img class="lang_flag" src="../../images/language-flags/ita_flag.svg"></div>
+					<div lang="slv" class="current-language-flex display_none"><span>SL</span><img class="lang_flag" src="../../images/language-flags/slv_flag.svg"></div>
+					<div lang="spa" class="current-language-flex display_none"><span>ES</span><img class="lang_flag" src="../../images/language-flags/spa_flag.svg"></div>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a onclick="set_lang_manually('eng')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/eng_flag.svg"><span style="font-size: 1em;">English</span></a></li>
+					<li><a onclick="set_lang_manually('spa')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/spa_flag.svg"><span style="font-size: 1em;">Español</span></a></li>
+					<li><a onclick="set_lang_manually('ita')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/ita_flag.svg"><span style="font-size: 1em;">Italian</span></a></li>
+					<li><a onclick="set_lang_manually('slv')" class="dropdown-item"><img class="lang_flag" src="../../images/language-flags/slv_flag.svg"><span style="font-size: 1em;">Slovenian</span></a></li>
+				</ul>
+			</div>
+			<div class="grid_item">
+				<a href="mailto:staff@genuiny.com">staff@genuiny.com</a>
+			</div>
+			<div class="grid_item">
+				<a href="../privacy">Privacy policy</a><a class="br slash" href="../cookie">Cookie policy</a>
+			</div>
+			<div class="grid_item">
+				<a href="https://goo.gl/maps/5ype6eZXjok3Bxiv6" target="self">Sede legale: <span class="br">20-22 Wenlock Road </span><span class="br slash">London, England, N1 7GU</span></a>
+			</div>
+			<div class="grid_item two_span">
+				© Copyright 2023 Genuiny - All Rights Reserved
+			</div>
+		</div>
+	</footer>
+
+	<!----- BOOTSTRAP ------->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+	
+	<!--navbar-->
+	<script type="text/javascript" src="../../script/navbar.js"></script>
+	<script type="text/javascript" src="../../script/on_loading.js"></script>
+	<script type="text/javascript" src="../../script/share_functionalities.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+
+</body>
+</html>

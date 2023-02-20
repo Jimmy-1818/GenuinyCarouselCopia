@@ -1202,24 +1202,24 @@ div.text {
   opacity: 0; }
 
 .buttons {
+  display: flex;
   flex-direction: column;
   row-gap: 3rem;
+  align-items: stretch;
   transform: translate(0, 0);
   position: static;
-  align-items: center;
   width: 80%;
-  margin: auto;
-  padding-top: 100px;
-  display: flex;
-  justify-content: center; }
+  margin: auto 7%;
+  padding-top: 100px; }
   @media (min-width: 768px) {
     .buttons {
+      padding-top: 0;
       flex-direction: row;
       position: relative;
       top: calc(50% + 36px);
       transform: translate(0, -50%);
-      margin: 0 7%;
-      column-gap: 5%; } }
+      column-gap: 5%;
+      margin: auto; } }
   .buttons .option-card {
     width: 100%;
     max-width: 350px;
@@ -1227,9 +1227,16 @@ div.text {
     border-radius: 10px;
     box-shadow: 0 0 15px 5px #00000050;
     transition: all ease 0.3s;
-    background: white; }
-    .buttons .option-card:hover {
-      box-shadow: 0 0 0 4px #09435E, 0 0 0 7px #09435E; }
+    background: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%); }
+    @media (min-width: 768px) {
+      .buttons .option-card {
+        position: static;
+        transform: translate(0, 0); }
+        .buttons .option-card:hover {
+          box-shadow: 0 0 0 4px #09435E, 0 0 0 7px #09435E; } }
     .buttons .option-card .card-image {
       position: relative; }
       .buttons .option-card .card-image:hover div.text {

@@ -128,7 +128,7 @@ function replace_event_listener(){
 
 function change_functioning_image(){
 	const image = document.getElementById("functioning_image")
-	image.setAttribute("src", "images/functioning.png")
+	image.setAttribute("src", "../images/functioning.png")
 	image.style.maxWidth = "none"
 	image.style.border = "none"
 	image.style.borderRadius = "0"
