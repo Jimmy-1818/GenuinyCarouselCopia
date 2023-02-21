@@ -238,7 +238,7 @@ main {
   z-index: -4; }
 
 ul.subscribe-steps {
-  padding: 0;
+  padding: 2rem 7vw 2rem;
   position: relative;
   max-width: 1000px;
   margin: 25px auto 0; }
@@ -250,7 +250,7 @@ ul.subscribe-steps {
     background-position: left 46px;
     background-size: 20px;
     font-size: calc(1.4rem + 0.4vw); }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     ul.subscribe-steps h7 {
       user-select: none; } }
 
@@ -302,11 +302,10 @@ li.subscribe-step-1 .subscribe-parent {
 
 .list-line {
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .list-line {
       display: block;
       position: absolute;
-      left: 0px;
       top: 75px;
       width: 10px;
       transform: translate(50%, 0%);
@@ -328,7 +327,7 @@ li.subscribe-step-1 .subscribe-parent {
   text-align: center;
   color: white;
   font-size: 20px; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .round-bullet, .round-bullet-inside {
       transform: translate(0, -50%);
       left: -10px;
@@ -339,14 +338,14 @@ li.subscribe-step-1 .subscribe-parent {
     font-weight: bold;
     top: 50%;
     transform: translate(0, -50%); }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .round-bullet h1, .round-bullet-inside h1 {
         top: 5px;
         transform: translate(0, 0); } }
 
 .round-bullet-inside {
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .round-bullet-inside {
       display: block;
       background-color: white;
@@ -362,7 +361,7 @@ li.subscribe-step-1 .subscribe-parent {
         font-size: 30px; }
       .round-bullet-inside img {
         display: none; } }
-    @media (min-width: 768px) and (min-width: 768px) {
+    @media (min-width: 1024px) and (min-width: 1024px) {
       .round-bullet-inside img {
         display: block;
         width: 30px;
@@ -395,7 +394,7 @@ li.subscribe-step-1 .subscribe-parent {
   transform: translate(-50%, 0);
   position: relative;
   left: 45%; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .subscribe-step-3 div.images-container {
       transform: translate(0, 0);
       position: static;
@@ -1289,6 +1288,7 @@ div.content-business {
   max-width: 600px;
   margin: 7rem auto 0; }
   div.content-business h1 {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
