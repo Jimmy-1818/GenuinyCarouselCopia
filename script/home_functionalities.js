@@ -6,7 +6,7 @@ function home_on_resize(){
 	if ((page_width >= 1024) && (layout_mobile)){
 		layout_mobile = false
 		desktop_reform()
-		add_container()
+		//add_container()
 		change_functioning_image()
 		remove_event_listener()
 		on_scroll()
@@ -83,13 +83,13 @@ function desktop_reform(){
 }
 
 
-function add_container(){
-	document.getElementsByTagName("main")[0].classList.add("container")
-}
+//function add_container(){
+//	document.getElementsByTagName("main")[0].classList.add("container")
+//}
 
-function remove_container(){
-	document.getElementsByTagName("main")[0].classList.remove("container")
-}
+//function remove_container(){
+//	document.getElementsByTagName("main")[0].classList.remove("container")
+//}
 
 function remove_event_listener(){
 	for (var i = 0; i < carousel_control.length; i++) {
