@@ -756,7 +756,10 @@ img.share-app {
   @media (min-width: 1024px) {
     #carousel-system-ban .to-calculator, #carousel-system-ban-desktop .to-calculator {
       margin: 15px auto;
-      padding: 10px 70px; } }
+      padding: 10px 70px; }
+      #carousel-system-ban .to-calculator:hover, #carousel-system-ban-desktop .to-calculator:hover {
+        transition: scale 0.1s cubic-bezier(0.65, 0.12, 0.8, 1.51);
+        scale: 1.05; } }
 
 #carousel-system-ban-desktop .module-1 img {
   width: 80%; }
@@ -1186,9 +1189,10 @@ div.main_landing_page {
       box-shadow: 0px 5px 12px 0px #00000080; } }
   @media (min-width: 1024px) and (min-width: 1024px) {
     .button-register {
-      font-size: 2.2rem; } }
-  @media (min-width: 1024px) {
-      .button-register::hover {
+      font-size: 2.2rem; }
+      .button-register:hover {
+        transition: scale 0.1s cubic-bezier(0.65, 0.12, 0.8, 1.51);
+        scale: 1.05;
         cursor: pointer; } }
 
 main.index3 {

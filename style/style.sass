@@ -798,6 +798,9 @@ img.share-app
 		@media (min-width: $breakpoint-1024)
 			margin: 15px auto
 			padding: 10px 70px
+			&:hover
+				transition: scale .1s cubic-bezier(0.65, 0.12, 0.8, 1.51)
+				scale: 1.05
 
 #carousel-system-ban-desktop
 	@extend #carousel-system-ban
@@ -1253,8 +1256,10 @@ div.main_landing_page
 		box-shadow: 0px 5px 12px 0px #00000080
 		@media (min-width: $breakpoint-1024)
 			font-size: 2.2rem
-		&::hover
-			cursor: pointer
+			&:hover
+				transition: scale .1s cubic-bezier(0.65, 0.12, 0.8, 1.51)
+				scale: 1.05
+				cursor: pointer
 
 
 //BUTTONS  index3
