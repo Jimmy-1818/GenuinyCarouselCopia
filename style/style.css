@@ -1234,16 +1234,19 @@ div.text {
     @media (min-width: 768px) {
       .buttons .option-card {
         position: static;
-        transform: translate(0, 0); }
-        .buttons .option-card:hover {
-          box-shadow: 0 0 0 4px #09435E, 0 0 0 7px #09435E; } }
+        transform: translate(0, 0); } }
+  @media (min-width: 768px) and (min-width: 1024px) {
+    .buttons .option-card:hover {
+      box-shadow: 0 0 0 4px #09435E, 0 0 0 7px #09435E; } }
+
     .buttons .option-card .card-image {
       position: relative; }
-      .buttons .option-card .card-image:hover div.text {
-        opacity: 1; }
-      .buttons .option-card .card-image:hover > img {
-        opacity: 0.1;
-        background-size: 130%; }
+      @media (min-width: 1024px) {
+        .buttons .option-card .card-image:hover div.text {
+          opacity: 1; }
+        .buttons .option-card .card-image:hover > img {
+          opacity: 0.1;
+          background-size: 130%; } }
       .buttons .option-card .card-image .overlay {
         position: absolute;
         width: 100%;
