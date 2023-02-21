@@ -63,7 +63,21 @@ function set_translated_media(language){
       }
     }
   }
-
+  
+  else if (window.location.pathname.includes("business")){
+    var smartphone = document.getElementsByClassName("smartphone")
+    if (language == "eng"){
+      if (smartphone[0].getAttribute("src") != "../images/front-mock-up-eng.png"){
+          for (var i = 0; i < smartphone.length; i++) {
+            smartphone[i].setAttribute("src", "../images/front-mock-up-eng.png")
+          }
+      }
+    }else if (language == "ita"){
+      for (var i = 0; i < smartphone.length; i++) {
+        smartphone[i].setAttribute("src", "../images/front-mock-up-ita.png")
+      }
+    }
+  }
 
   else if (window.location.pathname.includes("subscribe")){
     var video_autenticate = document.getElementsByClassName("video_autenticate_src")[0]
