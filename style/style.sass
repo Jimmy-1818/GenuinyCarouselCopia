@@ -1356,7 +1356,9 @@ div.content-business
 		padding: 12px 25px
 		background: $genuinyCol
 		border-radius: 99px
-		font-size: 3rem
+		font-size: 112%
+		@media (min-width: $breakpoint-1024)
+			font-size: 3rem
 	h2
 		margin-top: 4rem
 	ul, p
@@ -1364,11 +1366,10 @@ div.content-business
 	ul li
 		border-left: 4px solid $genuinyCol
 		list-style: none	
-		list-style-position: inside
 		position: relative
 		left: -20px
 		margin-bottom: 2rem
-		padding-left: 20px
+		padding: 1rem 0px 1rem 20px
 	
 	img.business-image
 		width: 100%
