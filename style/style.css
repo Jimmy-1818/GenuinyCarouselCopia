@@ -1026,27 +1026,6 @@ main {
   box-shadow: 0px 0px 60px 11px #00000045;
   padding-bottom: 50px; }
 
-@media (min-width: 1024px) {
-  main.subscribe {
-    background: url(../images/wave-flat-subscribe.png);
-    background-repeat: no-repeat;
-    background-position: 0px 20px;
-    background-size: 100% 120px; } }
-
-@media (min-width: 1024px) {
-  main.share {
-    background: url(../images/wave-flat-share.png);
-    background-repeat: no-repeat;
-    background-position: 0px 20px;
-    background-size: 100% 120px; } }
-
-@media (min-width: 1024px) {
-  main.affiliation {
-    background: url(../images/wave-flat-affiliation.png);
-    background-repeat: no-repeat;
-    background-position: 0px 20px;
-    background-size: 100% 110px; } }
-
 span[lang] {
   font-size: 1em;
   font-family: inherit;
@@ -1197,8 +1176,10 @@ div.main_landing_page {
         cursor: pointer; } }
 
 main.index3 {
-  background: linear-gradient(rgba(7, 119, 75, 0.25), rgba(7, 16, 119, 0.25)), url(../images/background_genuiny_website.jpg) no-repeat center/cover;
-  filter: saturate(0.8); }
+  background: linear-gradient(rgba(7, 119, 75, 0.25), rgba(7, 16, 119, 0.25)), url(../images/background_genuiny_website.png) no-repeat -140px 70px/75%;
+  filter: saturate(0.8);
+  width: 100%;
+  position: relative; }
   @media (min-width: 768px) {
     main.index3 {
       height: 100vh; } }
@@ -1209,33 +1190,28 @@ div.text {
 .buttons {
   display: flex;
   flex-direction: column;
-  row-gap: 3rem;
   align-items: stretch;
-  transform: translate(0, 0);
-  position: static;
-  width: 80%;
-  margin: auto;
-  padding-top: 100px; }
-  @media (min-width: 768px) {
-    .buttons {
-      padding-top: 0;
-      flex-direction: row;
-      position: relative;
-      top: calc(50% + 36px);
-      transform: translate(0, -50%);
-      column-gap: 5%;
-      margin: auto; } }
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  width: 40%;
+  margin: 0;
+  padding-top: 73px;
+  row-gap: 0;
+  height: 100vh; }
   .buttons .option-card {
+    display: flex;
+    align-items: stretch;
     width: 100%;
-    max-width: 350px;
+    height: 100%;
     cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 0 15px 5px #00000050;
     transition: all ease 0.3s;
     background: white;
     position: relative;
     left: 50%;
-    transform: translate(-50%); }
+    transform: translate(-50%);
+    border-bottom: 6px solid #0abab5; }
     @media (min-width: 768px) {
       .buttons .option-card {
         position: static;
@@ -1245,18 +1221,26 @@ div.text {
       box-shadow: 0 0 0 4px #09435E, 0 0 0 7px #09435E; } }
 
     .buttons .option-card .card-image {
-      position: relative; }
+      position: relative;
+      height: 100%;
+      width: 40%; }
       @media (min-width: 1024px) {
         .buttons .option-card .card-image:hover div.text {
           opacity: 1; }
         .buttons .option-card .card-image:hover > img {
           opacity: 0.1;
           background-size: 130%; } }
-      .buttons .option-card .card-image .overlay {
+    .buttons .option-card .background-1 {
+      background: url(../images/private-button.png) no-repeat center/cover; }
+    .buttons .option-card .background-2 {
+      background: url(../images/business-button.png) no-repeat center/cover; }
+    .buttons .option-card .background-3 {
+      background: url(../images/association-button.png) no-repeat center/cover; }
+      .buttons .option-card .background-3 .overlay {
         position: absolute;
         width: 100%;
         height: 100%; }
-        .buttons .option-card .card-image .overlay div.text {
+        .buttons .option-card .background-3 .overlay div.text {
           display: inline-block;
           position: relative;
           top: 50%;
@@ -1271,12 +1255,15 @@ div.text {
           text-overflow: ellipsis;
           max-width: 90%;
           transition: opacity 0.5s; }
-      .buttons .option-card .card-image img {
+      .buttons .option-card .background-3 img {
         border-radius: 10px 10px 0 0;
         width: 100%;
         transition: opacity 0.5s; }
     .buttons .option-card .card-box {
-      padding: 15px 7%; }
+      padding: 15px 7%;
+      background: white;
+      color: black;
+      width: 60%; }
       .buttons .option-card .card-box h4 {
         text-align: center;
         margin: 20px auto;
