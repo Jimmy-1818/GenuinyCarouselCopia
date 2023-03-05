@@ -3,16 +3,12 @@ $desktop-navbar-height: 40px
 
 $breakpoint-desktop: 1024px
 
-
-\:root
-  --primary: #09435E
-  --light: #EEEEEE
-  --dark: #0abab5
-
-
-//nav.desktop-nav
-//  &:not([data-scroll='0']) 
-//    box-shadow: 0px 0px 13px 6px #00000080
+$genuinyCol: #0abab5
+$genuinyColDark: #09435E 
+$colLight: #EEEEEE
+ 
+//html:not([data-scroll='0']) .desktop-nav
+//  background-color: $genuinyCol
 
 .desktop-nav
   position: fixed
@@ -20,12 +16,12 @@ $breakpoint-desktop: 1024px
   left: 0
   right: 0
   z-index: 81
-  background-color: var(--dark)
+  background-color: white
   transition: top .3s 0s, box-shadow .4s 0s, height .3s 0s
   height: 62px
   padding: 16px 4vw
   @media (min-width: $breakpoint-desktop)
-    padding: 16px 32px
+    padding: 16px 15%
     height: 73px
 
   .container-navbar
@@ -68,7 +64,7 @@ $breakpoint-desktop: 1024px
     margin-bottom: 5px
     position: relative
 
-    background-color: var(--light)
+    background-color: #3c3c3c
     border-radius: 6px
     z-index: 1
 
@@ -79,7 +75,7 @@ $breakpoint-desktop: 1024px
     margin-bottom: 0
 
 .hamburger.show span
-  background-color: var(--primary)
+  background-color: $genuinyColDark
 
 .hamburger.show span:nth-child(1) 
   transform: translate(0px, -2px) rotate(45deg)
@@ -93,7 +89,7 @@ $breakpoint-desktop: 1024px
   top: -1px
 
 .hamburger.show:hover span
-  background-color: var(--light)
+  background-color: $colLight
 
 .menu
   display: none
@@ -106,7 +102,7 @@ $breakpoint-desktop: 1024px
     a
       white-space: nowrap
   a.page-link
-    color: white
+    color: #3c3c3c
     margin: 0 4px
     font-weight: 600
     text-decoration: none
@@ -121,7 +117,7 @@ $breakpoint-desktop: 1024px
   a.page-link:first-of-type
     margin-left: 40px
   a.show, a.page-link:hover
-    background-color: var(--primary)
+    background-color: $genuinyColDark
     color: white
 
 
@@ -139,8 +135,8 @@ $breakpoint-desktop: 1024px
   z-index: 80
   width: 100vw
   padding-top: $mobile-navbar-height + 60px
-  background-color: var(--dark)
-  //border-bottom: 3px solid var(--primary)
+  background-color: $genuinyCol
+  //border-bottom: 3px solid $genuinyColDark
   transition: top 0.3s cubic-bezier(0, 0.5, 0.5, 1), box-shadow 0.3s cubic-bezier(0, 0.5, 0.5, 1)
   @media (min-width: $breakpoint-desktop)
     display: none
@@ -150,7 +146,7 @@ $breakpoint-desktop: 1024px
     margin: 0 auto 12px
     padding: 10px 14px
 
-    background-color: var(--primary)
+    background-color: $genuinyColDark
     text-decoration: none
     border-radius: 99px
     font-weight: bold
@@ -165,8 +161,8 @@ $breakpoint-desktop: 1024px
   a.page-link:nth-child(5)
     margin-bottom: 25px
   a.page-link:hover
-    background-color: var(--light)
-    color: var(--primary)
+    background-color: $colLight
+    color: $genuinyColDark
   .dropdown
     display: block
     margin: 0 auto 12px auto
@@ -268,7 +264,7 @@ body
   position: absolute
   top: 50%
   span
-    background-color: var(--dark)
+    background-color: $genuinyCol
 
 
 .bottom-btn-up
