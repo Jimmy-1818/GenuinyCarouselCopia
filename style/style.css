@@ -1201,7 +1201,7 @@ header.choice {
       position: absolute;
       left: 53%;
       top: 32%;
-      font-size: clamp(4rem, 6vw, 17rem);
+      font-size: clamp(4rem, 6vw, 16rem);
       font-family: "montserrat";
       font-weight: bold;
       transform: translate(0%, -50%); }
@@ -1233,8 +1233,8 @@ header.choice {
     box-shadow: -10px -10px 24px 0px #ffffff, 15px 15px 15px -14px #00000099;
     column-gap: 4px;
     background: #09435e;
-    max-width: 1200px;
-    max-height: 400px; }
+    max-width: 1100px;
+    max-height: 317px; }
     @media (min-width: 1024px) {
       header.choice .buttons {
         flex-direction: row; } }
@@ -1277,7 +1277,7 @@ header.choice {
         left: 50%;
         background: #09435E;
         color: white;
-        padding: 5px 16px;
+        padding: 1.3% 5%;
         border-radius: 99px;
         font-size: clamp(1rem, 1vw, 3rem);
         white-space: nowrap;
@@ -1446,11 +1446,12 @@ main.index3 .section-container {
       border-radius: 99px;
       margin-top: 2rem; }
       #accordion-faq .accordion-item .accordion-button:not(.collapsed) {
-        color: #0abab5;
-        margin-bottom: 1rem; }
+        color: #0abab5; }
     #accordion-faq .accordion-item button.show {
       box-shadow: none;
       color: #0abab5; }
+    #accordion-faq .accordion-item .accordion-body {
+      margin-top: 1rem; }
 
 .main-container {
   max-width: 2000px;
