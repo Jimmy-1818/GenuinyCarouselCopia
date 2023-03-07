@@ -323,5 +323,3 @@ function on_scroll(){
   //  bottom_btn_regulation()
   //}
 };
-
-

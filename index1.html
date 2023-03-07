@@ -47,7 +47,7 @@
 
 				<div class="menu">
 					<!--LATER REMOVE ALL (it doesn't work in local)-->
-					<a class="page-link" href="#">home</a>
+					<a class="page-link" onclick="window.scrollTo(0,0)">home</a>
 					<a class="page-link" onclick="scrollToOffset('accordion-faq');">chi siamo</a>
 					<a class="page-link" onclick="scrollToOffset('produts-container');">i nostri prodotti</a>
 					<div class="grid-item dropdown-center dropdown language_group" style="width: 62px;"> <!--width so to avoid moving other titles-->
@@ -74,9 +74,9 @@
 			</div>
 		</nav>
 		<nav class="mobile-nav">
-			<a class="page-link" href="#">home</a>
-			<a class="page-link" href="#accordion-faq">chi siamo</a>
-			<a class="page-link" href="#">i nostri prodotti</a>
+			<a class="page-link" onclick="window.scrollTo(0,0); hamburger_click();">home</a>
+			<a class="page-link" onclick="scrollToOffset('accordion-faq'); hamburger_click();">chi siamo</a>
+			<a class="page-link" onclick="scrollToOffset('produts-container'); hamburger_click();">i nostri prodotti</a>
 			<div class="grid-item dropdown-center dropdown language_group">
 				<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
@@ -281,7 +281,7 @@
 					<div class="text-block">
 						<h1 class="certify">Certify Genuiny</h1>
 						<p class="description">Prodotti e servizi autentici, a denominazione d'origine geolocalizzata certificata con la blockchain.</p>
-						<p class="info">More info</p>
+						<a href="#" target="_blank" style="text-decoration: none;"><p class="info">More info</p></a>
 					</div>
 					<div class="product-image">
 				</div>
