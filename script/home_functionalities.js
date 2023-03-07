@@ -1,7 +1,7 @@
 
 
 const app_desktop_html =   `
-		<div id="carousel-app-desktop" class="carousel slide keep-carousel common-div-desktop" data-bs-ride="false" data-bs-interval="false" data-bs-touch="false"><h1 class="section-title">App</h1><img class="smartphone app-image" src="../images/front-mock-up-ita.png">
+		<div id="carousel-app-desktop" class="carousel slide keep-carousel common-div-desktop" data-bs-ride="false" data-bs-interval="false" data-bs-touch="false"><img class="smartphone app-image" src="../images/front-mock-up-ita.png">
 			<div class="carousel-inner">
 				
 				<div class="carousel-item active">
@@ -129,16 +129,14 @@ var layout_mobile = true
 function home_on_resize(){
 	var page_width = window.innerWidth
 	if ((page_width >= 1024) && (layout_mobile)){
-		console.log("desktop")
 		layout_mobile = false
 		//desktop_reform()
 		//add_container()
 		//change_functioning_image()
 		//remove_event_listener()
 		//on_scroll()
-		mobile_app.innerHTML = app_desktop_html
+		mobile_app.outerHTML = app_desktop_html
 	}else if ((page_width < 1024) && !(layout_mobile)){
-		console.log("mobile")
 		layout_mobile = true
 		var desktop_app = document.getElementById("carousel-app-desktop")
 		//document.getElementsByTagName("body")[0].innerHTML = mobile_body
