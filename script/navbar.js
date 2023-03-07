@@ -15,6 +15,24 @@ const nearest_threshold = 70
 
 function hamburger_click(){
   var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
+  
+  //CLOSING
+  if (hamburger[0].classList.contains("show")){
+    if (window.scrollY == 0){
+      desktop_nav.classList.remove("desktop_nav_dark")
+      desktop_nav.classList.remove("desktop_nav_shadow")
+    }
+    else{
+      desktop_nav.classList.add("desktop_nav_shadow")
+      desktop_nav.classList.add("desktop_nav_dark")
+    }
+  }
+  //OPENING
+  else{
+    desktop_nav.classList.remove("desktop_nav_shadow")
+    desktop_nav.classList.add("desktop_nav_dark")
+  }
+  var desktop_nav = document.getElementsByClassName("desktop-nav")[0]
   if (desktop_nav.classList.contains("navbar-hide")){
     desktop_nav.classList.remove("navbar-hide")
   }
@@ -23,12 +41,6 @@ function hamburger_click(){
   hamburger[0].classList.toggle("show")
   menu_mobile.classList.toggle("show-mobile")
   desktop_nav.classList.toggle("mobile_nav_immediate_shadow")
-  if (menu_mobile.classList.contains("show-mobile")){
-    desktop_nav.style.boxShadow = "none"
-  }
-  else if (!window.scrollY == 0){
-    desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
-  }
   opacity.classList.toggle("show-opacity")
   if ((!menu_mobile.classList.contains("show-mobile")) && (current_index()[1] < nearest_threshold)) {
     desktop_nav.classList.add("navbar-hide")
@@ -255,32 +267,32 @@ on_scroll()
 
 
 
-
-
 function navbar_width_scroll_control(){
   desktop_nav = document.getElementsByClassName("desktop-nav")[0]
+  //ON TOP
   if (window.scrollY == 0){
-    desktop_nav.style.boxShadow = "0px 0px 16px 3px transparent"
+    if (hamburger[0].classList.contains("show")){
+      desktop_nav.classList.remove("desktop_nav_shadow")
+    }
+    else{
+      desktop_nav.classList.remove("desktop_nav_dark")
+      desktop_nav.classList.remove("desktop_nav_shadow")
+    }
     if(window.innerWidth >= 1024){
       desktop_nav.style.height = "73px"
-    }else{
-      desktop_nav.style.height = "62px"
     }
+  //SCROLLED
   }else{
-    if (!menu_mobile.classList.contains("show-mobile")){
-      desktop_nav.style.boxShadow = "0px 0px 16px 3px #00000045"
-    }
     desktop_nav.style.height = "62px"
+    if (hamburger[0].classList.contains("show")){
+      desktop_nav.classList.remove("desktop_nav_shadow")
+    }
+    else{
+      desktop_nav.classList.add("desktop_nav_dark")
+      desktop_nav.classList.add("desktop_nav_shadow")
+    }
   }
 }
-
-window.onresize = function(){
-  navbar_width_scroll_control()
-  if(window.location.href == "https://www.genuiny.it/index1.html"){
-    home_on_resize()
-  }
-}
-
 
 /////////////// TO SHOW/HIDE BOTTOM BTN/NAVBAR //////////////
 

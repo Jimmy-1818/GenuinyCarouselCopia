@@ -144,19 +144,19 @@ function language_set(){
         if(browser_language.includes("en")){
           null //every elem with (lang!="eng" is "display_none" by default)
           lang_setted = true
-          set_translated_media("eng")
+          //set_translated_media("eng")
         }
         else if(browser_language.includes("it")){
           hide_other_languages("ita")
-          set_translated_media("ita")
+          //set_translated_media("ita")
           lang_setted = true
         }else if(browser_language.includes("sl")){
           hide_other_languages("slv")
-          set_translated_media("eng")
+          //set_translated_media("eng")
           lang_setted = true
         }else if(browser_language.includes("es")){
           hide_other_languages("spa")
-          set_translated_media("eng")
+          //set_translated_media("eng")
           lang_setted = true
         }
       }
@@ -164,9 +164,33 @@ function language_set(){
   }else{
     hide_other_languages(localStorage.getItem("lang_set"))
     if (localStorage.getItem("lang_set") == "ita"){
-      set_translated_media("ita")
+      //set_translated_media("ita")
     }else{
-      set_translated_media("eng")
+      //set_translated_media("eng")
     }
   }
+}
+
+
+function scrollToOffset(id, offset){
+  console.log(id, offset)
+  if (offset === undefined){
+    offset = 120
+  }
+  console.log(id, offset)
+  var element = document.getElementById(id);
+  var elementPosition = element.getBoundingClientRect().top;
+  var offsetPosition = elementPosition + window.pageYOffset - offset;
+
+  window.scrollTo({
+       top: offsetPosition,
+       behavior: "smooth"
+  });
+}
+
+window.onresize = function(){
+  navbar_width_scroll_control()
+  //if(window.location.href == "https://www.genuiny.it/index1.html"){
+  home_on_resize()
+  //}
 }

@@ -1,21 +1,151 @@
 
-const mobile_body = document.getElementsByTagName("body")[0].innerHTML
+
+const app_desktop_html =   `
+		<div id="carousel-app-desktop" class="carousel slide keep-carousel common-div-desktop" data-bs-ride="false" data-bs-interval="false" data-bs-touch="false"><h1 class="section-title">App</h1><img class="smartphone app-image" src="../images/front-mock-up-ita.png">
+			<div class="carousel-inner">
+				
+				<div class="carousel-item active">
+					<div class="module module-2">
+						<h1 class="module-title">Avvisi e convalide</h1>
+						<div class="module-overflow">
+							<img class="alerts_btn" src="../images/alerts_ita.png">
+							<p>
+								In quest'area vengono visualizzate le notifiche certificate:<br><br>
+								</p>
+								<ul>
+									<li>Autentica dato (utente)</li>
+									<li>Digital Profit</li>
+									<li>Smart contract</li>
+								</ul><br>
+							<p>
+								Gli accrediti del servizio Digital Profit, concernenti il premio Rendita, saranno di volta in volta autorizzati dall'utente beneficiario.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="module module-3">
+						<h1 class="module-title">GData</h1>
+						<div class="module-overflow">
+							<p>
+								</p><p class="value">1 GData = 1€</p>
+								I GData funzionano in modo semplice, come una Gift card o un buono Amazon, ma a differenza dei buoni cartacei, sono crittografati, cioè non sono falsificabili.<br>
+								I GData sono ricaricabili tramite il proprio Wallet.<br><br>
+
+								<span class="subtitle">Perché conviene utilizzare i GData?</span><br><br>
+
+								I vantaggi sono diversi:<br><br>
+								<ul>
+									<li>Inviare e ricevere valore ai propri contatti gratuitamente</li>
+									<li>Accettare pagamenti senza commissioni (per le attività commerciali)</li>
+									<li>In quanto buoni regalo, non sono soggetti a tassazione</li>
+									<li>Una volta maturato il premio Digital Profit, i GData saranno immediatamente spendibili nel circuito Geniny Point o riconvertibili in Euro (da 50 GData)</li>
+								</ul>
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="module module-4">
+						<h1 class="module-title">Conto</h1>
+						<div class="module-overflow">
+							<img class="balance_image" src="../images/account_ita.png">
+							<p>
+								Gli utenti Genuiny hanno a disposizione 3 conti.<br>
+								I rispettivi saldi indicano il totale dei diversi tipi di valore detenuti dall'utente.<br><br>
+								</p><ul>
+									<li><b>Conto GData:</b><br>
+									ll conto GData indica le disponibilità immediate dell'utente Genuiny.</li><br>
+									<li><b>Conto NFTP:</b><br>
+									Il conto NFTP è il conto deposito titoli dell'utente Genuiny.</li><br>
+									<li><b>Conto Digital Profit:</b><br>
+									Il conto Digital Profit indica tutte le operazioni, in dare ed avere, che saranno compensate nel momento della maturazione del prorio Premio Rendita erogato dal servizio Digital Profit.</li>
+								</ul>
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="module module-5">
+						<h1 class="module-title">Altre funzioni</h1>
+						<div class="module-overflow">
+							<p>
+								All'iterno dell'app di possono trovare altre funzioni secondarie.<br><br>
+								</p><ul>
+									<li><b>Wall</b><br>
+									Il Wall è la sezione all'interno della qualle le attività commerciali pubblicheranno post che potranno essere visti dai loro contatti.</li><br>
+									<li><b>Cerca</b><br>
+									Da qui si possono cercare attività, persone e articoli.</li><br>
+									<li><b>Chat</b><br>
+									Qui puoi mandare messaggi diretti ai tuoi contatti.</li><br>
+									<li><b>Aggiungi dato</b><br>
+									Da qui si può invitare un amico a registrarsi o aggiungere ai propri contatti un utente già registrato.</li><br>
+									<li><b>Smart Contract</b><br>
+									<!-- Button trigger modal -->
+									<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#smart-contract">Cosa sono gli smart contract?</a></li><br>
+									<li><b>FAQ</b><br>
+									Qui trovi le risposte alle domande frequenti.</li>
+								</ul>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control carousel-control-prev change-target" type="button" data-bs-target="#carousel-app-desktop" data-bs-slide="prev">
+			<span class="visually-hidden" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control carousel-control-next change-target display-block" type="button" data-bs-target="#carousel-app-desktop" data-bs-slide="next">
+			<span class="visually-hidden" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+			</button>
+			<div class="bottom-btn">
+				<div class="carousel-indicators">
+					<button class="active change-target" type="button" data-bs-target="#carousel-app-desktop" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" class="change-target" data-bs-target="#carousel-app-desktop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" class="change-target" data-bs-target="#carousel-app-desktop" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					<button type="button" class="change-target" data-bs-target="#carousel-app-desktop" data-bs-slide-to="3" aria-label="Slide 4"></button>
+					
+				</div>
+				<div class="next-title desktop_hide">
+					<h1 class="module-title-bottom">Avvisi e convalide</h1>
+				</div>
+				<div class="arrow desktop_hide">
+					<img class="arrow-img display-block" src="../images/arrow2.png" alt="next paragraph">
+					<img class="subscribe-img" src="../images/page-link.png" alt="next page">
+				</div>
+				<div class="alternative-next desktop_hide" onclick="alternative_next_click(2)"></div>
+				<button class="hamburger bottom-left desktop_hide" onclick="hamburger_click()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div> `
+const mobile_app = document.getElementById("carousel-app")
+const mobile_app_outerHTML = mobile_app.outerHTML
+
 var layout_mobile = true
 function home_on_resize(){
 	var page_width = window.innerWidth
 	if ((page_width >= 1024) && (layout_mobile)){
+		console.log("desktop")
 		layout_mobile = false
-		desktop_reform()
+		//desktop_reform()
 		//add_container()
-		change_functioning_image()
-		remove_event_listener()
-		on_scroll()
+		//change_functioning_image()
+		//remove_event_listener()
+		//on_scroll()
+		mobile_app.innerHTML = app_desktop_html
 	}else if ((page_width < 1024) && !(layout_mobile)){
+		console.log("mobile")
 		layout_mobile = true
-		document.getElementsByTagName("body")[0].innerHTML = mobile_body
-		replace_event_listener()
-		on_scroll()
-		hamburger_listener()
+		var desktop_app = document.getElementById("carousel-app-desktop")
+		//document.getElementsByTagName("body")[0].innerHTML = mobile_body
+		//replace_event_listener()
+		//on_scroll()
+		//hamburger_listener()
+		desktop_app.outerHTML = mobile_app_outerHTML
 	}
 }
 home_on_resize()
@@ -125,7 +255,6 @@ function replace_event_listener(){
 	}
 };
 
-
 function change_functioning_image(){
 	const image = document.getElementById("functioning_image")
 	image.setAttribute("src", "../images/functioning.png")
@@ -133,3 +262,5 @@ function change_functioning_image(){
 	image.style.border = "none"
 	image.style.borderRadius = "0"
 }
+
+

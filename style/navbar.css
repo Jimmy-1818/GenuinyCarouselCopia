@@ -5,7 +5,7 @@
   right: 0;
   z-index: 81;
   background-color: white;
-  transition: top 0.3s 0s, box-shadow 0.4s 0s, height 0.3s 0s;
+  transition: top 0.3s 0s, box-shadow 0.4s 0s, height 0.3s 0s, background 0.2s 0s;
   height: 62px;
   padding: 16px 4vw; }
   @media (min-width: 1024px) {
@@ -94,7 +94,8 @@
     border-radius: 99px;
     font-size: 18px;
     font-family: "Montserrat";
-    font-weight: 700; }
+    font-weight: 700;
+    cursor: pointer; }
     .menu a.page-link:first-letter {
       text-transform: uppercase; }
   .menu a.page-link:first-of-type {
@@ -102,6 +103,18 @@
   .menu a.show, .menu a.page-link:hover {
     background-color: #09435E;
     color: white; }
+
+.desktop_nav_dark {
+  background-color: #0abab5; }
+  .desktop_nav_dark .logo img[src*="svg-logo-ethical"] {
+    content: url("../images/svg-logo-ethical-w.png"); }
+  .desktop_nav_dark a.page-link {
+    color: white; }
+  .desktop_nav_dark .hamburger span {
+    background-color: white; }
+
+.desktop_nav_shadow {
+  box-shadow: 0px 0px 16px 3px #00000045; }
 
 .mobile-nav {
   display: block;
@@ -191,7 +204,7 @@ body {
   background-color: #fff;
   transition: bottom 0.3s;
   box-shadow: 0 0 5px 2px #00000020;
-  width: 80%;
+  width: 90%;
   position: relative;
   bottom: -2vh;
   margin: 0 auto;
