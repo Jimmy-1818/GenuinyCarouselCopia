@@ -727,6 +727,8 @@ img.share-app {
   @media (min-width: 1024px) {
     #system-ban {
       margin-top: 10rem; } }
+  #system-ban .module-title {
+    margin-top: 3rem; }
   #system-ban img {
     height: calc(100% - 59px);
     display: block;
@@ -769,8 +771,8 @@ img.share-app {
   #carousel-app .module-1 p, #carousel-app-desktop .module-1 p {
     margin-bottom: 0; }
   #carousel-app .module-1 div.image-container, #carousel-app-desktop .module-1 div.image-container {
-    width: 100%;
-    height: 91%; }
+    width: auto;
+    height: 100%; }
     #carousel-app .module-1 div.image-container img, #carousel-app-desktop .module-1 div.image-container img {
       height: 90%;
       display: block;
@@ -916,7 +918,8 @@ img.share-app {
     text-align: end;
     text-decoration: underline;
     font-style: italic;
-    font-size: calc(0.9rem + 0.91vw); }
+    font-size: calc(0.9rem + 0.91vw);
+    margin: 0.6rem 0 2rem; }
     @media (min-width: 768px) {
       #carousel-ads a.source_link {
         font-size: 1.4rem; } }
