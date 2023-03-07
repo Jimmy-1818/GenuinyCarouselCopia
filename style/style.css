@@ -72,7 +72,10 @@ body {
   .header_grid .laptop-1, .header_grid .pc-1 {
     filter: drop-shadow(2px 2px 4px #00000070);
     width: 105%;
-    left: -40px; }
+    left: 50%; }
+    @media (min-width: 1024px) {
+      .header_grid .laptop-1, .header_grid .pc-1 {
+        left: -40px; } }
   .header_grid .pc-1 {
     width: 120%;
     left: -40px; }

@@ -117,7 +117,9 @@ body
 	.laptop-1
 		filter: drop-shadow(2px 2px 4px #00000070)
 		width: 105%
-		left: -40px
+		left: 50%
+		@media (min-width: $breakpoint-1024)
+			left: -40px
 	.pc-1
 		@extend .laptop-1
 		width: 120%
