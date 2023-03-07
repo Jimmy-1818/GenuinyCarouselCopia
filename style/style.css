@@ -1298,20 +1298,6 @@ div.content-business {
   width: 80%;
   max-width: 600px;
   margin: 7rem auto 0; }
-  div.content-business h1 {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    color: white;
-    font-weight: bold;
-    padding: 12px 25px;
-    background: #0abab5;
-    border-radius: 99px;
-    font-size: 112%; }
-    @media (min-width: 1024px) {
-      div.content-business h1 {
-        font-size: 3rem; } }
   div.content-business h2 {
     margin-top: 4rem; }
   div.content-business ul, div.content-business p {
