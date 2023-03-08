@@ -124,6 +124,7 @@ const app_desktop_html =   `
 		</div> `
 const mobile_app = document.getElementById("carousel-app")
 const mobile_app_outerHTML = mobile_app.outerHTML
+var app_parent = document.getElementById("app-parent")
 
 var layout_mobile = true
 function home_on_resize(){
@@ -135,14 +136,14 @@ function home_on_resize(){
 		//change_functioning_image()
 		//remove_event_listener()
 		//on_scroll()
-		mobile_app.outerHTML = app_desktop_html
+		app_parent.innerHTML = app_desktop_html
 	}else if ((page_width < 1024) && !(layout_mobile)){
 		layout_mobile = true
 		var desktop_app = document.getElementById("carousel-app-desktop")
 		//document.getElementsByTagName("body")[0].innerHTML = mobile_body
 		//replace_event_listener()
 		//on_scroll()
-		//hamburger_listener()
+		//hamburger_listener()	
 		desktop_app.outerHTML = mobile_app_outerHTML
 	}
 }

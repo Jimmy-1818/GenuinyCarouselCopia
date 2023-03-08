@@ -849,9 +849,9 @@ img.share-app {
     position: relative;
     left: 6%; }
   #carousel-app-desktop .module-overflow {
-    width: 66%;
+    width: 64%;
     position: relative;
-    left: 34%;
+    left: 36%;
     margin: 0;
     height: 490px; }
   #carousel-app-desktop ::-webkit-scrollbar {
@@ -868,10 +868,10 @@ img.share-app {
     z-index: 1;
     position: absolute;
     left: 30%;
-    top: 88px;
+    top: 0;
     margin: 0;
     transform: translate(-50%);
-    height: 78%;
+    height: 90%;
     filter: drop-shadow(12px 12px 12px #00000070); }
   #carousel-app-desktop .carousel-item {
     width: 100%; }
