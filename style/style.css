@@ -1374,13 +1374,17 @@ main.index3 .section-container {
   position: relative;
   padding: 0; }
   main.index3 .section-container .band {
-    background: #0abab580;
-    position: absolute;
-    height: calc(100% - 6rem);
-    top: 3rem;
-    width: 200vw;
-    left: -50vw;
-    z-index: -1; }
+    display: none; }
+    @media (min-width: 1024px) {
+      main.index3 .section-container .band {
+        display: block;
+        background: #0abab580;
+        position: absolute;
+        height: calc(100% - 6rem);
+        top: 3rem;
+        width: 200vw;
+        left: -50vw;
+        z-index: -1; } }
   main.index3 .section-container .general-copy {
     margin: auto;
     background: white;
@@ -1480,13 +1484,17 @@ main.index3 .section-container {
   margin-top: 13rem;
   position: relative; }
   .products-choice .band {
-    background: #333333;
-    position: absolute;
-    height: 100%;
-    width: 200vw;
-    left: -50vw;
-    top: 0;
-    z-index: -1; }
+    display: none; }
+    @media (min-width: 1024px) {
+      .products-choice .band {
+        display: block;
+        background: #333333;
+        position: absolute;
+        height: 100%;
+        width: 200vw;
+        left: -50vw;
+        top: 0;
+        z-index: -1; } }
   .products-choice h1.title {
     font-size: clamp(2rem, calc(2rem + 2rem), 9rem);
     font-family: "Montserrat";
