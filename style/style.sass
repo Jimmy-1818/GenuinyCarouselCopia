@@ -488,35 +488,35 @@ li.subscribe-step-1 .subscribe-parent
 		max-height: 420px
 		width: 80vw
 
-.modal-x
-	width: 64px
-	height: 64px
-	background: #3c3c3c
-	position: fixed
-	bottom: 8vh
-	left: 50%
-	transform: translate(-50%)
-	border-radius: 70px
-	box-shadow: 0px 0px 12px 5px #ffffff70
-	@media (min-width: $breakpoint-1024)
-		display: none
-	.spans
-		width: 50px
-		position: relative
-		top: calc(50% - 5px) //half of span height
-		transform: translate(0, -50%)
-		margin: auto
-		span
-			position: absolute
-			width: 100%
-			height: 10px	
-			border-radius: 5px
-			background-color: #e6e6e6
-			display: block
-			&:nth-of-type(0n + 1)
-				transform: rotate(45deg)
-			&:nth-of-type(0n + 2)
-				transform: rotate(-45deg)
+//.modal-x
+//	width: 64px
+//	height: 64px
+//	background: #3c3c3c
+//	position: fixed
+//	bottom: 8vh
+//	left: 50%
+//	transform: translate(-50%)
+//	border-radius: 70px
+//	box-shadow: 0px 0px 12px 5px #ffffff70
+//	@media (min-width: $breakpoint-1024)
+//		display: none
+//	.spans
+//		width: 50px
+//		position: relative
+//		top: calc(50% - 5px) //half of span height
+//		transform: translate(0, -50%)
+//		margin: auto
+//		span
+//			position: absolute
+//			width: 100%
+//			height: 10px	
+//			border-radius: 5px
+//			background-color: #e6e6e6
+//			display: block
+//			&:nth-of-type(0n + 1)
+//				transform: rotate(45deg)
+//			&:nth-of-type(0n + 2)
+//				transform: rotate(-45deg)
 
 .modal-content
 	@media (max-width: $breakpoint-1024)
@@ -1255,41 +1255,42 @@ header.choice
 	position: relative
 	margin: auto
 	.background-container
-		background-image: url("../images/background_genuiny_website.png")
+		background-image: url("../images/background_genuiny_website_sky.png")
 		background-size: cover
-		background-position: center
+		background-position: center 10%
 		background-repeat: no-repeat
 		flex-direction: column-reverse
 		width: 100%
 		max-width: 2000px
 		margin: 0 auto
 		position: relative
-		height: 100%
+		height: calc(100% - 100px - 24vw)
 		@media (min-width: $breakpoint-1024)
+			height: 100%
 			flex-direction: row
+			background-image: url("../images/background_genuiny_website.png")
+			background-size: cover
+			background-position: center
+
 		h1
 			position: absolute
 			font-family: "montserrat"
 			font-weight: bold
 			left: 50%
 			top: 8%
-			font-size: 336%
+			font-size: 190%
+			text-align: center
 			transform: translate(-50%)
 			padding: 2rem
 			width: 100%
-			background: #000000ba
-			color: white 
-			//color: $genuinyColDark
-			//filter: drop-shadow(0px 0px 3px #ffffff)
-			//background: white
-			//border-top: 4px solid $genuinyColDark
-			//border-bottom: 4px solid $genuinyColDark
+			color: $genuinyColDark 
 			@media (min-width: $breakpoint-1024)
+				color: white
 				left: 50%
+				background: #000000ba
 				top: 30%
 				font-size: clamp(3rem, 3.4vw, 7rem)
 				transform: translate(-50%, -50%)
-				text-align: center
 			span.certified
 				color: gray
 				font-size: inherit
@@ -1303,19 +1304,21 @@ header.choice
 		bottom: 100px
 		transform: translate(-50%)
 		left: 50%
-		border-radius: 2% 2% 2% 2% / 6% 6% 6% 6%
 		overflow: hidden
-		border: 4px solid #09435e
-		box-shadow: -10px -10px 24px 0px #ffffff, 15px 15px 15px -14px #00000099
+		box-shadow: -10px -10px 24px 0px #ffffff21, 15px 15px 15px -14px #00000099
 		column-gap: 4px
 		background: #09435e
 		max-width: 1100px
 		max-height: 317px
-		width: 90vw
-		height: 30vw
+		width: 100vw
+		height: 34vw
 		min-width: auto
 		min-height: auto
+		border-bottom: 4px solid #09435e
+		border-top: 4px solid #09435e
 		@media (min-width: $breakpoint-1024)
+			border: 4px solid #09435e
+			border-radius: 2% 2% 2% 2% / 6% 6% 6% 6%
 			bottom: 100px
 			width: 45vw
 			height: 13vw
@@ -1428,15 +1431,14 @@ div.content-business
 
 div.business-request
 	width: fit-content
-	margin: 0 auto
+	margin: 5rem auto 0
 	text-align: center
 	background: white
 	border-radius: 3rem
-	margin-bottom: 5rem
 	border: 5px solid $genuinyCol
 	padding: 3rem
 	box-shadow: 3px 6px 13px 0px #00000050
-	div.input
+	div.input-container
 		display: flex
 		justify-content: space-around
 		gap: 3rem 
