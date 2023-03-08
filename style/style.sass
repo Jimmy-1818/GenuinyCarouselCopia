@@ -1506,6 +1506,8 @@ main.index3 .section-container
 				text-align: center
 				white-space: nowrap
 				margin: auto
+				display: flex
+				flex-direction: column
 				@media (min-width: $breakpoint-1024)
 					text-align: right
 				a
@@ -1598,11 +1600,11 @@ main.index3 .section-container
 				transition: transform ease .2s
 				width: 100%
 				height: 200px
-				&:hover
-					transform:  scale(1.2)
 				@media (min-width: $breakpoint-1024)
 					width: 40%
 					height: auto
+					&:hover
+						transform:  scale(1.2)
 			.text-block
 				padding: 4rem
 				background: white
