@@ -29,17 +29,17 @@ const app_desktop_html =   `
 						<div class="module-overflow">
 							<p>
 								</p><p class="value">1 GData = 1€</p>
-								I GData funzionano in modo semplice, come una Gift card o un buono Amazon, ma a differenza dei buoni cartacei, sono crittografati, cioè non sono falsificabili.<br>
+								I GData funzionano in modo semplice, come una Gift card o un buono regalo, ma a differenza dei buoni cartacei, sono crittografati, cioè non sono falsificabili.<br>
 								I GData sono ricaricabili tramite il proprio Wallet.<br><br>
 
 								<span class="subtitle">Perché conviene utilizzare i GData?</span><br><br>
 
-								I vantaggi sono diversi:<br><br>
 								<ul>
-									<li>Inviare e ricevere valore ai propri contatti gratuitamente</li>
-									<li>Accettare pagamenti senza commissioni (per le attività commerciali)</li>
 									<li>In quanto buoni regalo, non sono soggetti a tassazione</li>
-									<li>Una volta maturato il premio Digital Profit, i GData saranno immediatamente spendibili nel circuito Geniny Point o riconvertibili in Euro (da 50 GData)</li>
+									<li>Invia GData ai propri contatti gratuitamente</li>
+									<li>Ricevi GData dai propri contatti gratuitamente</li>
+									<li>Acquista nel circuito Genuiny Point (fisico e online) senza commissioni</li>
+									<li>Una volta maturato il premio Digital Profit, i GData saranno immediatamente spendibili nel circuito Geniny Point o riconvertibili in Euro (importo minimo riconvertibile: 50 GData)</li>
 								</ul>
 							<p></p>
 						</div>
@@ -59,7 +59,7 @@ const app_desktop_html =   `
 									<li><b>Conto NFTP:</b><br>
 									Il conto NFTP è il conto deposito titoli dell'utente Genuiny.</li><br>
 									<li><b>Conto Digital Profit:</b><br>
-									Il conto Digital Profit indica tutte le operazioni, in dare ed avere, che saranno compensate nel momento della maturazione del prorio Premio Rendita erogato dal servizio Digital Profit.</li>
+									Il conto Digital Profit indica tutte le operazioni, in dare e avere, che saranno compensate nel momento della maturazione del prorio Premio Rendita erogato dal servizio Digital Profit.</li>
 								</ul>
 							<p></p>
 						</div>
@@ -72,19 +72,16 @@ const app_desktop_html =   `
 							<p>
 								All'iterno dell'app di possono trovare altre funzioni secondarie.<br><br>
 								</p><ul>
-									<li><b>Wall</b><br>
-									Il Wall è la sezione all'interno della qualle le attività commerciali pubblicheranno post che potranno essere visti dai loro contatti.</li><br>
 									<li><b>Cerca</b><br>
-									Da qui si possono cercare attività, persone e articoli.</li><br>
+									Persone e attività.</li><br>
 									<li><b>Chat</b><br>
-									Qui puoi mandare messaggi diretti ai tuoi contatti.</li><br>
+									Manda messaggi ai tuoi contatti.</li><br>
 									<li><b>Aggiungi dato</b><br>
-									Da qui si può invitare un amico a registrarsi o aggiungere ai propri contatti un utente già registrato.</li><br>
+									Invita un amico a registrarsi o aggiungi ai tuoi contatti un utente già registrato.</li><br>
 									<li><b>Smart Contract</b><br>
 									<!-- Button trigger modal -->
 									<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#smart-contract">Cosa sono gli smart contract?</a></li><br>
 									<li><b>FAQ</b><br>
-									Qui trovi le risposte alle domande frequenti.</li>
 								</ul>
 							<p></p>
 						</div>

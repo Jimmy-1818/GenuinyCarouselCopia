@@ -29,6 +29,8 @@
 	<!--STYLE-->
 	<link rel="stylesheet" type="text/css" href="style/navbar.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="private/digital-potential/affiliation-calculator.css">  
+
 
 	<!---Fonts links
 	<link rel="preload" href="fonts/Montserrat/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
@@ -42,14 +44,14 @@
 		<nav class="desktop-nav">
 			<div class="container-navbar">
 				<div class="logo">
-					<a class="page-link" href="https://genuiny.it"><img src="images/svg-logo-ethical.png" alt="logo"></a>
+					<a class="page-link" href="https://genuiny.it"><img src="images/svg-logo-ethical-w.png" alt="logo"></a>
 				</div>
 
 				<div class="menu">
 					<!--LATER REMOVE ALL (it doesn't work in local)-->
-					<a class="page-link" onclick="window.scrollTo(0,0)">home</a>
-					<a class="page-link" onclick="scrollToOffset('accordion-faq');">chi siamo</a>
-					<a class="page-link" onclick="scrollToOffset('produts-container');">i nostri prodotti</a>
+					<a class="page-link" href="private">privati</a>
+					<a class="page-link" href="business">aziende</a>
+					<a class="page-link" href="association">associazioni</a>
 					<div class="grid-item dropdown-center dropdown language_group" style="width: 62px;"> <!--width so to avoid moving other titles-->
 						<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
@@ -74,9 +76,9 @@
 			</div>
 		</nav>
 		<nav class="mobile-nav">
-			<a class="page-link" onclick="window.scrollTo(0,0); hamburger_click();">home</a>
-			<a class="page-link" onclick="scrollToOffset('accordion-faq'); hamburger_click();">chi siamo</a>
-			<a class="page-link" onclick="scrollToOffset('produts-container'); hamburger_click();">i nostri prodotti</a>
+			<a class="page-link" href="private">privati</a>
+			<a class="page-link" href="business">aziende</a>
+			<a class="page-link" href="association">associazioni</a>
 			<div class="grid-item dropdown-center dropdown language_group">
 				<button class="lang_btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					<div lang="eng" class="current-language-flex"><span>EN</span><img class="lang_flag" src="images/language-flags/eng_flag.svg"></div>
@@ -97,8 +99,7 @@
 	<main class="index3 main-container">
 		<header class="choice">
 			<div class="background-container">
-				<h1>Dati reali<br><span class="certified">certificati.</span></h1>
-				<img src="images/app-tilted.png">
+				<h1>L'innovativa economia degli utenti web3</h1>
 			</div>
 			<div class="buttons">
 				<div class="option-card" onclick="window.location.href='private'">
@@ -108,7 +109,7 @@
 	      </div>
 				<div class="option-card" onclick="window.location.href='business'">
 					<div class="card-image background-2"></div>
-					<div class="text">business</div>
+					<div class="text">aziende</div>
 					<div class="text lower">point</div>
 				</div>
 				<div class="option-card" onclick="window.location.href='association'">
@@ -118,13 +119,12 @@
 				</div>
 			</div>
 		</header>
-
+		<img class="phone-image" src="images/app-tilted.png">
 		<div class="section-container">
-		<div class="band"></div>
 			<div class="general-copy">
 				<h1>Digital Profit Genuiny</h1>
 				<div class="container-flex">
-					<div class="left"><p>Genuiny consente ai propri utenti certificati (Autentica account)  la possibilità di utilizzare il valore dell'economia digitale (direttiva UE 2019/770) per acquistre beni e servizi in tutto il ciurcuito fisico e online "Genuiny Point".</div>
+					<div class="left"><p>L'innovativo servizio Digital Profit consente ai propri utenti certificati (Autentica account)  la possibilità di utilizzare il valore dell'economia digitale (direttiva UE 2019/770) per acquistre beni e servizi in tutto il ciurcuito fisico e online "Genuiny Point".</p></div>
 					<div class="right">
 						<a href="https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32019L0770&from=RO" target="_black">
 							Direttiva UE 2019/770
@@ -136,6 +136,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
     <div class="accordion accordion-flush" id="accordion-faq">
      	<h1 class="faq">FAQ</h1>
@@ -273,8 +274,6 @@
 	</div>
 </div>
 	<div class="products-choice" id="produts-container">
-		<div class="band"></div>
-		<h1 class="title">prodotti</h1>
 		<div id="products">
 			<div class="certify">
 				<div class="flex-container">
@@ -283,11 +282,226 @@
 						<p class="description">Prodotti e servizi autentici, a denominazione d'origine geolocalizzata certificata con la blockchain.</p>
 						<a href="#" target="_blank" style="text-decoration: none;"><p class="info">More info</p></a>
 					</div>
-					<div class="product-image">
+					<div class="product-image"></div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div class="affiliation">
+			<div class="digital-potential-container ">
+				<h1 class="title title-subscribe">Potenziale digitale</h1>
+				<p class="calculator-paragraph">Il Digital Profit eroga i premi Autentica e Rendita, che sono calcolati in base alla profondità della tua filiera di utenti certificati.<br><br>
+					Ipotizza il tuo potenziale digitale.</p>
+				<p></p>
+			</div>
+
+			<div class="wrapper">
+				<div class="anchor-adjust-calculator" id="calculator"></div>
+
+
+				<h1 class="wrapper__title">Potenziale digitale</h1>
+				<form class="calculator">
+
+						<div class="calculator_row_monthly">
+								<label style="display: inline" for="tip">Rendita media <div style="display: inline; font-size: inherit; white-space: nowrap;">ipotizzata</label>
+									<!-- Button trigger modal -->
+									<a class="modal-trigger" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#average-profit">
+										<svg  class="info-svg" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M453 776h60V536h-60v240Zm26.982-314q14.018 0 23.518-9.2T513 430q0-14.45-9.482-24.225-9.483-9.775-23.5-9.775-14.018 0-23.518 9.775T447 430q0 13.6 9.482 22.8 9.483 9.2 23.5 9.2Zm.284 514q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80 658.319 80 575.5q0-82.819 31.5-155.659Q143 347 197.5 293t127.341-85.5Q397.681 176 480.5 176q82.819 0 155.659 31.5Q709 239 763 293t85.5 127Q880 493 880 575.734q0 82.734-31.5 155.5T763 858.316q-54 54.316-127 86Q563 976 480.266 976Zm.234-60Q622 916 721 816.5t99-241Q820 434 721.188 335 622.375 236 480 236q-141 0-240.5 98.812Q140 433.625 140 576q0 141 99.5 240.5t241 99.5Zm-.5-340Z"/></svg>
+									</a>
+								<input type="range" min="5" max="50" value="5" step="5" id="tip_monthly" required/>
+								<p class="monthly"></p></div>
+						</div>
+
+
+						<div class="calculator__row">
+								<label for="tip">1<sup>a</sup> Filiera<span class="tip-amount"></span></label>
+								<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip1" required/>
+								<p id="slider-value-1"></p>
+						</div>
+						<div class="calculator__row">
+							<label for="tip">2<sup>a</sup> Filiera<span class="tip-amount"></span></label>
+							<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip2" required/>
+							<p id="slider-value-2"></p>
+						</div>
+						<div class="calculator__row">
+							<label for="tip">3<sup>a</sup> Filiera<span class="tip-amount"></span></label>
+							<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip3" required/>
+							<p id="slider-value-3"></p>
+						</div>
+						<div class="calculator__row">
+							<label for="tip">4<sup>a</sup> Filiera<span class="tip-amount"></span></label>
+							<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip4" required/>
+							<p id="slider-value-4"></p>
+						</div>
+						<div class="calculator__row">
+							<label for="tip">5<sup>a</sup> Filiera<span class="tip-amount"></span></label>
+							<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip5" required/>
+							<p id="slider-value-5"></p>
+						</div>
+
+						<div class="result__row">
+							<div class="box-info autentica">
+								<h2 class="info">
+									<span class="two-lines">
+										<span class="first-line">Premio</span>
+										<div style="white-space: nowrap; display: inline;"><span class="second-line">Autentica:</span>
+										<!-- Button trigger modal -->
+										<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-autentica">
+											<svg  class="info-svg" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M453 776h60V536h-60v240Zm26.982-314q14.018 0 23.518-9.2T513 430q0-14.45-9.482-24.225-9.483-9.775-23.5-9.775-14.018 0-23.518 9.775T447 430q0 13.6 9.482 22.8 9.483 9.2 23.5 9.2Zm.284 514q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80 658.319 80 575.5q0-82.819 31.5-155.659Q143 347 197.5 293t127.341-85.5Q397.681 176 480.5 176q82.819 0 155.659 31.5Q709 239 763 293t85.5 127Q880 493 880 575.734q0 82.734-31.5 155.5T763 858.316q-54 54.316-127 86Q563 976 480.266 976Zm.234-60Q622 916 721 816.5t99-241Q820 434 721.188 335 622.375 236 480 236q-141 0-240.5 98.812Q140 433.625 140 576q0 141 99.5 240.5t241 99.5Zm-.5-340Z"/></svg>
+										</a>
+										</div>
+									</span>
+									<span class="autentica_result info-number resize-text"></span>
+								</h2>
+								<p>Ogni volta che certifichi un dato/utente ricevi in tempo reale GData (<a style="font-size: inherit;" href="private/share">Condividi App</a>).<br></p>
+							</div>
+							<div class="box-info rendita">
+								<h2 class="info">
+									<span class="two-lines">
+										<span class="first-line">Premio</span>
+										<div style="white-space: nowrap; display: inline;">
+										<span class="second-line">Rendita:</span>
+										<!-- Button trigger modal -->
+										<a class="modal-trigger" href="" data-bs-toggle="modal" data-bs-target="#modal-rendita">
+											<svg  class="info-svg" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M453 776h60V536h-60v240Zm26.982-314q14.018 0 23.518-9.2T513 430q0-14.45-9.482-24.225-9.483-9.775-23.5-9.775-14.018 0-23.518 9.775T447 430q0 13.6 9.482 22.8 9.483 9.2 23.5 9.2Zm.284 514q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80 658.319 80 575.5q0-82.819 31.5-155.659Q143 347 197.5 293t127.341-85.5Q397.681 176 480.5 176q82.819 0 155.659 31.5Q709 239 763 293t85.5 127Q880 493 880 575.734q0 82.734-31.5 155.5T763 858.316q-54 54.316-127 86Q563 976 480.266 976Zm.234-60Q622 916 721 816.5t99-241Q820 434 721.188 335 622.375 236 480 236q-141 0-240.5 98.812Q140 433.625 140 576q0 141 99.5 240.5t241 99.5Zm-.5-340Z"/></svg>
+										</a>
+										</div>
+									</span>
+									<span class="rendita_result info-number resize-text"></span>
+								</h2>
+								<p>Ogni volta che le tue filiere dati generano traffico, ricevi accrediti GData (Digital Profit).<br></p>
+							</div>
+
+						</div>
+				</form>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade modal-table" id="modal-autentica" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-x"><div class="spans"><span></span><span></span></div></div>
+					<div class="modal-content">
+						<div class="modal-body">
+							
+							<div class="table-container">
+								<div class="table-title">Premio Autentica</div>
+								<div class="anchor-adjust-tab1" id="table-autentica"></div>
+								<div class="table-grid tables">
+								
+									<div class="table-item first-row">Filiera</div>
+									<div class="table-item first-row">Utenti certificati</div>
+									<div class="table-item first-row">Valore per utente</div>
+									<div class="table-item first-row">Valore per filiera</div>
+
+									<div class="table-item">1<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab1_u1"></div>
+									<div class="table-item"><span class="yellow_amount">10 €</span></div>
+									<div class="table-item resize-text"id="tab1_p1"></div>
+
+									<div class="table-item">2<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab1_u2"></div>
+									<div class="table-item"><span class="yellow_amount">0,50 €</span></div>
+									<div class="table-item resize-text"id="tab1_p2"></div>
+
+									<div class="table-item">3<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab1_u3"></div>
+									<div class="table-item"><span class="yellow_amount">1 €</span></div>
+									<div class="table-item resize-text"id="tab1_p3"></div>
+
+									<div class="table-item">4<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab1_u4"></div>
+									<div class="table-item"><span class="yellow_amount">1,50 €</span></div>
+									<div class="table-item resize-text"id="tab1_p4"></div>
+
+									<div class="table-item">5<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab1_u5"></div>
+									<div class="table-item"><span class="yellow_amount">2 €</span></div>
+									<div class="table-item resize-text"id="tab1_p5"></div>
+
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale utenti:<br><span id="tab1_u12345"></span></div>
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale premio:<br><span class="autentica_result"></span><br></div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Modal -->
+			<div class="modal fade modal-table" id="modal-rendita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-x"><div class="spans"><span></span><span></span></div></div>
+					<div class="modal-content">
+						<div class="modal-body">
+
+							<div class="table-container">
+								<div class="table-title" id="table-rendita">Premio Rendita</div>
+								<div class="table-grid tables">
+									<div class="table-item first-row"><span>Filiera</span></div>
+									<div class="table-item first-row"><span>Utenti certificati</span></div>
+									<div class="table-item first-row"><span>Valore per utente</span></div>
+									<div class="table-item first-row"><span>Valore per filiera</span></div>
+
+									<div class="table-item">1<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab2_u1"></div>
+									<div class="table-item"><span class="yellow_amount">2%</span><span class="monthly"></span></div>
+									<div class="table-item resize-text"id="tab2_p1"></div>
+
+									<div class="table-item">2<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab2_u2"></div>
+									<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"></span></div>
+									<div class="table-item resize-text"id="tab2_p2"></div>
+
+									<div class="table-item">3<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab2_u3"></div>
+									<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"> </span></div>
+									<div class="table-item resize-text"id="tab2_p3"></div>
+
+									<div class="table-item">4<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab2_u4"></div>
+									<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"> </span></div>
+									<div class="table-item resize-text"id="tab2_p4"></div>
+
+									<div class="table-item">5<sup>a</sup></div>
+									<div class="table-item resize-text"id="tab2_u5"></div>
+									<div class="table-item"><span class="yellow_amount">2%</span><span class="monthly"></span></div>
+									<div class="table-item resize-text"id="tab2_p5"></div>
+
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale utenti:<br><span id="tab2_u12345"></span></div>
+									<div class="table-item last-row"></div>
+									<div class="table-item last-row">Totale premio:<br><span class="rendita_result"></span><br></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade modal-white" id="average-profit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-x"><div class="spans"><span></span><span></span></div></div>
+					<div class="modal-content">
+						<div class="modal-body">
+							<h1>Rendita Media</h1>
+							<p>
+								Il valore rendita media è il profitto medio <b>mensile</b> degli utenti della filiera.<br><br>
+
+								Influenza dunque il premio "Rendita", in quanto questo si calcola in percentuale alla rendita media.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 </main>
 	
 
@@ -319,11 +533,6 @@
 			<div class="grid_item two_span">
 				© Copyright 2023 Genuiny LTD - All Rights Reserved
 			</div>
-			<div class="grid_item two_span">
-				©Credits<br>
-				Contract icons created by Freepik - Flaticon<br>
-				Fingerprint icons created by Google - Flaticon
-			</div>
 		</div>
 	</footer>
 
@@ -336,5 +545,7 @@
 	
 	<script type="text/javascript" src="script/on_loading.js"></script>
 	<script type="text/javascript" src="script/home_functionalities.js"></script>
+	<script src="private/digital-potential/affiliation-calculator.js" type="text/javascript"></script>
+
 </body>
 </html>

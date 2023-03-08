@@ -49,6 +49,7 @@ body
 	overflow-x: hidden
 
 .container
+	margin: auto
 	width: 100%
 	box-sizing: border-box
 	max-width: 2000px
@@ -59,6 +60,12 @@ body
 		padding-left: 7%
 		padding-right: 7%
 		padding-top: 72px
+
+.digital-potential-container
+	@extend .container
+	width: 90%
+	@media (min-width: $breakpoint-1024)
+		width: 10 	0%
 
 //.home-background
 //	background-image: url("../images/wave.png")
@@ -114,16 +121,6 @@ body
 			grid-row: 1 / 5
 			margin-bottom: 0
 			top: 2rem
-	.laptop-1
-		filter: drop-shadow(2px 2px 4px #00000070)
-		width: 105%
-		left: 50%
-		@media (min-width: $breakpoint-1024)
-			left: -40px
-	.pc-1
-		@extend .laptop-1
-		width: 120%
-		left: -40px
 	.first-main, .second-main
 		font-family: 'Montserrat'
 		position: relative
@@ -186,7 +183,7 @@ body
 				width: 35%
 
 	.instructions
-		padding: 4% 4% 0
+		padding: 4% 4% 3%
 		text-align: center
 		position: relative
 		@media (min-width: $breakpoint-768)
@@ -218,8 +215,7 @@ body
 					color: white
 					font-size: 1.6rem
 					padding: 0
-					&:focus 
-						box-shadow: none !important
+					box-shadow: none
 					&::after
 						margin-left: 10px
 						background-image: url("../images/down-icon.png")
@@ -237,11 +233,43 @@ body
 				padding: 0
 				margin-left: 15px
 
+.not_smartphone_image
+	filter: drop-shadow(2px 2px 4px #00000070)
+	width: 105%
+	left: 50%
+	@media (min-width: $breakpoint-1024)
+		left: -40px
 
-video.milena-spiega
-	width: 100%
-	height: auto
-	border: 3px solid $genuinyColDark
+.header_grid_business
+	.smartphone
+		@extend .not_smartphone_image
+		width: 110%
+		@media (min-width: $breakpoint-1024)
+			left: -40px
+	span.second-main
+		margin-bottom: 1rem
+	.use_instructions_title
+		margin: 0
+	.accordion-body 
+		padding-bottom: 0
+		p
+			text-align: left
+		ul
+			text-align: left
+			margin-bottom: 0
+	.instructions .accordion-item h2.use_instructions_title 
+		margin: 0
+		padding: 8px 3rem
+		button
+			text-align: center
+			.accordion_body
+				padding-bottom: 0
+				margin-bottom: 0
+
+.header_grid_association
+	@extend .header_grid_business
+	.smartphone
+		width: 120%
 
 .title
 	font-size: calc(1.7rem + 0.6vw)
@@ -560,9 +588,8 @@ li.subscribe-step-1 .subscribe-parent
 	display: flex
 	flex-direction: column
 	align-items: center
-	width: 100vw
+	width: 100%
 	@media (min-width: $breakpoint-480)
-		width: 86vw
 		margin: 20px auto 0
 	@media (min-width: $breakpoint-1024)
 		align-items: start
@@ -968,6 +995,8 @@ img.share-app
 		margin-top: 1rem
 	a
 		color: $genuinyCol
+	h1.module-title
+		margin-top: 2rem
 
 
 //PRIVACY POLICY
@@ -983,7 +1012,7 @@ div.privacy_all
 		margin: 0 0 16px
  
 footer 
-	background-color: black
+	background-color: $genuinyCol
 	div.container
 		padding: 15px
 		display: grid
@@ -993,6 +1022,7 @@ footer
 		column-gap: 15px
 		grid-row-gap: 14px
 		grid-template-columns: 1fr 1fr
+		background-color: $genuinyCol
 		@media (min-width: $breakpoint-768)
 			grid-row-gap: 10px
 			grid-template-columns: 1fr 1fr
@@ -1212,8 +1242,6 @@ div.main_landing_page
 //BUTTONS  index3
 
 main.index3
-	//background: linear-gradient(rgba(7, 119, 75, .25), rgba(7, 16, 119, .25)), url(../images/background_genuiny_website.png) no-repeat -140px 70px/75%
-	filter: saturate(0.8)
 	width: 100%
 	position: relative
 	@media (min-width: $breakpoint-768)
@@ -1221,20 +1249,22 @@ main.index3
 
 
 header.choice
-	padding-top: 73px
+	padding-top: 63px
 	height: 100vh
 	max-height: 1200px
 	position: relative
 	margin: auto
-	margin-bottom: 10rem
 	.background-container
+		background-image: url("../images/background_genuiny_website.png")
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
 		flex-direction: column-reverse
-		width: 80%
+		width: 100%
 		max-width: 2000px
-		display: flex
 		margin: 0 auto
 		position: relative
-		height: calc(100% - 73px)
+		height: 100%
 		@media (min-width: $breakpoint-1024)
 			flex-direction: row
 		h1
@@ -1245,27 +1275,26 @@ header.choice
 			top: 8%
 			font-size: 336%
 			transform: translate(-50%)
+			padding: 2rem
+			width: 100%
+			background: #000000ba
+			color: white 
+			//color: $genuinyColDark
+			//filter: drop-shadow(0px 0px 3px #ffffff)
+			//background: white
+			//border-top: 4px solid $genuinyColDark
+			//border-bottom: 4px solid $genuinyColDark
 			@media (min-width: $breakpoint-1024)
-				left: 53%
-				top: 32%
-				font-size: clamp(4rem, 6vw, 16rem)
-				transform: translate(0%, -50%)
+				left: 50%
+				top: 30%
+				font-size: clamp(3rem, 3.4vw, 7rem)
+				transform: translate(-50%, -50%)
+				text-align: center
 			span.certified
 				color: gray
 				font-size: inherit
 				color: #c9c9c9
 				font-weight: normal
-		img
-			position: absolute
-			top: 30%
-			left: 50%
-			width: 110%
-			transform: translate(-50%)
-			@media (min-width: $breakpoint-1024)
-				transform: translate(0,0)
-				left: 0%
-				width: 50%
-				top: 0%
 	.buttons
 		display: flex
 		align-items: stretch
@@ -1367,6 +1396,14 @@ header.choice
 					text-transform: uppercase
 					font-weight: bold
 
+img.phone-image
+	margin-top: 3rem
+	width: 85%
+	@media (min-width: $breakpoint-1024)
+		margin-top: 0
+		width: 35%
+		margin: auto
+		display: block
 
 div.content-business
 	width: 80%
@@ -1388,33 +1425,32 @@ div.content-business
 		width: 100%
 		margin: 4rem 0 0
 
-div.business-request-container
-	width: 100%
-	padding: 5rem 0
-	background-color: #232323
-	color: white
-	margin-bottom: 4rem
-	div.business-request
-		width: 80%
-		max-width: 400px
-		margin: 0 auto
-		text-align: center
-		div.input
-			display: flex
-			justify-content: space-around
-			gap: 3rem 
-			margin-top: 2rem
-			input
-				display: inline-block
-				border-radius: 99px
-				padding-left: 2rem
-				font-size: 1.4rem
-			button
-				padding: 8px 25px
-				background: #232323
-				border-radius: 99px
-				border: 3px solid white
-				color: white
+div.business-request
+	width: fit-content
+	margin: 0 auto
+	text-align: center
+	background: white
+	border-radius: 3rem
+	margin-bottom: 5rem
+	border: 5px solid $genuinyCol
+	padding: 3rem
+	box-shadow: 3px 6px 13px 0px #00000050
+	div.input
+		display: flex
+		justify-content: space-around
+		gap: 3rem 
+		margin-top: 2rem
+		input
+			display: inline-block
+			border-radius: 99px
+			padding-left: 2rem
+			font-size: 1.4rem
+		button
+			padding: 8px 25px
+			background: $genuinyColDark
+			border-radius: 99px
+			border: 3px solid white
+			color: white
 
 .section-container
 	padding: 3rem 0
@@ -1422,19 +1458,8 @@ div.business-request-container
 main.index3 .section-container
 	position: relative
 	padding: 0
-	.band
-		display: none
-		@media (min-width: $breakpoint-1024)
-			display: block
-			background: #0abab580
-			position: absolute
-			height: calc(100% - 6rem)
-			top: 3rem
-			width: 200vw
-			left: -50vw
-			z-index: -1
 	.general-copy
-		margin: auto
+		margin: 5rem auto 0
 		background: white
 		position: relative
 		padding: 2rem
@@ -1527,23 +1552,10 @@ main.index3 .section-container
 
 
 .products-choice
-	padding: 4rem 0
-	margin-top: 13rem
+	margin: 13rem auto 5rem
 	position: relative
-	.band
-		width: 100%
-		height: 100%
-		left: 0
-		position: absolute
-		background: #333333
-		top: 0
-		@media (min-width: $breakpoint-1024)
-			display: block
-			width: 200vw
-			left: -50vw
-			z-index: -1
 	h1.title
-		font-size: clamp(2rem, calc(2rem + 2rem), 9rem)
+		font-size: clamp(2rem, calc(2rem + 2vw), 9rem)
 		font-family: 'Montserrat'
 		font-weight: bold
 		color: white
@@ -1556,20 +1568,23 @@ main.index3 .section-container
 		top: -0.06rem
 		transform: translate(-50%, -21%)
 	#products
-		width: 85%
+		width: 100%
 		margin: auto
-		margin-top: 3rem
 		@media (min-width: $breakpoint-1024)
 			width: 50%
 			margin-top: 8rem
 		.certify .flex-container
 			position: relative
 			display: flex
-			border-radius: 4rem
 			box-shadow: 0px 0px 15px 5px #00000060
 			overflow: hidden
 			flex-direction: column
+			box-shadow: 3px 6px 13px 0px #00000050
+			border-top: 5px solid #0abab5
+			border-bottom: 5px solid #0abab5
 			@media (min-width: $breakpoint-1024)
+				border: 5px solid #0abab5
+				border-radius: 4rem
 				flex-direction: row
 			.product-image
 				transform-origin: 0 50%
@@ -1596,6 +1611,7 @@ main.index3 .section-container
 				p.description
 					margin: auto
 				p.info
+					display: none	
 					text-align: right
 					padding: 1rem 2rem
 					background: #09435e
