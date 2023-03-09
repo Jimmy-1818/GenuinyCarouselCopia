@@ -55,7 +55,7 @@ const app_desktop_html =   `
 								I rispettivi saldi indicano il totale dei diversi tipi di valore detenuti dall'utente.<br><br>
 								</p><ul>
 									<li><b>Conto GData:</b><br>
-									ll conto GData indica le disponibilità immediate dell'utente Genuiny.</li><br>
+									ll conto GData indica la disponibilità immediata dell'utente Genuiny.</li><br>
 									<li><b>Conto NFTP:</b><br>
 									Il conto NFTP è il conto deposito titoli dell'utente Genuiny.</li><br>
 									<li><b>Conto Digital Profit:</b><br>
