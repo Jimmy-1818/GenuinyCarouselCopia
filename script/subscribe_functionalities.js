@@ -6,7 +6,7 @@ if (localStorage.getItem("hash") != null){
 }
 
 
-var default_link = "https://www.google.com"
+var default_link = "https://business.genuiny.com/register/index?referralCode=4UJDKWJNLJP5&name=OpportunitySrls+OpportunitySrls"
 qrcode = new QRCode(document.getElementById("qr_div"), default_link);
 link_desktop.innerHTML = default_link
 link_desktop.href = default_link
@@ -17,7 +17,7 @@ function generateQRCode(){
         value = "https://business.genuiny.com/register/index?referralCode=" + localStorage.getItem("hash")
     }
     else{
-        value = "https://www.google.com"
+        value = default_link
     }
     qrcode.clear()
     qrcode.makeCode(value);
