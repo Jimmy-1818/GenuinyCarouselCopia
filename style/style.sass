@@ -1497,6 +1497,7 @@ main.index3 .section-container
 					margin: auto
 					display: block
 					width: fit-content
+					text-align: left
 					@media (min-width: $breakpoint-1024)
 						margin-bottom: 1rem
 
@@ -1639,3 +1640,13 @@ main.index3 .section-container
 
 .language_group, .lang_btn
 	display: none
+
+.inherit
+	display: inline
+	font-weight: inherit
+	font-size: inherit
+	font-style: inherit
+
+span.no-wrap
+	@extend .inherit
+	white-space: nowrap

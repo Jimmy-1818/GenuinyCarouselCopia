@@ -1418,7 +1418,8 @@ main.index3 .section-container {
         main.index3 .section-container .general-copy .container-flex div.left p {
           margin: auto;
           display: block;
-          width: fit-content; }
+          width: fit-content;
+          text-align: left; }
           @media (min-width: 1024px) {
             main.index3 .section-container .general-copy .container-flex div.left p {
               margin-bottom: 1rem; } }
@@ -1562,5 +1563,14 @@ main.index3 .section-container {
 
 .language_group, .lang_btn {
   display: none; }
+
+.inherit, span.no-wrap {
+  display: inline;
+  font-weight: inherit;
+  font-size: inherit;
+  font-style: inherit; }
+
+span.no-wrap {
+  white-space: nowrap; }
 
 /*# sourceMappingURL=style.css.map */
