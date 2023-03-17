@@ -1396,16 +1396,17 @@ header.choice
 			left: 50%
 			overflow: hidden
 			transform: translate(0,0)
-			&:hover .card-image
-				scale: (1.2)
-			&:hover div.text
-				bottom: 50%
-			&:hover div.lower
-				bottom: 0
-			&:nth-child(odd):hover .card-image
-				box-shadow: inset 0px 0px 120px 30px rgba(10, 186, 181, .9)
-			&:nth-child(even):hover .card-image
-				box-shadow: inset 0px 0px 120px 30px #7f78a4
+			@media (min-width: $breakpoint-1024)
+				&:hover .card-image
+					scale: (1.2)
+				&:hover div.text
+					bottom: 50%
+				&:hover div.lower
+					bottom: 0
+				&:nth-child(odd):hover .card-image
+					box-shadow: inset 0px 0px 120px 30px rgba(10, 186, 181, .9)
+				&:nth-child(even):hover .card-image
+					box-shadow: inset 0px 0px 120px 30px #7f78a4
 			&:nth-child(1) .card-image
 				background: url(../images/private-button.png) no-repeat center/cover
 			&:nth-child(2) .card-image
