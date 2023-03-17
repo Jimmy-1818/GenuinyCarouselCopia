@@ -19,7 +19,7 @@ $colLight: #EEEEEE
   left: 0
   right: 0
   z-index: 81
-  background-color: #0abab5
+  background-color: white
   transition: top .3s 0s, box-shadow .4s 0s, height .3s 0s, background .2s 0s
   height: 62px
   padding: 16px 4vw
@@ -67,7 +67,7 @@ $colLight: #EEEEEE
     margin-bottom: 5px
     position: relative
 
-    background-color: white
+    background-color: $genuinyCol
     border-radius: 6px
     z-index: 1
 
@@ -105,7 +105,7 @@ $colLight: #EEEEEE
     a
       white-space: nowrap
   a.page-link
-    color: white
+    color: black
     margin: 0 4px
     font-weight: 600
     text-decoration: none
@@ -126,6 +126,16 @@ $colLight: #EEEEEE
 
 .desktop_nav_shadow
   box-shadow: 0px 0px 16px 3px #00000045
+
+.desktop_nav_dark
+  background: $genuinyCol
+  a.page-link 
+    color: white
+    img
+      content: url('../images/svg-logo-ethical-w.png')
+  button.hamburger span
+    background-color: white
+
 
 .mobile-nav
   display: block

@@ -518,9 +518,6 @@ li.subscribe-step-1 .subscribe-parent
 //			&:nth-of-type(0n + 2)
 //				transform: rotate(-45deg)
 
-.modal-content
-	@media (max-width: $breakpoint-1024)
-		top: -5vh
 
 #generate_qr 
 	.modal-body
@@ -532,22 +529,6 @@ li.subscribe-step-1 .subscribe-parent
 		margin-top: 15px
 		overflow-x: auto
 
-.modal-white .modal-content
-	background: white
-	.modal-body
-		padding: 35px
-		max-height: 60vh
-		overflow: auto
-		h1
-			font-weight: bold
-			padding-bottom: 15px
-			margin: 0
-			font-size: 2rem
-			@media (min-width: $breakpoint-768)
-				font-size: 25px
-		p
-			margin: 0
-			padding: 0
 
 #generate_qr .modal-body
 	overflow: hidden
@@ -575,6 +556,73 @@ li.subscribe-step-1 .subscribe-parent
 			height: 70vh
 			margin: 0 auto
 			display: block
+
+.modal-white .modal-content
+	background: white
+	.modal-body
+		padding: 35px
+		max-height: 60vh
+		overflow: auto
+		h1
+			font-weight: bold
+			padding-bottom: 15px
+			margin: 0
+			font-size: 2rem
+			@media (min-width: $breakpoint-768)
+				font-size: 25px
+		p
+			margin: 0
+			padding: 0
+
+.modal-dialog .modal-content
+	@media (min-width: $breakpoint-1024)
+		height: 100%
+		max-height: 90vh
+		overflow: auto
+	.modal-body
+		@media (min-width: $breakpoint-1024)
+			height: 100%
+			max-height: none
+.modal
+	overflow: hidden
+	.modal-dialog
+		max-height: none
+		max-width: none
+		min-height: 0
+		min-width: 0
+		height: 100%
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		position: static
+		margin: 0
+		.modal-content		
+			max-width: none
+			min-height: 0
+			min-width: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			position: static
+			width: 100%
+			max-height: none
+			height: 76vh
+			bottom: 5vh
+			@media (min-width: $breakpoint-1024)
+				height: fit-content
+				width: 70%
+			.modal-body
+				height: fit-content
+				min-width: 0
+				max-width: none
+				min-height: 0
+				max-height: none
+				display: block
+				margin: auto
+				position: static
+				transform: translate(0,0)
+				width: 100%
 
 
 
@@ -1255,7 +1303,6 @@ header.choice
 	position: relative
 	margin: auto
 	.background-container
-		background-image: url("../images/background_genuiny_website_sky.png")
 		background-size: cover
 		background-position: center 10%
 		background-repeat: no-repeat
@@ -1268,34 +1315,49 @@ header.choice
 		@media (min-width: $breakpoint-1024)
 			height: 100%
 			flex-direction: row
-			background-image: url("../images/background_genuiny_website.png")
 			background-size: cover
 			background-position: center
-
 		h1
 			position: absolute
+			z-index: 1
 			font-family: "montserrat"
 			font-weight: bold
 			left: 50%
 			top: 8%
-			font-size: 190%
+			font-size: 240%
 			text-align: center
 			transform: translate(-50%)
 			padding: 2rem
 			width: 100%
-			color: $genuinyColDark 
+			color: black
+			text-align: left
+			padding-left: 15%
 			@media (min-width: $breakpoint-1024)
-				color: white
-				left: 50%
-				background: #000000ba
+				padding: 0
+				left: 54%
 				top: 30%
 				font-size: clamp(3rem, 3.4vw, 7rem)
-				transform: translate(-50%, -50%)
-			span.certified
-				color: gray
+				transform: translate(0%, -50%)
+				width: 40%
+			span.italic
+				white-space: nowrap
+				color: $genuinyCol
+				font-style: italic
 				font-size: inherit
-				color: #c9c9c9
-				font-weight: normal
+				font-weight: bold
+		img
+			position: absolute
+			width: 80%
+			transform: translate(-50%,0)
+			left: 50%
+			top: 42%
+			@media (min-width: $breakpoint-1024)
+				width: 40%
+				right: 52%	
+				top: auto
+				transform: translate(-100%,0)
+
+
 	.buttons
 		display: flex
 		align-items: stretch
@@ -1310,12 +1372,12 @@ header.choice
 		background: #09435e
 		max-width: 1100px
 		max-height: 317px
-		width: 100vw
-		height: 34vw
+		width: 96vw
+		height: 32vw
 		min-width: auto
 		min-height: auto
-		border-bottom: 4px solid #09435e
-		border-top: 4px solid #09435e
+		border: 4px solid $genuinyColDark
+		border-radius: 2% 2% 2% 2% / 6% 6% 6% 6%
 		@media (min-width: $breakpoint-1024)
 			border: 4px solid #09435e
 			border-radius: 2% 2% 2% 2% / 6% 6% 6% 6%
