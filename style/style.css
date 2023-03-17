@@ -244,7 +244,7 @@ body {
 
 /**************SUBSCRIBE************** */
 main {
-  min-height: calc(100vh - 73px); }
+  min-height: 100vh; }
 
 .separation-line {
   position: relative;
@@ -253,7 +253,7 @@ main {
   z-index: -4; }
 
 ul.subscribe-steps {
-  padding: 2rem 7vw 2rem;
+  padding: 2rem 7% 2rem;
   position: relative;
   max-width: 1000px;
   margin: 25px auto 0; }
@@ -452,8 +452,9 @@ li.subscribe-step-1 .subscribe-parent {
 #generate_qr .modal-body {
   max-height: none; }
 #generate_qr img {
-  width: 80vw;
-  max-width: 100%; }
+  width: 80%;
+  max-width: 300px;
+  margin: auto; }
 #generate_qr p {
   margin-top: 15px;
   overflow-x: auto; }
@@ -554,6 +555,10 @@ li.subscribe-step-1 .subscribe-parent {
         position: static;
         transform: translate(0, 0);
         width: 100%; }
+
+div.modal-video div.modal-dialog div.modal-content {
+  width: fit-content;
+  overflow: hidden; }
 
 /**** SHARE *** */
 .title-subscribe {
