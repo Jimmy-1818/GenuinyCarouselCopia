@@ -1460,9 +1460,12 @@ main.index3 .section-container {
     main.index3 .section-container .general-copy h1 {
       text-align: center;
       margin-bottom: 2rem;
-      font-size: 4rem;
       font-family: "Montserrat";
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 200%; }
+      @media (min-width: 1024px) {
+        main.index3 .section-container .general-copy h1 {
+          font-size: 4rem; } }
     main.index3 .section-container .general-copy .container-flex {
       display: flex;
       flex-direction: row;
@@ -1475,33 +1478,53 @@ main.index3 .section-container {
           text-align: left;
           justify-content: normal; } }
       main.index3 .section-container .general-copy .container-flex div.left {
-        width: 65%; }
+        width: 98%; }
+        @media (min-width: 1024px) {
+          main.index3 .section-container .general-copy .container-flex div.left {
+            width: 65%; } }
         main.index3 .section-container .general-copy .container-flex div.left p {
           margin: auto;
           display: block;
           width: fit-content;
-          text-align: left; }
+          text-align: justify; }
           @media (min-width: 1024px) {
             main.index3 .section-container .general-copy .container-flex div.left p {
+              text-align: left;
               margin-bottom: 1rem; } }
       main.index3 .section-container .general-copy .container-flex div.right {
-        width: 30%;
         min-width: 210px;
         text-align: center;
         white-space: nowrap;
         margin: auto;
         display: flex;
-        flex-direction: column; }
+        gap: 1rem;
+        margin-top: 2rem;
+        width: 96%;
+        flex-direction: row;
+        justify-content: space-between; }
         @media (min-width: 1024px) {
           main.index3 .section-container .general-copy .container-flex div.right {
+            flex-direction: column;
+            width: 30%;
+            margin: auto;
             text-align: right; } }
         main.index3 .section-container .general-copy .container-flex div.right a {
           display: inline-block;
-          color: #0abab5; }
+          color: #0abab5;
+          font-size: 80%; }
+          @media (min-width: 1024px) {
+            main.index3 .section-container .general-copy .container-flex div.right a {
+              font-size: 1.6rem; } }
         main.index3 .section-container .general-copy .container-flex div.right svg {
           fill: #0abab5;
-          width: 3rem;
-          margin-left: 1rem; }
+          height: 100%;
+          margin-left: 0.4rem;
+          width: 2.3rem; }
+          @media (min-width: 1024px) {
+            main.index3 .section-container .general-copy .container-flex div.right svg {
+              height: 3rem;
+              width: 3rem;
+              margin-left: 1rem; } }
 
 #accordion-faq {
   width: 90%;
