@@ -1245,7 +1245,7 @@ header.choice {
       font-family: "montserrat";
       font-weight: bold;
       left: 50%;
-      top: 8%;
+      top: 3%;
       font-size: 240%;
       text-align: center;
       transform: translate(-50%);
@@ -1271,14 +1271,16 @@ header.choice {
         font-weight: bold; }
     header.choice .background-container img {
       position: relative;
-      width: 80%;
+      width: auto;
+      height: 50%;
       transform: translate(-50%, 0);
       left: 50%;
-      top: 4%; }
+      top: 0%; }
       @media (min-width: 1024px) {
         header.choice .background-container img {
           position: absolute;
           width: 40%;
+          height: auto;
           right: 52%;
           top: auto;
           transform: translate(-100%, 0); } }
@@ -1470,7 +1472,7 @@ main.index3 .section-container {
       margin-bottom: 2rem;
       font-family: "Montserrat";
       font-weight: bold;
-      font-size: 188%; }
+      font-size: 178%; }
       @media (min-width: 1024px) {
         main.index3 .section-container .general-copy h1 {
           font-size: 4rem; } }
