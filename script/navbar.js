@@ -20,6 +20,7 @@ function hamburger_click(){
   if (hamburger[0].classList.contains("show")){
     if (window.scrollY == 0){
       desktop_nav.classList.remove("desktop_nav_shadow")
+      desktop_nav.classList.remove("desktop_nav_dark")
     }
     else{
       desktop_nav.classList.add("desktop_nav_shadow")
