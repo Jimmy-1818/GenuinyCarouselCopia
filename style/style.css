@@ -537,11 +537,10 @@ li.subscribe-step-1 .subscribe-parent {
       position: static;
       width: 100%;
       max-height: none;
-      height: 76vh;
-      bottom: 5vh; }
+      height: fit-content;
+      max-height: 76vh; }
       @media (min-width: 1024px) {
         .modal .modal-dialog .modal-content {
-          height: fit-content;
           width: 70%; } }
       .modal .modal-dialog .modal-content .modal-body {
         height: fit-content;
