@@ -534,11 +534,12 @@ li.subscribe-step-1 .subscribe-parent {
       display: flex;
       justify-content: center;
       align-items: center;
-      position: static;
+      position: relative;
       width: 100%;
       max-height: none;
       height: fit-content;
-      max-height: 76vh; }
+      max-height: 70vh;
+      bottom: 6%; }
       @media (min-width: 1024px) {
         .modal .modal-dialog .modal-content {
           width: 70%; } }
