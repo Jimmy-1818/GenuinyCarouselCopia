@@ -1425,7 +1425,7 @@ div.content-business {
     width: 100%;
     margin: 4rem 0 0; }
 
-div.business-request {
+div.activation-request {
   width: fit-content;
   margin: 5rem auto 0;
   text-align: center;
@@ -1434,17 +1434,17 @@ div.business-request {
   border: 5px solid #0abab5;
   padding: 3rem;
   box-shadow: 3px 6px 13px 0px #00000050; }
-  div.business-request div.input-container {
+  div.activation-request div.input-container {
     display: flex;
     justify-content: space-around;
     gap: 3rem;
     margin-top: 2rem; }
-    div.business-request div.input-container input {
+    div.activation-request div.input-container input {
       display: inline-block;
       border-radius: 99px;
       padding-left: 2rem;
       font-size: 1.4rem; }
-    div.business-request div.input-container button {
+    div.activation-request div.input-container button {
       padding: 8px 25px;
       background: #09435E;
       border-radius: 99px;
