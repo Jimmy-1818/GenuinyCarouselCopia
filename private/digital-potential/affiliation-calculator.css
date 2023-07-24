@@ -105,7 +105,7 @@ h2.info {
 }
 
 .box-info p, .box-info b{
-    font-size: calc(1.3rem + 0.7vw);
+    font-size: calc(1.3rem + 5468vw);
 }
 
 
@@ -123,7 +123,7 @@ h2.info {
 
 
 .two-lines, .second-line{
-    font-size: calc(1.7rem + 1.1vw);
+    font-size: calc(1.7rem + .46875vw);
 }
 
 .info-number{
@@ -140,7 +140,6 @@ h2.info {
 .result__row{
     display: flex;
     flex: 1 1 100%;
-    margin-top: 30px;
 }
 
 .w3rcontainer{
@@ -183,7 +182,7 @@ h2.info {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr minmax(65px,auto) 2fr;
-    grid-template-rows: minmax(50px, auto) repeat(5, 30px) minmax(55px, auto);
+    grid-template-rows: minmax(50px, auto) repeat(5, 30px) minmax(20px, auto);
     width: 100%;
     overflow-x: auto;
 }
@@ -284,9 +283,10 @@ h2.info {
     justify-content: center;
     font-weight: bold;
     line-height: 1.2;
-    padding-top: 6px;
-    padding-bottom: 10px;
+    padding-top: 0.5em          ;
+    padding-bottom: 0.5em;
     font-size: calc(0.9rem + 0.6vw);
+    white-space: nowrap
 }
 
 
@@ -438,7 +438,9 @@ div.reduce-4{
 }
 
 
-
+.inherit_size{
+    font-size: inherit;
+}
 
 
 @media screen and (min-width: 480px){
@@ -458,9 +460,7 @@ div.reduce-4{
     }
     .calculator_row_monthly{
         margin: 0px 10% 40px; 
-}
-
-
+    }
 }
 
 @media screen and (min-width: 768px){
@@ -497,6 +497,9 @@ div.reduce-4{
         height: 23px;
         padding: 1px 7px 16px;
         line-height: 1.5;
+    }
+    div.reduce-1, div.reduce-2, div.reduce-3, div.reduce-4{
+        font-size: 2.2093rem;
     }
 }
 
