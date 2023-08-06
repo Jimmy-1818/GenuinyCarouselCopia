@@ -64,6 +64,7 @@ svg.info-svg{
     width: 25px;
     display: inline-block;
     margin-bottom: 0.3rem;
+    height: fit-content;
 }
 
 img.info-circle{
@@ -92,7 +93,7 @@ img.info-circle{
 
 h2.info {
     text-transform: capitalize;
-    margin: 0 auto 3% 4%;
+    margin: 0 auto 3% 0;
     font-size: calc(1.6rem + 1vw);
     width: 100%;
     overflow-x: auto;
@@ -102,7 +103,7 @@ h2.info {
 .box-info{
     margin: 0% 2% 6% 2%;
     text-align: center;
-    width: 50vw;
+    width: 100%;
 }
 
 .box-info p, .box-info b{
@@ -112,6 +113,7 @@ h2.info {
 
 .two-lines{
     display: block;
+    line-height: 1.8
 }
 
 .first-line, .second-line{
@@ -135,13 +137,15 @@ h2.info {
     display: inline-block;
     font-size: calc(2rem + 0.4vw);
     margin-top: 5px;
-    white-space: nowrap
+    white-space: nowrap;
+    margin-top: .6rem
 }
 
 
 .result__row{
     display: flex;
     flex: 1 1 100%;
+    margin-top: 2rem;
 }
 
 .w3rcontainer{
@@ -184,7 +188,7 @@ h2.info {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr minmax(65px,auto) 2fr;
-    grid-template-rows: minmax(50px, auto) repeat(5, 30px) minmax(20px, auto);
+    grid-template-rows: minmax(30px, auto) repeat(5, 30px) minmax(20px, auto);
     width: 100%;
     overflow-x: auto;
 }
@@ -291,7 +295,11 @@ h2.info {
     white-space: nowrap;
 }
 
-
+.last-row-flex-fix{	
+    display: flex;	
+    flex-direction: column;	
+    align-items: center;	
+}
 
 .yellow_amount {
     border-radius: 5px;

@@ -188,44 +188,31 @@ function resize_result(){
 
         /* count just the numbers */
         var numbers_count = number_strip(results_scoped[i].textContent).length - number_strip(results_scoped[i].textContent.replace(/[0-9]/g,'')).length
-        if (i == 0){
-        }
         if (numbers_count < 6){
-            results_scoped[i].classList.remove("reduce-1")
-            results_scoped[i].classList.remove("reduce-2")
-            results_scoped[i].classList.remove("reduce-3")
-            results_scoped[i].classList.remove("reduce-4")
+            results_scoped[i].classList.remove('reduce-1', 'reduce-2', 'reduce-3', 'reduce-4')
         }
         else if (numbers_count > 10){
-            if (!(results_scoped[i].classList.contains("reduce-4"))){
-                results_scoped[i].classList.add("reduce-4");
-                results_scoped[i].classList.remove("reduce-1")
-                results_scoped[i].classList.remove("reduce-2")
-                results_scoped[i].classList.remove("reduce-3")
+            if (!(results_scoped[i].classList.contains('reduce-4'))){
+                results_scoped[i].classList.add('reduce-4');
+                results_scoped[i].classList.remove('reduce-1', 'reduce-2', 'reduce-3')
             }
         }
         else if (numbers_count > 9){
-            if (!(results_scoped[i].classList.contains("reduce-3"))){
-                results_scoped[i].classList.add("reduce-3");
-                results_scoped[i].classList.remove("reduce-1")
-                results_scoped[i].classList.remove("reduce-2")
-                results_scoped[i].classList.remove("reduce-4")
+            if (!(results_scoped[i].classList.contains('reduce-3'))){
+                results_scoped[i].classList.add('reduce-3');
+                results_scoped[i].classList.remove('reduce-1', 'reduce-2', 'reduce-4')
             }
         }
         else if (numbers_count > 7){
-            if (!(results_scoped[i].classList.contains("reduce-2"))){
-                results_scoped[i].classList.add("reduce-2");
-                results_scoped[i].classList.remove("reduce-1")
-                results_scoped[i].classList.remove("reduce-3")
-                results_scoped[i].classList.remove("reduce-4")
+            if (!(results_scoped[i].classList.contains('reduce-2'))){
+                results_scoped[i].classList.add('reduce-2');
+                results_scoped[i].classList.remove('reduce-1', 'reduce-3', 'reduce-4')
             }
         }
         else if (numbers_count > 5){
-            if (!(results_scoped[i].classList.contains("reduce-1"))){
-                results_scoped[i].classList.add("reduce-1");
-                results_scoped[i].classList.remove("reduce-2")
-                results_scoped[i].classList.remove("reduce-3")
-                results_scoped[i].classList.remove("reduce-4")
+            if (!(results_scoped[i].classList.contains('reduce-1'))){
+                results_scoped[i].classList.add('reduce-1')
+                results_scoped[i].classList.remove('reduce-2', 'reduce-3', 'reduce-4');
             }
         }
     }

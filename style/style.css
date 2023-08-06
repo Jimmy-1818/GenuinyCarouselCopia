@@ -1306,6 +1306,8 @@ header.choice {
     height: 32vw;
     min-width: auto;
     min-height: auto;
+    max-width: 618px;
+    max-height: 181px;
     border: 4px solid #09435E;
     border-radius: 2% 2% 2% 2%/6% 6% 6% 6%;
     bottom: 40px; }
