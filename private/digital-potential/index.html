@@ -189,6 +189,16 @@
 			<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip5" required />
 			<p id="slider-value-5"></p>
 		</div>
+		<div class="calculator__row">
+			<label for="tip">6<sup>a</sup> Filiera<span class="tip-amount"></span></label>
+			<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip6" required />
+			<p id="slider-value-5"></p>
+		</div>
+		<div class="calculator__row">
+			<label for="tip">7<sup>a</sup> Filiera<span class="tip-amount"></span></label>
+			<input class="input calculator__tip" type="tel" min="0" value="" step="1" id="tip7" required />
+			<p id="slider-value-5"></p>
+		</div>
 
 		<div class="result__row">
 			<div class="box-info autentica">
@@ -252,7 +262,7 @@
 						<div class="table-container">
 							<div class="table-title">Premio Autentica</div>
 							<div class="anchor-adjust-tab1" id="table-autentica"></div>
-							<div class="table-grid tables">
+							<div class="table-grid-2 tables">
 
 								<div class="table-item first-row">Filiera</div>
 								<div class="table-item first-row">Utenti certificati</div>
@@ -266,28 +276,13 @@
 
 								<div class="table-item">2<sup>a</sup></div>
 								<div class="table-item resize-text" id="tab1_u2"></div>
-								<div class="table-item"><span class="yellow_amount">0,50 €</span></div>
+								<div class="table-item"><span class="yellow_amount">5 €</span></div>
 								<div class="table-item resize-text" id="tab1_p2"></div>
-
-								<div class="table-item">3<sup>a</sup></div>
-								<div class="table-item resize-text" id="tab1_u3"></div>
-								<div class="table-item"><span class="yellow_amount">1 €</span></div>
-								<div class="table-item resize-text" id="tab1_p3"></div>
-
-								<div class="table-item">4<sup>a</sup></div>
-								<div class="table-item resize-text" id="tab1_u4"></div>
-								<div class="table-item"><span class="yellow_amount">1,50 €</span></div>
-								<div class="table-item resize-text" id="tab1_p4"></div>
-
-								<div class="table-item">5<sup>a</sup></div>
-								<div class="table-item resize-text" id="tab1_u5"></div>
-								<div class="table-item"><span class="yellow_amount">2 €</span></div>
-								<div class="table-item resize-text" id="tab1_p5"></div>
 
 								<div class="table-item last-row"></div>
 								<div class="table-item last-row resize-text last-row-flex-fix">
 									<div>
-										Totale utenti:<br><span id="tab1_u12345"
+										Totale utenti:<br><span id="tab1_u12"
 										class="inherit_size"></span>
 									</div>
 								</div>
@@ -319,7 +314,7 @@
 
 						<div class="table-container">
 							<div class="table-title" id="table-rendita">Premio Rendita</div>
-							<div class="table-grid tables">
+							<div class="table-grid-7 tables">
 								<div class="table-item first-row"><span>Filiera</span></div>
 								<div class="table-item first-row"><span>Utenti certificati</span></div>
 								<div class="table-item first-row"><span>Valore per utente</span></div>
@@ -327,7 +322,7 @@
 
 								<div class="table-item">1<sup>a</sup></div>
 								<div class="table-item resize-text" id="tab2_u1"></div>
-								<div class="table-item"><span class="yellow_amount">2%</span><span
+								<div class="table-item"><span class="yellow_amount">1%</span><span
 										class="monthly"></span></div>
 								<div class="table-item resize-text" id="tab2_p1"></div>
 
@@ -351,14 +346,23 @@
 
 								<div class="table-item">5<sup>a</sup></div>
 								<div class="table-item resize-text" id="tab2_u5"></div>
-								<div class="table-item"><span class="yellow_amount">2%</span><span
-										class="monthly"></span></div>
+								<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"></span></div>
 								<div class="table-item resize-text" id="tab2_p5"></div>
+
+								<div class="table-item">6<sup>a</sup></div>
+								<div class="table-item resize-text" id="tab2_u6"></div>
+								<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"></span></div>
+								<div class="table-item resize-text" id="tab2_p6"></div>
+
+								<div class="table-item">7<sup>a</sup></div>
+								<div class="table-item resize-text" id="tab2_u7"></div>
+								<div class="table-item"><span class="yellow_amount">1%</span><span class="monthly"></span></div>
+								<div class="table-item resize-text" id="tab2_p7"></div>
 
 								<div class="table-item last-row"></div>
 								<div class="table-item last-row resize-text">
 									<div>
-										Totale utenti:<br><span id="tab2_u12345" class="inherit_size"></span>
+										Totale utenti:<br><span id="tab2_u1234567" class="inherit_size"></span>
 									</div>
 								</div>
 								<div class="table-item last-row"></div>

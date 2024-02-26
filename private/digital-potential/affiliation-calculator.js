@@ -1,7 +1,7 @@
 var monthly = 0
 var s1 = s2 = s3 = s4 = s5 = 0
-var l1_a = l2_a = l3_a = l4_a = l5_a = result_a = 0
-var l1_r = l2_r = l3_r = l4_r = l5_r = result_r = 0
+var l1_a = l2_a = result_a = 0
+var l1_r = l2_r = l3_r = l4_r = l5_r = l6_r = l7_r = result_r = 0
 
 var input = document.getElementsByClassName("input");
 
@@ -82,20 +82,21 @@ function vars_def(){
     s3 = number_strip(document.getElementById("tip3").value)
     s4 = number_strip(document.getElementById("tip4").value)
     s5 = number_strip(document.getElementById("tip5").value)
+    s6 = number_strip(document.getElementById("tip6").value)
+    s7 = number_strip(document.getElementById("tip7").value)
 
     l1_a = (s1*10)
-    l2_a = (s2*0.5) 
-    l3_a = (s3*1)
-    l4_a = (s4*1.5)
-    l5_a = (s5*2)
-    result_a = l1_a + l2_a + l3_a + l4_a + l5_a
+    l2_a = (s2*5) 
+    result_a = l1_a + l2_a
 
-    l1_r = (s1*(monthly/50))
+    l1_r = (s1*(monthly/100))
     l2_r = (s2*(monthly/100))
     l3_r = (s3*(monthly/100))
     l4_r = (s4*(monthly/100))
-    l5_r = (s5*(monthly/50))
-    result_r = l1_r + l2_r + l3_r + l4_r + l5_r
+    l5_r = (s5*(monthly/100))
+    l6_r = (s6*(monthly/100))
+    l7_r = (s7*(monthly/100))
+    result_r = l1_r + l2_r + l3_r + l4_r + l5_r + l6_r + l7_r
 }
 
 
@@ -115,19 +116,21 @@ function tab_value_update(){
     document.getElementById("tab1_u2").innerHTML = format_user(s2)
     document.getElementById("tab2_u2").innerHTML = format_user(s2)
 
-    document.getElementById("tab1_u3").innerHTML = format_user(s3)
     document.getElementById("tab2_u3").innerHTML = format_user(s3)
 
-    document.getElementById("tab1_u4").innerHTML = format_user(s4)
     document.getElementById("tab2_u4").innerHTML = format_user(s4)
 
-    document.getElementById("tab1_u5").innerHTML = format_user(s5)
     document.getElementById("tab2_u5").innerHTML = format_user(s5)
 
+    document.getElementById("tab2_u6").innerHTML = format_user(s6)
+    
+    document.getElementById("tab2_u7").innerHTML = format_user(s7)
+
 /**bottom line**/
-    var tot_utenti = Number(s1) + Number(s2) + Number(s3) + Number(s4) + Number(s5)
-    document.getElementById("tab1_u12345").innerHTML = format_user(tot_utenti)
-    document.getElementById("tab2_u12345").innerHTML = format_user(tot_utenti)
+    var tot_utenti_a = Number(s1) + Number(s2)
+    var tot_utenti_r = Number(s1) + Number(s2) + Number(s3) + Number(s4) + Number(s5) + Number(s6) + Number(s7)
+    document.getElementById("tab1_u12").innerHTML = format_user(tot_utenti_a)
+    document.getElementById("tab2_u1234567").innerHTML = format_user(tot_utenti_r)
 
 /**last column**/
     document.getElementById("tab1_p1").innerHTML = format_prize(l1_a)
@@ -136,14 +139,15 @@ function tab_value_update(){
     document.getElementById("tab1_p2").innerHTML = format_prize(l2_a)
     document.getElementById("tab2_p2").innerHTML = format_prize(l2_r)
 
-    document.getElementById("tab1_p3").innerHTML = format_prize(l3_a)
     document.getElementById("tab2_p3").innerHTML = format_prize(l3_r)
 
-    document.getElementById("tab1_p4").innerHTML = format_prize(l4_a)
     document.getElementById("tab2_p4").innerHTML = format_prize(l4_r)
 
-    document.getElementById("tab1_p5").innerHTML = format_prize(l5_a)
     document.getElementById("tab2_p5").innerHTML = format_prize(l5_r)
+
+    document.getElementById("tab2_p6").innerHTML = format_prize(l5_r)
+  
+    document.getElementById("tab2_p7").innerHTML = format_prize(l5_r)
 
 }
 

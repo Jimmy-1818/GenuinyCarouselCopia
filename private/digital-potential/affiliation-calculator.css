@@ -184,13 +184,12 @@ h2.info {
 }
 
 
-.table-grid{
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr minmax(65px,auto) 2fr;
-    grid-template-rows: minmax(30px, auto) repeat(5, 30px) minmax(20px, auto);
-    width: 100%;
-    overflow-x: auto;
+.table-grid-2{
+    grid-template-rows: minmax(30px, auto) repeat(1, 30px) minmax(20px, auto);
+}
+
+.table-grid-7{
+    grid-template-rows: minmax(30px, auto) repeat(7, 30px) minmax(20px, auto);
 }
 
 
@@ -373,6 +372,11 @@ h2.info {
 .tables{
     margin: 0 auto 0px auto;
     font-size: calc(1.1rem + 0.7vw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr minmax(65px,auto) 2fr;
+    width: 100%;
+    overflow-x: auto;
 }
 
 .table-container{
