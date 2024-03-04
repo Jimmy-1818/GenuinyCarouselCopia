@@ -224,7 +224,6 @@ function resize_result(){
 
 
 function on_input(){
-    //reconstruct_branch()
     alternative_format_input()
     vars_def()
     slider_value_update()
