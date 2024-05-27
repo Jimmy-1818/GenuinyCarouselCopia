@@ -119,93 +119,96 @@ const app_desktop_html =   `
 				</button>
 			</div>
 		</div> `
-const mobile_app = document.getElementById("carousel-app")
-const mobile_app_outerHTML = mobile_app.outerHTML
-var app_parent = document.getElementById("app-parent")
-
+		
 var layout_mobile = true
 function home_on_resize(){
-	var page_width = window.innerWidth
-	if ((page_width >= 1024) && (layout_mobile)){
-		layout_mobile = false
-		//desktop_reform()
-		//add_container()
-		//change_functioning_image()
-		//remove_event_listener()
-		//on_scroll()
-		app_parent.innerHTML = app_desktop_html
-	}else if ((page_width < 1024) && !(layout_mobile)){
-		layout_mobile = true
-		var desktop_app = document.getElementById("carousel-app-desktop")
-		//document.getElementsByTagName("body")[0].innerHTML = mobile_body
-		//replace_event_listener()
-		//on_scroll()
-		//hamburger_listener()	
-		desktop_app.outerHTML = mobile_app_outerHTML
+	let location = window.location.href
+	if (location = "https://www.genuiny.it/private/"){
+		const mobile_app = document.getElementById("carousel-app")
+		const mobile_app_outerHTML = mobile_app.outerHTML
+		var app_parent = document.getElementById("app-parent")
+		var page_width = window.innerWidth
+		if ((page_width >= 1024) && (layout_mobile)){
+			layout_mobile = false
+			//desktop_reform()
+			//add_container()
+			//change_functioning_image()
+			//remove_event_listener()
+			//on_scroll()
+			app_parent.innerHTML = app_desktop_html
+		}else if ((page_width < 1024) && !(layout_mobile)){
+			layout_mobile = true
+			var desktop_app = document.getElementById("carousel-app-desktop")
+			//document.getElementsByTagName("body")[0].innerHTML = mobile_body
+			//replace_event_listener()
+			//on_scroll()
+			//hamburger_listener()	
+			desktop_app.outerHTML = mobile_app_outerHTML
+		}
 	}
 }
 home_on_resize()
-
+	
 function desktop_reform(){
 	const carousels = document.getElementsByClassName("carousel")
 	for (var i = 0; i < carousels.length; i++) {
-		var module_overflows = carousels[i].getElementsByClassName("module-overflow")
-		var content = []
-		for (var i2 = 0; i2 < module_overflows.length; i2++) {
-			var momentary_content = []
-			var module_title = carousels[i].getElementsByClassName("module-title")[i2]
-			if (i2 == 0){
-				momentary_content.push('<div class="desktop_title_line"></div>')
-			}
-			momentary_content.push('<div class="module-' + String(i2 + 1) + '">')
-			if (i2 == 0){
-				momentary_content.push('<h1 class="first-module-title-desktop">' + module_title.textContent + '</h1>')
-			}else{
-				momentary_content.push('<h1 class="secondary-module-title-desktop">' + module_title.textContent + '</h1>')
-			}
-			momentary_content.push(module_overflows[i2].innerHTML)
-			
-			momentary_content.push('</div>')
-			content.push(momentary_content.join(""))
+	var module_overflows = carousels[i].getElementsByClassName("module-overflow")
+	var content = []
+	for (var i2 = 0; i2 < module_overflows.length; i2++) {
+		var momentary_content = []
+		var module_title = carousels[i].getElementsByClassName("module-title")[i2]
+		if (i2 == 0){
+			momentary_content.push('<div class="desktop_title_line"></div>')
 		}
-		if (!(carousels[i].classList.contains("keep-carousel"))){
-			carousels[i].innerHTML = content.join("")
+		momentary_content.push('<div class="module-' + String(i2 + 1) + '">')
+		if (i2 == 0){
+			momentary_content.push('<h1 class="first-module-title-desktop">' + module_title.textContent + '</h1>')
+		}else{
+			momentary_content.push('<h1 class="secondary-module-title-desktop">' + module_title.textContent + '</h1>')
 		}
+		momentary_content.push(module_overflows[i2].innerHTML)
+		
+		momentary_content.push('</div>')
+		content.push(momentary_content.join(""))
 	}
+	if (!(carousels[i].classList.contains("keep-carousel"))){
+		carousels[i].innerHTML = content.join("")
+	}
+}
 	
-	// remove "carousel" class so that navbar's on_scroll funcitons won't be called 
-	carousel = document.getElementsByClassName("slide")
-	for (var i3 = 0; i3 < carousel.length; i3++) {
-	 	if (!(carousel[i3].classList.contains("keep-carousel"))){
-	 		carousel[i3].classList.remove("carousel")
-	 	}
-	 	carousel[i3].classList.add("common-div-desktop")
-	 	carousel[i3].setAttribute("id", carousel[i3].id + "-desktop");
+// remove "carousel" class so that navbar's on_scroll funcitons won't be called 
+carousel = document.getElementsByClassName("slide")
+for (var i3 = 0; i3 < carousel.length; i3++) {
+	if (!(carousel[i3].classList.contains("keep-carousel"))){
+		carousel[i3].classList.remove("carousel")
 	}
-	var change_target = document.getElementsByClassName("change-target")
-	var target = "data-bs-target"
-	for (var i4 = 0; i4 < change_target.length; i4++) {
-		var current_target = 
-		change_target[i4].setAttribute(target, change_target[i4].getAttribute(target) + "-desktop")
-	}
-	carousel = document.getElementsByClassName("carousel")
+	carousel[i3].classList.add("common-div-desktop")
+	carousel[i3].setAttribute("id", carousel[i3].id + "-desktop");
+}
+var change_target = document.getElementsByClassName("change-target")
+var target = "data-bs-target"
+for (var i4 = 0; i4 < change_target.length; i4++) {
+	var current_target = 
+	change_target[i4].setAttribute(target, change_target[i4].getAttribute(target) + "-desktop")
+}
+carousel = document.getElementsByClassName("carousel")
 
-	const carousel_app_desktop = document.getElementById("carousel-app-desktop")
-	const inner_app = carousel_app_desktop.getElementsByClassName("carousel-inner")[0]
-	const image_app = inner_app.children[0].getElementsByTagName("img")[0]
-	var app_title = inner_app.children[0].getElementsByTagName("h1")[0].textContent
-	inner_app.children[0].remove()
-	for (var i = 0; i < inner_app.children.length; i++) {
-		inner_app.children[i].classList.remove("active")
-	}
-	image_app.classList.add("app-image")
+const carousel_app_desktop = document.getElementById("carousel-app-desktop")
+const inner_app = carousel_app_desktop.getElementsByClassName("carousel-inner")[0]
+const image_app = inner_app.children[0].getElementsByTagName("img")[0]
+var app_title = inner_app.children[0].getElementsByTagName("h1")[0].textContent
+inner_app.children[0].remove()
+for (var i = 0; i < inner_app.children.length; i++) {
+	inner_app.children[i].classList.remove("active")
+}
+image_app.classList.add("app-image")
 
-	// add to the NOW first
-	inner_app.children[0].classList.add("active")
-	carousel_app_desktop.innerHTML = '<div class="desktop_title_line"></div>' + '<h1 class="first-module-title-desktop">' + app_title + '</h1>' + image_app.outerHTML + carousel_app_desktop.innerHTML
-	
-	const indicators_buttons = carousel_app_desktop.getElementsByClassName("carousel-indicators")[0].getElementsByTagName("button")
-	indicators_buttons[indicators_buttons.length - 1].remove()
+// add to the NOW first
+inner_app.children[0].classList.add("active")
+carousel_app_desktop.innerHTML = '<div class="desktop_title_line"></div>' + '<h1 class="first-module-title-desktop">' + app_title + '</h1>' + image_app.outerHTML + carousel_app_desktop.innerHTML
+
+const indicators_buttons = carousel_app_desktop.getElementsByClassName("carousel-indicators")[0].getElementsByTagName("button")
+indicators_buttons[indicators_buttons.length - 1].remove()
 }
 
 

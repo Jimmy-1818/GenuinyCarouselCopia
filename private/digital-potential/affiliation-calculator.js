@@ -89,13 +89,13 @@ function vars_def(){
     l2_a = (s2*5) 
     result_a = l1_a + l2_a
 
-    l1_r = (s1*(monthly/100))
-    l2_r = (s2*(monthly/100))
-    l3_r = (s3*(monthly/100))
-    l4_r = (s4*(monthly/100))
-    l5_r = (s5*(monthly/100))
-    l6_r = (s6*(monthly/100))
-    l7_r = (s7*(monthly/100))
+    l1_r = (s1*(monthly/50))
+    l2_r = (s2*(monthly/50))
+    l3_r = (s3*(monthly/50))
+    l4_r = (s4*(monthly/50))
+    l5_r = (s5*(monthly/50))
+    l6_r = (s6*(monthly/50))
+    l7_r = (s7*(monthly/50))
     result_r = l1_r + l2_r + l3_r + l4_r + l5_r + l6_r + l7_r
 }
 
@@ -145,9 +145,9 @@ function tab_value_update(){
 
     document.getElementById("tab2_p5").innerHTML = format_prize(l5_r)
 
-    document.getElementById("tab2_p6").innerHTML = format_prize(l5_r)
+    document.getElementById("tab2_p6").innerHTML = format_prize(l6_r)
   
-    document.getElementById("tab2_p7").innerHTML = format_prize(l5_r)
+    document.getElementById("tab2_p7").innerHTML = format_prize(l7_r)
 
 }
 
